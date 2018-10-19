@@ -30,6 +30,8 @@ import android.app.ProgressDialog;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -54,6 +56,7 @@ import androidx.preference.PreferenceFragment.OnPreferenceStartFragmentCallback;
 import androidx.preference.PreferenceFragment.OnPreferenceStartScreenCallback;
 import androidx.preference.PreferenceGroup.PreferencePositionCallback;
 import androidx.preference.PreferenceScreen;
+import androidx.preference.SwitchPreference;
 import androidx.recyclerview.widget.RecyclerView;
 
 /**
@@ -68,6 +71,7 @@ public class SettingsActivity extends Activity
     private static final String GRID_ROWS_KEY = "pref_grid_rows";
     private static final String GRID_COLUMNS_KEY = "pref_grid_columns";
     private static final String HOTSEAT_ICONS_KEY = "pref_hotseat_icons";
+    public static final String KEY_FEED_INTEGRATION = "pref_feed_integration";
 
     private static final String NOTIFICATION_DOTS_PREFERENCE_KEY = "pref_icon_badging";
     /** Hidden field Settings.Secure.ENABLED_NOTIFICATION_LISTENERS */
@@ -219,6 +223,30 @@ public class SettingsActivity extends Activity
                     return true;
                 }
             });
+
+            SwitchPreference feedIntegration = (SwitchPreference)
+                    findPreference(KEY_FEED_INTEGRATION);
+            if (!hasPackageInstalled(Utilities.PACKAGE_NAME)) {
+                getPreferenceScreen().removePreference(feedIntegration);
+            } else {
+                feedIntegration.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        Utilities.restart(getActivity());
+                        return true;
+                    }
+                });
+            }
+
+        }
+
+        private boolean hasPackageInstalled(String pkgName) {
+            try {
+                ApplicationInfo ai = getContext().getPackageManager()
+                        .getApplicationInfo(pkgName, 0);
+                return ai.enabled;
+            } catch (PackageManager.NameNotFoundException e) {
+                return false;
+            }
         }
 
         @Override
