@@ -2478,7 +2478,7 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
                 recreate();
             }
         }
-        if (SettingsActivity.KEY_FEED_INTEGRATION.equals(key)) {
+        if (Homescreen.KEY_FEED_INTEGRATION.equals(key)) {
             if (mLauncherTab == null) {
                     return;
             }
