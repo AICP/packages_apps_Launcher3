@@ -63,8 +63,7 @@ import androidx.recyclerview.widget.RecyclerView;
  * Settings activity for Launcher. Currently implements the following setting: Allow rotation
  */
 public class SettingsActivity extends Activity
-        implements OnPreferenceStartFragmentCallback, OnPreferenceStartScreenCallback,
-        SharedPreferences.OnSharedPreferenceChangeListener{
+        implements OnPreferenceStartFragmentCallback, OnPreferenceStartScreenCallback {
 
     private static final String DEVELOPER_OPTIONS_KEY = "pref_developer_options";
     private static final String FLAGS_PREFERENCE_KEY = "flag_toggler";
@@ -101,9 +100,9 @@ public class SettingsActivity extends Activity
                     .replace(android.R.id.content, f)
                     .commit();
         }
-        Utilities.getPrefs(getApplicationContext()).registerOnSharedPreferenceChangeListener(this);
+//        Utilities.getPrefs(getApplicationContext()).registerOnSharedPreferenceChangeListener(this);
     }
-    @Override
+/*    @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         if (GRID_OPTIONS_PREFERENCE_KEY.equals(key)) {
 
@@ -123,7 +122,7 @@ public class SettingsActivity extends Activity
                         PackageManager.DONT_KILL_APP);
             }
         }
-    }
+    }*/
 
     private boolean startFragment(String fragment, Bundle args, String key) {
         if (Utilities.ATLEAST_P && getFragmentManager().isStateSaved()) {
@@ -189,85 +188,6 @@ public class SettingsActivity extends Activity
                     screen.removePreference(preference);
                 }
             }
-
-            final ListPreference gridColumns = (ListPreference) findPreference(Utilities.GRID_COLUMNS);
-            gridColumns.setSummary(gridColumns.getEntry());
-            gridColumns.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-                public boolean onPreferenceChange(Preference preference, Object newValue) {
-                    int index = gridColumns.findIndexOfValue((String) newValue);
-                    gridColumns.setSummary(gridColumns.getEntries()[index]);
-                    Utilities.restart(getActivity());
-                    return true;
-                }
-            });
-
-            final ListPreference gridRows = (ListPreference) findPreference(Utilities.GRID_ROWS);
-            gridRows.setSummary(gridRows.getEntry());
-            gridRows.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-                public boolean onPreferenceChange(Preference preference, Object newValue) {
-                    int index = gridRows.findIndexOfValue((String) newValue);
-                    gridRows.setSummary(gridRows.getEntries()[index]);
-                    Utilities.restart(getActivity());
-                    return true;
-                }
-            });
-
-            final ListPreference hotseatColumns = (ListPreference) findPreference(Utilities.HOTSEAT_ICONS);
-            hotseatColumns.setSummary(hotseatColumns.getEntry());
-            hotseatColumns.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-                public boolean onPreferenceChange(Preference preference, Object newValue) {
-                    int index = hotseatColumns.findIndexOfValue((String) newValue);
-                    hotseatColumns.setSummary(hotseatColumns.getEntries()[index]);
-                    Utilities.restart(getActivity());
-                    return true;
-                }
-            });
-
-            SwitchPreference desktopShowLabel = (SwitchPreference) findPreference(Utilities.DESKTOP_SHOW_LABEL);
-            SwitchPreference allAppsShowLabel = (SwitchPreference) findPreference(Utilities.ALLAPPS_SHOW_LABEL);
-            SwitchPreference desktopShowQsb = (SwitchPreference) findPreference(Utilities.DESKTOP_SHOW_QSB);
-            desktopShowLabel.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-                public boolean onPreferenceChange(Preference preference, Object newValue) {
-                    Utilities.restart(getActivity());
-                    return true;
-                }
-            });
-            allAppsShowLabel.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-                public boolean onPreferenceChange(Preference preference, Object newValue) {
-                    Utilities.restart(getActivity());
-                    return true;
-                }
-            });
-            desktopShowQsb.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-                public boolean onPreferenceChange(Preference preference, Object newValue) {
-                    Utilities.restart(getActivity());
-                    return true;
-                }
-            });
-
-            SwitchPreference feedIntegration = (SwitchPreference)
-                    findPreference(Utilities.KEY_FEED_INTEGRATION);
-            if (!hasPackageInstalled(Utilities.PACKAGE_NAME)) {
-                getPreferenceScreen().removePreference(feedIntegration);
-            } else {
-                feedIntegration.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-                    public boolean onPreferenceChange(Preference preference, Object newValue) {
-                        Utilities.restart(getActivity());
-                        return true;
-                    }
-                });
-            }
-
-        }
-
-        private boolean hasPackageInstalled(String pkgName) {
-            try {
-                ApplicationInfo ai = getContext().getPackageManager()
-                        .getApplicationInfo(pkgName, 0);
-                return ai.enabled;
-            } catch (PackageManager.NameNotFoundException e) {
-                return false;
-            }
         }
 
         @Override
@@ -291,7 +211,7 @@ public class SettingsActivity extends Activity
                             !getResources().getBoolean(R.bool.notification_dots_enabled)) {
                         return false;
                     }
-
+/*
                     // Listen to system notification dot settings while this UI is active.
                     mNotificationDotsObserver = newNotificationSettingsObserver(
                             getActivity(), (NotificationDotsPreference) preference);
@@ -300,7 +220,7 @@ public class SettingsActivity extends Activity
                     mNotificationDotsObserver.getResolver().registerContentObserver(
                             Settings.Secure.getUriFor(NOTIFICATION_ENABLED_LISTENERS), false,
                             mNotificationDotsObserver);
-                    mNotificationDotsObserver.dispatchOnChange();
+                    mNotificationDotsObserver.dispatchOnChange(); */
                     return true;
 
                 case ADD_ICON_PREFERENCE_KEY:
