@@ -147,8 +147,8 @@ public final class Utilities {
         return getPrefs(context).getBoolean(PREF_NOTIFICATIONS_GESTURE, true);
     }
 
-    public static final String KEY_HIDDEN_APPS = "hidden-app";
-    public static final String KEY_HIDDEN_APPS_SET = "hidden-app-set";
+    public static final String KEY_HIDDEN_APPS = "hidden_app";
+    public static final String KEY_HIDDEN_APPS_SET = "hidden_app_set";
 
     public static boolean showDesktopLabel(Context context) {
         return getPrefs(context).getBoolean(DESKTOP_SHOW_LABEL, true);
