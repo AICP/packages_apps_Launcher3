@@ -38,6 +38,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Sub categories -->
     <string name="home_grid_title">Grid layout</string>
 
+    <!-- Icon shape -->
+    <string name="icon_shape_rounded_square">Rounded square</string>
+
     <!-- Icon size -->
     <string name="icon_size_title">Icon size</string>
     <string name="icon_size_extra_small">Tiny</string>
