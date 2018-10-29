@@ -101,6 +101,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
+import static com.android.launcher3.Utilities.getDevicePrefs;
+
 /**
  * The workspace is a wide area with a wallpaper and a finite number of pages.
  * Each page contains a number of icons, folders or widgets the user can
@@ -251,6 +253,7 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
     private final WorkspaceStateTransitionAnimation mStateTransitionAnimation;
 
     private GestureDetector mGestureListener;
+    private int mGestureMode;
 
     /**
      * Used to inflate the Workspace from XML.
@@ -286,11 +289,13 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
 
         context.enforceCallingOrSelfPermission(
                     android.Manifest.permission.DEVICE_POWER, null);
+        mGestureMode = Integer.valueOf(
+                getDevicePrefs(getContext()).getString("pref_homescreen_dt_gestures", "0"));
         mGestureListener =
                 new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
             @Override
             public boolean onDoubleTap(MotionEvent event) {
-                AicpUtils.goToSleep(context);
+                triggerGesture(event);
                 return true;
             }
 
@@ -303,7 +308,9 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
                     }
                     if (e2.getY() - e1.getY() > 120/*min distance*/
                             && Math.abs(velocityY) > 200/*min speed*/) {
-                        openNotifications();
+                        if(Utilities.useNotificationsGesture(context)) {
+                            openNotifications();
+                        }
                     }
                 } catch (Exception e) {
 
@@ -313,6 +320,22 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
         });
 
         setOnTouchListener(new WorkspaceTouchListener(mLauncher, this));
+    }
+
+    private void triggerGesture(MotionEvent event) {
+        switch(mGestureMode) {
+            // Stock behavior
+            case 0:
+                break;
+            // Sleep
+            case 1:
+                AicpUtils.goToSleep(getContext());
+                break;
+        }
+    }
+
+    public void setGestures(int mode) {
+        mGestureMode = mode;
     }
 
     private boolean openNotifications() {
