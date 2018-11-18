@@ -29,15 +29,15 @@
     </Preference>
 
     <Preference
-        android:key="icons"
-        android:title="@string/icons_category_title"
-        android:summary="@string/icons_category_summary"
-        android:icon="@drawable/icons"
+        android:key="ui"
+        android:title="@string/ui_category_title"
+        android:summary="@string/ui_category_summary"
+        android:icon="@drawable/ui"
         android:layout="@layout/settings_layout">
         <intent
             android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
             android:targetPackage="com.android.launcher3"
-            android:targetClass="com.android.launcher3.Icons" />
+            android:targetClass="com.android.launcher3.UserInterface" />
     </Preference>
 
     <Preference
@@ -63,13 +63,5 @@
             android:targetPackage="com.android.launcher3"
             android:targetClass="com.android.launcher3.Gestures" />
     </Preference>
-
-    <ListPreference
-        android:key="pref_theme_style"
-        android:title="@string/theme_style_title"
-        android:persistent="true"
-        android:entries="@array/theme_style_entries"
-        android:entryValues="@array/theme_style_values"
-        android:defaultValue="0" />
 
 </PreferenceScreen>

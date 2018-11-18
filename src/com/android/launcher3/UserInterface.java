@@ -31,6 +31,7 @@ import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
 import android.view.MenuItem;
 
@@ -44,9 +45,10 @@ import java.util.Objects;
 /**
  * Settings activity for Launcher. Currently implements the following setting: Allow rotation
  */
-public class Icons extends SettingsActivity implements PreferenceFragment.OnPreferenceStartFragmentCallback {
+public class UserInterface extends SettingsActivity implements PreferenceFragment.OnPreferenceStartFragmentCallback {
 
     private static final String ICON_BADGING_PREFERENCE_KEY = "pref_icon_badging";
+    public static final String PREF_THEME_STYLE_KEY = "pref_theme_style";
 
     /** Hidden field Settings.Secure.NOTIFICATION_BADGING */
     public static final String NOTIFICATION_BADGING = "notification_badging";
@@ -58,7 +60,7 @@ public class Icons extends SettingsActivity implements PreferenceFragment.OnPref
     protected void onCreate(final Bundle bundle) {
         super.onCreate(bundle);
         if (bundle == null) {
-            getFragmentManager().beginTransaction().replace(android.R.id.content, new IconsSettingsFragment()).commit();
+            getFragmentManager().beginTransaction().replace(android.R.id.content, new UiSettingsFragment()).commit();
         }
     }
 
@@ -73,10 +75,12 @@ public class Icons extends SettingsActivity implements PreferenceFragment.OnPref
         return true;
     }
 
-    public static class IconsSettingsFragment extends PreferenceFragment
+    public static class UiSettingsFragment extends PreferenceFragment
             implements Preference.OnPreferenceChangeListener, Preference.OnPreferenceClickListener {
 
         ActionBar actionBar;
+
+        private ListPreference mThemeStyle;
 
         private IconBadgingObserver mIconBadgingObserver;
 
@@ -84,7 +88,7 @@ public class Icons extends SettingsActivity implements PreferenceFragment.OnPref
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             getPreferenceManager().setSharedPreferencesName(LauncherFiles.SHARED_PREFERENCES_KEY);
-            addPreferencesFromResource(R.xml.icons_preferences);
+            addPreferencesFromResource(R.xml.ui_preferences);
 
             ContentResolver resolver = getActivity().getContentResolver();
 
@@ -115,6 +119,17 @@ public class Icons extends SettingsActivity implements PreferenceFragment.OnPref
                     getPreferenceScreen().removePreference(iconShapeOverride);
                 }
             }
+            mThemeStyle = (ListPreference) findPreference(PREF_THEME_STYLE_KEY);
+            mThemeStyle.setSummary(mThemeStyle.getEntry());
+            mThemeStyle.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object o) {
+                    String newValue = (String) o;
+                    int valueIndex = mThemeStyle.findIndexOfValue(newValue);
+                    mThemeStyle.setSummary(mThemeStyle.getEntries()[valueIndex]);
+                    return true;
+                }
+            });
         }
 
         @Override

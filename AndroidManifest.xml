@@ -116,8 +116,8 @@
 
         <!-- Icons -->
         <activity
-            android:name="com.android.launcher3.Icons"
-            android:label="@string/icons_category_title"
+            android:name="com.android.launcher3.UserInterface"
+            android:label="@string/ui_category_title"
             android:theme="@android:style/Theme.DeviceDefault.Settings"
             android:autoRemoveFromRecents="true"
             android:parentActivityName="com.android.launcher3.SettingsActivity" />

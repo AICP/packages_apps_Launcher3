@@ -26,8 +26,6 @@ import android.view.View;
 
 public class SettingsActivity extends Activity {
 
-    public static final String PREF_THEME_STYLE_KEY = "pref_theme_style";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,8 +43,6 @@ public class SettingsActivity extends Activity {
 
     public static class LauncherSettingsFragment extends PreferenceFragment {
 
-        private ListPreference mThemeStyle;
-
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -60,17 +56,6 @@ public class SettingsActivity extends Activity {
             if (getListView() != null) {
                 getListView().setDivider(null);
             }
-            mThemeStyle = (ListPreference) findPreference(PREF_THEME_STYLE_KEY);
-            mThemeStyle.setSummary(mThemeStyle.getEntry());
-            mThemeStyle.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-                @Override
-                public boolean onPreferenceChange(Preference preference, Object o) {
-                    String newValue = (String) o;
-                    int valueIndex = mThemeStyle.findIndexOfValue(newValue);
-                    mThemeStyle.setSummary(mThemeStyle.getEntries()[valueIndex]);
-                    return true;
-                }
-            });
         }
 
         @Override
