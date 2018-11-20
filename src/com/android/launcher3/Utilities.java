@@ -700,8 +700,16 @@ public final class Utilities {
         return prefs.getBoolean(Homescreen.KEY_FEED_INTEGRATION, true);
     }
 
+    public static boolean showQSB(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        if (!LauncherAppState.getInstanceNoCreate().isSearchAppAvailable()) {
+            return false;
+        }
+        return prefs.getBoolean(Homescreen.KEY_SHOW_SEARCHBAR, true);
+    }
+
     public static void restart(final Context context) {
-        ProgressDialog.show(context, null, context.getString(R.string.state_loading), true, false);
+        //ProgressDialog.show(context, null, context.getString(R.string.state_loading), true, false);
         new LooperExecutor(LauncherModel.getWorkerLooper()).execute(() -> {
             try {
                 Thread.sleep(WAIT_BEFORE_RESTART);

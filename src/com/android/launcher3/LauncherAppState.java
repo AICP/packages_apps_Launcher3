@@ -33,6 +33,8 @@ import com.android.launcher3.util.ConfigMonitor;
 import com.android.launcher3.util.Preconditions;
 import com.android.launcher3.util.SettingsObserver;
 
+import com.android.internal.util.aicp.PackageUtils;
+
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 
@@ -51,6 +53,10 @@ public class LauncherAppState {
     private final WidgetPreviewLoader mWidgetCache;
     private final InvariantDeviceProfile mInvariantDeviceProfile;
     private final SettingsObserver mNotificationBadgingObserver;
+
+    private HomeKeyWatcher mHomeKeyListener = null;
+    private boolean mNeedsRestart;
+    private boolean mIsSearchAppAvailable;
 
     public static LauncherAppState getInstance(final Context context) {
         if (INSTANCE == null) {
@@ -88,6 +94,8 @@ public class LauncherAppState {
         Log.v(Launcher.TAG, "LauncherAppState initiated");
         Preconditions.assertUIThread();
         mContext = context;
+
+        setSearchAppAvailable(PackageUtils.isPackageInstalled(context, LauncherTab.SEARCH_PACKAGE));
 
         mInvariantDeviceProfile = new InvariantDeviceProfile(mContext);
         mIconCache = new IconCache(mContext, mInvariantDeviceProfile);
@@ -129,6 +137,31 @@ public class LauncherAppState {
                 }
             };
             mNotificationBadgingObserver.register(NOTIFICATION_BADGING);
+        }
+
+        mHomeKeyListener = new HomeKeyWatcher(mContext);
+    }
+
+    public void setNeedsRestart() {
+        if (mNeedsRestart) {
+            // another pref change already called a restart
+            return;
+        }
+        mNeedsRestart = true;
+        mHomeKeyListener.startWatch();
+        mHomeKeyListener.setOnHomePressedListener(() -> {
+            mHomeKeyListener.stopWatch();
+            Utilities.restart(mContext);
+            // we're killing the whole process so no need to set mNeedsRestart to false again
+        });
+    }
+
+    public void checkIfRestartNeeded() {
+        // we destroyed Settings activity with the back button
+        // so we force a restart now if needed without waiting for home button press
+        if (mNeedsRestart) {
+            mHomeKeyListener.stopWatch();
+            Utilities.restart(mContext);
         }
     }
 
@@ -179,5 +212,13 @@ public class LauncherAppState {
                 .acquireContentProviderClient(LauncherProvider.AUTHORITY)) {
             return (LauncherProvider) cl.getLocalContentProvider();
         }
+    }
+
+    public void setSearchAppAvailable(boolean available) {
+        mIsSearchAppAvailable = available;
+    }
+
+    public boolean isSearchAppAvailable() {
+        return mIsSearchAppAvailable;
     }
 }
