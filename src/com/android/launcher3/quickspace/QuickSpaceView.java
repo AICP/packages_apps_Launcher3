@@ -23,6 +23,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
+import android.graphics.Typeface;
 import android.text.TextUtils.TruncateAt;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -86,7 +87,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
             mIsQuickEvent = mController.isQuickEvent();
             prepareLayout();
         }
-        mWeatherAvailable = mController.isWeatherAvailable() && 
+        mWeatherAvailable = mController.isWeatherAvailable() &&
                 mController.getEventController().isDeviceIntroCompleted();
         getQuickSpaceView();
         if (mIsQuickEvent) {
@@ -158,6 +159,27 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         mWeatherTemp = (TextView) findViewById(R.id.weather_temp);
         mWeatherTempSub = (TextView) findViewById(R.id.quick_event_weather_temp);
         mClockView = (DateTextView) findViewById(R.id.clock_view);
+        setTypeface(mEventTitle, mEventTitleSub, mWeatherTemp, mWeatherTempSub, mClockView);
+    }
+
+    private void setTypeface(TextView... views) {
+        Typeface tf;
+        switch (Utilities.getDateStyleFont(getContext())) {
+            case "system-headline":
+                tf = Typeface.create(getContext().getString(R.string.date_style_headline_font), Typeface.NORMAL);
+                break;
+            case "system-body":
+                tf = Typeface.create(getContext().getString(R.string.date_style_body_font), Typeface.NORMAL);
+                break;
+            default:
+                tf = Typeface.create(getContext().getString(R.string.date_style_headline_font), Typeface.NORMAL);
+                break;
+        }
+        for (TextView view : views) {
+            if (view != null) {
+                view.setTypeface(tf);
+            }
+        }
     }
 
     private void prepareLayout() {
