@@ -115,6 +115,17 @@ public class Homescreen extends SettingsActivity implements PreferenceFragment.O
                     return true;
                 }
             });
+
+            ListPreference dateSpacing = (ListPreference) findPreference(Utilities.DATE_STYLE_SPACING);
+            dateSpacing.setSummary(dateSpacing.getEntry());
+            dateSpacing.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    int index = dateSpacing.findIndexOfValue((String) newValue);
+                    dateSpacing.setSummary(dateSpacing.getEntries()[index]);
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                    return true;
+                }
+            });
         }
 
         /**
