@@ -80,6 +80,16 @@
         android:defaultValue="2"
         android:dependency="pref_show_quickspace" />
 
+    <ListPreference
+        android:dependency="pref_show_quickspace"
+        android:entries="@array/date_style_font_names"
+        android:entryValues="@array/date_style_font_values"
+        android:defaultValue="system-headline"
+        android:key="pref_date_font"
+        android:persistent="true"
+        android:summary="%s"
+        android:title="@string/date_style_font" />
+
     <SwitchPreference
         android:defaultValue="true"
         android:key="pref_enable_minus_one"
