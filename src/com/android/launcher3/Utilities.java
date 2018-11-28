@@ -45,6 +45,8 @@ import android.graphics.RectF;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.InsetDrawable;
+import android.icu.text.DateFormat;
+import android.icu.text.DisplayContext;
 import android.os.Build;
 import android.os.DeadObjectException;
 import android.os.Handler;
@@ -52,6 +54,7 @@ import android.os.Message;
 import android.os.PowerManager;
 import android.os.TransactionTooLargeException;
 import android.provider.Settings;
+import android.text.format.DateUtils;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextUtils;
@@ -77,6 +80,7 @@ import com.android.launcher3.util.LooperExecutor;
 import com.android.launcher3.util.PackageManagerHelper;
 import com.android.launcher3.views.Transposable;
 import com.android.launcher3.widget.PendingAddShortcutInfo;
+import com.android.launcher3.R;
 
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -155,6 +159,8 @@ public final class Utilities {
 
     public static final String KEY_HIDDEN_APPS = "hidden_app";
     public static final String KEY_HIDDEN_APPS_SET = "hidden_app_set";
+
+    public static final String DATE_FORMAT_KEY = "pref_date_format";
 
     public static boolean IS_RUNNING_IN_TEST_HARNESS =
                     ActivityManager.isRunningInTestHarness();
@@ -248,6 +254,38 @@ public final class Utilities {
     public static boolean showQuickspace(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getBoolean(DESKTOP_SHOW_QUICKSPACE, true);
+    }
+
+    public static String getDateFormat(Context context) {
+        return getPrefs(context).getString(DATE_FORMAT_KEY, context.getString(R.string.date_format_normal));
+    }
+
+    public static String formatDateTime(Context context, long timeInMillis) {
+        try {
+            String format = getDateFormat(context);
+            String formattedDate;
+            if (Utilities.ATLEAST_OREO) {
+                DateFormat dateFormat = DateFormat.getInstanceForSkeleton(format, Locale.getDefault());
+                dateFormat.setContext(DisplayContext.CAPITALIZATION_FOR_STANDALONE);
+                formattedDate = dateFormat.format(timeInMillis);
+            } else {
+                int flags;
+                if (format.equals(context.getString(R.string.date_format_long))) {
+                    flags = DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE;
+                } else if (format.equals(context.getString(R.string.date_format_normal))) {
+                    flags = DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_MONTH;
+                } else if (format.equals(context.getString(R.string.date_format_short))) {
+                    flags = DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_MONTH | DateUtils.FORMAT_ABBREV_WEEKDAY;
+                } else {
+                    flags = DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_MONTH;
+                }
+                 formattedDate = DateUtils.formatDateTime(context, timeInMillis, flags);
+            }
+            return formattedDate;
+        } catch (Throwable t) {
+            Log.e(TAG, "Error formatting At A Glance date", t);
+            return DateUtils.formatDateTime(context, timeInMillis, DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_MONTH);
+        }
     }
 
     /**
