@@ -19,79 +19,6 @@
 
     <SwitchPreference
         android:defaultValue="true"
-        android:key="pref_workspace_edit"
-        android:persistent="true"
-        android:title="@string/settings_edit_allow_title"
-        android:summaryOn="@string/settings_edit_allow_summary_on"
-        android:summaryOff="@string/settings_edit_allow_summary_off" />
-
-    <SwitchPreference
-        android:key="pref_add_icon_to_home"
-        android:title="@string/auto_add_shortcuts_label"
-        android:summary="@string/auto_add_shortcuts_description"
-        android:defaultValue="true"
-        android:persistent="true" />
-
-    <SwitchPreference
-        android:key="pref_show_searchbar"
-        android:title="@string/show_searchbar_title"
-        android:summary="@string/show_searchbar_summary"
-        android:defaultValue="true"
-        android:persistent="true"/>
-
-    <SwitchPreference
-        android:key="pref_show_quickspace"
-        android:title="@string/show_quickspace_title"
-        android:summary="@string/show_quickspace_summary"
-        android:defaultValue="true"
-        android:persistent="true"/>
-
-    <SwitchPreference
-        android:dependency="pref_show_quickspace"
-        android:key="pref_quickspace_np"
-        android:summary="@string/quickspace_now_playing_summary"
-        android:title="@string/quickspace_now_playing_title"
-        android:defaultValue="true"
-        android:persistent="true" />
-
-    <SwitchPreference
-        android:key="pref_show_alt_quickspace"
-        android:dependency="pref_show_quickspace"
-        android:title="@string/quickspace_alternate_style_title"
-        android:summary="@string/quickspace_alternate_style_summary"
-        android:defaultValue="false"
-        android:persistent="true"/>
-
-    <SwitchPreference
-        android:key="pref_quickspace_psonality"
-        android:dependency="pref_show_quickspace"
-        android:summary="@string/quickspace_psa_summary"
-        android:title="@string/quickspace_psa_title"
-        android:defaultValue="true"
-        android:persistent="true" />
-
-    <ListPreference
-        android:key="pref_date_format"
-        android:title="@string/date_format_title"
-        android:summary="%s"
-        android:entries="@array/date_format_names"
-        android:entryValues="@array/date_format_values"
-        android:persistent="true"
-        android:defaultValue="2"
-        android:dependency="pref_show_quickspace" />
-
-    <ListPreference
-        android:dependency="pref_show_quickspace"
-        android:entries="@array/date_style_font_names"
-        android:entryValues="@array/date_style_font_values"
-        android:defaultValue="system-headline"
-        android:key="pref_date_font"
-        android:persistent="true"
-        android:summary="%s"
-        android:title="@string/date_style_font" />
-
-    <SwitchPreference
-        android:defaultValue="true"
         android:key="pref_enable_minus_one"
         android:summary="@string/pref_show_google_now_summary"
         android:title="@string/title_show_google_app"/>
@@ -109,14 +36,11 @@
         android:persistent="true" />
 
     <SwitchPreference
-        android:key="pref_allowRotation_user"
-        android:title="@string/allow_rotation_title"
+        android:key="pref_add_icon_to_home"
+        android:title="@string/auto_add_shortcuts_label"
+        android:summary="@string/auto_add_shortcuts_description"
         android:defaultValue="true"
         android:persistent="true" />
-
-    <Preference
-        android:key="pref_trust_apps"
-        android:title="@string/trust_apps_manager_name" />
 
     <com.android.launcher3.settings.preference.ReloadingListPreference
         android:key="pref_icon_pack"
@@ -138,37 +62,111 @@
         </intent>
     </com.android.launcher3.settings.NotificationDotsPreference>
 
-<PreferenceCategory
-        android:key="gestures_category"
-        android:title="@string/gestures_category">
+    <Preference
+        android:key="pref_trust_apps"
+        android:title="@string/trust_apps_manager_name" />
 
-    <SwitchPreference
-        android:key="pref_notification_gesture"
-        android:title="@string/pref_notifications_gesture_title"
-        android:summary="@string/pref_notifications_gesture_summary"
-        android:defaultValue="true"
-        android:persistent="true"/>
+    <PreferenceCategory
+        android:key="quickspace_category"
+        android:title="@string/quickspace_category">
 
-    <SwitchPreference
-        android:key="pref_dt_gesture"
-        android:title="@string/pref_dt_gesture_title"
-        android:summary="@string/pref_dt_gesture_summary"
-        android:defaultValue="true"
-        android:persistent="true"/>
+        <SwitchPreference
+            android:key="pref_show_quickspace"
+            android:title="@string/show_quickspace_title"
+            android:summary="@string/show_quickspace_summary"
+            android:defaultValue="true"
+            android:persistent="true"/>
 
-    <SwitchPreference
-        android:key="pref_allowSwipeDownClearAll"
-        android:title="@string/allow_swipe_down_clearall_title"
-        android:summary="@string/allow_swipe_down_clearall_desc"
-        android:defaultValue="@bool/allow_swipe_down_clearall"
-        android:persistent="true" />
+        <SwitchPreference
+            android:dependency="pref_show_quickspace"
+            android:key="pref_quickspace_np"
+            android:summary="@string/quickspace_now_playing_summary"
+            android:title="@string/quickspace_now_playing_title"
+            android:defaultValue="true"
+            android:persistent="true" />
 
-</PreferenceCategory>
+        <SwitchPreference
+            android:key="pref_show_alt_quickspace"
+            android:dependency="pref_show_quickspace"
+            android:title="@string/quickspace_alternate_style_title"
+            android:summary="@string/quickspace_alternate_style_summary"
+            android:defaultValue="false"
+            android:persistent="true"/>
 
-    <!--<androidx.preference.PreferenceScreen
-        android:key="pref_developer_options"
-        android:persistent="false"
-        android:title="Developer Options"
-        android:fragment="com.android.launcher3.settings.DeveloperOptionsFragment"/>-->
+        <SwitchPreference
+            android:key="pref_quickspace_psonality"
+            android:dependency="pref_show_quickspace"
+            android:summary="@string/quickspace_psa_summary"
+            android:title="@string/quickspace_psa_title"
+            android:defaultValue="true"
+            android:persistent="true" />
 
+        <ListPreference
+            android:key="pref_date_format"
+            android:title="@string/date_format_title"
+            android:summary="%s"
+            android:entries="@array/date_format_names"
+            android:entryValues="@array/date_format_values"
+            android:persistent="true"
+            android:defaultValue="2"
+            android:dependency="pref_show_quickspace" />
+
+        <ListPreference
+            android:dependency="pref_show_quickspace"
+            android:entries="@array/date_style_font_names"
+            android:entryValues="@array/date_style_font_values"
+            android:defaultValue="system-headline"
+            android:key="pref_date_font"
+            android:persistent="true"
+            android:summary="%s"
+            android:title="@string/date_style_font" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="actions_category"
+        android:title="@string/actions_category">
+
+        <SwitchPreference
+            android:key="pref_workspace_edit"
+            android:title="@string/settings_edit_allow_title"
+            android:summaryOn="@string/settings_edit_allow_summary_on"
+            android:summaryOff="@string/settings_edit_allow_summary_off"
+            android:defaultValue="true"
+            android:persistent="true" />
+
+        <SwitchPreference
+            android:key="pref_allowRotation_user"
+            android:title="@string/allow_rotation_title"
+            android:defaultValue="true"
+            android:persistent="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:key="gestures_category"
+            android:title="@string/gestures_category">
+
+        <SwitchPreference
+            android:key="pref_notification_gesture"
+            android:title="@string/pref_notifications_gesture_title"
+            android:summary="@string/pref_notifications_gesture_summary"
+            android:defaultValue="true"
+            android:persistent="true"/>
+
+        <SwitchPreference
+            android:key="pref_dt_gesture"
+            android:title="@string/pref_dt_gesture_title"
+            android:summary="@string/pref_dt_gesture_summary"
+            android:defaultValue="true"
+            android:persistent="true"/>
+
+        <SwitchPreference
+            android:key="pref_allowSwipeDownClearAll"
+            android:title="@string/allow_swipe_down_clearall_title"
+            android:summary="@string/allow_swipe_down_clearall_desc"
+            android:defaultValue="@bool/allow_swipe_down_clearall"
+            android:persistent="true" />
+
+    </PreferenceCategory>
 </androidx.preference.PreferenceScreen>

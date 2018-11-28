@@ -203,4 +203,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="date_style_font_system_body">System body</string>
     <string name="date_style_headline_font" translatable="false">@*android:string/config_headlineFontFamily</string>
     <string name="date_style_body_font" translatable="false">@*android:string/config_bodyFontFamily</string>
+
+    <!-- Homescreen setting categories -->
+    <string name="quickspace_category">QuickSpace</string>
+    <string name="actions_category">Actions</string>
 </resources>
