@@ -122,7 +122,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         mClockView.setVisibility(View.VISIBLE);
         mClockView.setOnClickListener(mActionReceiver.getCalendarAction());
         if (forced) {
-            mClockView.reloadDateFormat(true);
+            mClockView.reloadDateFormat();
         }
     }
 
