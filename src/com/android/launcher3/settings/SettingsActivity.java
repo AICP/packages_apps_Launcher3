@@ -119,6 +119,7 @@ public class SettingsActivity extends Activity
             case Utilities.KEY_SHOW_ALT_QUICKSPACE:
             case Utilities.KEY_SHOW_QUICKSPACE_NOWPLAYING:
             case Utilities.KEY_SHOW_QUICKSPACE_PSONALITY:
+            case Utilities.DATE_STYLE_FONT:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:
@@ -295,7 +296,15 @@ public class SettingsActivity extends Activity
                     atAGlanceDateFormat.setOnPreferenceChangeListener((pref, val) -> {
                         int index = atAGlanceDateFormat.findIndexOfValue((String) val);
                         atAGlanceDateFormat.setSummary(atAGlanceDateFormat.getEntries()[index]);
-//                        AppReloader.get(mContext).reload();
+                        return true;
+                    });
+                case Utilities.DATE_STYLE_FONT:
+                    ListPreference dateStyleFont =
+                                (ListPreference) findPreference(Utilities.DATE_STYLE_FONT);
+                    dateStyleFont.setSummary(dateStyleFont.getEntry());
+                    dateStyleFont.setOnPreferenceChangeListener((pref, val) -> {
+                        int index = dateStyleFont.findIndexOfValue((String) val);
+                        dateStyleFont.setSummary(dateStyleFont.getEntries()[index]);
                         return true;
                     });
             }
