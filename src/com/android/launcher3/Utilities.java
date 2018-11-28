@@ -147,6 +147,7 @@ public final class Utilities {
     public static final String KEY_SHOW_ALT_QUICKSPACE = "pref_show_alt_quickspace";
     public static final String KEY_SHOW_QUICKSPACE_PSONALITY = "pref_quickspace_psonality";
     public static final String DATE_FORMAT_ATAGLANCE = "pref_date_format";
+    public static final String DATE_STYLE_FONT = "pref_date_font";
 
     private static final long WAIT_BEFORE_RESTART = 250;
 
@@ -842,5 +843,9 @@ public final class Utilities {
             Log.e(TAG, "Error formatting At A Glance date", t);
             return DateUtils.formatDateTime(context, timeInMillis, DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_MONTH);
         }
+    }
+
+    public static String getDateStyleFont(Context context) {
+        return getPrefs(context).getString(DATE_STYLE_FONT, "system-headline");
     }
 }
