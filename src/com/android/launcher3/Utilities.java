@@ -61,6 +61,7 @@ import android.os.Message;
 import android.os.PowerManager;
 import android.os.TransactionTooLargeException;
 import android.provider.Settings;
+import android.text.format.DateUtils;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextUtils;
@@ -76,6 +77,7 @@ import android.view.animation.Interpolator;
 
 import androidx.core.os.BuildCompat;
 
+import com.android.launcher3.R;
 import com.android.launcher3.config.FeatureFlags;
 import com.android.launcher3.dragndrop.FolderAdaptiveIcon;
 import com.android.launcher3.graphics.GridOptionsProvider;
@@ -144,6 +146,7 @@ public final class Utilities {
     public static final String KEY_SHOW_QUICKSPACE_NOWPLAYING = "pref_quickspace_np";
     public static final String KEY_SHOW_ALT_QUICKSPACE = "pref_show_alt_quickspace";
     public static final String KEY_SHOW_QUICKSPACE_PSONALITY = "pref_quickspace_psonality";
+    public static final String DATE_FORMAT_ATAGLANCE = "pref_date_format";
 
     private static final long WAIT_BEFORE_RESTART = 250;
 
@@ -179,10 +182,6 @@ public final class Utilities {
         ResolveInfo ri = context.getPackageManager().resolveActivity(
                 PackageManagerHelper.getStyleWallpapersIntent(context), 0);
         return ri != null;
-    }
-
-    public static boolean isQuickspaceNowPlaying(Context context) {
-        return getPrefs(context).getBoolean(KEY_SHOW_QUICKSPACE_NOWPLAYING, true);
     }
 
     /**
@@ -719,29 +718,6 @@ public final class Utilities {
         }
     }
 
-    public static String formatDateTime(Context context, long timeInMillis) {
-        try {
-            String format = "EEEE, MMM d";
-            String formattedDate;
-            DateFormat dateFormat = DateFormat.getInstanceForSkeleton(format, Locale.getDefault());
-            dateFormat.setContext(DisplayContext.CAPITALIZATION_FOR_STANDALONE);
-            formattedDate = dateFormat.format(timeInMillis);
-            return formattedDate;
-        } catch (Throwable t) {
-            Log.e(TAG, "Error formatting At A Glance date", t);
-            return DateUtils.formatDateTime(context, timeInMillis, DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_MONTH);
-        }
-
-    }
-
-    public static boolean showQSB(Context context) {
-        SharedPreferences prefs = getPrefs(context.getApplicationContext());
-        if (!LauncherAppState.getInstanceNoCreate().isSearchAppAvailable()) {
-            return false;
-        }
-        return prefs.getBoolean(KEY_SHOW_SEARCHBAR, true);
-    }
-
     public static boolean isNotificationGestureEnabled(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_NOTIFICATION_GESTURE, true);
@@ -824,5 +800,28 @@ public final class Utilities {
 
     public static boolean isQuickspacePersonalityEnabled(Context context) {
         return getPrefs(context).getBoolean(KEY_SHOW_QUICKSPACE_PSONALITY, true);
+    }
+
+    public static boolean isQuickspaceNowPlaying(Context context) {
+        return getPrefs(context).getBoolean(KEY_SHOW_QUICKSPACE_NOWPLAYING, true);
+    }
+
+    public static String getDateFormat(Context context) {
+        return getPrefs(context).getString(DATE_FORMAT_ATAGLANCE, "0");
+    }
+
+    public static String formatDateTime(Context context, long timeInMillis) {
+        int flags;
+        switch(getDateFormat(context)) {
+            case "0":
+                flags = DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE;
+                break;
+            case "2":
+                flags = DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_MONTH | DateUtils.FORMAT_ABBREV_WEEKDAY;
+                break;
+            default:
+                flags = DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_MONTH;
+        }
+        return DateUtils.formatDateTime(context, timeInMillis, flags);
     }
 }
