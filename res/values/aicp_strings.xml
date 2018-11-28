@@ -207,4 +207,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Homescreen setting categories -->
     <string name="quickspace_category">QuickSpace</string>
     <string name="actions_category">Actions</string>
+
+    <!-- At a glance uppercase -->
+    <string name="date_style_transform_title">Show uppercase on date</string>
+    <string name="date_style_transform_summary">Transform all the date/at a glance with uppercased text</string>
 </resources>

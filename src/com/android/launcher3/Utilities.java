@@ -148,6 +148,7 @@ public final class Utilities {
     public static final String KEY_SHOW_QUICKSPACE_PSONALITY = "pref_quickspace_psonality";
     public static final String DATE_FORMAT_ATAGLANCE = "pref_date_format";
     public static final String DATE_STYLE_FONT = "pref_date_font";
+    public static final String DATE_STYLE_TRANSFORM = "pref_date_transform";
 
     private static final long WAIT_BEFORE_RESTART = 250;
 
@@ -837,5 +838,9 @@ public final class Utilities {
 
     public static String getDateStyleFont(Context context) {
         return getPrefs(context).getString(DATE_STYLE_FONT, "system-headline");
+    }
+
+    public static boolean isDateStyleUppercase(Context context) {
+        return getPrefs(context).getBoolean(DATE_STYLE_TRANSFORM, false);
     }
 }
