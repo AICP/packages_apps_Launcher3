@@ -51,6 +51,7 @@ import com.android.launcher3.trust.TrustAppsActivity;
 import com.android.launcher3.uioverrides.plugins.PluginManagerWrapper;
 import com.android.launcher3.util.SecureSettingsObserver;
 
+import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceFragment.OnPreferenceStartFragmentCallback;
@@ -285,6 +286,16 @@ public class SettingsActivity extends Activity
                         IconDatabase.clearAll(mContext);
                         IconDatabase.setGlobal(mContext, (String) val);
                         AppReloader.get(mContext).reload();
+                        return true;
+                    });
+                case Utilities.DATE_FORMAT_ATAGLANCE:
+                    ListPreference atAGlanceDateFormat =
+                                (ListPreference) findPreference(Utilities.DATE_FORMAT_ATAGLANCE);
+                    atAGlanceDateFormat.setSummary(atAGlanceDateFormat.getEntry());
+                    atAGlanceDateFormat.setOnPreferenceChangeListener((pref, val) -> {
+                        int index = atAGlanceDateFormat.findIndexOfValue((String) val);
+                        atAGlanceDateFormat.setSummary(atAGlanceDateFormat.getEntries()[index]);
+//                        AppReloader.get(mContext).reload();
                         return true;
                     });
             }
