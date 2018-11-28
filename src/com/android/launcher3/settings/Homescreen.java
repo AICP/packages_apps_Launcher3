@@ -126,6 +126,31 @@ public class Homescreen extends SettingsActivity implements PreferenceFragment.O
                 case Utilities.HOTSEAT_ICONS:
                     preference.setOnPreferenceChangeListener(this);
                     return true;
+                case Utilities.DATE_FORMAT_KEY:
+                    ListPreference dateFormat = (ListPreference) findPreference(Utilities.DATE_FORMAT_KEY);
+                    dateFormat.setSummary(dateFormat.getEntry());
+                    dateFormat.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                        public boolean onPreferenceChange(Preference preference, Object newValue) {
+                            int index = dateFormat.findIndexOfValue((String) newValue);
+                            dateFormat.setSummary(dateFormat.getEntries()[index]);
+                            LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                            return true;
+                        }
+                    });
+                    return true;
+
+                case Utilities.DATE_STYLE_FONT:
+                    ListPreference dateFont = (ListPreference) findPreference(Utilities.DATE_STYLE_FONT);
+                    dateFont.setSummary(dateFont.getEntry());
+                    dateFont.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                        public boolean onPreferenceChange(Preference preference, Object newValue) {
+                            int index = dateFont.findIndexOfValue((String) newValue);
+                            dateFont.setSummary(dateFont.getEntries()[index]);
+                            LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                            return true;
+                        }
+                    });
+                    return true;
             }
             return true;
         }
