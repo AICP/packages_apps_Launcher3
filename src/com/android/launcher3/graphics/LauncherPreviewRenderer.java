@@ -259,6 +259,7 @@ public class LauncherPreviewRenderer implements Callable<Bitmap> {
                 inflateAndAddIcon(info);
             }
 
+/*
             // Add first page QSB
             if (FeatureFlags.QSB_ON_FIRST_SCREEN) {
                 View qsb = mHomeElementInflater.inflate(
@@ -268,7 +269,7 @@ public class LauncherPreviewRenderer implements Callable<Bitmap> {
                 lp.canReorder = false;
                 mWorkspace.addViewToCellLayout(qsb, 0, R.id.search_container_workspace, lp, true);
             }
-
+*/
             // Setup search view
             SearchUiManager searchUiManager =
                     mRootView.findViewById(R.id.search_container_all_apps);
