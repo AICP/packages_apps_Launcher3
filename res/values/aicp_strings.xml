@@ -18,4 +18,9 @@
 
     <!-- Follow system theme -->
     <string name="theme_style_system">Follow system</string>
+
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">At A Glance</string>
+    <string name="show_quickspace_summary">Show at the top of your Home screen</string>
+    <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
 </resources>
