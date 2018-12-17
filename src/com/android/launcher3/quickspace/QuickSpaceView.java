@@ -38,10 +38,14 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.android.launcher3.quickspace.views.DateTextView;
+import com.android.launcher3.quickspace.receivers.QuickSpaceActionReceiver;
 
 import com.android.internal.util.aicp.OmniJawsClient;
 import com.android.launcher3.BubbleTextView;
 import com.android.launcher3.ItemInfo;
+import com.android.launcher3.Launcher;
+import com.android.launcher3.LauncherAppState;
+import com.android.launcher3.LauncherTab;
 import com.android.launcher3.R;
 
 public class QuickSpaceView extends FrameLayout implements ValueAnimator.AnimatorUpdateListener,
@@ -66,6 +70,8 @@ public class QuickSpaceView extends FrameLayout implements ValueAnimator.Animato
     private OmniJawsClient.PackageInfo mPackageInfo;
     private WeatherSettingsObserver mWeatherSettingsObserver;
 
+    private QuickSpaceActionReceiver mActionReceiver;
+
     public QuickSpaceView(Context context, AttributeSet set) {
         super(context, set);
         mHandler = new Handler();
@@ -77,6 +83,8 @@ public class QuickSpaceView extends FrameLayout implements ValueAnimator.Animato
             mWeatherClient.addSettingsObserver();
             mWeatherClient.addObserver(this);
         }
+
+        mActionReceiver = new QuickSpaceActionReceiver(context);
     }
 
     private void initListeners() {
@@ -85,6 +93,9 @@ public class QuickSpaceView extends FrameLayout implements ValueAnimator.Animato
 
     private void loadSingleLine() {
         setBackgroundResource(0);
+        boolean hasGoogleApp = LauncherAppState.getInstanceNoCreate().isSearchAppAvailable();
+        boolean hasGoogleCalendar = LauncherAppState.getInstanceNoCreate().isCalendarAppAvailable();
+        mClockView.setOnClickListener(hasGoogleCalendar ? mActionReceiver.getCalendarAction() : null);
         if (!mWeatherClient.isOmniJawsEnabled()) {
             mWeatherContent.setVisibility(View.GONE);
             mSeparator.setVisibility(View.GONE);
@@ -103,6 +114,7 @@ public class QuickSpaceView extends FrameLayout implements ValueAnimator.Animato
         mSeparator.setVisibility(View.VISIBLE);
         mWeatherContent.setVisibility(View.VISIBLE);
         mWeatherTemp.setText(temperatureText);
+        mWeatherTemp.setOnClickListener(hasGoogleApp ? mActionReceiver.getWeatherAction() : null);
         mWeatherIcon.setImageIcon(conditionIcon);
     }
 
