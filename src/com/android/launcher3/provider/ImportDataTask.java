@@ -41,6 +41,7 @@ import com.android.launcher3.LauncherProvider;
 import com.android.launcher3.LauncherSettings;
 import com.android.launcher3.LauncherSettings.Favorites;
 import com.android.launcher3.LauncherSettings.Settings;
+import com.android.launcher3.Utilities;
 import com.android.launcher3.Workspace;
 import com.android.launcher3.config.FeatureFlags;
 import com.android.launcher3.logging.FileLog;
@@ -54,7 +55,6 @@ import com.android.launcher3.util.PackageManagerHelper;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.HashSet;
-import com.android.launcher3.Utilities;
 
 /**
  * Utility class to import data from another Launcher which is based on Launcher3 schema.
@@ -105,7 +105,7 @@ public class ImportDataTask {
                 .getSerialNumberForUser(Process.myUserHandle()));
 
         boolean createEmptyRowOnFirstScreen;
-        if (Utilities.showQSB(mContext)) {
+        if (Utilities.showQuickspace(mContext)) {
             try (Cursor c = mContext.getContentResolver().query(mOtherFavoritesUri, null,
                     // get items on the first row of the first screen (min screen id)
                     "profileId = ? AND container = -100 AND cellY = 0 AND screen = " +
