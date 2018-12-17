@@ -1024,14 +1024,6 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
             resumeCallbacks.clear();
         }
 
-        if (mQuickSpace != null) {
-            mQuickSpace.onResume();
-        }
-
-        if (mFeedIntegrationEnabled) {
-            mClient.onResume();
-        }
-
         if (mLauncherCallbacks != null) {
             mLauncherCallbacks.onResume();
         }
@@ -1050,8 +1042,8 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         mDragController.resetLastGestureUpTime();
         mDropTargetBar.animateToVisibility(false);
 
-        if (mFeedIntegrationEnabled) {
-            mClient.onPause();
+        if (mQuickSpace != null) {
+            mQuickSpace.onPause();
         }
 
         if (mLauncherCallbacks != null) {
