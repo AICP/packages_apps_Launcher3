@@ -24,6 +24,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.LauncherApps;
+import android.content.pm.PackageManager;
 import android.os.Handler;
 import android.util.Log;
 
@@ -72,6 +73,7 @@ public class LauncherAppState {
     private boolean mIsSearchAppAvailable;
     private HomeKeyWatcher mHomeKeyListener = null;
     private boolean mNeedsRestart;
+    private boolean mIsCalendarAppAvailable;
 
     public static LauncherAppState getInstance(final Context context) {
         return INSTANCE.get(context);
@@ -243,5 +245,17 @@ public class LauncherAppState {
 
     public boolean isSearchAppAvailable() {
         return mIsSearchAppAvailable;
+    }
+
+    public static boolean isGSAEnabled(Context context) {
+        try {
+            return context.getPackageManager().getApplicationInfo("com.google.android.calendar", 0).enabled;
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
+    }
+
+    public boolean isCalendarAppAvailable() {
+        return mIsCalendarAppAvailable;
     }
 }

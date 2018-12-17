@@ -114,10 +114,11 @@ public class SettingsActivity extends Activity
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
         } else if (Utilities.KEY_DT_GESTURE.equals(key)) {
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
-        } else  if (Utilities.KEY_NOTIFICATION_GESTURE.equals(key)) {
+        } else if (Utilities.KEY_NOTIFICATION_GESTURE.equals(key)) {
+                LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+        } else if (Utilities.DESKTOP_SHOW_QUICKSPACE.equals(key)) {
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
         }
-
     }
 
     public interface OnResumePreferenceCallback {
