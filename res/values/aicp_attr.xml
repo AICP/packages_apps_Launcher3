@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-/*
-**
-** Copyright 2008, The Android Open Source Project
-** Copyright 2019, AICP
+/* Copyright 2018, CypherOS
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -18,16 +15,11 @@
 ** limitations under the License.
 */
 -->
-<resources>
 
-    <!-- QuickSpace -->
-    <style name="QuickSpaceText">
-        <item name="android:fontFamily">sans-serif</item>
-    </style>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- QSB -->
-    <style name="HotseatQsbTheme">
-        <item name="gIcon">@drawable/ic_super_g_color</item>
-        <item name="micIcon">@drawable/ic_poodle_color</item>
-    </style>
+    <attr name="gIcon" format="reference" />
+    <attr name="micIcon" format="reference" />
+
 </resources>

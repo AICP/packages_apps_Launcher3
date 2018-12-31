@@ -32,4 +32,9 @@
     <string name="date_format_long" translatable="false">EEEE, MMMM d</string>
     <string name="date_format_normal" translatable="false">EEEE, MMM d</string>
     <string name="date_format_short" translatable="false">EEE, MMM d</string>
+
+    <!-- QSB -->
+    <string name="hotseat_qsb_preferences">Preferences</string>
+    <string name="label_search">Search</string>
+    <string name="label_voice_search">Voice search</string>
 </resources>
