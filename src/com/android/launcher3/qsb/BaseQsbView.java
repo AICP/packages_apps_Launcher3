@@ -62,6 +62,8 @@ import com.android.launcher3.uioverrides.WallpaperColorInfo;
 import com.android.launcher3.util.Themes;
 import com.android.launcher3.util.TransformingTouchDelegate;
 
+import com.android.internal.util.aicp.PackageUtils;
+
 public abstract class BaseQsbView extends FrameLayout implements OnClickListener, OnLongClickListener, Insettable, WallpaperColorInfo.OnChangeListener {
 
     public static final Rect mSrcRect = new Rect();
@@ -174,9 +176,10 @@ public abstract class BaseQsbView extends FrameLayout implements OnClickListener
     }
 
     public void loadMicViews() {
+        boolean hasGsa = PackageUtils.isPackageInstalled(getContext(), LauncherCallbacks.SEARCH_PACKAGE);
         mMicIconView = (ImageView) findViewById(R.id.mic_icon);
-        mMicIconView.setOnClickListener(this);
-        mMicIconView.setVisibility(View.VISIBLE);
+        mMicIconView.setOnClickListener(hasGsa ? this : null);
+        mMicIconView.setVisibility(hasGsa ? View.VISIBLE : View.GONE);
         setTouchDelegate(mQsbDelegate);
         requestLayout();
     }
