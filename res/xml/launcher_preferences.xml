@@ -71,7 +71,7 @@
         android:summary="@string/pref_show_google_now_summary"
         android:title="@string/title_show_google_app"/>
 
-<!--    <androidx.preference.PreferenceScreen
+<!-- <androidx.preference.PreferenceScreen
         android:key="pref_developer_options"
         android:persistent="false"
         android:title="@string/developer_options_title"
@@ -94,5 +94,9 @@
         android:title="@string/dock_search_title"
         android:summary="@string/dock_search_summary"
         android:defaultValue="true" />
+
+    <Preference
+        android:key="pref_trust_apps"
+        android:title="@string/trust_apps_manager_name" />
 
 </androidx.preference.PreferenceScreen>
