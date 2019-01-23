@@ -119,8 +119,4 @@
         android:defaultValue="100"
         android:dependency="pref_dock_search" />
 
-    <Preference
-        android:key="pref_trust_apps"
-        android:title="@string/trust_apps_manager_name" />
-
 </androidx.preference.PreferenceScreen>
