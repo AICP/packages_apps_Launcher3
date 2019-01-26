@@ -21,6 +21,13 @@
         android:defaultValue="true"
         android:persistent="true" />
 
+    <SwitchPreference
+        android:key="pref_allapps_long_labels"
+        android:title="@string/allapps_long_labels_title"
+        android:summary="@string/allapps_long_labels_summary"
+        android:persistent="true"
+        android:defaultValue="false" />
+
     <ListPreference
         android:key="pref_override_icon_shape"
         android:title="@string/icon_shape_override_label"

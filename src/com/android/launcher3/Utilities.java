@@ -142,6 +142,11 @@ public final class Utilities {
     public static final String ALLAPPS_SHOW_LABEL = "pref_allapps_show_label";
     public static final String ICON_SIZE = "pref_icon_size";
     public static final String PREF_NOTIFICATIONS_GESTURE = "pref_notifications_gesture";
+    public static final String PREF_ALLAPPS_LONG_LABELS = "pref_allapps_long_labels";
+
+    public static boolean showAllAppsLongLabels(Context context) {
+        return getPrefs(context).getBoolean(PREF_ALLAPPS_LONG_LABELS, false);
+    }
 
     public static boolean useNotificationsGesture(Context context) {
         return getPrefs(context).getBoolean(PREF_NOTIFICATIONS_GESTURE, true);
