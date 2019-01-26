@@ -7,6 +7,7 @@
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Lock desktop</string>
     <string name="lock_desktop_summary">Prevent Home screen from being modified</string>
+    <string name="lock_desktop_toast">Desktop is locked. Unlock it to proceed.</string>
 
     <!-- AE theming link -->
     <string name="ae_theming_title">System design</string>
