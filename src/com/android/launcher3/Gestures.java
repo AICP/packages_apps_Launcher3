@@ -109,20 +109,10 @@ public class Gestures extends SettingsActivity
         public boolean onPreferenceChange(Preference preference, final Object newValue) {
             switch (preference.getKey()) {
                 case KEY_HOMESCREEN_DT_GESTURES:
-                    String dtGestureValue = (String) newValue;
-                    getDevicePrefs(mContext).edit().putString(KEY_HOMESCREEN_DT_GESTURES,
-                        dtGestureValue).commit();
-                    mDoubleTapGestures.setValue(dtGestureValue);
-                    mDoubleTapGestures.setSummary(mDoubleTapGestures.getEntry());
-                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                    handlePreferenceChange(mDoubleTapGestures, KEY_HOMESCREEN_DT_GESTURES, (String) newValue, true);
                     break;
                 case KEY_HOMESCREEN_SWIPE_DOWN_GESTURES:
-                    String swipeDownGestureValue = (String) newValue;
-                    getDevicePrefs(mContext).edit().putString(KEY_HOMESCREEN_SWIPE_DOWN_GESTURES,
-                        swipeDownGestureValue).commit();
-                    mSwipeDownGestures.setValue(swipeDownGestureValue);
-                    mSwipeDownGestures.setSummary(mSwipeDownGestures.getEntry());
-                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                    handlePreferenceChange(mSwipeDownGestures, KEY_HOMESCREEN_SWIPE_DOWN_GESTURES, (String) newValue, true);
                     break;
             }
             return false;
@@ -131,6 +121,14 @@ public class Gestures extends SettingsActivity
         @Override
         public boolean onPreferenceClick(Preference preference) {
             return false;
+        }
+
+        private void handlePreferenceChange(final ListPreference pref, final String prefKey,
+                                            final String value, final boolean needsRestart) {
+            getDevicePrefs(mContext).edit().putString(prefKey, value).commit();
+            pref.setValue(value);
+            pref.setSummary(pref.getEntry());
+            if (needsRestart) LauncherAppState.getInstanceNoCreate().setNeedsRestart();
         }
     }
 
