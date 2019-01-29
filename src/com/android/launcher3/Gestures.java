@@ -36,6 +36,8 @@ public class Gestures extends SettingsActivity
     public static final String KEY_HOMESCREEN_DT_GESTURES = "pref_homescreen_dt_gestures";
     public static final String KEY_HOMESCREEN_SWIPE_DOWN_GESTURES =
         "pref_homescreen_swipe_down_gestures";
+    public static final String KEY_HOMESCREEN_SWIPE_UP_GESTURES =
+        "pref_homescreen_swipe_up_gestures";
 
     @Override
     protected void onCreate(final Bundle bundle) {
@@ -69,6 +71,7 @@ public class Gestures extends SettingsActivity
 
         private ListPreference mDoubleTapGestures;
         private ListPreference mSwipeDownGestures;
+        private ListPreference mSwipeUpGestures;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -93,6 +96,12 @@ public class Gestures extends SettingsActivity
                 KEY_HOMESCREEN_SWIPE_DOWN_GESTURES, "8"));
             mSwipeDownGestures.setSummary(mSwipeDownGestures.getEntry());
             mSwipeDownGestures.setOnPreferenceChangeListener(this);
+
+            mSwipeUpGestures = (ListPreference) findPreference(KEY_HOMESCREEN_SWIPE_UP_GESTURES);
+            mSwipeUpGestures.setValue(getDevicePrefs(mContext).getString(
+                KEY_HOMESCREEN_SWIPE_UP_GESTURES, "10"));
+            mSwipeUpGestures.setSummary(mSwipeUpGestures.getEntry());
+            mSwipeUpGestures.setOnPreferenceChangeListener(this);
         }
 
         @Override
@@ -113,6 +122,9 @@ public class Gestures extends SettingsActivity
                     break;
                 case KEY_HOMESCREEN_SWIPE_DOWN_GESTURES:
                     handlePreferenceChange(mSwipeDownGestures, KEY_HOMESCREEN_SWIPE_DOWN_GESTURES, (String) newValue, true);
+                    break;
+                case KEY_HOMESCREEN_SWIPE_UP_GESTURES:
+                    handlePreferenceChange(mSwipeUpGestures, KEY_HOMESCREEN_SWIPE_UP_GESTURES, (String) newValue, true);
                     break;
             }
             return false;

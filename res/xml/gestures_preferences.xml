@@ -17,6 +17,14 @@
         android:defaultValue="8"
         android:persistent="false" />
 
+    <ListPreference
+        android:key="pref_homescreen_swipe_up_gestures"
+        android:title="@string/pref_homescreen_swipe_up_gestures_title"
+        android:entries="@array/pref_homescreen_gestures_names"
+        android:entryValues="@array/pref_homescreen_gestures_values"
+        android:defaultValue="10"
+        android:persistent="false" />
+
     <PreferenceCategory
         android:title="@string/gestures_other_category_title">
 

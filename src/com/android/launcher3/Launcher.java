@@ -257,6 +257,8 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
     private static final String KEY_HOMESCREEN_DT_GESTURES = "pref_homescreen_dt_gestures";
     private static final String KEY_HOMESCREEN_SWIPE_DOWN_GESTURES =
         "pref_homescreen_swipe_down_gestures";
+    private static final String KEY_HOMESCREEN_SWIPE_UP_GESTURES =
+        "pref_homescreen_swipe_up_gestures";
 
     private final Handler mHandler = new Handler();
     private final Runnable mLogOnDelayedResume = this::logOnDelayedResume;
@@ -2583,6 +2585,11 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
             mWorkspace.setSwipeDownGestures(
                 Integer.valueOf(sharedPreferences.getString(
                 "KEY_HOMESCREEN_SWIPE_DOWN_GESTURES", "8")));
+        }
+        if (KEY_HOMESCREEN_SWIPE_UP_GESTURES.equals(key)) {
+            mWorkspace.setSwipeUpGestures(
+                Integer.valueOf(sharedPreferences.getString(
+                "KEY_HOMESCREEN_SWIPE_UP_GESTURES", "10")));
         }
     }
 }

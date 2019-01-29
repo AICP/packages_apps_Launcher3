@@ -258,6 +258,7 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
     private GestureDetector mGestureListener;
     private int mDoubleGestureMode;
     private int mSwipeDownGestureMode;
+    private int mSwipeUpGestureMode;
 
     private static final int SCREEN_RECORD_HIGH_QUALITY = WindowManager.SCREEN_RECORD_HIGH_QUALITY;
 
@@ -299,6 +300,8 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
                 getDevicePrefs(getContext()).getString("pref_homescreen_dt_gestures", "0"));
         mSwipeDownGestureMode = Integer.valueOf(
                 getDevicePrefs(getContext()).getString("pref_homescreen_swipe_down_gestures", "8"));
+        mSwipeUpGestureMode = Integer.valueOf(
+                getDevicePrefs(getContext()).getString("pref_homescreen_swipe_up_gestures", "10"));
         mGestureListener =
                 new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
             @Override
@@ -321,6 +324,9 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
                             // Swipe down gestures
                             Gestures(e1, mSwipeDownGestureMode);
                         }
+                    } else if (e1.getY() - e2.getY() > 100/*min distance*/) {
+                           // Swipe up gestures
+                           Gestures(e1, mSwipeUpGestureMode);
                     }
                 } catch (Exception e) {
 
@@ -364,6 +370,9 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
             case 9: // QS panel
                 AicpUtils.toggleQsPanel();
                 break;
+            case 10: // Open drawer
+                launchAllApps();
+                break;
         }
     }
 
@@ -373,6 +382,10 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
 
     public void setSwipeDownGestures(int mode) {
         mSwipeDownGestureMode = mode;
+    }
+
+    public void setSwipeUpGestures(int mode) {
+        mSwipeUpGestureMode = mode;
     }
 
     public boolean checkCustomGestures(MotionEvent ev) {
@@ -3576,5 +3589,10 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
             Toast.makeText(context, R.string.pref_homescreen_dt_gestures_google_toast,
                     Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void launchAllApps() {
+        if (mLauncher != null)
+            mLauncher.getStateManager().goToState(ALL_APPS);
     }
 }
