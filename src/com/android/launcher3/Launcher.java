@@ -2528,6 +2528,7 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
                     client.getEventInfo().parse("setClientOptions ", client.mFlags);
                 }
             }
+            LauncherAppState.getInstanceNoCreate().setNeedsRestart();
         }
         if (KEY_HOMESCREEN_DT_GESTURES.equals(key)) {
             mWorkspace.setGestures(Integer.valueOf(sharedPreferences.getString("KEY_HOMESCREEN_DT_GESTURES", "0")));
