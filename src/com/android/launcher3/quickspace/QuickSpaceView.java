@@ -97,6 +97,7 @@ public class QuickSpaceView extends FrameLayout implements ValueAnimator.Animato
         boolean hasGoogleApp = LauncherAppState.getInstanceNoCreate().isSearchAppAvailable();
         boolean hasGoogleCalendar = LauncherAppState.getInstanceNoCreate().isCalendarAppAvailable();
         mClockView.setOnClickListener(hasGoogleCalendar ? mActionReceiver.getCalendarAction() : null);
+        mClockView.reloadDateFormat();
         if (!mWeatherClient.isOmniJawsEnabled()) {
             mWeatherContent.setVisibility(View.GONE);
             mSeparator.setVisibility(View.GONE);
