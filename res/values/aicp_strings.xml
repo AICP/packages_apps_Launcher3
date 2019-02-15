@@ -4,12 +4,7 @@
 
     <string name="icon_shape_hexagon">Hexagon</string>
 
-    <!-- Icon labels -->
-    <string name="allapps_long_labels_title">Long app labels</string>
-    <string name="allapps_long_labels_summary">Allows apps to display labels using two lines</string>
-
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Lock desktop</string>
     <string name="lock_desktop_summary">Prevent the homescreen from being modified</string>
-
 </resources>

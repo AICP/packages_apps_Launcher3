@@ -32,7 +32,6 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceFragment;
-import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.view.MenuItem;
 
@@ -140,15 +139,6 @@ public class UserInterface extends SettingsActivity implements PreferenceFragmen
                     String newValue = (String) o;
                     int valueIndex = mThemeStyle.findIndexOfValue(newValue);
                     mThemeStyle.setSummary(mThemeStyle.getEntries()[valueIndex]);
-                    return true;
-                }
-            });
-
-            SwitchPreference allAppsLongLabels = (SwitchPreference) findPreference(
-                    Utilities.PREF_ALLAPPS_LONG_LABELS);
-            allAppsLongLabels.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
-                public boolean onPreferenceChange(Preference preference, Object newValue) {
-                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                     return true;
                 }
             });
