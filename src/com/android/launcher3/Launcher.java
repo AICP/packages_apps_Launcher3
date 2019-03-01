@@ -2539,7 +2539,7 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         if (KEY_HOMESCREEN_SWIPE_DOWN_GESTURES.equals(key)) {
             mWorkspace.setSwipeDownGestures(
                 Integer.valueOf(sharedPreferences.getString(
-                "KEY_HOMESCREEN_SWIPE_DOWN_GESTURES", "7")));
+                "KEY_HOMESCREEN_SWIPE_DOWN_GESTURES", "8")));
         }
     }
 }

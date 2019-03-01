@@ -63,6 +63,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="pref_homescreen_gestures_volume_panel">Volume panel</string>
     <string name="pref_homescreen_gestures_clear_notifications">Clear notifications</string>
     <string name="pref_homescreen_gestures_screenshot">Screenshot</string>
+    <string name="pref_homescreen_gestures_screenrecord">Screenrecord</string>
     <string name="pref_homescreen_gestures_notifications">Notifications</string>
     <string name="pref_homescreen_gestures_qs_panel">QS panel</string>
 

@@ -90,7 +90,7 @@ public class Gestures extends SettingsActivity
 
             mSwipeDownGestures = (ListPreference) findPreference(KEY_HOMESCREEN_SWIPE_DOWN_GESTURES);
             mSwipeDownGestures.setValue(getDevicePrefs(mContext).getString(
-                KEY_HOMESCREEN_SWIPE_DOWN_GESTURES, "7"));
+                KEY_HOMESCREEN_SWIPE_DOWN_GESTURES, "8"));
             mSwipeDownGestures.setSummary(mSwipeDownGestures.getEntry());
             mSwipeDownGestures.setOnPreferenceChangeListener(this);
         }
