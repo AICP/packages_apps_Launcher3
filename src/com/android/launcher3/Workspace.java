@@ -56,6 +56,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.android.internal.util.aicp.AicpUtils;
@@ -258,6 +259,8 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
     private int mDoubleGestureMode;
     private int mSwipeDownGestureMode;
 
+    private static final int SCREEN_RECORD_HIGH_QUALITY = WindowManager.SCREEN_RECORD_HIGH_QUALITY;
+
     /**
      * Used to inflate the Workspace from XML.
      *
@@ -352,10 +355,13 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
             case 6: // Screenshot
                 AicpUtils.takeScreenshot(true);
                 break;
-            case 7: // Notifications
+            case 7: // Screenrecord
+                AicpUtils.takeScreenrecord(SCREEN_RECORD_HIGH_QUALITY);
+                break;
+            case 8: // Notifications
                 AicpUtils.toggleNotifications();
                 break;
-            case 8: // QS panel
+            case 9: // QS panel
                 AicpUtils.toggleQsPanel();
                 break;
         }

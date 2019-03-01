@@ -61,9 +61,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>3</item>
         <item>4</item>
         <item>5</item>
-        <item>6</item>
         <item>7</item>
         <item>8</item>
+        <item>9</item>
     </string-array>
 
     <string-array name="pref_homescreen_gestures_names">
@@ -73,7 +73,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>@string/pref_homescreen_gestures_google</item>
         <item>@string/pref_homescreen_gestures_volume_panel</item>
         <item>@string/pref_homescreen_gestures_clear_notifications</item>
-        <item>@string/pref_homescreen_gestures_screenshot</item>
+        <item>@string/pref_homescreen_gestures_screenrecord</item>
         <item>@string/pref_homescreen_gestures_notifications</item>
         <item>@string/pref_homescreen_gestures_qs_panel</item>
     </string-array>
