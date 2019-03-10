@@ -298,7 +298,7 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
         mDoubleGestureMode = Integer.valueOf(
                 getDevicePrefs(getContext()).getString("pref_homescreen_dt_gestures", "0"));
         mSwipeDownGestureMode = Integer.valueOf(
-                getDevicePrefs(getContext()).getString("pref_homescreen_swipe_down_gestures", "7"));
+                getDevicePrefs(getContext()).getString("pref_homescreen_swipe_down_gestures", "8"));
         mGestureListener =
                 new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
             @Override
