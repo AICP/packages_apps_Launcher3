@@ -13,6 +13,9 @@
 # limitations under the License.
 #
 
+# AICP does not need test targets
+ifeq (0,)
+
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
@@ -30,3 +33,5 @@ LOCAL_PACKAGE_NAME := Launcher3Tests
 LOCAL_INSTRUMENTATION_FOR := Launcher3
 
 include $(BUILD_PACKAGE)
+
+endif
