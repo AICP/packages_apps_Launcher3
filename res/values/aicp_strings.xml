@@ -7,4 +7,9 @@
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Lock desktop</string>
     <string name="lock_desktop_summary">Prevent the homescreen from being modified</string>
+
+    <!-- AE theming link -->
+    <string name="ae_theming_title">System design</string>
+    <string name="ae_theming_summary">System-wide appearance settings</string>
+
 </resources>

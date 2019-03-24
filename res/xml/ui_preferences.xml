@@ -21,6 +21,7 @@
         android:defaultValue="true"
         android:persistent="true" />
 
+<!-- Overwritten by system setting.
     <ListPreference
         android:key="pref_override_icon_shape"
         android:title="@string/icon_shape_override_label"
@@ -29,6 +30,7 @@
         android:entryValues="@array/icon_shape_override_paths_values"
         android:defaultValue=""
         android:persistent="false" />
+-->
 
     <ListPreference
         android:key="pref_icon_size"
@@ -46,5 +48,16 @@
         android:entries="@array/theme_style_entries"
         android:entryValues="@array/theme_style_values"
         android:defaultValue="0" />
+
+    <Preference
+        android:title="@string/ae_theming_title"
+        android:summary="@string/ae_theming_summary">
+        <intent android:action="android.intent.action.VIEW"
+            android:targetPackage="com.aicp.extras"
+            android:targetClass="com.aicp.extras.SubSettingsActivity">
+            <extra android:name=":android:show_fragment"
+                android:value="com.aicp.extras.fragments.Theming" />
+        </intent>
+    </Preference>
 
 </PreferenceScreen>

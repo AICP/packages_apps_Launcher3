@@ -24,8 +24,10 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.drawable.AdaptiveIconDrawable;
 import android.os.Build;
 import android.os.SystemClock;
+import android.os.SystemProperties;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -51,6 +53,8 @@ public class IconShapeOverride {
     private static final String TAG = "IconShapeOverride";
 
     public static final String KEY_PREFERENCE = "pref_override_icon_shape";
+
+    private static final String KEY_CACHED_SYSTEM = "cached_system_shape";
 
     // Time to wait before killing the process this ensures that the progress bar is visible for
     // sufficient time so that there is no flicker.
@@ -82,6 +86,10 @@ public class IconShapeOverride {
     }
 
     public static void apply(Context context) {
+        if (true) {
+            // Launcher icon shapes disabled in favor of system wide setting. ~AICP
+            return;
+        }
         if (!Utilities.ATLEAST_OREO) {
             return;
         }
@@ -208,6 +216,17 @@ public class IconShapeOverride {
 
             // Kill process
             android.os.Process.killProcess(android.os.Process.myPid());
+        }
+    }
+
+    public static void initialize(Context context) {
+        int lastApplied = getDevicePrefs(context).getInt(KEY_CACHED_SYSTEM, -1);
+        int systemSetting = SystemProperties.getInt(AdaptiveIconDrawable.MASK_SETTING_PROP, 0);
+        if (lastApplied != systemSetting) {
+            // Clear the icon cache.
+            LauncherAppState.getInstance(context).getIconCache().clear();
+            // Remember what shape our cache uses.
+            getDevicePrefs(context).edit().putInt(KEY_CACHED_SYSTEM, systemSetting).apply();
         }
     }
 }
