@@ -49,7 +49,6 @@ import java.util.Objects;
 public class UserInterface extends SettingsActivity implements PreferenceFragment.OnPreferenceStartFragmentCallback {
 
     private static final String ICON_BADGING_PREFERENCE_KEY = "pref_icon_badging";
-    public static final String PREF_THEME_STYLE_KEY = "pref_theme_style";
 
     /** Hidden field Settings.Secure.NOTIFICATION_BADGING */
     public static final String NOTIFICATION_BADGING = "notification_badging";
@@ -80,8 +79,6 @@ public class UserInterface extends SettingsActivity implements PreferenceFragmen
             implements Preference.OnPreferenceChangeListener, Preference.OnPreferenceClickListener {
 
         ActionBar actionBar;
-
-        private ListPreference mThemeStyle;
 
         private IconBadgingObserver mIconBadgingObserver;
 
@@ -132,14 +129,15 @@ public class UserInterface extends SettingsActivity implements PreferenceFragmen
                 }
             });
 
-            mThemeStyle = (ListPreference) findPreference(PREF_THEME_STYLE_KEY);
-            mThemeStyle.setSummary(mThemeStyle.getEntry());
-            mThemeStyle.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+            final ListPreference themeStyle = (ListPreference) findPreference(Utilities.THEME_STYLE_KEY);
+            themeStyle.setSummary(themeStyle.getEntry());
+            themeStyle.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
                 @Override
                 public boolean onPreferenceChange(Preference preference, Object o) {
                     String newValue = (String) o;
-                    int valueIndex = mThemeStyle.findIndexOfValue(newValue);
-                    mThemeStyle.setSummary(mThemeStyle.getEntries()[valueIndex]);
+                    int valueIndex = themeStyle.findIndexOfValue(newValue);
+                    themeStyle.setSummary(themeStyle.getEntries()[valueIndex]);
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                     return true;
                 }
             });

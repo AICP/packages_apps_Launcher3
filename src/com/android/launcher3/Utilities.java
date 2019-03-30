@@ -141,6 +141,7 @@ public final class Utilities {
     public static final String DESKTOP_SHOW_LABEL = "pref_desktop_show_label";
     public static final String ALLAPPS_SHOW_LABEL = "pref_allapps_show_label";
     public static final String APPS_ALWAYS_SHOW_LABEL = "pref_apps_always_show_label";
+    public static final String THEME_STYLE_KEY = "pref_theme_style";
     public static final String ICON_SIZE = "pref_icon_size";
     public static final String PREF_NOTIFICATIONS_GESTURE = "pref_notifications_gesture";
     public static final String LOCK_DESKTOP_KEY = "pref_lock_desktop";
