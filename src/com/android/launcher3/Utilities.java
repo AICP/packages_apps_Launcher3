@@ -140,6 +140,7 @@ public final class Utilities {
     public static final String HOTSEAT_ICONS = "pref_hotseat_icons";
     public static final String DESKTOP_SHOW_LABEL = "pref_desktop_show_label";
     public static final String ALLAPPS_SHOW_LABEL = "pref_allapps_show_label";
+    public static final String APPS_ALWAYS_SHOW_LABEL = "pref_apps_always_show_label";
     public static final String ICON_SIZE = "pref_icon_size";
     public static final String PREF_NOTIFICATIONS_GESTURE = "pref_notifications_gesture";
     public static final String LOCK_DESKTOP_KEY = "pref_lock_desktop";
@@ -161,6 +162,10 @@ public final class Utilities {
 
     public static boolean showAllAppsLabel(Context context) {
         return getPrefs(context).getBoolean(ALLAPPS_SHOW_LABEL, true);
+    }
+
+    public static boolean showAppLabelsAlways(Context context) {
+        return getPrefs(context).getBoolean(APPS_ALWAYS_SHOW_LABEL, false);
     }
 
     public static boolean isPropertyEnabled(String propertyName) {

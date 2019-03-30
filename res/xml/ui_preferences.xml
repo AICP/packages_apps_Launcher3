@@ -21,6 +21,13 @@
         android:defaultValue="true"
         android:persistent="true" />
 
+    <SwitchPreference
+        android:key="pref_apps_always_show_label"
+        android:title="@string/apps_always_show_label_title"
+        android:summary="@string/apps_always_show_label_summary"
+        android:defaultValue="false"
+        android:persistent="true" />
+
 <!-- Overwritten by system setting.
     <ListPreference
         android:key="pref_override_icon_shape"

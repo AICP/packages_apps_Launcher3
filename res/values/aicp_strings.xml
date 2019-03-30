@@ -12,4 +12,7 @@
     <string name="ae_theming_title">System design</string>
     <string name="ae_theming_summary">System-wide appearance settings</string>
 
+    <!-- Always how labels irrespective of orientation -->
+    <string name="apps_always_show_label_title">Ignore orientation for labels</string>
+    <string name="apps_always_show_label_summary">Always show app labels on homescreen and app drawer</string>
 </resources>
