@@ -21,11 +21,14 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
+import android.database.ContentObserver;
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.Process;
 import android.os.StrictMode;
 import android.os.UserHandle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.ActionMode;
 import android.view.Surface;
@@ -39,6 +42,8 @@ import com.android.launcher3.uioverrides.DisplayRotationListener;
 import com.android.launcher3.uioverrides.WallpaperColorInfo;
 import com.android.launcher3.shortcuts.DeepShortcutManager;
 import com.android.launcher3.views.BaseDragLayer;
+
+import com.aicp.gear.util.ThemeOverlayHelper;
 
 /**
  * Extension of BaseActivity allowing support for drag-n-drop
@@ -67,11 +72,30 @@ public abstract class BaseDraggingActivity extends BaseActivity
 
     protected int mThemeStyle;
 
+    private ContentObserver mSystemBaseThemeObserver = new ContentObserver(new Handler()) {
+        @Override
+        public void onChange(boolean selfChange) {
+            int baseTheme = Settings.System.getInt(getContentResolver(),
+                    Settings.System.THEMING_BASE, 0);
+            if (baseTheme == mSystemBaseTheme) {
+                // Changed, need to recreate to apply
+                recreate();
+            }
+        }
+    };
+    private int mSystemBaseTheme;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mIsSafeModeEnabled = getPackageManager().isSafeMode();
         mRotationListener = new DisplayRotationListener(this, this::onDeviceRotationChanged);
+
+        mSystemBaseTheme = Settings.System.getInt(getContentResolver(),
+                Settings.System.THEMING_BASE, 0);
+        getContentResolver().registerContentObserver(
+                Settings.System.getUriFor(Settings.System.THEMING_BASE), false,
+                mSystemBaseThemeObserver);
 
         // Update theme
         WallpaperColorInfo wallpaperColorInfo = WallpaperColorInfo.getInstance(this);
@@ -95,6 +119,12 @@ public abstract class BaseDraggingActivity extends BaseActivity
             return R.style.AppTheme;
         } else if (mThemeStyle == 2) {
             return R.style.AppTheme_Dark;
+        } else if (mThemeStyle == 3) {
+            if (ThemeOverlayHelper.isDarkBaseTheme(mSystemBaseTheme)) {
+                return R.style.AppTheme_Dark;
+            } else {
+                return R.style.AppTheme;
+            }
         } else {
             if (wallpaperColorInfo.isDark()) {
                 return wallpaperColorInfo.supportsDarkText() ?
@@ -250,6 +280,7 @@ public abstract class BaseDraggingActivity extends BaseActivity
         super.onDestroy();
         WallpaperColorInfo.getInstance(this).removeOnChangeListener(this);
         mRotationListener.disable();
+        getContentResolver().unregisterContentObserver(mSystemBaseThemeObserver);
     }
 
     public <T extends BaseDraggingActivity> void setOnStartCallback(OnStartCallback<T> callback) {

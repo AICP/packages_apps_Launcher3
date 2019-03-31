@@ -54,7 +54,7 @@
         android:persistent="true"
         android:entries="@array/theme_style_entries"
         android:entryValues="@array/theme_style_values"
-        android:defaultValue="0" />
+        android:defaultValue="3" />
 
     <Preference
         android:title="@string/ae_theming_title"
