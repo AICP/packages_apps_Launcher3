@@ -15,4 +15,7 @@
     <!-- Always how labels irrespective of orientation -->
     <string name="apps_always_show_label_title">Ignore orientation for labels</string>
     <string name="apps_always_show_label_summary">Always show app labels on homescreen and app drawer</string>
+
+    <!-- Follow system theme -->
+    <string name="theme_style_system">Follow system</string>
 </resources>

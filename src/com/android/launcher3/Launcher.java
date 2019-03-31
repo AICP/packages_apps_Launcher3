@@ -289,7 +289,7 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         }
         TraceHelper.beginSection("Launcher-onCreate");
         mSharedPrefs = Utilities.getPrefs(this);
-        mThemeStyle = Integer.parseInt(mSharedPrefs.getString(Utilities.THEME_STYLE_KEY, "0"));
+        mThemeStyle = Integer.parseInt(mSharedPrefs.getString(Utilities.THEME_STYLE_KEY, "3"));
 
         super.onCreate(savedInstanceState);
         TraceHelper.partitionSection("Launcher-onCreate", "super call");
@@ -2554,7 +2554,7 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         if (key.equals(Utilities.THEME_STYLE_KEY)) {
-            final int themeStyle = Integer.parseInt(sharedPreferences.getString(Utilities.THEME_STYLE_KEY, "0"));
+            final int themeStyle = Integer.parseInt(sharedPreferences.getString(Utilities.THEME_STYLE_KEY, "3"));
             if (themeStyle != mThemeStyle) {
                 mThemeStyle = themeStyle;
                 recreate();
