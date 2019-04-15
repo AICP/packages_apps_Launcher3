@@ -4,4 +4,9 @@
     <string name="icon_shape_hexagon">Шестиугольник</string>
     <string name="lock_desktop_title">Заблокировать рабочий стол</string>
     <string name="lock_desktop_summary">Запретить изменения домашнего экрана</string>
+    <string name="ae_theming_title">Системный дизайн</string>
+    <string name="ae_theming_summary">Настройки внешнего вида системы</string>
+    <string name="apps_always_show_label_title">Игнорировать ориентацию для подписей</string>
+    <string name="apps_always_show_label_summary">Всегда показывать подписи приложений на главном экране и в меню приложений</string>
+    <string name="theme_style_system">Как в системных настройках</string>
 </resources>

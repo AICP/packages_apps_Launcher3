@@ -4,4 +4,9 @@
     <string name="icon_shape_hexagon">Šestiúhelník</string>
     <string name="lock_desktop_title">Uzamčení pracovní plochy</string>
     <string name="lock_desktop_summary">Zabránit v úpravě domovské obrazovky</string>
+    <string name="ae_theming_title">Systémový design</string>
+    <string name="ae_theming_summary">Nastavení vzhledu celého systému</string>
+    <string name="apps_always_show_label_title">Ignorovat orientaci pro popisky</string>
+    <string name="apps_always_show_label_summary">Vždy zobrazit popisky aplikací na domovské obrazovce a v seznamu</string>
+    <string name="theme_style_system">Podle systému</string>
 </resources>

@@ -4,4 +4,9 @@
     <string name="icon_shape_hexagon">Hatszög</string>
     <string name="lock_desktop_title">Asztalzárolás</string>
     <string name="lock_desktop_summary">Megvédi a Kezdőképernyőt a módosítástól</string>
+    <string name="ae_theming_title">Rendszerdizájn</string>
+    <string name="ae_theming_summary">Az egész rendszerre kiterjedő megjelenési beállítások</string>
+    <string name="apps_always_show_label_title">A feliratok tájolásának mellőzése</string>
+    <string name="apps_always_show_label_summary">Az alkalmazásfeliratok állandó megjelenítése a kezdőképernyőn és az alkalmazásfiókban</string>
+    <string name="theme_style_system">Rendszertéma-követés</string>
 </resources>

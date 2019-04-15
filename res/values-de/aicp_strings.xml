@@ -4,4 +4,9 @@
     <string name="icon_shape_hexagon">Sechseck</string>
     <string name="lock_desktop_title">Desktop sperren</string>
     <string name="lock_desktop_summary">Verhindert Änderungen des Startbildschirms</string>
+    <string name="ae_theming_title">System-Design</string>
+    <string name="ae_theming_summary">Systemweite Einstellungen des Designs</string>
+    <string name="apps_always_show_label_title">Displayausrichtung für Beschriftungen ignorieren</string>
+    <string name="apps_always_show_label_summary">Immer die App-Beschriftung auf dem Startbildschirm und im App-Ordner zeigen</string>
+    <string name="theme_style_system">Dem System-Design folgen</string>
 </resources>

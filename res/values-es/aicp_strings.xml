@@ -4,4 +4,9 @@
     <string name="icon_shape_hexagon">Hexágono</string>
     <string name="lock_desktop_title">Bloquear escritorio</string>
     <string name="lock_desktop_summary">Evita que se modifique el escritorio</string>
+    <string name="ae_theming_title">Diseño del Sistema</string>
+    <string name="ae_theming_summary">Configuración de la apariencia de todo el sistema</string>
+    <string name="apps_always_show_label_title">Ignorar orientación para etiquetas</string>
+    <string name="apps_always_show_label_summary">Mostrar siempre etiquetas de aplicaciones en pantalla de inicio y en el cajón de aplicaciones</string>
+    <string name="theme_style_system">Siguen el sistema</string>
 </resources>
