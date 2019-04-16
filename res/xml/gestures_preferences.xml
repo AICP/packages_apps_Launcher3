@@ -14,7 +14,7 @@
         android:title="@string/pref_homescreen_swipe_down_gestures_title"
         android:entries="@array/pref_homescreen_gestures_names"
         android:entryValues="@array/pref_homescreen_gestures_values"
-        android:defaultValue="7"
+        android:defaultValue="8"
         android:persistent="false" />
 
     <PreferenceCategory
