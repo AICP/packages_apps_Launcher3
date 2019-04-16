@@ -4,4 +4,5 @@
     <string name="icon_shape_hexagon">Zeshoek</string>
     <string name="lock_desktop_title">Bureaublad vergrendelen</string>
     <string name="lock_desktop_summary">Voorkomen dat het startscherm wordt aangepast</string>
+    <string name="theme_style_system">Volg systeem</string>
 </resources>
