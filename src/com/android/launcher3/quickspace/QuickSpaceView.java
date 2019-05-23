@@ -69,6 +69,7 @@ public class QuickSpaceView extends FrameLayout implements ValueAnimator.Animato
     private OmniJawsClient.WeatherInfo mWeatherInfo;
     private OmniJawsClient.PackageInfo mPackageInfo;
     private WeatherSettingsObserver mWeatherSettingsObserver;
+    private boolean mUpdatesEnabled;
 
     private QuickSpaceActionReceiver mActionReceiver;
 
@@ -82,7 +83,6 @@ public class QuickSpaceView extends FrameLayout implements ValueAnimator.Animato
         if (mWeatherClient.isOmniJawsEnabled()) {
             mWeatherClient.addSettingsObserver();
             mWeatherClient.addObserver(this);
-            mWeatherInfo = mWeatherClient.getWeatherInfo();
         }
 
         mActionReceiver = new QuickSpaceActionReceiver(context);
@@ -146,6 +146,31 @@ public class QuickSpaceView extends FrameLayout implements ValueAnimator.Animato
             mQuickspaceContent.setVisibility(View.VISIBLE);
             mQuickspaceContent.setAlpha(0f);
             mQuickspaceContent.animate().setDuration(200L).alpha(1f);
+        }
+    }
+
+    public void enableUpdates() {
+        if (mUpdatesEnabled) {
+            return;
+        }
+        if (DEBUG) Log.d(TAG, "enableUpdates");
+        if (mWeatherClient.isOmniJawsEnabled()) {
+            mWeatherClient.addSettingsObserver();
+            mWeatherClient.addObserver(this);
+            queryAndUpdateWeather();
+            mUpdatesEnabled = true;
+        }
+    }
+
+    public void disableUpdates() {
+        if (!mUpdatesEnabled) {
+            return;
+        }
+        if (DEBUG) Log.d(TAG, "disableUpdates");
+        if (mWeatherClient != null) {
+            mWeatherClient.removeObserver(this);
+            mWeatherClient.cleanupObserver();
+            mUpdatesEnabled = false;
         }
     }
 
