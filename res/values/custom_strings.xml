@@ -38,6 +38,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- Sub categories -->
     <string name="home_grid_title">Grid layout</string>
+    <string name="home_quickspace_title">At A Glance</string>
+    <string name="home_hotseat_title">Hotseat</string>
+    <string name="home_looknfeel_title">Look \u0026 Feel</string>
 
     <!-- Icon shape -->
     <string name="icon_shape_rounded_square">Rounded square</string>
@@ -69,7 +72,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- Google Feed -->
     <string name="google_feed_title">Display Google app</string>
-    <string name="google_feed_summary">To the left of the main home screen</string>
+    <string name="google_feed_summary">To the left of Home screen</string>
 
     <!-- Grid -->
     <string name="num_default">Default</string>
@@ -90,11 +93,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- Show labels on icon -->
     <string name="app_show_label_title">App labels</string>
-    <string name="desktop_show_label_summary">Show the labels of apps on the home screen</string>
-    <string name="allapps_show_label_summary">Show the labels of apps in the app drawer</string>
+    <string name="desktop_show_label_summary">Show app labels on Home screen</string>
+    <string name="allapps_show_label_summary">Show app labels in app drawer</string>
 
     <!-- Show searchbar -->
     <string name="show_searchbar_title">Show search bar</string>
-    <string name="show_searchbar_summary">Show the search bar on the home screen</string>
+    <string name="show_searchbar_summary">Show search bar on Home screen</string>
 
 </resources>
