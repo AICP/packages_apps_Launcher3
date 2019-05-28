@@ -838,7 +838,6 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         DiscoveryBounce.showForHomeIfNeeded(this);
 
         if (mQuickSpace != null) {
-            mQuickSpace.enableUpdates();
             mQuickSpace.onResume();
         }
 
@@ -862,10 +861,6 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         super.onPause();
         mDragController.cancelDrag();
         mDragController.resetLastGestureUpTime();
-
-        if (mQuickSpace != null) {
-            mQuickSpace.disableUpdates();
-        }
 
         if (mFeedIntegrationEnabled) {
             mClient.onPause();
