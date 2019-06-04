@@ -4,4 +4,9 @@
     <string name="icon_shape_hexagon">六边形</string>
     <string name="lock_desktop_title">锁定桌面</string>
     <string name="lock_desktop_summary">防止主屏幕被修改</string>
+    <string name="ae_theming_title">系统设计</string>
+    <string name="ae_theming_summary">全系统外观设置</string>
+    <string name="apps_always_show_label_title">忽略标签方向</string>
+    <string name="apps_always_show_label_summary">主屏幕和应用抽屉上始终显示应用标签</string>
+    <string name="theme_style_system">跟随系统</string>
 </resources>
