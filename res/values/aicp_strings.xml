@@ -6,7 +6,7 @@
 
     <!-- Lock desktop -->
     <string name="lock_desktop_title">Lock desktop</string>
-    <string name="lock_desktop_summary">Prevent the homescreen from being modified</string>
+    <string name="lock_desktop_summary">Prevent Home screen from being modified</string>
 
     <!-- AE theming link -->
     <string name="ae_theming_title">System design</string>
@@ -14,8 +14,22 @@
 
     <!-- Always how labels irrespective of orientation -->
     <string name="apps_always_show_label_title">Ignore orientation for labels</string>
-    <string name="apps_always_show_label_summary">Always show app labels on homescreen and app drawer</string>
+    <string name="apps_always_show_label_summary">Always show app labels on Home screen and app drawer</string>
 
     <!-- Follow system theme -->
     <string name="theme_style_system">Follow system</string>
+
+    <!-- QuickSpace -->
+    <string name="show_quickspace_title">Show At A Glance</string>
+    <string name="show_quickspace_summary">Show on top of Home screen</string>
+    <string name="abbrev_wday_month_day_no_year">EEEEMMMd</string>
+
+    <!-- Date format -->
+    <string name="date_format_title">Date format</string>
+    <string name="date_format_long_name">Long</string>
+    <string name="date_format_normal_name">Normal</string>
+    <string name="date_format_short_name">Short</string>
+    <string name="date_format_long" translatable="false">EEEE, MMMM d</string>
+    <string name="date_format_normal" translatable="false">EEEE, MMM d</string>
+    <string name="date_format_short" translatable="false">EEE, MMM d</string>
 </resources>
