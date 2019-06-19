@@ -101,4 +101,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Quickspace alternative view -->
     <string name="quickspace_alternate_style_title">Use an alternative style</string>
     <string name="quickspace_alternate_style_summary">Use a minimalistic style for At a Glance</string>
+
+    <string-array translatable="false" name="welcome_message_variants">
+        <item>Thank you for choosing AICP</item>
+        <item>Loving us? Send us a beer</item>
+        <item>AICP FTW!</item>
+        <item>Have a great day</item>
+        <item>Happiness is a bottle of ice cold beer</item>
+        <item>Tap here to begin</item>
+        <item>We love you 3000</item>
+    </string-array>
 </resources>
