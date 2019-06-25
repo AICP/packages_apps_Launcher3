@@ -5,4 +5,8 @@
     <string name="lock_desktop_title">Kunci desktop</string>
     <string name="ae_theming_title">Desain sistem</string>
     <string name="theme_style_system">Ikuti setelan sistem</string>
+    <string name="date_format_title">Format tanggal</string>
+    <string name="date_format_long_name">Panjang</string>
+    <string name="date_format_normal_name">Normal</string>
+    <string name="date_format_short_name">Pendek</string>
 </resources>

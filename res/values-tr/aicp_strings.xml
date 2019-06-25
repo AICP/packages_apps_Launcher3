@@ -3,10 +3,16 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="icon_shape_hexagon">Altıgen</string>
     <string name="lock_desktop_title">Ana ekranı kilitle</string>
-    <string name="lock_desktop_summary">Giriş ekranının değiştirilmesini önle</string>
+    <string name="lock_desktop_summary">Ana ekranının değiştirilmesini önle</string>
     <string name="ae_theming_title">Sistem tasarımı</string>
     <string name="ae_theming_summary">Genel sistem görünüm ayarları</string>
     <string name="apps_always_show_label_title">Etiketler için yönlendirmeyi yoksay</string>
-    <string name="apps_always_show_label_summary">Uygulama etiketlerini her zaman ana ekranda ve uygulama çekmecesinde göster</string>
+    <string name="apps_always_show_label_summary">Uygulama etiketlerini her zaman Ana ekranda ve uygulama çekmecesinde göster</string>
     <string name="theme_style_system">Sistemi izle</string>
+    <string name="show_quickspace_title">Bir bakışta göster</string>
+    <string name="show_quickspace_summary">Ana ekranın üst kısmında göster</string>
+    <string name="date_format_title">Tarih biçimi</string>
+    <string name="date_format_long_name">Uzun</string>
+    <string name="date_format_normal_name">Normal</string>
+    <string name="date_format_short_name">Kısa</string>
 </resources>

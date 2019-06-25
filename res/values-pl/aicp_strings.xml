@@ -9,4 +9,10 @@
     <string name="apps_always_show_label_title">Ignoruj orientację dla etykiet</string>
     <string name="apps_always_show_label_summary">Zawsze pokazuj nazwy aplikacji na pulpicie oraz w szufladce aplikacji</string>
     <string name="theme_style_system">Śledź motyw systemu</string>
+    <string name="show_quickspace_title">Pokaż At A Glance</string>
+    <string name="show_quickspace_summary">Pokaż w górnej części ekranu</string>
+    <string name="date_format_title">Format daty</string>
+    <string name="date_format_long_name">Długo</string>
+    <string name="date_format_normal_name">Normalnie</string>
+    <string name="date_format_short_name">Krótko</string>
 </resources>

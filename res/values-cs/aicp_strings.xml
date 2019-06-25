@@ -9,4 +9,10 @@
     <string name="apps_always_show_label_title">Ignorovat orientaci pro popisky</string>
     <string name="apps_always_show_label_summary">Vždy zobrazit popisky aplikací na domovské obrazovce a v seznamu</string>
     <string name="theme_style_system">Podle systému</string>
+    <string name="show_quickspace_title">Zobrazit At A Glance</string>
+    <string name="show_quickspace_summary">Zobrazit nahoře domovské obrazovky</string>
+    <string name="date_format_title">Formát data</string>
+    <string name="date_format_long_name">Dlouhý</string>
+    <string name="date_format_normal_name">Normální</string>
+    <string name="date_format_short_name">Krátký</string>
 </resources>

@@ -9,4 +9,10 @@
     <string name="apps_always_show_label_title">تجاهل الاتجاه للتسميات</string>
     <string name="apps_always_show_label_summary">عرض تسميات التطبيق دائماً على الشاشة الرئيسية ودرج التطبيق</string>
     <string name="theme_style_system">اتباع النظام</string>
+    <string name="show_quickspace_title">عرض النظرة السريعة</string>
+    <string name="show_quickspace_summary">تظهر في الجزء العلوي من الشاشة الرئيسية</string>
+    <string name="date_format_title">تنسيق التاريخ</string>
+    <string name="date_format_long_name">طويل</string>
+    <string name="date_format_normal_name">عادي</string>
+    <string name="date_format_short_name">قصير</string>
 </resources>

@@ -9,4 +9,11 @@
     <string name="apps_always_show_label_title">A feliratok tájolásának mellőzése</string>
     <string name="apps_always_show_label_summary">Az alkalmazásfeliratok állandó megjelenítése a kezdőképernyőn és az alkalmazásfiókban</string>
     <string name="theme_style_system">Rendszertéma-követés</string>
+    <string name="show_quickspace_title">A \"Belepillantás\" megjelenítése</string>
+    <string name="show_quickspace_summary">Megjelenítés a Kezdőképernyő tetején</string>
+    <string name="abbrev_wday_month_day_no_year">MMM. d., EEEE</string>
+    <string name="date_format_title">Dátumformátum</string>
+    <string name="date_format_long_name">Hosszú</string>
+    <string name="date_format_normal_name">Szokásos</string>
+    <string name="date_format_short_name">Rövid</string>
 </resources>

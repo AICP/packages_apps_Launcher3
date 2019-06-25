@@ -3,10 +3,16 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="icon_shape_hexagon">Sechseck</string>
     <string name="lock_desktop_title">Desktop sperren</string>
-    <string name="lock_desktop_summary">Verhindert Änderungen des Startbildschirms</string>
+    <string name="lock_desktop_summary">Änderungen des Startbildschirms verhindern</string>
     <string name="ae_theming_title">System-Design</string>
     <string name="ae_theming_summary">Systemweite Einstellungen des Designs</string>
     <string name="apps_always_show_label_title">Displayausrichtung für Beschriftungen ignorieren</string>
-    <string name="apps_always_show_label_summary">Immer die App-Beschriftung auf dem Startbildschirm und im App-Ordner zeigen</string>
+    <string name="apps_always_show_label_summary">Immer App-Beschriftungen auf dem Startbildschirm und im App-Ordner zeigen</string>
     <string name="theme_style_system">Dem System-Design folgen</string>
+    <string name="show_quickspace_title">Zeige \"At A Glance\" Widget</string>
+    <string name="show_quickspace_summary">Oben auf dem Startbildschirm anzeigen</string>
+    <string name="date_format_title">Datumsformat</string>
+    <string name="date_format_long_name">Lang</string>
+    <string name="date_format_normal_name">Normal</string>
+    <string name="date_format_short_name">Kurz</string>
 </resources>

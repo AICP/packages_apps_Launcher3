@@ -3,10 +3,16 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="icon_shape_hexagon">Шестиугольник</string>
     <string name="lock_desktop_title">Заблокировать рабочий стол</string>
-    <string name="lock_desktop_summary">Запретить изменения домашнего экрана</string>
+    <string name="lock_desktop_summary">Запретить изменения Домашнего экрана</string>
     <string name="ae_theming_title">Системный дизайн</string>
     <string name="ae_theming_summary">Настройки внешнего вида системы</string>
     <string name="apps_always_show_label_title">Игнорировать ориентацию для подписей</string>
-    <string name="apps_always_show_label_summary">Всегда показывать подписи приложений на главном экране и в меню приложений</string>
+    <string name="apps_always_show_label_summary">Всегда показывать подписи приложений на Домашнем экране и в меню приложений</string>
     <string name="theme_style_system">Как в системных настройках</string>
+    <string name="show_quickspace_title">Показать С первого взгляда</string>
+    <string name="show_quickspace_summary">Показывать в верхней части Домашнего экрана</string>
+    <string name="date_format_title">Формат даты</string>
+    <string name="date_format_long_name">Длинный</string>
+    <string name="date_format_normal_name">Нормальный</string>
+    <string name="date_format_short_name">Короткий</string>
 </resources>

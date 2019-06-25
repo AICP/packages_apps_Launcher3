@@ -9,4 +9,10 @@
     <string name="apps_always_show_label_title">Ignorar orientación para etiquetas</string>
     <string name="apps_always_show_label_summary">Mostrar siempre etiquetas de aplicaciones en pantalla de inicio y en el cajón de aplicaciones</string>
     <string name="theme_style_system">Siguen el sistema</string>
+    <string name="show_quickspace_title">Mostrar en un vistazo</string>
+    <string name="show_quickspace_summary">Mostrar en la parte superior de la pantalla de inicio</string>
+    <string name="date_format_title">Formato de fecha</string>
+    <string name="date_format_long_name">Largo</string>
+    <string name="date_format_normal_name">Normal</string>
+    <string name="date_format_short_name">Corto</string>
 </resources>
