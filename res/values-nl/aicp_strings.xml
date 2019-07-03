@@ -3,10 +3,15 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="icon_shape_hexagon">Zeshoek</string>
     <string name="lock_desktop_title">Bureaublad vergrendelen</string>
+    <string name="lock_desktop_summary">Voorkom dat het startscherm wordt gewijzigd</string>
     <string name="ae_theming_title">Systeemontwerp</string>
     <string name="ae_theming_summary">Instellingen voor systeembrede weergave</string>
     <string name="apps_always_show_label_title">Negeer oriëntatie voor labels</string>
+    <string name="apps_always_show_label_summary">Toon altijd app labels op het startscherm en de app drawer</string>
     <string name="theme_style_system">Volg systeem</string>
+    <string name="show_quickspace_title">Toon At a Glance widget</string>
+    <string name="show_quickspace_summary">Toon aan de bovenkant van het startscherm</string>
+    <string name="date_format_title">Datumformaat</string>
     <string name="date_format_long_name">Lang</string>
     <string name="date_format_normal_name">Normaal</string>
     <string name="date_format_short_name">Kort</string>
