@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <SwitchPreference
+        android:key="pref_show_qsb_in_hotseat"
+        android:title="@string/hotseat_qsb_title"
+        android:summary="@string/hotseat_qsb_summary"
+        android:defaultValue="true"
+        android:persistent="true" />
+
+    <SwitchPreference
+        android:key="pref_apps_always_show_label"
+        android:title="@string/apps_always_show_label_title"
+        android:summary="@string/apps_always_show_label_summary"
+        android:defaultValue="false"
+        android:persistent="true" />
+
+    <SwitchPreference
+        android:key="pref_add_icon_to_home"
+        android:title="@string/auto_add_shortcuts_label"
+        android:summary="@string/auto_add_shortcuts_description"
+        android:defaultValue="true"
+        android:persistent="true" />
+
     <com.android.launcher3.views.ButtonPreference
         android:key="pref_icon_badging"
         android:title="@string/icon_badging_title"
@@ -13,27 +34,6 @@
                 android:value="notification_badging" />
         </intent>
     </com.android.launcher3.views.ButtonPreference>
-
-    <SwitchPreference
-        android:key="pref_show_qsb_in_hotseat"
-        android:title="@string/hotseat_qsb_title"
-        android:summary="@string/hotseat_qsb_summary"
-        android:defaultValue="true"
-        android:persistent="true" />
-
-    <SwitchPreference
-        android:key="pref_add_icon_to_home"
-        android:title="@string/auto_add_shortcuts_label"
-        android:summary="@string/auto_add_shortcuts_description"
-        android:defaultValue="true"
-        android:persistent="true" />
-
-    <SwitchPreference
-        android:key="pref_apps_always_show_label"
-        android:title="@string/apps_always_show_label_title"
-        android:summary="@string/apps_always_show_label_summary"
-        android:defaultValue="false"
-        android:persistent="true" />
 
 <!-- Overwritten by system setting.
     <ListPreference
