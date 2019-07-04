@@ -24,8 +24,10 @@ import android.view.View;
 import com.android.launcher3.AbstractFloatingView;
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.Launcher;
+import com.android.launcher3.LauncherAppState;
 import com.android.launcher3.LauncherState;
 import com.android.launcher3.R;
+import com.android.launcher3.Utilities;
 import com.android.launcher3.Workspace;
 import com.android.launcher3.allapps.DiscoveryBounce;
 import com.android.launcher3.userevent.nano.LauncherLogProto.ContainerType;
@@ -100,6 +102,11 @@ public class OverviewState extends LauncherState {
         if (launcher.getDeviceProfile().isVerticalBarLayout()) {
             return VERTICAL_SWIPE_INDICATOR;
         } else {
+            if (!Utilities.showHotseatQSB(LauncherAppState.getInstanceNoCreate().getContext())) {
+                return VERTICAL_SWIPE_INDICATOR |
+                        (launcher.getAppsView().getFloatingHeaderView().hasVisibleContent()
+                                ? ALL_APPS_HEADER_EXTRA : HOTSEAT_ICONS);
+            }
             return HOTSEAT_SEARCH_BOX | VERTICAL_SWIPE_INDICATOR |
                     (launcher.getAppsView().getFloatingHeaderView().hasVisibleContent()
                             ? ALL_APPS_HEADER_EXTRA : HOTSEAT_ICONS);

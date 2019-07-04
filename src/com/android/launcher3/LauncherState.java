@@ -200,6 +200,9 @@ public class LauncherState {
         if (launcher.getDeviceProfile().isVerticalBarLayout()) {
             return HOTSEAT_ICONS | VERTICAL_SWIPE_INDICATOR;
         }
+        if (!Utilities.showHotseatQSB(LauncherAppState.getInstanceNoCreate().getContext())) {
+            return HOTSEAT_ICONS | VERTICAL_SWIPE_INDICATOR;
+        }
         return HOTSEAT_ICONS | HOTSEAT_SEARCH_BOX | VERTICAL_SWIPE_INDICATOR;
     }
 

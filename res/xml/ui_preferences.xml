@@ -15,6 +15,13 @@
     </com.android.launcher3.views.ButtonPreference>
 
     <SwitchPreference
+        android:key="pref_show_qsb_in_hotseat"
+        android:title="@string/hotseat_qsb_title"
+        android:summary="@string/hotseat_qsb_summary"
+        android:defaultValue="true"
+        android:persistent="true" />
+
+    <SwitchPreference
         android:key="pref_add_icon_to_home"
         android:title="@string/auto_add_shortcuts_label"
         android:summary="@string/auto_add_shortcuts_description"
