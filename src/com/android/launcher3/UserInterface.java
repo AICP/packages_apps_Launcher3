@@ -149,6 +149,14 @@ public class UserInterface extends SettingsActivity implements PreferenceFragmen
                     return true;
                 }
             });
+
+            SwitchPreference showHotseatQSB = (SwitchPreference) findPreference(Utilities.HOTSEAT_QSB);
+            showHotseatQSB.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                    return true;
+                }
+            });
         }
 
         @Override

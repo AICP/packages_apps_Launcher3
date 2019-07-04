@@ -152,6 +152,7 @@ public final class Utilities {
     public static final String PREF_NOTIFICATIONS_GESTURE = "pref_notifications_gesture";
     public static final String LOCK_DESKTOP_KEY = "pref_lock_desktop";
     public static final String DATE_FORMAT_KEY = "pref_date_format";
+    public static final String HOTSEAT_QSB = "pref_show_qsb_in_hotseat";
 
     public static boolean isDesktopLocked(Context context) {
         return getPrefs(context).getBoolean(LOCK_DESKTOP_KEY, false);
@@ -174,6 +175,10 @@ public final class Utilities {
 
     public static boolean showAppLabelsAlways(Context context) {
         return getPrefs(context).getBoolean(APPS_ALWAYS_SHOW_LABEL, false);
+    }
+
+    public static boolean showHotseatQSB(Context context) {
+        return getPrefs(context).getBoolean(HOTSEAT_QSB, true);
     }
 
     public static boolean isPropertyEnabled(String propertyName) {
