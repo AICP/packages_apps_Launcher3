@@ -4,6 +4,7 @@
     <string name="icon_shape_hexagon">Altıgen</string>
     <string name="lock_desktop_title">Ana ekranı kilitle</string>
     <string name="lock_desktop_summary">Ana ekranının değiştirilmesini önle</string>
+    <string name="lock_desktop_toast">Masaüstü kilitlendi. Devam etmek için kilidini açın.</string>
     <string name="ae_theming_title">Sistem tasarımı</string>
     <string name="ae_theming_summary">Genel sistem görünüm ayarları</string>
     <string name="apps_always_show_label_title">Etiketler için yönlendirmeyi yoksay</string>
@@ -15,4 +16,9 @@
     <string name="date_format_long_name">Uzun</string>
     <string name="date_format_normal_name">Normal</string>
     <string name="date_format_short_name">Kısa</string>
+    <string name="hotseat_qsb_preferences">Tercihler</string>
+    <string name="label_search">Arama</string>
+    <string name="label_voice_search">Sesli arama</string>
+    <string name="hotseat_qsb_title">Hotseat\'e QSB ekle</string>
+    <string name="hotseat_qsb_summary">Hızlı arama çubuğunu hotseat simgeler satırının altında görüntüleyin</string>
 </resources>

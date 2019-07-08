@@ -4,6 +4,7 @@
     <string name="icon_shape_hexagon">Шестиугольник</string>
     <string name="lock_desktop_title">Заблокировать рабочий стол</string>
     <string name="lock_desktop_summary">Запретить изменения Домашнего экрана</string>
+    <string name="lock_desktop_toast">Рабочий стол заблокирован. Разблокируйте его, чтобы продолжить.</string>
     <string name="ae_theming_title">Системный дизайн</string>
     <string name="ae_theming_summary">Настройки внешнего вида системы</string>
     <string name="apps_always_show_label_title">Игнорировать ориентацию для подписей</string>
@@ -15,4 +16,9 @@
     <string name="date_format_long_name">Длинный</string>
     <string name="date_format_normal_name">Нормальный</string>
     <string name="date_format_short_name">Короткий</string>
+    <string name="hotseat_qsb_preferences">Предпочтения</string>
+    <string name="label_search">Поиск</string>
+    <string name="label_voice_search">Голосовой поиск</string>
+    <string name="hotseat_qsb_title">Добавить QSB в Hotseat</string>
+    <string name="hotseat_qsb_summary">Показывать панель быстрого поиска под строкой значков в hotseat</string>
 </resources>

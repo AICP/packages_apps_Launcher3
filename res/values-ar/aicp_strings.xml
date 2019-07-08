@@ -4,6 +4,7 @@
     <string name="icon_shape_hexagon">سداسي الأضلاع</string>
     <string name="lock_desktop_title">قفل الشاشة الرئيسية</string>
     <string name="lock_desktop_summary">منع الشاشة الرئيسية من التعديل</string>
+    <string name="lock_desktop_toast">تم قفل سطح المكتب. إلغاء القفل للمضي قدماً.</string>
     <string name="ae_theming_title">تصميم النظام</string>
     <string name="ae_theming_summary">إعدادات المظهر على مستوى النظام</string>
     <string name="apps_always_show_label_title">تجاهل الاتجاه للتسميات</string>
@@ -15,4 +16,9 @@
     <string name="date_format_long_name">طويل</string>
     <string name="date_format_normal_name">عادي</string>
     <string name="date_format_short_name">قصير</string>
+    <string name="hotseat_qsb_preferences">التفضيلات</string>
+    <string name="label_search">بحث</string>
+    <string name="label_voice_search">البحث الصوتي</string>
+    <string name="hotseat_qsb_title">أضف شريط البحث السريع إلى الشريط السفلي</string>
+    <string name="hotseat_qsb_summary">عرض شريط البحث السريع تحت صف الرموز في الشريط السفلي</string>
 </resources>

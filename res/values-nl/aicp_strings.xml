@@ -4,6 +4,7 @@
     <string name="icon_shape_hexagon">Zeshoek</string>
     <string name="lock_desktop_title">Bureaublad vergrendelen</string>
     <string name="lock_desktop_summary">Voorkom dat het startscherm wordt gewijzigd</string>
+    <string name="lock_desktop_toast">Desktop is vergrendeld. Ontgrendel deze om verder te gaan.</string>
     <string name="ae_theming_title">Systeemontwerp</string>
     <string name="ae_theming_summary">Instellingen voor systeembrede weergave</string>
     <string name="apps_always_show_label_title">Negeer oriëntatie voor labels</string>
@@ -15,4 +16,7 @@
     <string name="date_format_long_name">Lang</string>
     <string name="date_format_normal_name">Normaal</string>
     <string name="date_format_short_name">Kort</string>
+    <string name="hotseat_qsb_preferences">Voorkeuren</string>
+    <string name="label_search">Zoeken</string>
+    <string name="label_voice_search">Spraakgestuurd zoeken</string>
 </resources>

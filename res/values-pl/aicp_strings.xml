@@ -4,6 +4,7 @@
     <string name="icon_shape_hexagon">Sześciokąt</string>
     <string name="lock_desktop_title">Blokada pulpitu</string>
     <string name="lock_desktop_summary">Zapobiega modyfikacji ekranu głównego</string>
+    <string name="lock_desktop_toast">Pulpit jest zablokowany. Odblokuj go, aby kontynuować.</string>
     <string name="ae_theming_title">Wygląd systemu</string>
     <string name="ae_theming_summary">Ustawienia wyglądu całego systemu</string>
     <string name="apps_always_show_label_title">Ignoruj orientację dla etykiet</string>
@@ -15,4 +16,7 @@
     <string name="date_format_long_name">Długo</string>
     <string name="date_format_normal_name">Normalnie</string>
     <string name="date_format_short_name">Krótko</string>
+    <string name="hotseat_qsb_preferences">Ustawienia</string>
+    <string name="label_search">Szukaj</string>
+    <string name="label_voice_search">Wyszukiwanie głosowe</string>
 </resources>

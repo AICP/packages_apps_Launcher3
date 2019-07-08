@@ -4,6 +4,7 @@
     <string name="icon_shape_hexagon">Hexágono</string>
     <string name="lock_desktop_title">Bloquear escritorio</string>
     <string name="lock_desktop_summary">Evita que se modifique el escritorio</string>
+    <string name="lock_desktop_toast">El escritorio está bloqueado. Desbloquearlo para continuar.</string>
     <string name="ae_theming_title">Diseño del Sistema</string>
     <string name="ae_theming_summary">Configuración de la apariencia de todo el sistema</string>
     <string name="apps_always_show_label_title">Ignorar orientación para etiquetas</string>
@@ -15,4 +16,9 @@
     <string name="date_format_long_name">Largo</string>
     <string name="date_format_normal_name">Normal</string>
     <string name="date_format_short_name">Corto</string>
+    <string name="hotseat_qsb_preferences">Ajustes</string>
+    <string name="label_search">Búsqueda</string>
+    <string name="label_voice_search">Búsqueda por voz</string>
+    <string name="hotseat_qsb_title">Añadir QSB an HotSeat</string>
+    <string name="hotseat_qsb_summary">Mostrar barra de búsqueda rápida bajo la fila de iconos de hotseat</string>
 </resources>

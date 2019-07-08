@@ -4,6 +4,7 @@
     <string name="icon_shape_hexagon">Sechseck</string>
     <string name="lock_desktop_title">Desktop sperren</string>
     <string name="lock_desktop_summary">Änderungen des Startbildschirms verhindern</string>
+    <string name="lock_desktop_toast">Bildschirm ist gesperrt. Entsperren, um fortzufahren.</string>
     <string name="ae_theming_title">System-Design</string>
     <string name="ae_theming_summary">Systemweite Einstellungen des Designs</string>
     <string name="apps_always_show_label_title">Displayausrichtung für Beschriftungen ignorieren</string>
@@ -15,4 +16,9 @@
     <string name="date_format_long_name">Lang</string>
     <string name="date_format_normal_name">Normal</string>
     <string name="date_format_short_name">Kurz</string>
+    <string name="hotseat_qsb_preferences">Einstellungen</string>
+    <string name="label_search">Suche</string>
+    <string name="label_voice_search">Sprachsuche</string>
+    <string name="hotseat_qsb_title">Schnellsuche zum Dock hinzufügen</string>
+    <string name="hotseat_qsb_summary">Schnellsuchleiste unter Symbolen im Dock anzeigen</string>
 </resources>

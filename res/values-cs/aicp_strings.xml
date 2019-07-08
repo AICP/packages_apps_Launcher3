@@ -4,6 +4,7 @@
     <string name="icon_shape_hexagon">Šestiúhelník</string>
     <string name="lock_desktop_title">Uzamčení pracovní plochy</string>
     <string name="lock_desktop_summary">Zabránit v úpravě domovské obrazovky</string>
+    <string name="lock_desktop_toast">Plocha je uzamčena. Odemkněte ji a pokračujte.</string>
     <string name="ae_theming_title">Systémový design</string>
     <string name="ae_theming_summary">Nastavení vzhledu celého systému</string>
     <string name="apps_always_show_label_title">Ignorovat orientaci pro popisky</string>
@@ -15,4 +16,9 @@
     <string name="date_format_long_name">Dlouhý</string>
     <string name="date_format_normal_name">Normální</string>
     <string name="date_format_short_name">Krátký</string>
+    <string name="hotseat_qsb_preferences">Předvolby</string>
+    <string name="label_search">Hledat</string>
+    <string name="label_voice_search">Hlasové vyhledávání</string>
+    <string name="hotseat_qsb_title">Přidat QSB do Hotseat</string>
+    <string name="hotseat_qsb_summary">Zobrazit vyhledávací pole pod řadou ikon v hotseat</string>
 </resources>
