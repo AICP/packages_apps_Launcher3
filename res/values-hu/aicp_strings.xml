@@ -4,6 +4,7 @@
     <string name="icon_shape_hexagon">Hatszög</string>
     <string name="lock_desktop_title">Asztalzárolás</string>
     <string name="lock_desktop_summary">Megvédi a Kezdőképernyőt a módosítástól</string>
+    <string name="lock_desktop_toast">A Kezdőképernyő zárolva. Oldja fel a folytatáshoz.</string>
     <string name="ae_theming_title">Rendszerdizájn</string>
     <string name="ae_theming_summary">Az egész rendszerre kiterjedő megjelenési beállítások</string>
     <string name="apps_always_show_label_title">A feliratok tájolásának mellőzése</string>
@@ -16,4 +17,9 @@
     <string name="date_format_long_name">Hosszú</string>
     <string name="date_format_normal_name">Szokásos</string>
     <string name="date_format_short_name">Rövid</string>
+    <string name="hotseat_qsb_preferences">Tulajdonságok</string>
+    <string name="label_search">Keresés</string>
+    <string name="label_voice_search">Hangalapú keresés</string>
+    <string name="hotseat_qsb_title">Gyorskeresés hozzáadása a területhez</string>
+    <string name="hotseat_qsb_summary">Az ikonok sora alatt megjelenít egy gyorskeresősávot</string>
 </resources>
