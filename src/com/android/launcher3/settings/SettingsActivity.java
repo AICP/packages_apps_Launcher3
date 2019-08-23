@@ -110,17 +110,18 @@ public class SettingsActivity extends Activity
     }
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-        if (Utilities.KEY_SHOW_SEARCHBAR.equals(key)) {
+        switch (key) {
+            case Utilities.KEY_SHOW_SEARCHBAR:
+            case Utilities.KEY_DT_GESTURE:
+            case Utilities.KEY_NOTIFICATION_GESTURE:
+            case Utilities.DESKTOP_SHOW_QUICKSPACE:
+            case Utilities.KEY_SHOW_ALT_QUICKSPACE:
+            case Utilities.KEY_SHOW_QUICKSPACE_NOWPLAYING:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
-        } else if (Utilities.KEY_DT_GESTURE.equals(key)) {
-                LauncherAppState.getInstanceNoCreate().setNeedsRestart();
-        } else if (Utilities.KEY_NOTIFICATION_GESTURE.equals(key)) {
-                LauncherAppState.getInstanceNoCreate().setNeedsRestart();
-        } else if (Utilities.DESKTOP_SHOW_QUICKSPACE.equals(key)) {
-                LauncherAppState.getInstanceNoCreate().setNeedsRestart();
-        } else if (Utilities.KEY_SHOW_QUICKSPACE_NOWPLAYING.equals(key)) {
-                LauncherAppState.getInstanceNoCreate().setNeedsRestart();
-        }
+                break;
+            default:
+                break;
+         }
     }
 
     public interface OnResumePreferenceCallback {
