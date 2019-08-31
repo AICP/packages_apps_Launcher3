@@ -128,8 +128,6 @@ public final class Utilities {
     public static final boolean ATLEAST_OREO =
             Build.VERSION.SDK_INT >= Build.VERSION_CODES.O;
 
-    public static final String DESKTOP_SHOW_QUICKSPACE = "pref_show_quickspace";
-
     /**
      * Set on a motion event dispatched from the nav bar. See {@link MotionEvent#setEdgeFlags(int)}.
      */
@@ -139,6 +137,8 @@ public final class Utilities {
     public static final String KEY_DT_GESTURE = "pref_dt_gesture";
     public static final String KEY_NOTIFICATION_GESTURE = "pref_notification_gesture";
     public static final String KEY_ALLOW_AUTOROTATE_USER = "pref_allowRotation_user";
+    public static final String DESKTOP_SHOW_QUICKSPACE = "pref_show_quickspace";
+    public static final String KEY_SHOW_QUICKSPACE_NOWPLAYING = "pref_quickspace_np";
 
     private static final long WAIT_BEFORE_RESTART = 250;
 
@@ -174,6 +174,10 @@ public final class Utilities {
         ResolveInfo ri = context.getPackageManager().resolveActivity(
                 PackageManagerHelper.getStyleWallpapersIntent(context), 0);
         return ri != null;
+    }
+
+    public static boolean isQuickspaceNowPlaying(Context context) {
+        return getPrefs(context).getBoolean(KEY_SHOW_QUICKSPACE_NOWPLAYING, true);
     }
 
     /**

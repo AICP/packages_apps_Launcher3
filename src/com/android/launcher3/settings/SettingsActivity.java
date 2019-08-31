@@ -118,6 +118,8 @@ public class SettingsActivity extends Activity
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
         } else if (Utilities.DESKTOP_SHOW_QUICKSPACE.equals(key)) {
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+        } else if (Utilities.KEY_SHOW_QUICKSPACE_NOWPLAYING.equals(key)) {
+                LauncherAppState.getInstanceNoCreate().setNeedsRestart();
         }
     }
 
