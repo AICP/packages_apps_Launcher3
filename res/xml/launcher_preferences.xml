@@ -47,6 +47,14 @@
         android:persistent="true"/>
 
     <SwitchPreference
+        android:dependency="pref_show_quickspace"
+        android:key="pref_quickspace_np"
+        android:summary="@string/quickspace_now_playing_summary"
+        android:title="@string/quickspace_now_playing_title"
+        android:defaultValue="true"
+        android:persistent="true" />
+
+    <SwitchPreference
         android:defaultValue="true"
         android:key="pref_enable_minus_one"
         android:summary="@string/pref_show_google_now_summary"
