@@ -3,8 +3,22 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="icon_shape_hexagon">六边形</string>
     <string name="lock_desktop_title">锁定桌面</string>
+    <string name="lock_desktop_summary">防止主屏幕被修改</string>
+    <string name="lock_desktop_toast">桌面已锁定，解锁才能继续。</string>
     <string name="ae_theming_title">系统设计</string>
     <string name="ae_theming_summary">全系统外观设置</string>
     <string name="apps_always_show_label_title">忽略标签方向</string>
+    <string name="apps_always_show_label_summary">始终在主屏幕和应用抽屉上显示应用标签</string>
     <string name="theme_style_system">跟随系统</string>
+    <string name="show_quickspace_title">显示概览</string>
+    <string name="show_quickspace_summary">在主屏幕顶部显示</string>
+    <string name="date_format_title">日期格式</string>
+    <string name="date_format_long_name">长</string>
+    <string name="date_format_normal_name">标准</string>
+    <string name="date_format_short_name">短</string>
+    <string name="hotseat_qsb_preferences">首选项</string>
+    <string name="label_search">搜索</string>
+    <string name="label_voice_search">语音搜索</string>
+    <string name="hotseat_qsb_title">添加快速搜索栏到导航栏</string>
+    <string name="hotseat_qsb_summary">在导航栏的图标行下方显示快速搜索栏</string>
 </resources>
