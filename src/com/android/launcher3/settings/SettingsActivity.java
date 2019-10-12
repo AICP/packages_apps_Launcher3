@@ -47,6 +47,14 @@ import androidx.preference.PreferenceGroup.PreferencePositionCallback;
 import androidx.preference.PreferenceScreen;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.launcher3.LauncherAppState;
+import com.android.launcher3.LauncherFiles;
+import com.android.launcher3.R;
+import com.android.launcher3.Utilities;
+import com.android.launcher3.config.FeatureFlags;
+import com.android.launcher3.uioverrides.plugins.PluginManagerWrapper;
+import com.android.launcher3.util.SecureSettingsObserver;
+
 /**
  * Settings activity for Launcher. Currently implements only various categories
  */
