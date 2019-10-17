@@ -59,4 +59,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- Folder titles -->
     <string name="google_folder_title" translatable="false">Google</string>
+
+    <!-- Icon packs -->
+    <string name="iconPackPackageDefault" translatable="false">""</string>
+    <string name="icon_pack">Icon pack</string>
+    <string name="icon_pack_summary">Select a custom icon pack</string>
 </resources>
