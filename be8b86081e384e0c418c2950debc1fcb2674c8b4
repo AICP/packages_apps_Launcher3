@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c22951fa_bb02b6cf",
+        "filename": "src/com/android/launcher3/views/OptionsPopupView.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 1375
+      },
+      "writtenOn": "2019-10-30T21:00:19Z",
+      "side": 1,
+      "message": "remove the white space",
+      "revId": "be8b86081e384e0c418c2950debc1fcb2674c8b4",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": true
+    }
+  ]
+}
