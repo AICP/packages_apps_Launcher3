@@ -152,6 +152,8 @@ public final class Utilities {
     public static final String DATE_STYLE_TRANSFORM = "pref_date_transform";
     public static final String DATE_STYLE_SPACING = "pref_date_spacing";
     public static final String KEY_ALL_APPS_BACKGROUND_ALPHA = "pref_all_apps_scrim_alpha";
+    public static final String KEY_ICON_SIZE = "pref_icon_size";
+
     private static final long WAIT_BEFORE_RESTART = 250;
 
     /**
@@ -889,5 +891,31 @@ public final class Utilities {
 
     public static boolean showDateInPlaceOfNowPlaying(Context context) {
         return getPrefs(context).getBoolean(KEY_SHOW_QUICKSPACE_NOWPLAYING_SHOWDATE, true);
+    }
+
+    public static float getIconSizeModifier(Context context) {
+        String saved = getPrefs(context).getString(KEY_ICON_SIZE, "average");
+        float offset;
+        switch (saved) {
+            case "extrasmall":
+                offset = 0.75F;
+                break;
+            case "small":
+                offset = 0.90F;
+                break;
+            case "average":
+                offset = 1.00F;
+                break;
+            case "large":
+                offset = 1.10F;
+                break;
+            case "extralarge":
+                offset = 1.25F;
+                break;
+            default:
+                offset = 1.00F;
+                break;
+        }
+        return offset;
     }
 }
