@@ -125,6 +125,7 @@ public class SettingsActivity extends Activity
             case Utilities.DATE_STYLE_TRANSFORM:
             case Utilities.DATE_STYLE_SPACING:
             case Utilities.KEY_ALL_APPS_BACKGROUND_ALPHA:
+            case Utilities.KEY_ICON_SIZE:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:
@@ -330,6 +331,7 @@ public class SettingsActivity extends Activity
                     });
                 case Utilities.DATE_STYLE_TRANSFORM:
                 case KEY_TRUST_APPS:
+                case Utilities.KEY_ICON_SIZE:
                         return true;
                 case Utilities.DATE_STYLE_SPACING:
                     ListPreference dateStyleSpacing =
