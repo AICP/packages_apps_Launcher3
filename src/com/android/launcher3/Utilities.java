@@ -133,7 +133,7 @@ public final class Utilities {
      */
     public static final int EDGE_NAV_BAR = 1 << 8;
 
-    public static final String KEY_SHOW_SEARCHBAR = "pref_show_searchbar";
+    public static final String KEY_SHOW_SEARCHBAR = "pref_show_quickspace";
     public static final String KEY_DT_GESTURE = "pref_dt_gesture";
     public static final String KEY_NOTIFICATION_GESTURE = "pref_notification_gesture";
 
