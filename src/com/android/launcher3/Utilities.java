@@ -154,6 +154,8 @@ public final class Utilities {
     public static final String KEY_ALL_APPS_BACKGROUND_ALPHA = "pref_all_apps_scrim_alpha";
     public static final String KEY_ICON_SIZE = "pref_icon_size";
     public static final String KEY_ALLAPPS_SHOW_PREDICTIONS = "last_prediction_enabled_state";
+    public static final String KEY_DOCK_SEARCH = "pref_dock_search";
+    public static final String SEARCH_PACKAGE = "com.google.android.googlequicksearchbox";
 
     public static final String KEY_DEFAULT_HOME_PAGE = "pref_default_homepage";
 
@@ -173,8 +175,6 @@ public final class Utilities {
     // An intent extra to indicate the horizontal scroll of the wallpaper.
     public static final String EXTRA_WALLPAPER_OFFSET = "com.android.launcher3.WALLPAPER_OFFSET";
     public static final String EXTRA_WALLPAPER_FLAVOR = "com.android.launcher3.WALLPAPER_FLAVOR";
-
-    public static final String SEARCH_PACKAGE = "com.google.android.googlequicksearchbox";
 
     public static boolean IS_RUNNING_IN_TEST_HARNESS =
                     ActivityManager.isRunningInTestHarness();
@@ -735,6 +735,19 @@ public final class Utilities {
     public static boolean isDoubleTapGestureEnabled(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_DT_GESTURE, true);
+    }
+
+    public static boolean showQSB(Context context, Launcher launcher) {
+        LauncherAppState appState = LauncherAppState.getInstance(launcher);
+        if (!appState.isSearchAppAvailable()) {
+            return false;
+        }
+        return isQSBEnabled(context);
+    }
+
+    public static boolean isQSBEnabled(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(KEY_DOCK_SEARCH, true);
     }
 
     public static void restart(final Context context) {

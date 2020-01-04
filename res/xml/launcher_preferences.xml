@@ -37,6 +37,13 @@
         android:defaultValue="true"
         android:persistent="true" />
 
+    <SwitchPreference
+        android:key="pref_dock_search"
+        android:title="@string/dock_search_title"
+        android:summary="@string/dock_search_summary"
+        android:defaultValue="true"
+        android:persistent="true" />
+
     <com.android.launcher3.settings.preference.ReloadingListPreference
         android:key="pref_icon_pack"
         android:title="@string/app_info_icon_pack"
