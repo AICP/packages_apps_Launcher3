@@ -329,6 +329,9 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
             case 5: // Clear notifications
                 AicpUtils.clearAllNotifications();
                 break;
+            case 6: // Screenrecord
+                AicpUtils.takeScreenrecord(getContext(), UserHandle.CURRENT);
+                break;
             case 7: // Notifications
                 AicpUtils.toggleNotifications();
                 break;
