@@ -20,4 +20,8 @@
 <resources>
 
     <string name="google_folder_title">Google</string>
+
+    <!-- Double tap gesture -->
+    <string name="pref_sleep_gesture_title">Double tap to sleep</string>
+    <string name="pref_sleep_gesture_summary">Double tap on empty space to turn off the display</string>
 </resources>
