@@ -23,12 +23,7 @@ include $(CLEAR_VARS)
 LOCAL_USE_AAPT2 := true
 LOCAL_AAPT2_ONLY := true
 LOCAL_MODULE_TAGS := optional
-
-ifneq (,$(wildcard frameworks/base))
-    LOCAL_STATIC_JAVA_LIBRARIES:= PluginCoreLib
-else
-    LOCAL_STATIC_JAVA_LIBRARIES:= libPluginCore
-endif
+LOCAL_STATIC_JAVA_LIBRARIES:= PluginCoreLib
 
 LOCAL_SRC_FILES := \
     $(call all-java-files-under, src_plugins)
@@ -170,11 +165,10 @@ LOCAL_USE_AAPT2 := true
 LOCAL_AAPT2_ONLY := true
 LOCAL_MODULE_TAGS := optional
 
+LOCAL_STATIC_JAVA_LIBRARIES := SystemUISharedLib launcherprotosnano
 ifneq (,$(wildcard frameworks/base))
-  LOCAL_STATIC_JAVA_LIBRARIES := SystemUISharedLib launcherprotosnano
   LOCAL_PRIVATE_PLATFORM_APIS := true
 else
-  LOCAL_STATIC_JAVA_LIBRARIES := libSharedSystemUI libLauncherProtos
   LOCAL_SDK_VERSION := system_current
   LOCAL_MIN_SDK_VERSION := 26
 endif
@@ -239,10 +233,12 @@ include $(CLEAR_VARS)
 LOCAL_USE_AAPT2 := true
 LOCAL_MODULE_TAGS := optional
 
+LOCAL_STATIC_JAVA_LIBRARIES := SystemUISharedLib launcherprotosnano
 ifneq (,$(wildcard frameworks/base))
-  LOCAL_STATIC_JAVA_LIBRARIES := SystemUISharedLib launcherprotosnano
+  LOCAL_PRIVATE_PLATFORM_APIS := true
 else
-  LOCAL_STATIC_JAVA_LIBRARIES := libSharedSystemUI libLauncherProtos
+  LOCAL_SDK_VERSION := system_current
+  LOCAL_MIN_SDK_VERSION := 26
 endif
 LOCAL_STATIC_ANDROID_LIBRARIES := Launcher3CommonDepsLib
 
@@ -291,10 +287,12 @@ include $(CLEAR_VARS)
 LOCAL_USE_AAPT2 := true
 LOCAL_MODULE_TAGS := optional
 
+LOCAL_STATIC_JAVA_LIBRARIES := SystemUISharedLib launcherprotosnano
 ifneq (,$(wildcard frameworks/base))
-  LOCAL_STATIC_JAVA_LIBRARIES := SystemUISharedLib launcherprotosnano
+  LOCAL_PRIVATE_PLATFORM_APIS := true
 else
-  LOCAL_STATIC_JAVA_LIBRARIES := libSharedSystemUI libLauncherProtos
+  LOCAL_SDK_VERSION := system_current
+  LOCAL_MIN_SDK_VERSION := 26
 endif
 LOCAL_STATIC_ANDROID_LIBRARIES := Launcher3CommonDepsLib
 
