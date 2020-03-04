@@ -365,7 +365,7 @@ public class DeviceProfile {
         allAppsCellHeightPx = getCellSize().y;
         allAppsCellWidthPx = allAppsIconSizePx + allAppsIconDrawablePaddingPx;
 
-        if (isVerticalBarLayout && !Utilities.showAppLabelsAlways(mContext)()) {
+        if (isVerticalBarLayout && !Utilities.showAppLabelsAlways(mContext)) {
             // Always hide the Workspace text with vertical bar layout
             // unless user chooses to opt out with the ui preference switch
             adjustToHideWorkspaceLabels();
