@@ -20,13 +20,27 @@ import static com.android.launcher3.states.RotationHelper.ALLOW_ROTATION_PREFERE
 import static com.android.launcher3.states.RotationHelper.getAllowRotationDefaultValue;
 
 import android.app.ActionBar;
+import android.app.Activity;
 import android.app.DialogFragment;
 import android.app.Fragment;
 import android.content.pm.ApplicationInfo;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import androidx.preference.ListPreference;
+import android.provider.Settings;
+import android.text.TextUtils;
+
+import com.android.launcher3.LauncherAppState;
+import com.android.launcher3.LauncherFiles;
+import com.android.launcher3.R;
+import com.android.launcher3.Utilities;
+import com.android.launcher3.config.FeatureFlags;
+import com.android.launcher3.uioverrides.plugins.PluginManagerWrapper;
+import com.android.launcher3.util.SecureSettingsObserver;
+
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceFragment.OnPreferenceStartFragmentCallback;
@@ -37,11 +51,6 @@ import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.MenuItem;
-
-import com.android.launcher3.LauncherAppState;
-import com.android.launcher3.LauncherFiles;
-import com.android.launcher3.R;
-import com.android.launcher3.Utilities;
 
 public class Homescreen extends SettingsActivity
         implements OnPreferenceStartFragmentCallback, OnPreferenceStartScreenCallback,
