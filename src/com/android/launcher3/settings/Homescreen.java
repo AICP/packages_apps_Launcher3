@@ -69,7 +69,7 @@ public class Homescreen extends SettingsActivity
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         switch (key) {
-            case KEY_MINUS_ONE:
+            case Utilities.KEY_FEED_INTEGRATION:
             case Utilities.KEY_SHOW_ALT_QUICKSPACE:
             case Utilities.KEY_SHOW_QUICKSPACE_NOWPLAYING:
             case Utilities.KEY_SHOW_QUICKSPACE_PSONALITY:

@@ -1028,6 +1028,10 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
             mQuickSpace.onResume();
         }
 
+        if (mFeedIntegrationEnabled) {
+            mClient.onResume();
+        }
+
         if (mLauncherCallbacks != null) {
             mLauncherCallbacks.onResume();
         }
@@ -1048,6 +1052,10 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
 
         if (mQuickSpace != null) {
             mQuickSpace.onPause();
+        }
+
+        if (mFeedIntegrationEnabled) {
+            mClient.onPause();
         }
 
         if (mLauncherCallbacks != null) {
