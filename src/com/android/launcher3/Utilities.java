@@ -144,6 +144,7 @@ public final class Utilities {
     public static final String KEY_ALLOW_AUTOROTATE_USER = "pref_allowRotation_user";
     public static final String DESKTOP_SHOW_QUICKSPACE = "pref_show_quickspace";
     public static final String KEY_SHOW_QUICKSPACE_NOWPLAYING = "pref_quickspace_np";
+    public static final String KEY_SHOW_QUICKSPACE_NOWPLAYING_SHOWDATE = "pref_quickspace_np_showdate";
     public static final String KEY_SHOW_ALT_QUICKSPACE = "pref_show_alt_quickspace";
     public static final String KEY_SHOW_QUICKSPACE_PSONALITY = "pref_quickspace_psonality";
     public static final String DATE_FORMAT_ATAGLANCE = "pref_date_format";
@@ -870,5 +871,9 @@ public final class Utilities {
                 break;
         }
         return amountsp;
+    }
+
+    public static boolean showDateInPlaceOfNowPlaying(Context context) {
+        return getPrefs(context).getBoolean(KEY_SHOW_QUICKSPACE_NOWPLAYING_SHOWDATE, true);
     }
 }
