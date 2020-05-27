@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:fontFamily="@*android:string/config_headlineFontFamily"
-        android:textColor="?android:attr/textColorPrimary"
+        android:textColor="?android:attr/colorAccent"
         android:textSize="24sp"/>
 
     <TextView
