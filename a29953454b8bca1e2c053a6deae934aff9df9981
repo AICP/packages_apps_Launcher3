@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3bfc4d41_d4b31f39",
+        "filename": "res/values/aicp_strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2020-06-08T10:31:36Z",
+      "side": 1,
+      "message": "H",
+      "range": {
+        "startLine": 107,
+        "startChar": 48,
+        "endLine": 107,
+        "endChar": 49
+      },
+      "revId": "a29953454b8bca1e2c053a6deae934aff9df9981",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": true
+    }
+  ]
+}
