@@ -36,6 +36,23 @@
     },
     {
       "key": {
+        "uuid": "9265f5cd_d017afb1",
+        "filename": "res/values/aicp_strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-06-08T11:51:04Z",
+      "side": 1,
+      "message": "This too I guess, referring to GZR",
+      "revId": "149807eba99e9c7651ce8ac91cfed6bf55e7fe12",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "b891e7fd_1346dc66",
         "filename": "res/values/aicp_strings.xml",
         "patchSetId": 6
