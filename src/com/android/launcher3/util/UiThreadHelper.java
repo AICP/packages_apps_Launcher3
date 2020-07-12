@@ -48,6 +48,8 @@ public class UiThreadHelper {
     }
 
     public static void setOrientationAsync(Activity activity, int orientation) {
+        //android.util.Log.e("SCSCSC", "setOrientationAsync " + orientation, new Exception("SCSCSC"));
+        android.util.Log.e("SCSCSC", "setOrientationAsync " + orientation, new Exception("SCSCSC"));
         Message.obtain(getHandler(activity), MSG_SET_ORIENTATION, orientation, 0, activity)
                 .sendToTarget();
     }
