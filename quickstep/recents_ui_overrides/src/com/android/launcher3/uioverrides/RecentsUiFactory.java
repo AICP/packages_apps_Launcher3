@@ -145,17 +145,20 @@ public abstract class RecentsUiFactory {
         ArrayList<TouchController> list = new ArrayList<>();
         list.add(launcher.getDragController());
         if (mode == NO_BUTTON) {
+            android.util.Log.e("SCSCSC", "NO BUTTON");
             list.add(new NoButtonQuickSwitchTouchController(launcher));
             list.add(new NavBarToHomeTouchController(launcher));
             list.add(new FlingAndHoldTouchController(launcher));
         } else {
             if (launcher.getDeviceProfile().isVerticalBarLayout()) {
+                android.util.Log.e("SCSCSC", "VERTICAL BAR");
                 list.add(new OverviewToAllAppsTouchController(launcher));
                 list.add(new LandscapeEdgeSwipeController(launcher));
                 if (mode.hasGestures) {
                     list.add(new TransposedQuickSwitchTouchController(launcher));
                 }
             } else {
+                android.util.Log.e("SCSCSC", "PORTRAIT STATES");
                 list.add(new PortraitStatesTouchController(launcher,
                         mode.hasGestures /* allowDragToOverview */));
                 if (mode.hasGestures) {

@@ -179,20 +179,27 @@ public class RotationHelper implements OnSharedPreferenceChangeListener {
         if (mStateHandlerRequest != REQUEST_NONE) {
             activityFlags = mStateHandlerRequest == REQUEST_LOCK ?
                     SCREEN_ORIENTATION_LOCKED : SCREEN_ORIENTATION_UNSPECIFIED;
+            android.util.Log.e("SCSCSC", "or1");
         } else if (mCurrentTransitionRequest != REQUEST_NONE) {
             activityFlags = mCurrentTransitionRequest == REQUEST_LOCK ?
                     SCREEN_ORIENTATION_LOCKED : SCREEN_ORIENTATION_UNSPECIFIED;
+            android.util.Log.e("SCSCSC", "or2");
         } else if (mCurrentStateRequest == REQUEST_LOCK) {
             activityFlags = SCREEN_ORIENTATION_LOCKED;
+            android.util.Log.e("SCSCSC", "or3");
         } else if (mCurrentStateRequest == REQUEST_ROTATE || !mAutoRotateEnabled) {
-            activityFlags = SCREEN_ORIENTATION_NOSENSOR;
+            //activityFlags = SCREEN_ORIENTATION_NOSENSOR;
+            activityFlags = SCREEN_ORIENTATION_UNSPECIFIED;
+            android.util.Log.e("SCSCSC", "or4");
         } else if (mCurrentStateRequest == REQUEST_ROTATE || mAutoRotateEnabled
                       || mAllowRotationByDefault) {
             activityFlags = SCREEN_ORIENTATION_UNSPECIFIED;
+            android.util.Log.e("SCSCSC", "or5");
         } else {
             // If auto rotation is off, allow rotation on the activity, in case the user is using
             // forced rotation.
             activityFlags = SCREEN_ORIENTATION_NOSENSOR;
+            android.util.Log.e("SCSCSC", "or6");
         }
         if (activityFlags != mLastActivityFlags) {
             mLastActivityFlags = activityFlags;
