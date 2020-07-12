@@ -185,7 +185,8 @@ public class RotationHelper implements OnSharedPreferenceChangeListener {
         } else if (mCurrentStateRequest == REQUEST_LOCK) {
             activityFlags = SCREEN_ORIENTATION_LOCKED;
         } else if (mCurrentStateRequest == REQUEST_ROTATE || !mAutoRotateEnabled) {
-            activityFlags = SCREEN_ORIENTATION_NOSENSOR;
+            //activityFlags = SCREEN_ORIENTATION_NOSENSOR;
+            activityFlags = SCREEN_ORIENTATION_UNSPECIFIED;
         } else if (mCurrentStateRequest == REQUEST_ROTATE || mAutoRotateEnabled
                       || mAllowRotationByDefault) {
             activityFlags = SCREEN_ORIENTATION_UNSPECIFIED;
