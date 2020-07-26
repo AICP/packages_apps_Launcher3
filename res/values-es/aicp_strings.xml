@@ -89,6 +89,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="quick_event_rom_intro_title2">Gracias por elegirnos</string>
     <string name="quick_event_rom_intro_title3">¿Te gustamos? Envíanos una cerveza</string>
     <string name="quick_event_rom_intro_title4">AICP FTW!</string>
+    <string name="quick_event_rom_intro_title5">La felicidad es una botella de cerveza helada</string>
     <string name="quick_event_rom_intro_title6">Pulsa aquí para empezar</string>
     <string name="quick_event_rom_intro_title7">Te queremos 3000</string>
     <!-- QuickSpace: QuickEvent: Ambient Play -->
@@ -141,36 +142,36 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>¿Eres más productivo a esta hora?</item>
     </string-array>
     <string-array name="quickspace_psa_random">
-        <item>Our ROM is as cold as your Ex\'s heart</item>
-        <item>Is it time to flash an update again?</item>
-        <item>Hyped about Android R?</item>
+        <item>Nuestra ROM es tan fría como el corazón de tu Ex</item>
+        <item>¿Es hora de instalar otra actualización?</item>
+        <item>¿Emocionado por Android R?</item>
         <item>Hola. ¿Qué tal estamos?</item>
         <item>Concéntrate en tus tareas</item>
         <item>¿Cuántas capturas de pantalla realizas?</item>
-        <item>May the sync be with you...</item>
-        <item>Have fun!</item>
-        <item>Time for some good music</item>
-        <item>What\'s cooler than being cool?</item>
+        <item>Que la sincronización te acompañe...</item>
+        <item>¡Diviértete!</item>
+        <item>Es el momento para algo de buena música</item>
+        <item>¿Qué es más fresco que ser cool?</item>
         <item>Ice Cold!</item>
         <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>Thou art all ice!</item>
-        <item>I had the best ice pun but it slipped my mind. Get it?</item>
-        <item>We love you 3000</item>
-        <item>Say \'Hi\' to us on Discord</item>
-        <item>Do something nice today</item>
-        <item>This is as good as it gets, right?</item>
-        <item>How is everything going?</item>
-        <item>All you need is ice cream!</item>
-        <item>Thank you for your support</item>
-        <item>Root Beer never breaks your heart, right?</item>
-        <item>One of the buildbot\'s best picks</item>
-        <item>It is what it is</item>
-        <item>Try Ice Cold desserts</item>
-        <item>What a lovely experience, isn\'t it?</item>
-        <item>Keep on flashing!</item>
-        <item>You are in a relationship with ice</item>
-        <item>What\'s on your mind?</item>
-        <item>Winner Winner ....?</item>
+        <item>¡Eres todo hielo!</item>
+        <item>¿Como me las maravillaría yo?</item>
+        <item>Te queremos 3000</item>
+        <item>Dinos \'Hola\' en Discord</item>
+        <item>Haz algo bueno hoy</item>
+        <item>Esto es tan bueno como se hace, ¿verdad?</item>
+        <item>¿Como va todo?</item>
+        <item>¡Todo lo que necesitas es un helado!</item>
+        <item>Gracias por tu apoyo</item>
+        <item>La cerveza raíz nunca romperá tu corazón, ¿verdad?</item>
+        <item>Una de las mejores elecciones del buildbot</item>
+        <item>Es lo que es</item>
+        <item>Prueba postres helados</item>
+        <item>Qué experiencia tan bonita, ¿no es así?</item>
+        <item>¡Sigue flasheando!</item>
+        <item>Estás en una relación con el hielo</item>
+        <item>¿En que estas pensando?</item>
+        <item>Ganador Ganador ....?</item>
         <item>rm -rf \/</item>
     </string-array>
     <!-- QuickSpace Date format -->
@@ -206,5 +207,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_info_version">Versión</string>
     <string name="app_info_more">Más</string>
     <!-- Edit workspace -->
+    <string name="settings_edit_allow_title">Permitir edición</string>
+    <string name="settings_edit_allow_summary_on">Los iconos y widgets se pueden añadir, eliminar y mover en la pantalla principal</string>
+    <string name="settings_edit_allow_summary_off">Los iconos y widgets no se pueden añadir, eliminar y mover en la pantalla principal</string>
+    <string name="settings_edit_widgets_error">No es posible añadir widgets en la pantalla principal</string>
     <!-- AppPrediction Row -->
+    <string name="app_show_predictions_title">Fila de predicción de aplicaciones</string>
+    <string name="app_show_predictions_summary">Cambiar para mostrar la fila de predicción de aplicaciones en recientes y cajón de aplicaciones</string>
 </resources>
