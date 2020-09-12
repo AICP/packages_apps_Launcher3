@@ -137,13 +137,20 @@ public class OverviewState extends LauncherState {
 
     @Override
     public int getVisibleElements(Launcher launcher) {
+        int flags = VERTICAL_SWIPE_INDICATOR | RECENTS_CLEAR_ALL_BUTTON;
+        if (launcher.getAppsView() != null) {
+            launcher.getAppsView().getSearchUiManager().setSearchBarVisibility(true);
+        }
         if (launcher.getDeviceProfile().isVerticalBarLayout()) {
-            return VERTICAL_SWIPE_INDICATOR | RECENTS_CLEAR_ALL_BUTTON;
+            return flags;
         } else {
             boolean hasAllAppsHeaderExtra = launcher.getAppsView() != null
                     && launcher.getAppsView().getFloatingHeaderView().hasVisibleContent();
-            return HOTSEAT_SEARCH_BOX | VERTICAL_SWIPE_INDICATOR | RECENTS_CLEAR_ALL_BUTTON |
-                    (hasAllAppsHeaderExtra ? ALL_APPS_HEADER_EXTRA : HOTSEAT_ICONS);
+            if (launcher.getAppsView() != null && hasAllAppsHeaderExtra) {
+                  launcher.getAppsView().getSearchUiManager().setSearchBarVisibility(false);
+                  return flags | ALL_APPS_HEADER_EXTRA;
+            }
+            return flags | HOTSEAT_ICONS | HOTSEAT_SEARCH_BOX;
         }
     }
 

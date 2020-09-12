@@ -236,4 +236,9 @@ public class AppsSearchContainerLayout extends ExtendedEditText
             Interpolator interpolator) {
         setter.setViewAlpha(this, (visibleElements & ALL_APPS_HEADER) != 0 ? 1 : 0, interpolator);
     }
+
+    @Override
+    public void setSearchBarVisibility(boolean visible){
+        mSearchBarController.setVisibility(visible ? View.VISIBLE : View.GONE);
+    }
 }

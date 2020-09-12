@@ -2,6 +2,7 @@ package com.android.launcher3.allapps;
 
 import static com.android.launcher3.LauncherState.ALL_APPS_CONTENT;
 import static com.android.launcher3.LauncherState.ALL_APPS_HEADER_EXTRA;
+import static com.android.launcher3.LauncherState.HOTSEAT_SEARCH_BOX;
 import static com.android.launcher3.LauncherState.OVERVIEW;
 import static com.android.launcher3.LauncherState.VERTICAL_SWIPE_INDICATOR;
 import static com.android.launcher3.anim.AnimatorSetBuilder.ANIM_ALL_APPS_FADE;
@@ -197,6 +198,7 @@ public class AllAppsTransitionController implements StateHandler, OnDeviceProfil
                 : config.getPropertySetter(builder);
         boolean hasHeaderExtra = (visibleElements & ALL_APPS_HEADER_EXTRA) != 0;
         boolean hasAllAppsContent = (visibleElements & ALL_APPS_CONTENT) != 0;
+        boolean hasHeaderSearchBox = (visibleElements & HOTSEAT_SEARCH_BOX) != 0;
 
         Interpolator allAppsFade = builder.getInterpolator(ANIM_ALL_APPS_FADE, LINEAR);
         Interpolator headerFade = builder.getInterpolator(ANIM_ALL_APPS_HEADER_FADE, allAppsFade);
@@ -204,8 +206,9 @@ public class AllAppsTransitionController implements StateHandler, OnDeviceProfil
         setter.setViewAlpha(mAppsView.getScrollBar(), hasAllAppsContent ? 1 : 0, allAppsFade);
         mAppsView.getFloatingHeaderView().setContentVisibility(hasHeaderExtra, hasAllAppsContent,
                 setter, headerFade, allAppsFade);
-        mAppsView.getSearchUiManager().setContentVisibility(visibleElements, setter, allAppsFade);
-
+        if (hasHeaderSearchBox) {
+            mAppsView.getSearchUiManager().setContentVisibility(visibleElements, setter, allAppsFade);
+        }
         setter.setInt(mScrimView, ScrimView.DRAG_HANDLE_ALPHA,
                 (visibleElements & VERTICAL_SWIPE_INDICATOR) != 0 ? 255 : 0, allAppsFade);
     }

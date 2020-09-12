@@ -62,7 +62,7 @@ public class AllAppsState extends LauncherState {
 
     @Override
     public int getVisibleElements(Launcher launcher) {
-        return ALL_APPS_HEADER | ALL_APPS_CONTENT;
+        return ALL_APPS_HEADER | ALL_APPS_CONTENT | HOTSEAT_SEARCH_BOX;
     }
 
     @Override

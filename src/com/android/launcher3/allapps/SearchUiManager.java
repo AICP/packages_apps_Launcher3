@@ -52,4 +52,9 @@ public interface SearchUiManager {
      */
     void setContentVisibility(int visibleElements, PropertySetter setter,
             Interpolator interpolator);
+
+    /**
+     * Called as part of state transition to update the searchbar visibility
+     */
+    void setSearchBarVisibility(boolean visible);
 }
