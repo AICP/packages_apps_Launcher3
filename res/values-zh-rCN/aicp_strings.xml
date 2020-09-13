@@ -15,9 +15,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- General -->
     <string name="settings_title">设置</string>
-    <!-- Categories -->
     <string name="home_category_title">主屏幕</string>
     <string name="home_category_summary">设置 Google now 面板等</string>
     <string name="ui_category_title">用户界面</string>
@@ -26,16 +24,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_drawer_category_summary">自定义应用抽屉</string>
     <string name="gestures_category_title">手势</string>
     <string name="gestures_category_summary">双击和清除所有手势</string>
-    <!-- Sub categories -->
     <string name="home_grid_title">网格布局</string>
-    <!-- Icon size -->
     <string name="icon_size_title">图标大小</string>
     <string name="icon_size_extra_small">极小</string>
     <string name="icon_size_small">小</string>
     <string name="icon_size_average">默认</string>
     <string name="icon_size_large">大</string>
     <string name="icon_size_extra_large">超大</string>
-    <!-- Gestures -->
     <string name="allow_swipe_down_clearall_title">从最近任务视图向下滑动时清除所有内容</string>
     <string name="allow_swipe_down_clearall_desc">在最近任务视图中垂直向下滑动以清除所有应用</string>
     <string name="pref_homescreen_dt_gestures_title">双击</string>
@@ -51,39 +46,31 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="pref_homescreen_gestures_screenrecord">屏幕录制</string>
     <string name="pref_homescreen_gestures_screenshot_full">全屏截图</string>
     <string name="pref_homescreen_gestures_screenshot_partial">区域截图</string>
-    <!-- Google Feed -->
     <string name="google_feed_title">显示 Google 应用</string>
     <string name="google_feed_summary">主屏幕左侧</string>
-    <!-- Grid -->
     <string name="num_default">默认</string>
     <string name="number_of_columns_title">列数</string>
     <string name="number_of_rows_title">行数</string>
     <string name="number_of_hotseat_title">基座图标个数</string>
     <string name="state_loading">正在应用\u2026</string>
-    <!-- Show labels on icon -->
     <string name="app_show_label_title">应用标签</string>
     <string name="desktop_show_label_summary">在主屏幕上显示应用的标签</string>
     <string name="allapps_show_label_summary">在应用抽屉中显示应用的标签</string>
-    <!-- Show QSB on homescreen -->
     <string name="pref_qsb_show_title">快速搜索栏</string>
     <string name="pref_qsb_show_summary">在主屏幕上显示快速搜索栏</string>
-    <!-- QuickSpace -->
     <string name="show_quickspace_title">速览</string>
     <string name="show_quickspace_summary">在主屏幕的顶部显示</string>
-    <!-- Always how labels irrespective of orientation -->
     <string name="apps_always_show_label_title">忽略标签方向</string>
     <string name="apps_always_show_label_summary">主屏幕和应用抽屉上始终显示应用标签</string>
-    <!-- Hidden apps -->
     <string name="customize">自定义</string>
     <string name="hide_app">隐藏应用</string>
     <string name="hide_app_sum">从应用抽屉隐藏应用</string>
-    <string name="hide_app_selected">&#160;已选中</string>
+    <string name="hide_app_selected"> 已选中</string>
     <string name="hidden_app">所有应用</string>
     <string name="hide_selected">隐藏所选应用</string>
     <string name="more">更多</string>
     <string name="reset_hidden_apps">全部重置</string>
     <string name="reset_hidden_apps_done">隐藏的应用已可用</string>
-    <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome">欢迎使用 AICP</string>
     <string name="quick_event_rom_intro_title1">祝你有个美好的一天</string>
     <string name="quick_event_rom_intro_title2">感谢您选择我们</string>
@@ -92,18 +79,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="quick_event_rom_intro_title5">幸福是一瓶冰啤酒</string>
     <string name="quick_event_rom_intro_title6">点此开始</string>
     <string name="quick_event_rom_intro_title7">AICP，超级爱你</string>
-    <!-- QuickSpace: QuickEvent: Ambient Play -->
     <string name="quick_event_ambient_now_playing">正在播放</string>
     <string name="quick_event_ambient_song_artist">%1$s，艺术家 %2$s</string>
-    <!-- Quickspace alternative view -->
     <string name="quickspace_alternate_style_title">使用另一风格</string>
     <string name="quickspace_alternate_style_summary">在速览中使用简约风格</string>
-    <!-- Quickspace Now Playing -->
     <string name="quickspace_now_playing_title">显示正在播放</string>
     <string name="quickspace_now_playing_summary">速览中显示正在播放的曲目信息。注意：并不兼容所有的媒体播放器。</string>
     <string name="quickspace_now_playing_showdate_title">...改为显示日期</string>
     <string name="quickspace_now_playing_showdate_summary">在第一行显示日期而非“正在播放”</string>
-    <!-- Quickspace PSA - Custom messages for the glance -->
     <string name="quickspace_psa_title">显示一条随机消息</string>
     <string name="quickspace_psa_summary">在速览中显示问候语</string>
     <string-array name="quickspace_psa_morning">
@@ -174,7 +157,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>大吉大利 今晚……？</item>
         <item>rm -rf \/</item>
     </string-array>
-    <!-- QuickSpace Date format -->
     <string name="date_format_title">日期格式</string>
     <string name="date_format_long_name">长</string>
     <string name="date_format_normal_name">标准</string>
@@ -182,22 +164,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="date_format_daydate_long_name">天数（带有数字）</string>
     <string name="date_format_daydate_short_name">天数（带有短数字）</string>
     <string name="date_format_dayonly_name">仅仅今天</string>
-    <!-- At a glance style -->
     <string name="date_style_font">日期字体</string>
     <string name="date_style_font_system_header">系统标题</string>
     <string name="date_style_font_system_body">系统内容</string>
-    <!-- At a glance uppercase -->
     <string name="date_style_transform_title">显示大写日期</string>
     <string name="date_style_transform_summary">速览中全部使用大写日期</string>
-    <!-- At a glance font spacing -->
     <string name="date_style_spacing">日期间隔</string>
     <string name="date_style_spacing_normal">标准</string>
     <string name="date_style_spacing_barely">几乎没有人注意到</string>
     <string name="date_style_spacing_ott">在顶部显示</string>
-    <!-- AppInfo -->
     <string name="app_info_subtext">下滑关闭应用信息</string>
     <string name="placeholder_string">正在加载...</string>
-    <!-- Used for preference height loading. -->
     <string name="app_info_icon_pack">图标包</string>
     <string name="app_info_icon_pack_none">无</string>
     <string name="app_info_source">来源</string>
@@ -205,12 +182,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_info_last_update">上次更新</string>
     <string name="app_info_version">版本</string>
     <string name="app_info_more">更多</string>
-    <!-- Edit workspace -->
     <string name="settings_edit_allow_title">允许编辑</string>
     <string name="settings_edit_allow_summary_on">可以在主屏幕上添加、删除和移动图标及小部件</string>
     <string name="settings_edit_allow_summary_off">不能在主屏幕上添加、删除和移动图标及小部件</string>
     <string name="settings_edit_widgets_error">无法将小部件添加到主屏幕</string>
-    <!-- AppPrediction Row -->
     <string name="app_show_predictions_title">应用程序预测行</string>
     <string name="app_show_predictions_summary">切换显示最近任务和应用抽屉中的应用程序预测行</string>
 </resources>

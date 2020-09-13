@@ -15,9 +15,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- General -->
     <string name="settings_title">Beállítások</string>
-    <!-- Categories -->
     <string name="home_category_title">Kezdőképernyő</string>
     <string name="home_category_summary">A \'Google Now\'-panel és egyebek beállítása</string>
     <string name="ui_category_title">Felhasználói felület</string>
@@ -26,16 +24,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_drawer_category_summary">Az Alkalmazásfiók testreszabása</string>
     <string name="gestures_category_title">Mozdulatvezérlés</string>
     <string name="gestures_category_summary">A dupla érintés és \'az összes törlése\' vezérlői</string>
-    <!-- Sub categories -->
     <string name="home_grid_title">Rácselrendezés</string>
-    <!-- Icon size -->
     <string name="icon_size_title">Ikonméret</string>
     <string name="icon_size_extra_small">Apró</string>
     <string name="icon_size_small">Kicsi</string>
     <string name="icon_size_average">Alapértelmezett</string>
     <string name="icon_size_large">Nagy</string>
     <string name="icon_size_extra_large">Hatalmas</string>
-    <!-- Gestures -->
     <string name="allow_swipe_down_clearall_title">Az \'Összes törlése\' egy lefelé mozdulattal</string>
     <string name="allow_swipe_down_clearall_desc">Csúsztasson függőlegesen lefelé, hogy törölje az összes alkalmazást az Előzményekből</string>
     <string name="pref_homescreen_dt_gestures_title">Dupla érintés</string>
@@ -51,55 +46,147 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="pref_homescreen_gestures_screenrecord">Képernyővideó</string>
     <string name="pref_homescreen_gestures_screenshot_full">Teljes képernyőmentés</string>
     <string name="pref_homescreen_gestures_screenshot_partial">Részleges képernyőmentés</string>
-    <!-- Google Feed -->
     <string name="google_feed_title">A Google-alkalmazás megjelenítése</string>
     <string name="google_feed_summary">A fő kezdőképernyőtől balra</string>
-    <!-- Grid -->
     <string name="num_default">Alapértelmezett</string>
     <string name="number_of_columns_title">Az oszlopok száma</string>
     <string name="number_of_rows_title">A sorok száma</string>
     <string name="number_of_hotseat_title">A Dokk-ikonok száma</string>
     <string name="state_loading">Alkalmazás\u2026</string>
-    <!-- Show labels on icon -->
     <string name="app_show_label_title">Alkalmazásnevek</string>
     <string name="desktop_show_label_summary">Az alkalmazások nevének megjelenítése a Kezdőképernyőn</string>
     <string name="allapps_show_label_summary">Az alkalmazások nevének megjelenítése az Alkalmazásfiókban</string>
-    <!-- Show QSB on homescreen -->
     <string name="pref_qsb_show_title">Gyorskeresés</string>
     <string name="pref_qsb_show_summary">Gyorskereső a főképernyőn</string>
-    <!-- QuickSpace -->
     <string name="show_quickspace_title">Belepillantás</string>
     <string name="show_quickspace_summary">Az Ön kezdőképernyőjének tetején jelenik meg</string>
     <string name="abbrev_wday_month_day_no_year">MMM. d., EEEE</string>
-    <!-- Always how labels irrespective of orientation -->
     <string name="apps_always_show_label_title">A feliratok tájolásának mellőzése</string>
     <string name="apps_always_show_label_summary">Az alkalmazásnevek állandó megjelenítése a Kezdőképernyőn és az Alkalmazásfiókban</string>
-    <!-- Hidden apps -->
     <string name="customize">Testreszabás</string>
     <string name="hide_app">Alkalmazások elrejtése</string>
     <string name="hide_app_sum">Alkalmazások elrejtése az alkalmazásfiókból</string>
-    <string name="hide_app_selected">&#160; kiválasztva</string>
+    <string name="hide_app_selected">  kiválasztva</string>
     <string name="hidden_app">Az összes alkalmazás</string>
     <string name="hide_selected">A kiválasztott alkalmazás(ok) elrejtése</string>
     <string name="more">Továbbiak</string>
     <string name="reset_hidden_apps">Az összes visszaállítása</string>
     <string name="reset_hidden_apps_done">A rejtett alkalmazások újra elérhetőek</string>
-    <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <!-- QuickSpace: QuickEvent: Ambient Play -->
-    <!-- Quickspace alternative view -->
-    <!-- Quickspace Now Playing -->
-    <!-- Quickspace PSA - Custom messages for the glance -->
-    <!-- QuickSpace Date format -->
+    <string name="quick_event_rom_intro_welcome">Üdvözlégy az AICP-ben!</string>
+    <string name="quick_event_rom_intro_title1">Legyen szép napja!</string>
+    <string name="quick_event_rom_intro_title2">Köszönjük, hogy minket választott</string>
+    <string name="quick_event_rom_intro_title3">Kedvel minket? Küldjön nekünk sört!</string>
+    <string name="quick_event_rom_intro_title4">Az AICP k.vajó!</string>
+    <string name="quick_event_rom_intro_title5">A boldogság nem más mint egy jó hideg sör</string>
+    <string name="quick_event_rom_intro_title6">Érintse meg itt a kezdéshez</string>
+    <string name="quick_event_rom_intro_title7">Már nagyon várjuk a 3000-es évet</string>
+    <string name="quick_event_ambient_now_playing">Most hallható</string>
+    <string name="quick_event_ambient_song_artist">%1$s szerző: %2$s</string>
+    <string name="quickspace_alternate_style_title">Egy alternatív stílus használata</string>
+    <string name="quickspace_alternate_style_summary">Használjon minimalista stílust a Belepillantáshoz</string>
+    <string name="quickspace_now_playing_title">A \"Most hallható\" megjelenítése</string>
+    <string name="quickspace_now_playing_summary">A Belepillantásban jeleníti meg mi szól éppen. FIGYELEM: Ez nem minden médialejátszóval kompatibilis!</string>
+    <string name="quickspace_now_playing_showdate_title">...dátum látszódjon</string>
+    <string name="quickspace_now_playing_showdate_summary">A \"Most hallható\" helyett az első sorban</string>
+    <string name="quickspace_psa_title">Véletlenszerű üzenetek megjelenítése</string>
+    <string name="quickspace_psa_summary">Néha jelenjenek meg kedves üzenetek a Belepillantásban.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Jó reggelt!</item>
+        <item>Jó reggelt, szóljon a rock!</item>
+        <item>Micsoda szép nap!</item>
+        <item>Legyen szép napja!</item>
+        <item>Mit szólna egy 5 perces szunyókáláshoz?</item>
+        <item>Ez is egy módja az ébredésnek.</item>
+        <item>Meg kell változtatnia az ébresztés hangját.</item>
+        <item>Ez egy szép napnak tűnik, nem?</item>
+        <item>Lásson neki a reggelinek.</item>
+        <item>Mindenképp ellenőrizze az időjárást</item>
+        <item>Még egy kicsit álmos lehet</item>
+        <item>Szétnézett már odakinn?</item>
+        <item>Lásson neki a munkának.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Jó éjszakát!</item>
+        <item>Aludjon jól!</item>
+        <item>Holnap találkozunk!</item>
+        <item>Szép álmokat!</item>
+        <item>Ne maradjon ébren túl későig</item>
+        <item>Legyen pihentető az álma</item>
+        <item>Aludjon többet</item>
+        <item>Eljött a relaxálás ideje</item>
+        <item>Használja ki az éjszakát!</item>
+        <item>Eljött az akkufeltöltés ideje!</item>
+        <item>A holnapi nap akár nagyszerű is lehet</item>
+        <item>Készítse elő fáradt csontjait holnapra</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Hm... jó éjt?</item>
+        <item>Egy kicsit már késő van</item>
+        <item>Alvási ütemtervet kéne készítenie</item>
+        <item>Még ebben az órában is tevékeny?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Ez a ROM olyan hideg, mint az exfeleséged szíve</item>
+        <item>Itt az ideje már egy új frissítést telepíteni?</item>
+        <item>Elege van már az Android R körüli felhajtásból?</item>
+        <item>Helló, mi a helyzet?</item>
+        <item>Fókuszáljon a feladataira</item>
+        <item>Hány képernyőképet készített?</item>
+        <item>A szinronizálás legyen veled!</item>
+        <item>Jó szórakozást!</item>
+        <item>Ideje lenne egy jó zenét hallgatni!</item>
+        <item>Van a \"kúlnál\" is \"kúlabb\"?</item>
+        <item>Jéghideg!</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C FEJ</item>
+        <item>Te vagy minden jég!</item>
+        <item>Még mindig telefonozol? Nem kéne inkább a pároddal lenned?</item>
+        <item>Már nagyon várjuk a 3000-es évet</item>
+        <item>Dobj nekünk egy \'Sziá\'-t a Discordon</item>
+        <item>Tegyen ma valami szépet</item>
+        <item>Ez úgy jó, ahogy van. Igaz?</item>
+        <item>Hogy mennek a dolgok?</item>
+        <item>Jégkrémbe nyalnál...vagy inkább valami másba?</item>
+        <item>Köszönjük a támogatást!</item>
+        <item>Inkább kergesd be a lompost a málnásba, jó?</item>
+        <item>Az építőrobot egyik legjobb válogatása</item>
+        <item>Ez itt...mi is ez?</item>
+        <item>Próbáljon egy jeges desszertet</item>
+        <item>Milyen remek élmény, nem igaz?</item>
+        <item>Flesseljen minden nap!</item>
+        <item>Ön kapcsolatba került a jéggel</item>
+        <item>Mi jár a fejében?</item>
+        <item>A győztes pedig....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
     <string name="date_format_title">Dátumformátum</string>
     <string name="date_format_long_name">Hosszú</string>
     <string name="date_format_normal_name">Szokásos</string>
     <string name="date_format_short_name">Rövid</string>
-    <!-- At a glance style -->
-    <!-- At a glance uppercase -->
-    <!-- At a glance font spacing -->
+    <string name="date_format_daydate_long_name">Nap (számokkal)</string>
+    <string name="date_format_daydate_short_name">Nap (röviden, számokkal)</string>
+    <string name="date_format_dayonly_name">Csak ma</string>
+    <string name="date_style_font">A dátum betűtípusa</string>
+    <string name="date_style_font_system_header">Rendszer-fejléc</string>
+    <string name="date_style_font_system_body">Rendszer-főlap</string>
+    <string name="date_style_transform_title">Nagybetűs dátum-megjelenítés</string>
+    <string name="date_style_transform_summary">Alakítsa át az összes dátumot / betekintést nagybetűs szöveggé</string>
+    <string name="date_style_spacing">A dátum térköze</string>
     <string name="date_style_spacing_normal">Szokásos</string>
-    <!-- AppInfo -->
-    <!-- Used for preference height loading. -->
-    <!-- Edit workspace -->
-    <!-- AppPrediction Row -->
+    <string name="date_style_spacing_barely">Alig észrevehető</string>
+    <string name="date_style_spacing_ott">Legfelülre</string>
+    <string name="app_info_subtext">Csúsztasson lefelé az info bezárásához</string>
+    <string name="placeholder_string">Betöltés...</string>
+    <string name="app_info_icon_pack">Ikoncsomag</string>
+    <string name="app_info_icon_pack_none">Nincs</string>
+    <string name="app_info_source">Forrás</string>
+    <string name="app_info_source_unknown">Ismeretlen</string>
+    <string name="app_info_last_update">Utolsó frissítés</string>
+    <string name="app_info_version">Verzió</string>
+    <string name="app_info_more">Továbbiak</string>
+    <string name="settings_edit_allow_title">Szerkesztés-engedélyező</string>
+    <string name="settings_edit_allow_summary_on">A kezdőképernyőn engedélyezett az ikon- és modulhozzáadás, eltávolítás és mozgatás</string>
+    <string name="settings_edit_allow_summary_off">A kezdőképernyőn nem engedélyezett az ikon- és modulhozzáadás, eltávolítás és mozgatás</string>
+    <string name="settings_edit_widgets_error">Nem lehet kisalkalmazásokat hozzáadni a kezdőképernyőhöz</string>
+    <string name="app_show_predictions_title">Ajánlott alkalmazások sora</string>
+    <string name="app_show_predictions_summary">Kapcsoló az ajánlott alkalmazások megjelenítéséhez az előzményben és az alkalmazásfiókban</string>
 </resources>
