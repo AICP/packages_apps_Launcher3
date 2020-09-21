@@ -20,6 +20,7 @@ import static android.view.View.MeasureSpec.getSize;
 import static android.view.View.MeasureSpec.makeMeasureSpec;
 
 import static com.android.launcher3.LauncherState.ALL_APPS_HEADER;
+import static com.android.launcher3.LauncherState.ALL_APPS_HEADER_EXTRA;
 import static com.android.launcher3.Utilities.prefixTextWithIcon;
 import static com.android.launcher3.icons.IconNormalizer.ICON_VISIBLE_AREA_FACTOR;
 
@@ -235,5 +236,7 @@ public class AppsSearchContainerLayout extends ExtendedEditText
     public void setContentVisibility(int visibleElements, PropertySetter setter,
             Interpolator interpolator) {
         setter.setViewAlpha(this, (visibleElements & ALL_APPS_HEADER) != 0 ? 1 : 0, interpolator);
+        mSearchBarController.setVisibility(
+                (visibleElements & ALL_APPS_HEADER_EXTRA) != 0 ? View.GONE : View.VISIBLE);
     }
 }
