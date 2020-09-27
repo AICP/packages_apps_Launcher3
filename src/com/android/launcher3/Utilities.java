@@ -154,6 +154,8 @@ public final class Utilities {
     public static final String KEY_ALL_APPS_BACKGROUND_ALPHA = "pref_all_apps_scrim_alpha";
     public static final String KEY_ICON_SIZE = "pref_icon_size";
 
+    public static final String KEY_DEFAULT_HOME_PAGE = "pref_default_homepage";
+
     private static final long WAIT_BEFORE_RESTART = 250;
 
     /**

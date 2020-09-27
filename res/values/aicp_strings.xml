@@ -236,4 +236,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="icon_size_average">Default</string>
     <string name="icon_size_large">Large</string>
     <string name="icon_size_extra_large">Extra large</string>
+
+    <!-- Default home page -->
+    <string name="set_default_home_page">Set default page</string>
 </resources>
