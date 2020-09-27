@@ -264,6 +264,8 @@ public class Launcher extends StatefulActivity<LauncherState> implements Launche
     private static final int APPS_VIEW_ALPHA_CHANNEL_INDEX = 1;
     private static final int SCRIM_VIEW_ALPHA_CHANNEL_INDEX = 0;
 
+    private static final String PREF_DEFAULT_HOME_PAGE = "PREF_DEFAULT_HOME_PAGE";
+
     private LauncherAppTransitionManager mAppTransitionManager;
     private Configuration mOldConfig;
 
@@ -2009,7 +2011,7 @@ public class Launcher extends StatefulActivity<LauncherState> implements Launche
         } else  if (mWorkspace != null) {
             return mWorkspace.getCurrentPage();
         } else {
-            return 0;
+            return getDefaultPage();
         }
     }
 
@@ -2392,7 +2394,9 @@ public class Launcher extends StatefulActivity<LauncherState> implements Launche
 
     public void onPageBoundSynchronously(int page) {
         mSynchronouslyBoundPage = page;
-        mWorkspace.setCurrentPage(page);
+        if (page != PagedView.INVALID_PAGE) {
+            mWorkspace.setCurrentPage(page);
+        }
         mPageToBindSynchronously = PagedView.INVALID_PAGE;
     }
 
@@ -2457,7 +2461,12 @@ public class Launcher extends StatefulActivity<LauncherState> implements Launche
         // When undoing the removal of the last item on a page, return to that page.
         // Since we are just resetting the current page without user interaction,
         // override the previous page so we don't log the page switch.
-        mWorkspace.setCurrentPage(pageBoundFirst, pageBoundFirst /* overridePrevPage */);
+        if (mWorkspace.initializeDefaultPage()) {
+            // Nothing to do (i.e., skip the else if part)
+            // -> initializeDefaultPage already called setCurrentPage for us
+        } else if (pageBoundFirst != PagedView.INVALID_PAGE) {
+            mWorkspace.setCurrentPage(pageBoundFirst, pageBoundFirst /* overridePrevPage */);
+        }
         mPageToBindSynchronously = PagedView.INVALID_PAGE;
 
         // Cache one page worth of icons
@@ -2780,5 +2789,27 @@ public class Launcher extends StatefulActivity<LauncherState> implements Launche
 
     private static class NonConfigInstance {
         public Configuration config;
+    }
+
+
+    public int getCurrentPage() {
+        return mWorkspace.getNextPage();
+    }
+    public void setCurrentDefaultPage() {
+        int page = getCurrentPage();
+        mSharedPrefs.edit().putInt(PREF_DEFAULT_HOME_PAGE, page).apply();
+    }
+    public int getDefaultPage(int pageCount) {
+        int page = mSharedPrefs.getInt(PREF_DEFAULT_HOME_PAGE, 0);
+        if (page >= pageCount) {
+            return pageCount - 1;
+        }
+        return page;
+    }
+    public int getDefaultPage() {
+        return getDefaultPage(mWorkspace.getChildCount());
+    }
+    public boolean isOnDefaultPage() {
+        return getDefaultPage() == getCurrentPage();
     }
 }
