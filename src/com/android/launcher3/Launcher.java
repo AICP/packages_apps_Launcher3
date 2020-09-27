@@ -227,6 +227,8 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
     private static final int APPS_VIEW_ALPHA_CHANNEL_INDEX = 1;
     private static final int SCRIM_VIEW_ALPHA_CHANNEL_INDEX = 0;
 
+    private static final String PREF_DEFAULT_HOME_PAGE = "PREF_DEFAULT_HOME_PAGE";
+
     private LauncherAppTransitionManager mAppTransitionManager;
     private Configuration mOldConfig;
 
@@ -2463,7 +2465,9 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         // When undoing the removal of the last item on a page, return to that page.
         // Since we are just resetting the current page without user interaction,
         // override the previous page so we don't log the page switch.
-        mWorkspace.setCurrentPage(pageBoundFirst, pageBoundFirst /* overridePrevPage */);
+        if (pageBoundFirst != PagedView.INVALID_RESTORE_PAGE) {
+            mWorkspace.setCurrentPage(pageBoundFirst, pageBoundFirst /* overridePrevPage */);
+        }
 
         // Cache one page worth of icons
         getViewCache().setCacheSize(R.layout.folder_application,
@@ -2749,5 +2753,23 @@ public class Launcher extends BaseDraggingActivity implements LauncherExterns,
         mClient.redraw(mUiInformation);
 
         super.onExtractedColorsChanged(wallpaperColorInfo);
+    }
+
+    public int getCurrentPage() {
+        return mWorkspace.getNextPage();
+    }
+
+    public void setCurrentDefaultPage() {
+        int page = getCurrentPage();
+        mSharedPrefs.edit().putInt(PREF_DEFAULT_HOME_PAGE, page).apply();
+    }
+
+    public int getDefaultPage() {
+        // TODO check if exists, else ret 0
+        return mSharedPrefs.getInt(PREF_DEFAULT_HOME_PAGE, 0);
+    }
+
+    public boolean isOnDefaultPage() {
+        return getDefaultPage() == getCurrentPage();
     }
 }
