@@ -138,7 +138,7 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
 
     private static final int ADJACENT_SCREEN_DROP_DURATION = 300;
 
-    private static final int DEFAULT_PAGE = 0;
+    //private static final int DEFAULT_PAGE = 0;
 
     private LayoutTransition mLayoutTransition;
     @Thunk final WallpaperManager mWallpaperManager;
@@ -517,7 +517,9 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
      * Initializes various states for this workspace.
      */
     protected void initWorkspace() {
-        mCurrentPage = DEFAULT_PAGE;
+        // getChildCount crashes here, and is not the final child count here anyway,
+        // so let's initialize mCurrentPage to the user's choice later
+        mCurrentPage = 0;///mLauncher.getDefaultPage(getChildCount());
         setClipToPadding(false);
 
         setupLayoutTransition();
@@ -1257,6 +1259,10 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
     }
 
     public void unlockWallpaperFromDefaultPageOnNextLayout() {
+        // This method is called after all pages have been added,
+        // so we can switch to the user's default page now
+        mCurrentPage = mLauncher.getDefaultPage(getChildCount());
+
         if (mWallpaperOffset.isLockedToDefaultPage()) {
             mUnlockWallpaperFromDefaultPageOnLayout = true;
             requestLayout();
@@ -3340,7 +3346,7 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
     }
 
     void moveToDefaultScreen() {
-        int page = DEFAULT_PAGE;
+        int page = mLauncher.getDefaultPage(getChildCount());
         if (!workspaceInModalState()) {
             if (getNextPage() != page) {
                 snapToPage(page);

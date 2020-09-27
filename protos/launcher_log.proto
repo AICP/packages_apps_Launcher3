@@ -119,6 +119,7 @@ enum ControlType {
   BACK_GESTURE = 19;
   UNDO = 20;
   DISMISS_PREDICTION = 21;
+  SET_DEFAULT_PAGE = 1024;
 }
 
 enum TipType {
