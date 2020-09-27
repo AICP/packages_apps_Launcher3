@@ -155,6 +155,8 @@ public final class Utilities {
     public static final String KEY_ICON_SIZE = "pref_icon_size";
     public static final String KEY_ALLAPPS_SHOW_PREDICTIONS = "last_prediction_enabled_state";
 
+    public static final String KEY_DEFAULT_HOME_PAGE = "pref_default_homepage";
+
     private static final long WAIT_BEFORE_RESTART = 250;
 
     /**
