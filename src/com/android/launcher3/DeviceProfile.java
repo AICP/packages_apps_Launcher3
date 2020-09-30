@@ -329,12 +329,12 @@ public class DeviceProfile {
         updateIconSize(1f, res);
 
         // Check to see if the icons fit within the available height.  If not, then scale down.
-        float usedHeight = (cellHeightPx * inv.numRows);
+        /*float usedHeight = (cellHeightPx * inv.numRows);
         int maxHeight = (availableHeightPx - getTotalWorkspacePadding().y);
         if (usedHeight > maxHeight) {
             float scale = maxHeight / usedHeight;
             updateIconSize(scale, res);
-        }
+        }*/
         updateAvailableFolderCellDimensions(res);
     }
 
@@ -365,15 +365,15 @@ public class DeviceProfile {
         }
         cellWidthPx = iconSizePx + iconDrawablePaddingPx;
 
-        // All apps
-        if (allAppsHasDifferentNumColumns()) {
+        // all apps should always have constant row height and not follow workspace
+        //if (allAppsHasDifferentNumColumns()) {
             allAppsIconSizePx = ResourceUtils.pxFromDp(inv.allAppsIconSize, mInfo.metrics);
             allAppsIconTextSizePx = Utilities.pxFromSp(inv.allAppsIconTextSize, mInfo.metrics);
             allAppsIconDrawablePaddingPx = iconDrawablePaddingOriginalPx;
             // We use 4 below to ensure labels are closer to their corresponding icon.
             allAppsCellHeightPx = Math.round(allAppsIconSizePx + allAppsIconTextSizePx
                     + (4 * allAppsIconDrawablePaddingPx));
-        } else {
+        /*} else {
             allAppsIconSizePx = iconSizePx;
             allAppsIconTextSizePx = iconTextSizePx;
             allAppsIconDrawablePaddingPx = iconDrawablePaddingPx;
@@ -383,7 +383,7 @@ public class DeviceProfile {
             allAppsCellHeightPx = allAppsIconSizePx + allAppsIconDrawablePaddingPx
                     + Utilities.calculateTextHeight(allAppsIconTextSizePx)
                     + topBottomPadding * 2;
-        }
+        }*/
         allAppsCellWidthPx = allAppsIconSizePx + allAppsIconDrawablePaddingPx;
 
         if (isVerticalBarLayout()) {
