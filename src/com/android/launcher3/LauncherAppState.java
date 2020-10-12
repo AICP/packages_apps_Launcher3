@@ -46,7 +46,7 @@ import com.android.launcher3.util.SecureSettingsObserver;
 import com.android.launcher3.util.SimpleBroadcastReceiver;
 import com.android.launcher3.widget.custom.CustomWidgetManager;
 
-import com.android.internal.util.syberia.SyberiaUtils;
+import com.android.internal.util.aicp.PackageUtils;
 
 public class LauncherAppState {
 
@@ -89,7 +89,7 @@ public class LauncherAppState {
         this(context, LauncherFiles.APP_ICONS_DB);
 
         mModelChangeReceiver = new SimpleBroadcastReceiver(mModel::onBroadcastIntent);
-        setSearchAppAvailable(SyberiaUtils.isPackageInstalled(context, Utilities.SEARCH_PACKAGE));
+        setSearchAppAvailable(PackageUtils.isPackageInstalled(context, Utilities.SEARCH_PACKAGE));
 
         mContext.getSystemService(LauncherApps.class).registerCallback(mModel);
         mModelChangeReceiver.register(mContext, Intent.ACTION_LOCALE_CHANGED,
