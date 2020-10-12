@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
-* Copyright (C) 2019-2020 crDroid Android Project
+* Copyright (C) 2014-2020 AICP
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -21,4 +21,10 @@
 
     <!-- Folder titles -->
     <string name="google_title" translatable="false">Google</string>
+
+    <!-- Show searchbar -->
+    <string name="show_searchbar_title">Show search bar</string>
+    <string name="show_searchbar_summary">Show the search bar on the home screen</string>
+
+    <string name="state_loading">Applying\u2026</string>
 </resources>
