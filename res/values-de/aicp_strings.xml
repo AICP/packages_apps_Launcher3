@@ -189,4 +189,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="settings_edit_widgets_error">Es ist nicht möglich, Widgets zum Startbildschirm hinzuzufügen</string>
     <string name="app_show_predictions_title">Zeile mit App-Vorschlägen</string>
     <string name="app_show_predictions_summary">Zeige App-Vorschläge im Anwendungsverlauf und der App-Übersicht an</string>
+    <string name="set_default_home_page">Startseite festlegen</string>
 </resources>
