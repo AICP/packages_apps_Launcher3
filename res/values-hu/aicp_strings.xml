@@ -189,4 +189,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="settings_edit_widgets_error">Nem lehet kisalkalmazásokat hozzáadni a kezdőképernyőhöz</string>
     <string name="app_show_predictions_title">Ajánlott alkalmazások sora</string>
     <string name="app_show_predictions_summary">Kapcsoló az ajánlott alkalmazások megjelenítéséhez az előzményben és az alkalmazásfiókban</string>
+    <string name="set_default_home_page">Az alapértelmezett oldal beállítása</string>
 </resources>

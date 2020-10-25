@@ -188,4 +188,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="settings_edit_widgets_error">Nelze přidat widgety na domovskou obrazovku</string>
     <string name="app_show_predictions_title">Řádek návrhů aplikací</string>
     <string name="app_show_predictions_summary">Přepnout zobrazení řádku návrhů aplikací v nedávných a seznamu aplikací</string>
+    <string name="set_default_home_page">Nastavit výchozí stránku</string>
 </resources>

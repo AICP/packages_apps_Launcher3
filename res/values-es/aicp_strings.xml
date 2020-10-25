@@ -189,4 +189,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="settings_edit_widgets_error">No es posible añadir widgets en la pantalla principal</string>
     <string name="app_show_predictions_title">Fila de predicción de aplicaciones</string>
     <string name="app_show_predictions_summary">Cambiar para mostrar la fila de predicción de aplicaciones en recientes y cajón de aplicaciones</string>
+    <string name="set_default_home_page">Establecer página predeterminada</string>
 </resources>

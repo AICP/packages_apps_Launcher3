@@ -150,4 +150,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_info_last_update">Laatste update</string>
     <string name="app_info_version">Versie</string>
     <string name="app_info_more">Meer</string>
+    <string name="set_default_home_page">Standaardpagina instellen</string>
 </resources>
