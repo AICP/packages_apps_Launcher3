@@ -188,4 +188,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="settings_edit_widgets_error">Невозможно добавить виджеты на домашний экран</string>
     <string name="app_show_predictions_title">Добавить строку прогноза</string>
     <string name="app_show_predictions_summary">Вкл/Выкл для отображения строки прогноза в панели недавних приложений и меню приложений</string>
+    <string name="set_default_home_page">Задать страницу по умолчанию</string>
 </resources>
