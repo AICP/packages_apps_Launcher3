@@ -60,6 +60,8 @@ import androidx.preference.PreferenceGroup.PreferencePositionCallback;
 import androidx.preference.PreferenceScreen;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.aicp.gear.preference.SeekBarPreferenceCham;
+
 /**
  * Settings activity for Launcher. Currently implements the following setting: Allow rotation
  */
@@ -122,6 +124,7 @@ public class SettingsActivity extends Activity
             case Utilities.DATE_STYLE_FONT:
             case Utilities.DATE_STYLE_TRANSFORM:
             case Utilities.DATE_STYLE_SPACING:
+            case Utilities.KEY_ALL_APPS_BACKGROUND_ALPHA:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:
@@ -298,6 +301,12 @@ public class SettingsActivity extends Activity
                     atAGlanceDateFormat.setOnPreferenceChangeListener((pref, val) -> {
                         int index = atAGlanceDateFormat.findIndexOfValue((String) val);
                         atAGlanceDateFormat.setSummary(atAGlanceDateFormat.getEntries()[index]);
+                        return true;
+                    });
+                case Utilities.KEY_ALL_APPS_BACKGROUND_ALPHA:
+                    SeekBarPreferenceCham allAppsAlpha =
+                            (SeekBarPreferenceCham) findPreference(Utilities.KEY_ALL_APPS_BACKGROUND_ALPHA);
+                    allAppsAlpha.setOnPreferenceChangeListener((pref, val) -> {
                         return true;
                     });
                 case Utilities.DATE_STYLE_FONT:
