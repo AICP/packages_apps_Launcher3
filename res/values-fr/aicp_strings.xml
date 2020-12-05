@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2019 AICP
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="settings_title">Paramètres</string>
+    <string name="home_category_title">Écran d\'accueil</string>
+    <string name="home_category_summary">Définir le panneau Google Now et plus</string>
+    <string name="ui_category_title">Interface utilisateur</string>
+    <string name="ui_category_summary">Paramètres de l\'interface utilisateur</string>
+    <string name="app_drawer_category_title">Tiroir d\'applications</string>
+    <string name="app_drawer_category_summary">Personnalisez votre tiroir d\'applications</string>
+    <string name="gestures_category_title">Gestes</string>
+    <string name="gestures_category_summary">Appui double, gestes balayer vers le bas et \"effacer tout\"</string>
+    <string name="home_grid_title">Disposition de la grille</string>
+    <string name="icon_size_title">Taille d\'icône</string>
+    <string name="icon_size_extra_small">Très petit</string>
+    <string name="icon_size_small">Petit</string>
+    <string name="icon_size_average">Par défaut</string>
+    <string name="icon_size_large">Grande</string>
+    <string name="icon_size_extra_large">Très grand</string>
+    <string name="allow_swipe_down_clearall_title">Tout effacer en glissant vers le bas depuis la vue des applications récentes</string>
+    <string name="allow_swipe_down_clearall_desc">Glisser verticalement vers le bas dans la vue des applications récentes pour effacer toutes les applications</string>
+    <string name="pref_homescreen_dt_gestures_title">Appui double</string>
+    <string name="pref_homescreen_gestures_none">Aucun</string>
+    <string name="pref_homescreen_gestures_sleep">Éteindre l\'écran</string>
+    <string name="pref_homescreen_gestures_torch">Lampe torche</string>
+    <string name="pref_homescreen_gestures_google">Recherche Google</string>
+    <string name="pref_homescreen_dt_gestures_google_toast">Recherche Google n\'est pas installée</string>
+    <string name="pref_homescreen_gestures_volume_panel">Panneau de volume</string>
+    <string name="pref_homescreen_gestures_clear_notifications">Effacer les notifications</string>
+    <string name="pref_homescreen_gestures_notifications">Panneau de notifications</string>
+    <string name="pref_homescreen_gestures_qs_panel">Volet des réglages rapides</string>
+    <string name="pref_homescreen_gestures_screenrecord">Capture d\'écran vidéo</string>
+    <string name="pref_homescreen_gestures_screenshot_full">Capture d\'écran - pleine</string>
+    <string name="pref_homescreen_gestures_screenshot_partial">Capture d\'écran - partielle</string>
+    <string name="google_feed_title">Afficher l\'application Google</string>
+    <string name="google_feed_summary">À gauche de l\'écran d\'accueil principal</string>
+    <string name="num_default">Par défaut</string>
+    <string name="number_of_columns_title">Nombre de colonnes</string>
+    <string name="number_of_rows_title">Nombre de lignes</string>
+    <string name="number_of_hotseat_title">Nombre d\'icônes du dock</string>
+    <string name="state_loading">Application \u2026</string>
+    <string name="app_show_label_title">Libellés des applications</string>
+    <string name="desktop_show_label_summary">Afficher les libellés des applications sur l\'écran d\'accueil</string>
+    <string name="allapps_show_label_summary">Afficher les libellés des applications dans le tiroir des applications</string>
+    <string name="pref_qsb_show_title">Barre de recherche rapide</string>
+    <string name="pref_qsb_show_summary">Afficher la barre de recherche rapide sur l\'écran d\'accueil</string>
+    <string name="show_quickspace_title">En bref</string>
+    <string name="show_quickspace_summary">Afficher en haut de votre écran d\'accueil</string>
+    <string name="apps_always_show_label_title">Ignorer l\'orientation des libellés</string>
+    <string name="apps_always_show_label_summary">Toujours afficher les libellés des applications sur l\'écran d\'accueil et le tiroir d\'applications</string>
+    <string name="customize">Personnaliser</string>
+    <string name="hide_app">Masquer les applications</string>
+    <string name="hide_app_sum">Masquer les applications du tiroir d\'applications</string>
+    <string name="hide_app_selected"> sélectionné</string>
+    <string name="hidden_app">Toutes les applications</string>
+    <string name="hide_selected">Masquer l\'(les) application(s) sélectionnée(s)</string>
+    <string name="more">Plus</string>
+    <string name="reset_hidden_apps">Tout réinitialiser</string>
+    <string name="reset_hidden_apps_done">Les applications cachées sont maintenant disponibles</string>
+    <string name="date_format_title">Format de la date</string>
+    <string name="date_format_long_name">Long</string>
+    <string name="date_format_normal_name">Normal</string>
+    <string name="date_format_short_name">Court</string>
+    <string name="date_style_spacing_normal">Normal</string>
+</resources>

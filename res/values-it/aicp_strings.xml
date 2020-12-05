@@ -15,6 +15,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="desktop_show_label_summary">Mostra le etichette delle app nella schermata home</string>
     <string name="apps_always_show_label_title">Ignora l\'orientamento delle etichette</string>
     <string name="date_format_title">Formato data</string>
     <string name="date_format_long_name">Lungo</string>

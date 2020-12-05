@@ -15,10 +15,177 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="settings_title">Configurações</string>
+    <string name="home_category_title">Tela inicial</string>
+    <string name="home_category_summary">Definir o painel do Google Now e muito mais</string>
+    <string name="ui_category_title">Interface do usuário</string>
+    <string name="ui_category_summary">Configurações da Interface do Usuário</string>
+    <string name="app_drawer_category_title">Gaveta de aplicativos</string>
+    <string name="app_drawer_category_summary">Personalizar sua gaveta de aplicativos</string>
+    <string name="gestures_category_title">Gestos</string>
+    <string name="gestures_category_summary">Toque duas vezes, deslize para baixo e limpe todos os gestos</string>
+    <string name="home_grid_title">Layout em grade</string>
+    <string name="icon_size_title">Tamanho do ícone</string>
+    <string name="icon_size_extra_small">Minúsculo</string>
+    <string name="icon_size_small">Pequeno</string>
+    <string name="icon_size_average">Padrão</string>
+    <string name="icon_size_large">Grande</string>
+    <string name="icon_size_extra_large">Muito grande</string>
+    <string name="allow_swipe_down_clearall_title">Limpar tudo ao deslizar da visualização recente</string>
+    <string name="allow_swipe_down_clearall_desc">Deslize verticalmente para baixo na visualização recente para limpar todos os aplicativos</string>
+    <string name="pref_homescreen_dt_gestures_title">Toque duplo</string>
+    <string name="pref_homescreen_gestures_none">Nenhum</string>
+    <string name="pref_homescreen_gestures_sleep">Tela desligada</string>
+    <string name="pref_homescreen_gestures_torch">Lanterna</string>
+    <string name="pref_homescreen_gestures_google">Pesquisa do Google</string>
+    <string name="pref_homescreen_dt_gestures_google_toast">Aplicativo do Google não instalado</string>
+    <string name="pref_homescreen_gestures_volume_panel">Painel de volume</string>
+    <string name="pref_homescreen_gestures_clear_notifications">Limpar notificações</string>
+    <string name="pref_homescreen_gestures_notifications">Painel de notificações</string>
+    <string name="pref_homescreen_gestures_qs_panel">Painel de Configurações Rápidas</string>
+    <string name="pref_homescreen_gestures_screenrecord">Gravador de tela</string>
+    <string name="pref_homescreen_gestures_screenshot_full">Captura de tela - completa</string>
+    <string name="pref_homescreen_gestures_screenshot_partial">Captura de tela - parcial</string>
+    <string name="google_feed_title">Exibir aplicativo do Google</string>
+    <string name="google_feed_summary">À esquerda da sua tela inicial</string>
+    <string name="num_default">Padrão</string>
+    <string name="number_of_columns_title">Número de colunas</string>
+    <string name="number_of_rows_title">Número de linhas</string>
+    <string name="number_of_hotseat_title">Número de ícones na dock</string>
+    <string name="state_loading">Aplicando\u2026</string>
+    <string name="app_show_label_title">Rótulo dos aplicativos</string>
+    <string name="desktop_show_label_summary">Mostrar os rótulos de aplicativos na tela inicial</string>
+    <string name="allapps_show_label_summary">Mostrar os rótulos de aplicativos na gaveta de aplicativos</string>
+    <string name="pref_qsb_show_title">Barra de pesquisa rápida</string>
+    <string name="pref_qsb_show_summary">Mostrar barra de pesquisa rápida na tela inicial</string>
+    <string name="show_quickspace_title">Em resumo</string>
+    <string name="show_quickspace_summary">Mostrar no topo da tela inicial</string>
     <string name="apps_always_show_label_title">Ignorar orientação para etiquetas</string>
+    <string name="apps_always_show_label_summary">Sempre mostrar rótulos de aplicativos na tela inicial e na gaveta</string>
+    <string name="customize">Personalizar</string>
+    <string name="hide_app">Ocultar aplicativos</string>
+    <string name="hide_app_sum">Ocultar aplicativos da gaveta</string>
+    <string name="hide_app_selected"> selecionado</string>
+    <string name="hidden_app">Todos os aplicativos</string>
+    <string name="hide_selected">Ocultar aplicativo(s) selecionado(s)</string>
+    <string name="more">Mais</string>
+    <string name="reset_hidden_apps">Redefinir tudo</string>
+    <string name="reset_hidden_apps_done">Aplicativos ocultos agora estão disponíveis</string>
+    <string name="quick_event_rom_intro_welcome">Bem-vindo ao AICP!</string>
+    <string name="quick_event_rom_intro_title1">Tenha um ótimo dia</string>
+    <string name="quick_event_rom_intro_title2">Obrigado por nos escolher</string>
+    <string name="quick_event_rom_intro_title3">Gostando de nós? Envie-nos uma cerveja</string>
+    <string name="quick_event_rom_intro_title4">AICP OTA!</string>
+    <string name="quick_event_rom_intro_title5">A felicidade é uma garrafa de cerveja gelada</string>
+    <string name="quick_event_rom_intro_title6">Toque aqui para começar</string>
+    <string name="quick_event_rom_intro_title7">Nós também te amamos</string>
+    <string name="quick_event_ambient_now_playing">Reproduzindo agora</string>
+    <string name="quick_event_ambient_song_artist">%1$s por %2$s</string>
+    <string name="quickspace_alternate_style_title">Use um estilo alternativo</string>
+    <string name="quickspace_alternate_style_summary">Use um estilo minimalista para ver de relance</string>
+    <string name="quickspace_now_playing_title">Mostrar tocando agora</string>
+    <string name="quickspace_now_playing_summary">Mostra a música em que você está tocando. AVISO: Não é totalmente compatível com todos os players de mídia!</string>
+    <string name="quickspace_now_playing_showdate_title">...mostrar data</string>
+    <string name="quickspace_now_playing_showdate_summary">Mostra a data na primeira linha em vez de \"Tocando agora\"</string>
+    <string name="quickspace_psa_title">Mostrar uma mensagem aleatória</string>
+    <string name="quickspace_psa_summary">Às vezes, algumas mensagens legais são exibidas.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Bom dia!</item>
+        <item>Bom dia, hora de botar pra quebrar!</item>
+        <item>Que dia lindo!</item>
+        <item>Tenha um bom dia!</item>
+        <item>Que tal um pequeno cochilo de 5 minutos?</item>
+        <item>Essa é uma maneira de acordar.</item>
+        <item>Você deveria mudar os sons de seu alarme.</item>
+        <item>Parece que está um dia bonito, não é?</item>
+        <item>Vamos pegar esse pão.</item>
+        <item>Verifique o clima para garantir</item>
+        <item>Sentindo um pouco sonolento ainda</item>
+        <item>Você já olhou pra fora hoje?</item>
+        <item>Vamos resolver isso.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Boa noite!</item>
+        <item>Durma bem!</item>
+        <item>Te vejo amanhã!</item>
+        <item>Bons sonhos!</item>
+        <item>Não fique acordado até tarde</item>
+        <item>Tenha um bom sono</item>
+        <item>Durma um pouco</item>
+        <item>Hora de relaxar</item>
+        <item>Aproveite a noite!</item>
+        <item>Hora de carregar as baterias!</item>
+        <item>Amanhã pode ser um ótimo dia</item>
+        <item>Prepare seus ossos para amanhã</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Hm... boa noite?</item>
+        <item>É um pouco tarde agora</item>
+        <item>Você deve corrigir seu horário de sono</item>
+        <item>Você é mais produtivo neste momento?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Nossa ROM é tão fria quanto o coração do teu Ex</item>
+        <item>Está na hora de instalar uma atualização novamente?</item>
+        <item>Empolgado com o Android R?</item>
+        <item>Oh ei, o que se passa?</item>
+        <item>Concentre-se em suas tarefas</item>
+        <item>Quantas capturas de tela você tira?</item>
+        <item>Que a sincronização esteja com você...</item>
+        <item>Divirta-se!</item>
+        <item>Hora de música boa</item>
+        <item>O que é mais legal do que ser legal?</item>
+        <item>Gelado!</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C CABEÇALHO</item>
+        <item>Tu és todo gelo!</item>
+        <item>Eu tinha o melhor trocadilho de gelo, mas isso me escapou da cabeça. Pegou?</item>
+        <item>Te amamos 3000</item>
+        <item>Diga \'Olá\' para nós no Discord</item>
+        <item>Faça algo legal hoje</item>
+        <item>Isso é tão bom quanto ele ganha, certo?</item>
+        <item>Como estão as coisas?</item>
+        <item>Tudo que você precisa é de sorvete!</item>
+        <item>Obrigado pelo seu apoio</item>
+        <item>Cerveja raiz nunca quebra seu coração, certo?</item>
+        <item>Uma das melhores escolhas do buildbot</item>
+        <item>É o que é</item>
+        <item>Experimente sobremesas geladas</item>
+        <item>Que experiência adorável, não é?</item>
+        <item>Continue piscando!</item>
+        <item>Você está em um relacionamento com o gelo</item>
+        <item>No que você está pensando?</item>
+        <item>Vencedor Vencedor ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
     <string name="date_format_title">Formato da data</string>
     <string name="date_format_long_name">Longo</string>
     <string name="date_format_normal_name">Normal</string>
     <string name="date_format_short_name">Curto</string>
+    <string name="date_format_daydate_long_name">Dia (com número)</string>
+    <string name="date_format_daydate_short_name">Dia (curto com número)</string>
+    <string name="date_format_dayonly_name">Só hoje</string>
+    <string name="date_style_font">Fonte da data</string>
+    <string name="date_style_font_system_header">Título do sistema</string>
+    <string name="date_style_font_system_body">Corpo do sistema</string>
+    <string name="date_style_transform_title">Mostrar maiúsculas na data</string>
+    <string name="date_style_transform_summary">Transforme toda a data/de relance com texto em maiúsculas</string>
+    <string name="date_style_spacing">Data espaçada</string>
     <string name="date_style_spacing_normal">Normal</string>
+    <string name="date_style_spacing_barely">Quase imperceptível</string>
+    <string name="date_style_spacing_ott">Acima do topo</string>
+    <string name="app_info_subtext">Deslize para baixo para fechar as informações do aplicativo.</string>
+    <string name="placeholder_string">Carregando...</string>
+    <string name="app_info_icon_pack">Pacote de ícones</string>
+    <string name="app_info_icon_pack_none">Nenhum</string>
+    <string name="app_info_source">Fonte</string>
+    <string name="app_info_source_unknown">Desconhecido</string>
+    <string name="app_info_last_update">Última atualização</string>
+    <string name="app_info_version">Versão</string>
+    <string name="app_info_more">Mais</string>
+    <string name="settings_edit_allow_title">Permitir edição</string>
+    <string name="settings_edit_allow_summary_on">Ícones e widgets podem ser adicionados, removidos e movidos na tela inicial</string>
+    <string name="settings_edit_allow_summary_off">Ícones e widgets não podem ser adicionados, removidos e movidos na tela inicial</string>
+    <string name="settings_edit_widgets_error">Não é possível adicionar widgets à tela inicial</string>
+    <string name="app_show_predictions_title">Previsões de aplicativos</string>
+    <string name="app_show_predictions_summary">Alterne para mostrar a linha de previsões de aplicativos em recentes e gaveta de aplicativos</string>
 </resources>
