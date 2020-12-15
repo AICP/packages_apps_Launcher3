@@ -15,6 +15,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="apps_always_show_label_title">Abaikan orientasi untuk label</string>
     <string name="date_format_title">Format tanggal</string>
     <string name="date_format_long_name">Panjang</string>
     <string name="date_format_normal_name">Normal</string>
