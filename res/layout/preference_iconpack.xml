@@ -27,24 +27,6 @@
     android:clipToPadding="false"
     android:focusable="true" >
 
-    <LinearLayout
-        android:id="@+id/icon_frame"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minWidth="56dp"
-        android:gravity="start|center_vertical"
-        android:orientation="horizontal"
-        android:paddingEnd="8dp"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp">
-        <androidx.preference.internal.PreferenceImageView
-            android:id="@android:id/icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:maxWidth="48dp"
-            app:maxHeight="48dp" />
-    </LinearLayout>
-
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,6 +52,26 @@
             android:maxLines="10" />
 
     </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/icon_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="56dp"
+        android:gravity="start|center_vertical"
+        android:orientation="horizontal"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+        <androidx.preference.internal.PreferenceImageView
+            android:id="@android:id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:maxWidth="48dp"
+            app:maxHeight="48dp"
+            android:padding="12dp" />
+    </LinearLayout>
+
 
     <!-- Preference should place its actual preference widget here. -->
     <LinearLayout android:id="@android:id/widget_frame"
