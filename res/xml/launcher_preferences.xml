@@ -25,19 +25,6 @@
         android:summaryOn="@string/settings_edit_allow_summary_on"
         android:summaryOff="@string/settings_edit_allow_summary_off" />
 
-    <com.android.launcher3.settings.NotificationDotsPreference
-        android:key="pref_icon_badging"
-        android:title="@string/notification_dots_title"
-        android:persistent="false"
-        android:widgetLayout="@layout/notification_pref_warning" >
-        <intent android:action="android.settings.NOTIFICATION_SETTINGS">
-            <!-- This extra highlights the "Allow notification dots" field in Notification settings -->
-            <extra
-                android:name=":settings:fragment_args_key"
-                android:value="notification_badging" />
-        </intent>
-    </com.android.launcher3.settings.NotificationDotsPreference>
-
     <SwitchPreference
         android:key="pref_add_icon_to_home"
         android:title="@string/auto_add_shortcuts_label"
@@ -73,6 +60,19 @@
     <Preference
         android:key="pref_trust_apps"
         android:title="@string/trust_apps_manager_name" />
+
+    <com.android.launcher3.settings.NotificationDotsPreference
+        android:key="pref_icon_badging"
+        android:title="@string/notification_dots_title"
+        android:persistent="false"
+        android:widgetLayout="@layout/notification_pref_warning" >
+        <intent android:action="android.settings.NOTIFICATION_SETTINGS">
+            <!-- This extra highlights the "Allow notification dots" field in Notification settings -->
+            <extra
+                android:name=":settings:fragment_args_key"
+                android:value="notification_badging" />
+        </intent>
+    </com.android.launcher3.settings.NotificationDotsPreference>
 
 <PreferenceCategory
         android:key="gestures_category"
