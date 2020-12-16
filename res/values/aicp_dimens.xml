@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    <!--Icon Pack Picker İcon Sizes -->
+    <dimen name="icon_pack_icon_size">24dp</dimen>
+
+</resources>
