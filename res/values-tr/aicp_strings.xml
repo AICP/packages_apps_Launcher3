@@ -15,10 +15,178 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="settings_title">Ayarlar</string>
+    <string name="home_category_title">Ana ekran</string>
+    <string name="home_category_summary">Google now panelini ve daha fazlasını ayarlayın</string>
+    <string name="ui_category_title">Kullanıcı arayüzü</string>
+    <string name="ui_category_summary">Kullanıcı arayüzü ayarları</string>
+    <string name="app_drawer_category_title">Uygulama menüsü</string>
+    <string name="app_drawer_category_summary">Uygulama menünüzü özelleştirin</string>
+    <string name="gestures_category_title">Hareketler</string>
+    <string name="gestures_category_summary">Çift dokunun ve tüm hareketleri temizleyin</string>
+    <string name="home_grid_title">Klavuz düzeni</string>
+    <string name="icon_size_title">Simge boyutu</string>
+    <string name="icon_size_extra_small">Çok küçük</string>
+    <string name="icon_size_small">Küçük</string>
+    <string name="icon_size_average">Varsayılan</string>
+    <string name="icon_size_large">Büyük</string>
+    <string name="icon_size_extra_large">Çok büyük</string>
+    <string name="allow_swipe_down_clearall_title">Son uygulamalarda aşağı doğru kaydırarak tümünü temizle</string>
+    <string name="allow_swipe_down_clearall_desc">Tüm uygulamaları temizlemek için son uygulamalar görünümde dikey olarak aşağı doğru kaydırın</string>
+    <string name="pref_homescreen_dt_gestures_title">Çift dokunma</string>
+    <string name="pref_homescreen_gestures_none">Yok</string>
+    <string name="pref_homescreen_gestures_sleep">Ekranı kapat</string>
+    <string name="pref_homescreen_gestures_torch">El feneri</string>
+    <string name="pref_homescreen_gestures_google">Google arama</string>
+    <string name="pref_homescreen_dt_gestures_google_toast">Google arama yüklü değil</string>
+    <string name="pref_homescreen_gestures_volume_panel">Ses paneli</string>
+    <string name="pref_homescreen_gestures_clear_notifications">Bildirimleri temizle</string>
+    <string name="pref_homescreen_gestures_notifications">Bildirim paneli</string>
+    <string name="pref_homescreen_gestures_qs_panel">Hızlı ayarlar paneli</string>
+    <string name="pref_homescreen_gestures_screenrecord">Ekran kaydı</string>
+    <string name="pref_homescreen_gestures_screenshot_full">Ekran görüntüsü - tam</string>
+    <string name="pref_homescreen_gestures_screenshot_partial">Ekran görüntüsü - kısmi</string>
+    <string name="google_feed_title">Google uygulamasını görüntüle</string>
+    <string name="google_feed_summary">Ana ekran giriş ekranının solunda</string>
+    <string name="num_default">Varsayılan</string>
+    <string name="number_of_columns_title">Sütun sayısı</string>
+    <string name="number_of_rows_title">Satır sayısı</string>
+    <string name="number_of_hotseat_title">Alt panel simge sayısı</string>
+    <string name="state_loading">Uygulanıyor\u2026</string>
+    <string name="app_show_label_title">Uygulama etiketleri</string>
+    <string name="desktop_show_label_summary">Ana ekrandaki uygulamaların etiketlerini göster</string>
+    <string name="allapps_show_label_summary">Uygulama menüsünde uygulama etiketlerini göster</string>
+    <string name="pref_qsb_show_title">Hızlı arama çubuğu</string>
+    <string name="pref_qsb_show_summary">Ana ekranda hızlı arama çubuğunu göster</string>
+    <string name="show_quickspace_title">Bir bakışta</string>
+    <string name="show_quickspace_summary">Ana ekranınızın üst kısmında göster</string>
     <string name="apps_always_show_label_title">Etiketler için yönlendirmeyi yoksay</string>
+    <string name="apps_always_show_label_summary">Uygulama etiketlerini her zaman ana ekranda ve uygulama menüsünde göster</string>
+    <string name="customize">Özelleştirme</string>
+    <string name="hide_app">Uygulamaları gizle</string>
+    <string name="hide_app_sum">Uygulamaları menüden gizle</string>
+    <string name="hide_app_selected"> seçildi</string>
+    <string name="hidden_app">Tüm uygulamalar</string>
+    <string name="hide_selected">Seçilen uygulamaları gizle(s)</string>
+    <string name="more">Daha fazla</string>
+    <string name="reset_hidden_apps">Tümünü sıfırla</string>
+    <string name="reset_hidden_apps_done">Gizli uygulamalar artık kullanılabilir</string>
+    <string name="quick_event_rom_intro_welcome">AICP\'ye hoş geldiniz!</string>
+    <string name="quick_event_rom_intro_title1">İyi günler</string>
+    <string name="quick_event_rom_intro_title2">Bizi seçtiğiniz için teşşekkürler</string>
+    <string name="quick_event_rom_intro_title3">Bizi seviyor musunuz? Bize bira ısmarla</string>
+    <string name="quick_event_rom_intro_title4">AICP FTW!</string>
+    <string name="quick_event_rom_intro_title5">Mutluluk bir şişe buz gibi bir biradır</string>
+    <string name="quick_event_rom_intro_title6">Başlamak için buraya dokun</string>
+    <string name="quick_event_rom_intro_title7">Seni seviyoruz 3000</string>
+    <string name="quick_event_ambient_now_playing">Şimdi oynatılıyor</string>
+    <string name="quick_event_ambient_song_artist">%2$s tarafından %1$s</string>
+    <string name="quickspace_alternate_style_title">Alternatif bir stil kullan</string>
+    <string name="quickspace_alternate_style_summary">Bir bakışta için minimalist bir still kullanın</string>
+    <string name="quickspace_now_playing_title">Şimdi oynatılanı göster</string>
+    <string name="quickspace_now_playing_summary">Şuan çaldığınız şarkıyı gösterir. UYARI: Tüm medya oynatıcılarıyla tam uyumlu değildir!</string>
+    <string name="quickspace_now_playing_showdate_title">... bunun yerine tarihi göster</string>
+    <string name="quickspace_now_playing_showdate_summary">Tarihi \"Şimdi oynatılıyor\" yerine ilk satırda gösterir</string>
+    <string name="quickspace_psa_title">Rastgele bir mesaj göster</string>
+    <string name="quickspace_psa_summary">Bir bakışta için bazı güzel mesajlar göster.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Günaydın!</item>
+        <item>Günaydın, Rock zamanı!</item>
+        <item>Ne kadar güzel bir gün!</item>
+        <item>İyi günler dilerim!</item>
+        <item>Peki ya 5 dakikalık küçük bir şekerlemeye nedersin?</item>
+        <item>Uyanmanın yollarından biri de bu.</item>
+        <item>Alarm seslerinizi değiştirmelisiniz.</item>
+        <item>Güzel bir gün gibi görünüyor, değil mi?</item>
+        <item>Haydi sorunu çözelim.</item>
+        <item>Sadece hava durumunu kontrol et</item>
+        <item>Henüz biraz uykulu hissediyorum</item>
+        <item>Dışarıya baktın mı?</item>
+        <item>Bunu halledelim.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>İyi geceler!</item>
+        <item>İyi uykular!</item>
+        <item>Yarın görüşürüz!</item>
+        <item>Tatlı rüyalar!</item>
+        <item>Çok uzun süre kalma</item>
+        <item>İyi uykular</item>
+        <item>Biraz uyu</item>
+        <item>Rahatlama zamanı</item>
+        <item>Gecenin tadını çıkart!</item>
+        <item>Pilleri şarj etme zamanı!</item>
+        <item>Yarın harika bir gün olabilir</item>
+        <item>Kemiklerinizi yarın için hazırlayın</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Um... iyi geceler?</item>
+        <item>Şimdi biraz geç</item>
+        <item>Uyku zamanlamanızı düzeltmelisiniz</item>
+        <item>Şu anda daha üretken misiniz?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>ROM\'umuz eski sevgilinin kalbi kadar soğuk</item>
+        <item>Çoktan başka güncelleme flaş etme zamanı gelmedi mi?</item>
+        <item>Android R hakkında endişeli misiniz?</item>
+        <item>Hey, nasıl gidiyor?</item>
+        <item>Görevlerinize odaklanın</item>
+        <item>Kaç tane ekran görüntüsü alıyorsunuz?</item>
+        <item>Senkronizasyon sizinle olsun...</item>
+        <item>İyi eğlenceler!</item>
+        <item>Bazı güzel müzikler için doğru zaman</item>
+        <item>Havalı olmaktan daha havalı ne olabilir?</item>
+        <item>Buz soğuğu!</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C BAŞ</item>
+        <item>Sen tamamen buz gibisin!</item>
+        <item>En iyi buz oyununa sahiptim ama aklımı kaçırdı. Anladın?</item>
+        <item>Seni seviyoruz 3000</item>
+        <item>Discord\'da bize \'Merhaba\' deyin</item>
+        <item>Bugün güzel bir şey yap</item>
+        <item>Bu olabildiğince iyi, değil mi?</item>
+        <item>Her şey nasıl gidiyor?</item>
+        <item>Tek ihtiyacın olan dondurma!</item>
+        <item>Desteğiniz için teşekkürler</item>
+        <item>Root Birası asla kalbini kırmaz, değil mi?</item>
+        <item>Buildbot\'un en iyi seçimlerinden biri</item>
+        <item>Neyse ne</item>
+        <item>Buz gibi tatlıları deneyin</item>
+        <item>Ne hoş bir deneyim değil mi?</item>
+        <item>Yanıp sönmeye devam edin!</item>
+        <item>Buz ile bir ilişki içindesin</item>
+        <item>Aklında ne var?</item>
+        <item>Kazanan Kazanan ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
     <string name="date_format_title">Tarih biçimi</string>
     <string name="date_format_long_name">Uzun</string>
     <string name="date_format_normal_name">Normal</string>
     <string name="date_format_short_name">Kısa</string>
+    <string name="date_format_daydate_long_name">Gün (sayı ile)</string>
+    <string name="date_format_daydate_short_name">Gün (kısa sayı ile)</string>
+    <string name="date_format_dayonly_name">Sadece bugün</string>
+    <string name="date_style_font">Tarih yazı tipi</string>
+    <string name="date_style_font_system_header">Sistem başlığı</string>
+    <string name="date_style_font_system_body">Sistem gövdesi</string>
+    <string name="date_style_transform_title">Tarihte büyük harf göster</string>
+    <string name="date_style_transform_summary">Büyük/küçük harfle tüm tarihi bir bakışta dönüştürün</string>
+    <string name="date_style_spacing">Tarih aralığı</string>
     <string name="date_style_spacing_normal">Normal</string>
+    <string name="date_style_spacing_barely">Neredeyse farkedilir</string>
+    <string name="date_style_spacing_ott">Üst üzerinde</string>
+    <string name="app_info_subtext">Uygulama bilgilerini kapatmak için aşağı kaydırın.</string>
+    <string name="placeholder_string">Yükleniyor...</string>
+    <string name="app_info_icon_pack">Simge paketi</string>
+    <string name="app_info_icon_pack_none">Yok</string>
+    <string name="app_info_source">Kaynak</string>
+    <string name="app_info_source_unknown">Bilinmiyor</string>
+    <string name="app_info_last_update">Son güncelleme</string>
+    <string name="app_info_version">Sürüm</string>
+    <string name="app_info_more">Daha fazla</string>
+    <string name="settings_edit_allow_title">Düzenlemeye izin ver</string>
+    <string name="settings_edit_allow_summary_on">Simgeleri ve widget\'lar ana ekrandan eklenebilir, kaldırılabilir ve taşınabilir</string>
+    <string name="settings_edit_allow_summary_off">Simgeler ve widget\'lar ana ekrana eklenemez, kaldırılamaz ve taşınamaz</string>
+    <string name="settings_edit_widgets_error">Ana ekrana widget eklemek mümkün değildir</string>
+    <string name="app_show_predictions_title">Uygulama tahminleri satırı</string>
+    <string name="app_show_predictions_summary">Son uygulama ekranında uygulama tahminleri satırını göstermek için geçiş yapın</string>
+    <string name="set_default_home_page">Varsayılan sayfayı ayarla</string>
 </resources>
