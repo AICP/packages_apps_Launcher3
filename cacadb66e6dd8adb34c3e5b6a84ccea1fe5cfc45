@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7e71d85_23ea9c30",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2021-01-27T14:59:39Z",
+      "side": 1,
+      "message": "This breaks other styles options like grid selection as the Launcher \ndoesn\u0027t know how to handle the preview.\nhttp://haste.aicp-rom.com/hedovaloca.md",
+      "revId": "cacadb66e6dd8adb34c3e5b6a84ccea1fe5cfc45",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
