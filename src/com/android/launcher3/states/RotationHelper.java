@@ -45,6 +45,7 @@ public class RotationHelper implements OnSharedPreferenceChangeListener {
 
     private final ContentResolver mContentResolver;
     private boolean mSystemAutoRotateEnabled;
+    private boolean mUserAutoRotateEnabled;
 
     private ContentObserver mSystemAutoRotateObserver = new ContentObserver(new Handler()) {
         @Override
@@ -103,6 +104,8 @@ public class RotationHelper implements OnSharedPreferenceChangeListener {
             mSharedPrefs.registerOnSharedPreferenceChangeListener(this);
             mHomeRotationEnabled = mSharedPrefs.getBoolean(ALLOW_ROTATION_PREFERENCE_KEY,
                     getAllowRotationDefaultValue());
+            mUserAutoRotateEnabled = mSharedPrefs.getBoolean(Utilities.KEY_ALLOW_AUTOROTATE_USER,
+                    true);
         } else {
             mSharedPrefs = null;
         }
@@ -124,10 +127,13 @@ public class RotationHelper implements OnSharedPreferenceChangeListener {
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
-        boolean wasRotationEnabled = mHomeRotationEnabled;
+        boolean wasHomeRotationEnabled = mHomeRotationEnabled ;
+        boolean wasUserRotationEnabled = mUserAutoRotateEnabled ;
         mHomeRotationEnabled = mSharedPrefs.getBoolean(ALLOW_ROTATION_PREFERENCE_KEY,
                 getAllowRotationDefaultValue());
-        if (mHomeRotationEnabled != wasRotationEnabled) {
+        mUserAutoRotateEnabled = mSharedPrefs.getBoolean(Utilities.KEY_ALLOW_AUTOROTATE_USER,
+                true);
+        if (mHomeRotationEnabled != wasHomeRotationEnabled || mUserAutoRotateEnabled != wasUserRotationEnabled) {
             notifyChange();
             updateAutoRotateSetting();
         }
@@ -198,7 +204,7 @@ public class RotationHelper implements OnSharedPreferenceChangeListener {
         } else if (mCurrentStateRequest == REQUEST_LOCK) {
             activityFlags = SCREEN_ORIENTATION_LOCKED;
         } else if (mIgnoreAutoRotateSettings || mCurrentStateRequest == REQUEST_ROTATE
-                || mHomeRotationEnabled) {
+                || mHomeRotationEnabled || mUserAutoRotateEnabled) {
             activityFlags = SCREEN_ORIENTATION_UNSPECIFIED;
         } else {
             // If auto rotation is off, allow rotation on the activity, in case the user is using

@@ -136,6 +136,7 @@ public final class Utilities {
     public static final String KEY_SHOW_SEARCHBAR = "pref_show_searchbar";
     public static final String KEY_DT_GESTURE = "pref_dt_gesture";
     public static final String KEY_NOTIFICATION_GESTURE = "pref_notification_gesture";
+    public static final String KEY_ALLOW_AUTOROTATE_USER = "pref_allowRotation_user";
 
     private static final long WAIT_BEFORE_RESTART = 250;
 
