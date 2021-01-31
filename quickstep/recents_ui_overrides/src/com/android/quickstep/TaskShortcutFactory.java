@@ -345,12 +345,14 @@ public interface TaskShortcutFactory {
         private static final String TAG = "KillSystemShortcut";
         private final TaskView mTaskView;
         private final BaseDraggingActivity mActivity;
+        private final RecentsView mRecentsView;
         private final String mPackageName;
 
         public KillSystemShortcut(BaseDraggingActivity activity, TaskView tv, String packageName) {
             super(R.drawable.ic_kill_app, R.string.recent_task_option_kill_app, activity, tv.getItemInfo());
             mTaskView = tv;
             mActivity = activity;
+            mRecentsView = activity.getOverviewPanel();
             mPackageName = packageName;
         }
 
@@ -358,16 +360,18 @@ public interface TaskShortcutFactory {
         public void onClick(View view) {
             if (mPackageName != null) {
                 IActivityManager iam = ActivityManagerNative.getDefault();
-                try {
-                    iam.forceStopPackage(mPackageName, UserHandle.USER_CURRENT);
-                    Toast appKilled = Toast.makeText(mActivity, R.string.recents_app_killed,
-                        Toast.LENGTH_SHORT);
-                    appKilled.show();
-                } catch (RemoteException e) { }
-            }
+                Task task = mTaskView.getTask();
+                if (task != null) {
+                    try {
+                        iam.forceStopPackage(mPackageName, UserHandle.USER_CURRENT);
+                        Toast appKilled = Toast.makeText(mActivity, R.string.recents_app_killed,
+                            Toast.LENGTH_SHORT);
+                        appKilled.show();
+                        mRecentsView.dismissTask(mTaskView, true /* animate */, true /* removeTask */);
+                    } catch (RemoteException e) { }
+                }
             dismissTaskMenuView(mActivity);
+            }
         }
     }
-
-
 }
