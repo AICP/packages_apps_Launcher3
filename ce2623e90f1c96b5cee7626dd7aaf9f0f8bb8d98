@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5b5224b8_dc5ab85a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2021-01-31T15:12:20Z",
+      "side": 1,
+      "message": "PS4 \u003d PS2",
+      "revId": "ce2623e90f1c96b5cee7626dd7aaf9f0f8bb8d98",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
