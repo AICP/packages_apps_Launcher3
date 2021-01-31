@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0199d55c_377eb51f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-01-31T10:11:52Z",
+      "side": 1,
+      "message": "Don\u0027t crowd up the ActionsView, submitted an alternative as https://gerrit.aicp-rom.com/c/AICP/packages_apps_Launcher3/+/107531",
+      "revId": "4331593bba5d13e2ead8f00a940c18c92eb10e27",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
