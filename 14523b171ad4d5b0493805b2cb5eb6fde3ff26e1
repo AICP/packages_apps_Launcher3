@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f944c936_3e92b62f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-02-01T04:12:29Z",
+      "side": 1,
+      "message": "Yikes, We can probably do it \"SimpleDeviceConfig\" way",
+      "revId": "14523b171ad4d5b0493805b2cb5eb6fde3ff26e1",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
