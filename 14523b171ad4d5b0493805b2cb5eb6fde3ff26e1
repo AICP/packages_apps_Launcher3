@@ -16,6 +16,24 @@
       "message": "Yikes, We can probably do it \"SimpleDeviceConfig\" way",
       "revId": "14523b171ad4d5b0493805b2cb5eb6fde3ff26e1",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ac8ca2f_4c388523",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2021-02-01T06:46:52Z",
+      "side": 1,
+      "message": "Button doesn\u0027t do the expected job. Every suggestion is wellcome.",
+      "parentUuid": "f944c936_3e92b62f",
+      "revId": "14523b171ad4d5b0493805b2cb5eb6fde3ff26e1",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
