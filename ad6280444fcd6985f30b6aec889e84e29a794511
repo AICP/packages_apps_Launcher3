@@ -16,6 +16,24 @@
       "message": "I was going for alphabetical order for easy placement.",
       "revId": "ad6280444fcd6985f30b6aec889e84e29a794511",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "61a6767e_12e3f035",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2021-02-03T15:37:07Z",
+      "side": 1,
+      "message": "Also functionalitywise, doesnt make sense to me to place it after Uninstall. The first two are more commonly encountered in daily usage, so I still think Kill App should also be within that group",
+      "parentUuid": "3a167d5a_23c43a1c",
+      "revId": "ad6280444fcd6985f30b6aec889e84e29a794511",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
