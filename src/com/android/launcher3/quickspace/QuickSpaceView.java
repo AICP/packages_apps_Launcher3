@@ -101,6 +101,8 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
         setBackgroundResource(mQuickspaceBackgroundRes);
         mEventTitle.setText(mController.getEventController().getTitle());
         mEventTitle.setEllipsize(TruncateAt.END);
+        mEventTitle.setOnClickListener(Utilities.showDateInPlaceOfNowPlaying(getContext()) ?
+            mActionReceiver.getCalendarAction() : mController.getEventController().getAction());
         mEventTitleSub.setText(mController.getEventController().getActionTitle());
         mEventTitleSub.setEllipsize(TruncateAt.MARQUEE);
         mEventTitleSub.setMarqueeRepeatLimit(3);
