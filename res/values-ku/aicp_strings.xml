@@ -188,4 +188,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="settings_edit_widgets_error">مەحاڵ نییە بۆ زیادکردنی قەدبڕ بۆ پەڕەی سەرەکی</string>
     <string name="app_show_predictions_title">ڕیزی پێشزانی ئەپ</string>
     <string name="app_show_predictions_summary">بیچەسپێنە بۆ پیشاندانی ڕیزی پێشزانی ئەپ لە دوایینەکان و پلیکانەی ئەپ</string>
+    <string name="set_default_home_page">دانانی په‌ڕه‌ی بنەڕەت</string>
 </resources>
