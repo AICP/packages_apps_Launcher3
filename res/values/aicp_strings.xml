@@ -87,4 +87,10 @@
     <!-- Background opacity -->
     <string name="app_drawer_background_opacity_title">App drawer background opacity</string>
     <string name="recents_background_opacity_title">Recents background opacity</string>
+
+    <!-- Icon size -->
+    <string name="icon_size_title">Icon size</string>
+
+    <!-- Font size -->
+    <string name="font_size_title">Font size</string>
 </resources>
