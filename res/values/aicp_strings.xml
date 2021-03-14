@@ -229,4 +229,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- Scrim alpha in apps drawer -->
     <string name="all_apps_background_opacity_title">Background opacity</string>
+
+    <string name="allapps_category">App Drawer</string>
 </resources>
