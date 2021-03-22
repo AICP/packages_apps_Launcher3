@@ -210,11 +210,8 @@ public class SettingsActivity extends Activity
             PreferenceScreen screen = getPreferenceScreen();
             Preference trustApps = findPreference(KEY_TRUST_APPS);
             trustApps.setOnPreferenceClickListener(p -> {
-                Utilities.showLockScreen(getActivity(),
-                        getString(R.string.trust_apps_manager_name), () -> {
-                    Intent intent = new Intent(getActivity(), TrustAppsActivity.class);
-                    startActivity(intent);
-                });
+                Intent intent = new Intent(getActivity(), TrustAppsActivity.class);
+                startActivity(intent);
                 return true;
             });
 
@@ -288,11 +285,8 @@ public class SettingsActivity extends Activity
 
 /*                case KEY_TRUST_APPS:
                     preference.setOnPreferenceClickListener(p -> {
-                        Utilities.showLockScreen(getActivity(),
-                                getString(R.string.trust_apps_manager_name), () -> {
-                            Intent intent = new Intent(getActivity(), TrustAppsActivity.class);
-                            startActivity(intent);
-                        });
+                        Intent intent = new Intent(getActivity(), TrustAppsActivity.class);
+                        startActivity(intent);
                         return true;
                     });*/
                 case KEY_ICON_PACK:
