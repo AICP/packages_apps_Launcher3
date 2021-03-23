@@ -17,7 +17,7 @@
     android:id="@id/quickspace_content"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="32dp"
+    android:layout_gravity="center_vertical"
     android:orientation="vertical">
 
     <com.android.launcher3.quickspace.views.DoubleShadowTextView
@@ -57,8 +57,8 @@
 
         <ImageView
             android:id="@+id/quick_event_weather_icon"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="@dimen/quickspace_subtitle_icon_size"
+            android:layout_height="@dimen/quickspace_subtitle_icon_size"
             android:layout_gravity="center"
             android:visibility="gone"
             android:scaleType="fitXY" />
@@ -73,7 +73,7 @@
             android:singleLine="true"
             android:alpha="0.75"
             android:textColor="?workspaceTextColor"
-            android:textSize="14dp"
+            android:textSize="@dimen/quickspace_alternate_subtitle_size"
             launcher:ambientShadowBlur="3dp"
             launcher:ambientShadowColor="?workspaceAmbientShadowColor"
             launcher:keyShadowBlur="2dp"
@@ -95,8 +95,8 @@
 
         <ImageView
             android:id="@+id/quick_event_icon_sub"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="@dimen/quickspace_subtitle_icon_size"
+            android:layout_height="@dimen/quickspace_subtitle_icon_size"
             android:layout_gravity="center"
             android:visibility="gone"
             android:scaleType="fitXY" />
@@ -111,7 +111,7 @@
             android:singleLine="true"
             android:alpha="0.75"
             android:textColor="?workspaceTextColor"
-            android:textSize="14dp"
+            android:textSize="@dimen/quickspace_alternate_subtitle_size"
             launcher:ambientShadowBlur="3dp"
             launcher:ambientShadowColor="?workspaceAmbientShadowColor"
             launcher:keyShadowBlur="2dp"
