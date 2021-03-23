@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "62f2114f_f563aa70",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-03-23T14:14:01Z",
+      "side": 1,
+      "message": "Most of the change is just removing margins and padding so all available space can be used\nRest is just switching units for text sizes.\n\n\"When defining text sizes, however, you should instead use scalable pixels (sp) \nas your units (but never use sp for layout sizes). The sp unit is the same size as dp,\nby default, but it resizes based on the user\u0027s preferred text size.\"\n\nReference: https://developer.android.com/training/multiscreen/screendensities",
+      "revId": "45dd090147e09e207f7818c1f01aebaf208dcbf5",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
