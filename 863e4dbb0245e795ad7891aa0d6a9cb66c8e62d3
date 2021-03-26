@@ -16,6 +16,23 @@
       "message": "works on enchilada",
       "revId": "863e4dbb0245e795ad7891aa0d6a9cb66c8e62d3",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4fa2f426_c9d734f8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-03-26T15:31:13Z",
+      "side": 1,
+      "message": "Looks GTG, tested with different display size, font sizes and configurations and seem to be holding together",
+      "revId": "863e4dbb0245e795ad7891aa0d6a9cb66c8e62d3",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
