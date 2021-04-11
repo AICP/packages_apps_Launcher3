@@ -15,7 +15,8 @@
 -->
 
 <androidx.preference.PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aicpextras="http://schemas.android.com/apk/res-auto">
 
     <SwitchPreference
         android:defaultValue="true"
@@ -26,12 +27,6 @@
     <SwitchPreference
         android:key="pref_desktop_show_labels"
         android:title="@string/desktop_show_labels"
-        android:defaultValue="true"
-        android:persistent="true" />
-
-    <SwitchPreference
-        android:key="pref_drawer_show_labels"
-        android:title="@string/drawer_show_labels"
         android:defaultValue="true"
         android:persistent="true" />
 
@@ -49,6 +44,15 @@
         android:defaultValue=""
         android:persistent="true" />
 
+    <ListPreference
+        android:key="pref_icon_size"
+        android:title="@string/icon_size_title"
+        android:summary="%s"
+        android:entries="@array/icon_size_names"
+        android:entryValues="@array/icon_size_values"
+        android:defaultValue="average"
+        android:persistent="true" />
+
     <com.android.launcher3.settings.NotificationDotsPreference
         android:key="pref_icon_badging"
         android:title="@string/notification_dots_title"
@@ -62,9 +66,30 @@
         </intent>
     </com.android.launcher3.settings.NotificationDotsPreference>
 
-    <Preference
-        android:key="pref_trust_apps"
-        android:title="@string/trust_apps_manager_name" />
+    <PreferenceCategory
+        android:key="appdrawer_category"
+        android:title="@string/allapps_category">
+
+        <SwitchPreference
+            android:key="pref_drawer_show_labels"
+            android:title="@string/drawer_show_labels"
+            android:defaultValue="true"
+            android:persistent="true" />
+
+        <com.aicp.gear.preference.SeekBarPreferenceCham
+            android:key="pref_all_apps_scrim_alpha"
+            android:title="@string/all_apps_background_opacity_title"
+            android:persistent="true"
+            android:max="100"
+            android:min="0"
+            aicpextras:unitsRight="%"
+            android:defaultValue="100" />
+
+        <Preference
+            android:key="pref_trust_apps"
+            android:title="@string/trust_apps_manager_name" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="quickspace_category"

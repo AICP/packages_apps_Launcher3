@@ -60,6 +60,8 @@ import androidx.preference.PreferenceGroup.PreferencePositionCallback;
 import androidx.preference.PreferenceScreen;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.aicp.gear.preference.SeekBarPreferenceCham;
+
 /**
  * Settings activity for Launcher. Currently implements the following setting: Allow rotation
  */
@@ -122,6 +124,8 @@ public class SettingsActivity extends Activity
             case Utilities.DATE_STYLE_FONT:
             case Utilities.DATE_STYLE_TRANSFORM:
             case Utilities.DATE_STYLE_SPACING:
+            case Utilities.KEY_ALL_APPS_BACKGROUND_ALPHA:
+            case Utilities.KEY_ICON_SIZE:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:
@@ -204,6 +208,16 @@ public class SettingsActivity extends Activity
             setPreferencesFromResource(R.xml.launcher_preferences, rootKey);
 
             PreferenceScreen screen = getPreferenceScreen();
+            Preference trustApps = findPreference(KEY_TRUST_APPS);
+            trustApps.setOnPreferenceClickListener(p -> {
+                Utilities.showLockScreen(getActivity(),
+                        getString(R.string.trust_apps_manager_name), () -> {
+                    Intent intent = new Intent(getActivity(), TrustAppsActivity.class);
+                    startActivity(intent);
+                });
+                return true;
+            });
+
             for (int i = screen.getPreferenceCount() - 1; i >= 0; i--) {
                 Preference preference = screen.getPreference(i);
                 if (!initPreference(preference)) {
@@ -272,7 +286,7 @@ public class SettingsActivity extends Activity
                     updateIsGoogleAppEnabled();
                     return true;
 
-                case KEY_TRUST_APPS:
+/*                case KEY_TRUST_APPS:
                     preference.setOnPreferenceClickListener(p -> {
                         Utilities.showLockScreen(getActivity(),
                                 getString(R.string.trust_apps_manager_name), () -> {
@@ -280,7 +294,7 @@ public class SettingsActivity extends Activity
                             startActivity(intent);
                         });
                         return true;
-                    });
+                    });*/
                 case KEY_ICON_PACK:
                     ReloadingListPreference icons = (ReloadingListPreference) findPreference(KEY_ICON_PACK);
                     icons.setValue(IconDatabase.getGlobal(mContext));
@@ -300,6 +314,12 @@ public class SettingsActivity extends Activity
                         atAGlanceDateFormat.setSummary(atAGlanceDateFormat.getEntries()[index]);
                         return true;
                     });
+                case Utilities.KEY_ALL_APPS_BACKGROUND_ALPHA:
+                    SeekBarPreferenceCham allAppsAlpha =
+                            (SeekBarPreferenceCham) findPreference(Utilities.KEY_ALL_APPS_BACKGROUND_ALPHA);
+                    allAppsAlpha.setOnPreferenceChangeListener((pref, val) -> {
+                        return true;
+                    });
                 case Utilities.DATE_STYLE_FONT:
                     ListPreference dateStyleFont =
                                 (ListPreference) findPreference(Utilities.DATE_STYLE_FONT);
@@ -310,7 +330,9 @@ public class SettingsActivity extends Activity
                         return true;
                     });
                 case Utilities.DATE_STYLE_TRANSFORM:
-                    return true;
+                case KEY_TRUST_APPS:
+                case Utilities.KEY_ICON_SIZE:
+                        return true;
                 case Utilities.DATE_STYLE_SPACING:
                     ListPreference dateStyleSpacing =
                                 (ListPreference) findPreference(Utilities.DATE_STYLE_SPACING);
