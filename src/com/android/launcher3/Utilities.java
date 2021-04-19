@@ -153,6 +153,7 @@ public final class Utilities {
     public static final String DATE_STYLE_SPACING = "pref_date_spacing";
     public static final String KEY_ALL_APPS_BACKGROUND_ALPHA = "pref_all_apps_scrim_alpha";
     public static final String KEY_ICON_SIZE = "pref_icon_size";
+    public static final String KEY_ALLAPPS_SHOW_PREDICTIONS = "last_prediction_enabled_state";
 
     private static final long WAIT_BEFORE_RESTART = 250;
 
@@ -917,5 +918,9 @@ public final class Utilities {
         } else {
             successRunnable.run();
         }
+    }
+
+    public static boolean showAllAppsPredictions(Context context) {
+         return getPrefs(context).getBoolean(KEY_ALLAPPS_SHOW_PREDICTIONS, true);
     }
 }
