@@ -332,6 +332,7 @@ public class SettingsActivity extends Activity
                 case Utilities.DATE_STYLE_TRANSFORM:
                 case KEY_TRUST_APPS:
                 case Utilities.KEY_ICON_SIZE:
+                case Utilities.KEY_ALLAPPS_SHOW_PREDICTIONS:
                         return true;
                 case Utilities.DATE_STYLE_SPACING:
                     ListPreference dateStyleSpacing =

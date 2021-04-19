@@ -85,6 +85,13 @@
             aicpextras:unitsRight="%"
             android:defaultValue="100" />
 
+        <SwitchPreference
+            android:key="last_prediction_enabled_state"
+            android:title="@string/app_show_predictions_title"
+            android:summary="@string/app_show_predictions_summary"
+            android:defaultValue="true"
+            android:persistent="true" />
+
         <Preference
             android:key="pref_trust_apps"
             android:title="@string/trust_apps_manager_name" />
