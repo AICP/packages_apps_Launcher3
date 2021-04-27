@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4562b93d_6aebbb7f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2021-04-27T19:42:03Z",
+      "side": 1,
+      "message": "The only thing I would fix is move the string to Utilities. All are defined there.",
+      "revId": "e8083a5f2903e2801da24f9b790c90d9d1fd367c",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
