@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7544799f_d406f149",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2021-04-29T16:15:14Z",
+      "side": 1,
+      "message": "Bring it inline with homescreen selection commit\nhttps://gerrit.aicp-rom.com/c/AICP/packages_apps_Launcher3/+/109575/",
+      "revId": "c5952b70b8428cec43da98d2909e4a70dd8ac570",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
