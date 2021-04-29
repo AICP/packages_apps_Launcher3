@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "561de901_33f8b175",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-04-29T13:02:59Z",
+      "side": 1,
+      "message": "Test:\n- Compiles\n- Preference is shows in Launcher preferences\n- Toggling the preference toggles visisblilty the predicted app row on app drawer",
+      "revId": "0159b231e3cd913a71922c2b120316d979cb6134",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
