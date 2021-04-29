@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9ed223ff_d4450d91",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-04-29T13:03:56Z",
+      "side": 1,
+      "message": "Test:\n- Compiles\n- No extra space is visible on recents view on 2 button navigation mode",
+      "revId": "db667c6bbd3c91d996a0f7d50e164facf84241de",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
