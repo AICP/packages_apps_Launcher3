@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "02d40ce6_f0127f23",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2021-04-29T16:11:15Z",
+      "side": 1,
+      "message": "PS4 \u003d PS2 and includes the string move to utilities",
+      "revId": "8f581220ad1cc47420975595bfb99b34df1bd312",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
