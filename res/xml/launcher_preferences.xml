@@ -67,6 +67,14 @@
             aicpextras:interval="5"
             android:defaultValue="100" />
 
+        <com.android.launcher3.settings.preference.SeekBarPreferenceCham
+            android:key="pref_max_lines"
+            android:title="@string/icon_max_lines_title"
+            android:persistent="true"
+            android:max="3"
+            android:min="1"
+            android:defaultValue="1" />
+
         <SwitchPreference
             android:key="pref_drawer_sync_size"
             android:title="@string/drawer_size_change_allowed_title"
