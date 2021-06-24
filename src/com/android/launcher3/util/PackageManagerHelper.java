@@ -18,6 +18,9 @@ package com.android.launcher3.util;
 
 import static android.content.pm.PackageManager.MATCH_SYSTEM_ONLY;
 
+import static com.android.launcher3.LauncherSettings.Favorites.ITEM_TYPE_DEEP_SHORTCUT;
+import static com.android.launcher3.LauncherSettings.Favorites.ITEM_TYPE_SHORTCUT;
+
 import android.app.AppOpsManager;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
@@ -361,6 +364,14 @@ public class PackageManagerHelper {
             return context.getSystemService(LauncherApps.class).hasShortcutHostPermission();
         } catch (SecurityException | IllegalStateException e) {
             Log.e(TAG, "Failed to make shortcut manager call", e);
+        }
+        return false;
+    }
+
+    public static boolean isShortcut(ItemInfo item) {
+        if (item.itemType == ITEM_TYPE_DEEP_SHORTCUT ||
+            item.itemType == ITEM_TYPE_SHORTCUT) {
+            return true;
         }
         return false;
     }
