@@ -95,6 +95,14 @@ public abstract class SystemShortcut<T extends BaseDraggingActivity> extends Ite
         return mAccessibilityActionId == action;
     }
 
+    private static boolean isItemShortcut(ItemInfo item) {
+        if (item.itemType == ITEM_TYPE_DEEP_SHORTCUT ||
+            item.itemType == ITEM_TYPE_SHORTCUT) {
+            return true;
+        }
+        return false;
+    }
+
     public interface Factory<T extends BaseDraggingActivity> {
 
         @Nullable SystemShortcut<T> getShortcut(T activity, ItemInfo itemInfo);
@@ -102,6 +110,9 @@ public abstract class SystemShortcut<T extends BaseDraggingActivity> extends Ite
 
     public static final Factory<Launcher> WIDGETS = (launcher, itemInfo) -> {
         if (itemInfo.getTargetComponent() == null) return null;
+        if (isItemShortcut(itemInfo)) {
+            return null;
+        }
         final List<WidgetItem> widgets =
                 launcher.getPopupDataProvider().getWidgetsForPackageUser(new PackageUserKey(
                         itemInfo.getTargetComponent().getPackageName(), itemInfo.user));
@@ -198,8 +209,7 @@ public abstract class SystemShortcut<T extends BaseDraggingActivity> extends Ite
 
     public static final Factory<BaseDraggingActivity> UNINSTALL = (activity, itemInfo) -> {
         if (itemInfo.getTargetComponent() == null) return null;
-        if (itemInfo.itemType == ITEM_TYPE_DEEP_SHORTCUT ||
-            itemInfo.itemType == ITEM_TYPE_SHORTCUT ||
+        if (isItemShortcut(itemInfo) ||
             PackageManagerHelper.isSystemApp(activity,
                  itemInfo.getTargetComponent().getPackageName())) {
             return null;
