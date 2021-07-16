@@ -77,6 +77,8 @@ import android.view.animation.Interpolator;
 
 import androidx.core.os.BuildCompat;
 
+import com.android.internal.util.aicp.PackageUtils;
+
 import com.android.launcher3.R;
 import com.android.launcher3.config.FeatureFlags;
 import com.android.launcher3.dragndrop.FolderAdaptiveIcon;
@@ -156,6 +158,7 @@ public final class Utilities {
     public static final String KEY_ALLAPPS_SHOW_PREDICTIONS = "last_prediction_enabled_state";
     public static final String KEY_DOCK_SEARCH = "pref_dock_search";
     public static final String SEARCH_PACKAGE = "com.google.android.googlequicksearchbox";
+    public static final String KEY_MINUS_ONE = "pref_enable_minus_one";
 
     public static final String KEY_DEFAULT_HOME_PAGE = "pref_default_homepage";
 
@@ -737,9 +740,8 @@ public final class Utilities {
         return prefs.getBoolean(KEY_DT_GESTURE, true);
     }
 
-    public static boolean showQSB(Context context, Launcher launcher) {
-        LauncherAppState appState = LauncherAppState.getInstance(launcher);
-        if (!appState.isSearchAppAvailable()) {
+    public static boolean showQSB(Context context) {
+        if (!PackageUtils.isPackageAvailable(context, SEARCH_PACKAGE)) {
             return false;
         }
         return isQSBEnabled(context);
@@ -748,6 +750,18 @@ public final class Utilities {
     public static boolean isQSBEnabled(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_DOCK_SEARCH, true);
+    }
+
+    public static boolean showMinusOne(Context context) {
+        if (!PackageUtils.isPackageAvailable(context, SEARCH_PACKAGE)) {
+            return false;
+        }
+        return isMinusOneEnabled(context);
+    }
+
+    public static boolean isMinusOneEnabled(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(KEY_MINUS_ONE, true);
     }
 
     public static void restart(final Context context) {

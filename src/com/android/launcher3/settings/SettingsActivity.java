@@ -21,8 +21,6 @@ import static com.android.launcher3.states.RotationHelper.ALLOW_ROTATION_PREFERE
 import static com.android.launcher3.states.RotationHelper.getAllowRotationDefaultValue;
 import static com.android.launcher3.util.SecureSettingsObserver.newNotificationSettingsObserver;
 
-import static com.aicp.launcher.OverlayCallbackImpl.KEY_ENABLE_MINUS_ONE;
-
 import com.android.launcher3.customization.IconDatabase;
 import android.app.ActivityManager;
 import android.app.Activity;
@@ -282,7 +280,8 @@ public class SettingsActivity extends Activity
                     return FeatureFlags.showFlagTogglerUi(getContext()) ||
                             PluginManagerWrapper.hasPlugins(getContext());*/
 
-                case KEY_ENABLE_MINUS_ONE:
+                case Utilities.KEY_DOCK_SEARCH:
+                case Utilities.KEY_MINUS_ONE:
                     mShowGoogleAppPref = preference;
                     updateIsGoogleAppEnabled();
                     return true;
@@ -334,7 +333,6 @@ public class SettingsActivity extends Activity
                 case KEY_TRUST_APPS:
                 case Utilities.KEY_ICON_SIZE:
                 case Utilities.KEY_ALLAPPS_SHOW_PREDICTIONS:
-                case Utilities.KEY_DOCK_SEARCH:
                         return true;
                 case Utilities.DATE_STYLE_SPACING:
                     ListPreference dateStyleSpacing =

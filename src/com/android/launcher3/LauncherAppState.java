@@ -91,7 +91,6 @@ public class LauncherAppState {
         this(context, LauncherFiles.APP_ICONS_DB);
 
         mModelChangeReceiver = new SimpleBroadcastReceiver(mModel::onBroadcastIntent);
-        setSearchAppAvailable(PackageUtils.isPackageInstalled(context, Utilities.SEARCH_PACKAGE));
 
         mContext.getSystemService(LauncherApps.class).registerCallback(mModel);
         mModelChangeReceiver.register(mContext, Intent.ACTION_LOCALE_CHANGED,
@@ -237,14 +236,6 @@ public class LauncherAppState {
      */
     public static InvariantDeviceProfile getIDP(Context context) {
         return InvariantDeviceProfile.INSTANCE.get(context);
-    }
-
-    public void setSearchAppAvailable(boolean available) {
-        mIsSearchAppAvailable = available;
-    }
-
-    public boolean isSearchAppAvailable() {
-        return mIsSearchAppAvailable;
     }
 
     public static boolean isGSAEnabled(Context context) {
