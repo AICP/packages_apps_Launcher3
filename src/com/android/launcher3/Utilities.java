@@ -749,7 +749,7 @@ public final class Utilities {
 
     public static boolean isQSBEnabled(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
-        return prefs.getBoolean(KEY_DOCK_SEARCH, true);
+        return prefs.getBoolean(KEY_DOCK_SEARCH, false);
     }
 
     public static boolean showMinusOne(Context context) {
