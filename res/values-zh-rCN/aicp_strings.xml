@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2018-2019 Syberia Project
+      Copyright (C) 2014-2020 AICP
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="show_searchbar_title">显示搜索栏</string>
+    <string name="show_searchbar_summary">在主屏幕上显示搜索栏</string>
+    <string name="state_loading">正在应用\u2026</string>
+    <string name="gestures_category">手势</string>
+    <string name="pref_notifications_gesture_title">通知手势</string>
+    <string name="pref_notifications_gesture_summary">在主屏幕上垂直下滑以显示快速设置面板</string>
+    <string name="pref_dt_gesture_title">双击手势</string>
+    <string name="pref_dt_gesture_summary">双击空白处以关闭屏幕</string>
+    <string name="allow_swipe_down_clearall_title">向下滑动以清除所有最近任务</string>
+    <string name="allow_swipe_down_clearall_desc">启用向下滑动以清除概览屏幕上的所有最近任务</string>
+    <string name="trust_apps_manager_name">隐藏应用程序</string>
+    <string name="trust_apps_auth_manager">解锁以管理隐藏应用</string>
+    <string name="trust_apps_loading">载入中\u2026</string>
+    <string name="trust_apps_no_lock_error">请设置一个安全锁定屏幕以限制应用访问</string>
+    <string name="trust_apps_help">帮助</string>
+    <string name="trust_apps_info_hidden">从抽屉中隐藏应用和其他小部件</string>
+    <string name="title_show_google_app">滑动以访问 Google 应用</string>
+    <string name="msg_minus_one_on_left">从默认主屏幕向左滑动以打开 Google 应用</string>
+    <string name="msg_minus_one_on_right">从默认主屏幕向右滑动打开谷歌应用</string>
+    <string name="desktop_show_labels">在主屏幕上显示图标标签</string>
+    <string name="drawer_show_labels">在抽屉里显示图标标签</string>
+    <string name="settings_edit_allow_title">允许编辑</string>
+    <string name="settings_edit_allow_summary_on">可以在主屏幕上添加、删除和移动图标及小部件</string>
+    <string name="settings_edit_allow_summary_off">不能在主屏幕上添加、删除和移动图标及小部件</string>
+    <string name="settings_edit_widgets_error">无法将小部件添加到主屏幕</string>
+    <string name="show_quickspace_title">速览</string>
+    <string name="show_quickspace_summary">在主屏幕的顶部显示</string>
+    <string name="quick_event_rom_intro_welcome">欢迎使用 AICP</string>
+    <string name="quick_event_rom_intro_learn">点击此处以获得乐趣！</string>
+    <string name="quick_event_ambient_now_playing">正在播放</string>
+    <string name="quick_event_ambient_song_artist">%1$s，艺术家 %2$s</string>
+    <string name="quickspace_now_playing_title">显示正在播放</string>
+    <string name="quickspace_now_playing_summary">速览中显示正在播放的曲目信息。注意：并不兼容所有的媒体播放器。</string>
+    <string name="quickspace_now_playing_showdate_title">...改为显示日期</string>
+    <string name="quickspace_now_playing_showdate_summary">在第一行显示日期而非“正在播放”</string>
+    <string name="quickspace_alternate_style_title">使用另一风格</string>
+    <string name="quickspace_alternate_style_summary">在速览中使用简约风格</string>
+    <string name="quickspace_psa_title">显示一条随机消息</string>
+    <string name="quickspace_psa_summary">在速览中显示问候语</string>
+    <string-array name="quickspace_psa_morning">
+        <item>早上好！</item>
+        <item>早上好，祝你好运！</item>
+        <item>享受美好的一天！</item>
+        <item>祝你有个美好的一天</item>
+        <item>考虑小睡几分钟？</item>
+        <item>昨晚睡得好吗？</item>
+        <item>换首闹铃找点儿新鲜感？</item>
+        <item>今天还不错，不是吗？</item>
+        <item>为了面包，加油</item>
+        <item>为防万一，看看天气？</item>
+        <item>亲，睡饱了没</item>
+        <item>眺望一下外面的风景吧</item>
+        <item>行动起来。</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>晚安！</item>
+        <item>睡个好觉。</item>
+        <item>明天见！</item>
+        <item>祝你好梦。</item>
+        <item>别睡太晚了哦</item>
+        <item>睡个好觉</item>
+        <item>不休息一会？</item>
+        <item>不时放松一下吧</item>
+        <item>美妙的夜晚</item>
+        <item>别忘了给我充电哦</item>
+        <item>明天也许会更好</item>
+        <item>做好准备，迎接新一天</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>还不睡吗？</item>
+        <item>很晚了呢</item>
+        <item>考虑规范一下作息吧</item>
+        <item>晚上的效率更高？</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>我们的 ROM 就像你前任的心一样冷</item>
+        <item>是时候再次刷新更新了吗？</item>
+        <item>Android R 的体验如何？</item>
+        <item>你还好吗？我很好。</item>
+        <item>别忘了要做的事</item>
+        <item>你截过多少图片呢</item>
+        <item>希望同步与您同在...</item>
+        <item>祝你开心！</item>
+        <item>听点儿音乐？</item>
+        <item>有什么比变酷还酷？</item>
+        <item>冰冷！</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>这是最美丽的冰雪！</item>
+        <item>我有了最好的冰杯，但它使我失去了主意。是吗？</item>
+        <item>AICP，超级爱你</item>
+        <item>在 Discord 上与我们打招呼</item>
+        <item>日行一善</item>
+        <item>感觉不错，不是吗？</item>
+        <item>最近过得好吗？</item>
+        <item>您只需要冰淇淋！</item>
+        <item>谢谢你的支持</item>
+        <item>Root 啤酒永远不会伤您的心，对吗？</item>
+        <item>构建机器人的最佳选择</item>
+        <item>就是这样</item>
+        <item>冰凉的甜点（Ice Cold）好吃吗？</item>
+        <item>希望你有美妙的体验</item>
+        <item>刷机不止！</item>
+        <item>你和冰恋爱了</item>
+        <item>您在想什么呢？</item>
+        <item>大吉大利 今晚……？</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <string name="date_format_title">日期格式</string>
+    <string name="date_format_long_name">长</string>
+    <string name="date_format_normal_name">标准</string>
+    <string name="date_format_short_name">短</string>
+    <string name="date_format_daydate_long_name">天数（带有数字）</string>
+    <string name="date_format_daydate_short_name">天数（带有短数字）</string>
+    <string name="date_format_dayonly_name">仅仅今天</string>
+    <string name="date_style_font">日期字体</string>
+    <string name="date_style_font_system_header">系统标题</string>
+    <string name="date_style_font_system_body">系统内容</string>
+    <string name="quickspace_category">快速空间</string>
+    <string name="actions_category">操作</string>
+    <string name="date_style_transform_title">显示大写日期</string>
+    <string name="date_style_transform_summary">速览中全部使用大写日期</string>
+    <string name="date_style_spacing">日期间隔</string>
+    <string name="date_style_spacing_normal">标准</string>
+    <string name="date_style_spacing_barely">几乎没有人注意到</string>
+    <string name="date_style_spacing_ott">在顶部显示</string>
+    <string name="all_apps_background_opacity_title">背景透明</string>
+    <string name="allapps_category">应用抽屉</string>
+    <string name="icon_size_title">图标大小</string>
+    <string name="icon_size_extra_small">极小</string>
+    <string name="icon_size_small">小</string>
+    <string name="icon_size_average">默认</string>
+    <string name="icon_size_large">大</string>
+    <string name="icon_size_extra_large">超大</string>
+    <string name="app_show_predictions_title">应用程序预测行</string>
+    <string name="app_show_predictions_summary">切换到应用抽屉中显示应用预测行</string>
+    <string name="set_default_home_page">设置默认主页</string>
+</resources>

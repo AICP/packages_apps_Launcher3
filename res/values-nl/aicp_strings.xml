@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2018-2019 Syberia Project
+      Copyright (C) 2014-2020 AICP
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="state_loading">Toepassen\u2026</string>
+    <string name="gestures_category">Gebaren</string>
+    <string name="show_quickspace_title">In een oogopslag</string>
+    <string name="show_quickspace_summary">Toon bovenaan uw beginscherm</string>
+    <string name="quick_event_rom_intro_welcome">Welkom bij AICP!</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Goedemorgen!</item>
+        <item>Good morning, time to rock!</item>
+        <item>Wat een mooie dag!</item>
+        <item>Fijne dag!</item>
+        <item>What about a small 5 minutes nap?</item>
+        <item>That\'s one way to wake up.</item>
+        <item>You should change your alarm sounds.</item>
+        <item>Looks like it\'s a beautiful day, isn\'t it?</item>
+        <item>Let\'s get this bread.</item>
+        <item>Check the weather just in case</item>
+        <item>Feeling a bit sleepy yet</item>
+        <item>Have you looked outside yet?</item>
+        <item>Let\'s get this done.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Goedenacht!</item>
+        <item>Slaap lekker!</item>
+        <item>Tot morgen!</item>
+        <item>Droom zacht!</item>
+        <item>Niet te lang opblijven</item>
+        <item>Have a good sleep</item>
+        <item>Get some sleep</item>
+        <item>Time to relax</item>
+        <item>Enjoy the night!</item>
+        <item>Time to charge the batteries!</item>
+        <item>Tomorrow might be a great day</item>
+        <item>Get your bones ready for tomorrow</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Our ROM is as cold as your Ex\'s heart</item>
+        <item>Is it time to flash an update again?</item>
+        <item>Hyped about Android R?</item>
+        <item>Oh hey, hoe gaat het?</item>
+        <item>Focus on your tasks</item>
+        <item>Hoeveel screenshots maak je?</item>
+        <item>May the sync be with you...</item>
+        <item>Have fun!</item>
+        <item>Time for some good music</item>
+        <item>What\'s cooler than being cool?</item>
+        <item>Ice Cold!</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>Thou art all ice!</item>
+        <item>I had the best ice pun but it slipped my mind. Get it?</item>
+        <item>We love you 3000</item>
+        <item>Say \'Hi\' to us on Discord</item>
+        <item>Do something nice today</item>
+        <item>This is as good as it gets, right?</item>
+        <item>How is everything going?</item>
+        <item>All you need is ice cream!</item>
+        <item>Thank you for your support</item>
+        <item>Root Beer never breaks your heart, right?</item>
+        <item>One of the buildbot\'s best picks</item>
+        <item>It is what it is</item>
+        <item>Try Ice Cold desserts</item>
+        <item>What a lovely experience, isn\'t it?</item>
+        <item>Keep on flashing!</item>
+        <item>You are in a relationship with ice</item>
+        <item>What\'s on your mind?</item>
+        <item>Winner Winner ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <string name="date_format_title">Datumformaat</string>
+    <string name="date_format_long_name">Lang</string>
+    <string name="date_format_normal_name">Normaal</string>
+    <string name="date_format_short_name">Kort</string>
+    <string name="date_format_dayonly_name">Alleen vandaag</string>
+    <string name="date_style_spacing_normal">Normaal</string>
+    <string name="icon_size_title">Icoon grootte</string>
+    <string name="icon_size_extra_small">Zeer klein</string>
+    <string name="icon_size_small">Klein</string>
+    <string name="icon_size_average">Standaard</string>
+    <string name="icon_size_large">Groot</string>
+    <string name="icon_size_extra_large">Extra groot</string>
+    <string name="set_default_home_page">Standaardpagina instellen</string>
+</resources>

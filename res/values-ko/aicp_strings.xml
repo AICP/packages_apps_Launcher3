@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2018-2019 Syberia Project
+      Copyright (C) 2014-2020 AICP
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="state_loading">적용 중\u2026</string>
+    <string name="gestures_category">제스쳐</string>
+    <string name="settings_edit_allow_title">편집 허용</string>
+    <string name="settings_edit_allow_summary_on">아이콘과 위젯을 홈 화면에 추가하거나 제거, 이동할 수 있도록 허용합니다.</string>
+    <string name="settings_edit_allow_summary_off">아이콘과 위젯을 홈 화면에 추가하거나 제거, 이동할 수 없습니다.</string>
+    <string name="settings_edit_widgets_error">홈 화면에 위젯을 추가할 수 없습니다.</string>
+    <string name="show_quickspace_title">한 눈에 보기</string>
+    <string name="show_quickspace_summary">홈 화면 상단에 표시</string>
+    <string name="quick_event_rom_intro_welcome">AICP에 오신 것을 환영합니다!</string>
+    <string name="quick_event_ambient_now_playing">지금 재생 중</string>
+    <string name="quick_event_ambient_song_artist">%1$s by %2$s</string>
+    <string name="quickspace_now_playing_title">지금 재생 중 표시</string>
+    <string name="quickspace_now_playing_summary">재생중인 노래를 한 눈에 보여줍니다.  경고 : 모든 미디어 플레이어와 완벽하게 호환되는 것은 아닙니다!</string>
+    <string name="quickspace_now_playing_showdate_title">... 대신 날짜 표시</string>
+    <string name="quickspace_now_playing_showdate_summary">\"지금 재생 중\"대신 첫 번째 줄에 날짜를 표시합니다.</string>
+    <string name="quickspace_alternate_style_title">대체 스타일 사용</string>
+    <string name="quickspace_alternate_style_summary">한 눈에 최소한의 스타일 사용</string>
+    <string name="quickspace_psa_title">재생중인 노래 표시 한 눈에보기</string>
+    <string name="quickspace_psa_summary">때때로 메시지를 한 눈에 보여주세요.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>좋은 아침입니다</item>
+        <item>좋은 아침입니다.</item>
+        <item>아름다운 날이네요!</item>
+        <item>좋은 하루 보내세요!</item>
+        <item>5 분 낮잠은 어떻습니까?</item>
+        <item>그것은 깨우는 한 가지 방법입니다.</item>
+        <item>알람 소리를 변경해야합니다.</item>
+        <item>아름다운 날인 것 같지 않습니까?</item>
+        <item>Let\'s get this bread.</item>
+        <item>만약을 대비하여 날씨를 확인하십시오</item>
+        <item>조금 졸린 느낌...</item>
+        <item>오늘의 바깥 풍경을 본 적이 있나요?</item>
+        <item>이 작업을 수행하겠습니다.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>좋은 밤 보내세요</item>
+        <item>좋은 밤 보내세요</item>
+        <item>내일 봐요!</item>
+        <item>좋은 꿈 꿔요!</item>
+        <item>너무 늦게까지 깨어있지 마세요.</item>
+        <item>잘 자요</item>
+        <item>잠 좀 자!</item>
+        <item>휴식 시간</item>
+        <item>밤을 즐기십시오!</item>
+        <item>배터리를 충전 할 시간입니다!</item>
+        <item>내일은 좋은 날일지도 몰라</item>
+        <item>내일을위한 준비</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>음 ... 잘자요?</item>
+        <item>조금 늦었어</item>
+        <item>수면 스케줄을 수정해야합니다</item>
+        <item>현재 생산성이 더 높습니까?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>우리의 ROM은 당신의  마음만큼 차갑습니다</item>
+        <item>업데이트를  플래시 할 시간입니까?</item>
+        <item>Android R에 대해 과시 했나요?</item>
+        <item>오, 무슨 일이야?</item>
+        <item>작업에 집중</item>
+        <item>몇 개의 스크린 샷을 찍습니까?</item>
+        <item>동기화가 당신과 함께하기를 ...</item>
+        <item>즐거운 시간 보내세요!</item>
+        <item>좋은 음악을위한 시간</item>
+        <item>쿨한 것보다 더 쿨한 게 뭐야?</item>
+        <item>차가운 얼음</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>너는 모두 얼음이야!</item>
+        <item>I had the best ice pun but it slipped my mind. Get it?</item>
+        <item>우리는 당신을 사랑합니다 </item>
+        <item>Say \'Hi\' to us on Discord</item>
+        <item>오늘 좋은 일을</item>
+        <item>이것은 얻는 것만 큼 좋습니다.</item>
+        <item>모든게 어때요?</item>
+        <item>아이스크림 만 있으면됩니다</item>
+        <item>지원해주셔서 감사합니다!</item>
+        <item>루트 비어는 결코 당신의 마음을 아프게하지 않습니다.</item>
+        <item>빌드 봇의 최고의 선택 중 하나</item>
+        <item>그것이 무엇입니까</item>
+        <item>아이스 콜드 디저트 사용해보기</item>
+        <item>정말 멋진 경험이지 않나요?</item>
+        <item>계속 깜박입니다!</item>
+        <item>당신은 얼음과 관계에 있습니다</item>
+        <item>무슨 생각을 하고 계신가요?</item>
+        <item>수상자 수상자 ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <string name="date_format_title">날짜 형식</string>
+    <string name="date_format_long_name">길게</string>
+    <string name="date_format_normal_name">보통</string>
+    <string name="date_format_short_name">짧게</string>
+    <string name="date_format_daydate_long_name">일 (숫자 포함)</string>
+    <string name="date_format_daydate_short_name">일 (숫자가 짧음)</string>
+    <string name="date_format_dayonly_name">바로 오늘</string>
+    <string name="date_style_font">날짜 글꼴</string>
+    <string name="date_style_font_system_header">시스템 헤드 라인</string>
+    <string name="date_style_font_system_body">시스템 본체</string>
+    <string name="date_style_transform_title">날짜 대문자 표시</string>
+    <string name="date_style_transform_summary">대문자로 된 텍스트로 모든 날짜 / 모양을 한 눈에 볼 수 있습니다.</string>
+    <string name="date_style_spacing">날짜 간격</string>
+    <string name="date_style_spacing_normal">보통</string>
+    <string name="date_style_spacing_barely">간신히 눈에 띄는</string>
+    <string name="date_style_spacing_ott">위로</string>
+    <string name="icon_size_title">아이콘 크기</string>
+    <string name="icon_size_extra_small">매우 작게</string>
+    <string name="icon_size_small">작게</string>
+    <string name="icon_size_average">기본값</string>
+    <string name="icon_size_large">크게</string>
+    <string name="icon_size_extra_large">매우 크게</string>
+    <string name="app_show_predictions_title">앱 예측 행</string>
+    <string name="set_default_home_page">기본 페이지 설정</string>
+</resources>

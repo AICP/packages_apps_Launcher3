@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2018-2019 Syberia Project
+      Copyright (C) 2014-2020 AICP
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="show_searchbar_title">Mostrar la barra de búsqueda</string>
+    <string name="show_searchbar_summary">Mostrar la barra de búsqueda en la pantalla de inicio</string>
+    <string name="state_loading">Aplicando\u2026</string>
+    <string name="gestures_category">Gestos</string>
+    <string name="pref_notifications_gesture_title">Gesto de notificaciones</string>
+    <string name="pref_notifications_gesture_summary">Desliza verticalmente hacia abajo en la pantalla de inicio para mostrar el panel de ajustes rápidos</string>
+    <string name="pref_dt_gesture_title">Gesto de doble toque</string>
+    <string name="pref_dt_gesture_summary">Toca dos veces en un espacio vacío para apagar</string>
+    <string name="allow_swipe_down_clearall_title">Desliza hacia abajo para borrar todos las aplicaciones recientes</string>
+    <string name="allow_swipe_down_clearall_desc">Activar para borrar todas las aplicaciones en la pantalla de recientes al deslizar hacia abajo</string>
+    <string name="trust_apps_manager_name">Aplicaciones ocultas</string>
+    <string name="trust_apps_auth_manager">Desbloquear para administrar las aplicaciones ocultas</string>
+    <string name="trust_apps_loading">Cargando\u2026</string>
+    <string name="trust_apps_no_lock_error">Por favor, configure un bloqueo de pantalla seguro para restringir el acceso a las aplicaciones</string>
+    <string name="trust_apps_help">Ayuda</string>
+    <string name="trust_apps_info_hidden">Las aplicaciones ocultas y sus widgets no aparecen en el cajón de aplicaciones</string>
+    <string name="title_show_google_app">Desliza para acceder a la aplicación de Google</string>
+    <string name="msg_minus_one_on_left">Desde la pantalla de inicio predeterminada, desliza a la izquierda para abrir la aplicación de Google</string>
+    <string name="msg_minus_one_on_right">Desde la pantalla de inicio predeterminada, desliza a la derecha para abrir la aplicación de Google</string>
+    <string name="desktop_show_labels">Mostrar etiquetas de iconos en el escritorio</string>
+    <string name="drawer_show_labels">Mostrar etiquetas de las aplicación en el cajón de aplicaciones</string>
+    <string name="settings_edit_allow_title">Permitir edición</string>
+    <string name="settings_edit_allow_summary_on">Los iconos y widgets se pueden añadir, eliminar y mover en la pantalla principal</string>
+    <string name="settings_edit_allow_summary_off">Los iconos y widgets no se pueden añadir, eliminar y mover en la pantalla principal</string>
+    <string name="settings_edit_widgets_error">No es posible añadir widgets en la pantalla principal</string>
+    <string name="show_quickspace_title">De un vistazo</string>
+    <string name="show_quickspace_summary">Mostrar en la parte superior de la pantalla de inicio</string>
+    <string name="quick_event_rom_intro_welcome">¡Bienvenido a AICP!</string>
+    <string name="quick_event_rom_intro_learn">¡Toca aquí para divertirte!</string>
+    <string name="quick_event_ambient_now_playing">Ahora reproduciendo</string>
+    <string name="quick_event_ambient_song_artist">%1$s de %2$s</string>
+    <string name="quickspace_now_playing_title">Mostrar Ahora reproduciendo</string>
+    <string name="quickspace_now_playing_summary">Muestra la canción en la que estás reproduciendo en la información De un vistazo. ¡ATENCIÓN: No es totalmente compatible con todos los reproductores multimedia!</string>
+    <string name="quickspace_now_playing_showdate_title">...mostrar fecha en su lugar</string>
+    <string name="quickspace_now_playing_showdate_summary">Muestra la fecha en la primera línea en lugar de \"Ahora reproduciendo\"</string>
+    <string name="quickspace_alternate_style_title">Usar un estilo alternativo</string>
+    <string name="quickspace_alternate_style_summary">Usa un estilo minimalista para la información de un vistazo</string>
+    <string name="quickspace_psa_title">Mostrar un mensaje aleatorio</string>
+    <string name="quickspace_psa_summary">Mostrar mensajes agradables en Información de un vistazo.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>¡Buenos días!</item>
+        <item>¡Buenos días, hora de actuar!</item>
+        <item>¡Qué día tan hermoso!</item>
+        <item>¡Que tengas un buen día!</item>
+        <item>¿Qué tal una pequeña siesta de 5 minutos?</item>
+        <item>Esa es una forma de despertar.</item>
+        <item>Deberías cambiar los sonidos de tu alarma.</item>
+        <item>Parece hermoso día, ¿no es así?</item>
+        <item>Vamos a ganar.</item>
+        <item>Consulta el clima por si acaso</item>
+        <item>Todavía tengo sueño</item>
+        <item>¿Has echado un vistazo afuera?</item>
+        <item>Vamos a terminar esto.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>¡Buenas noches!</item>
+        <item>¡Que duermas bien!</item>
+        <item>¡Hasta mañana!</item>
+        <item>¡Dulces sueños!</item>
+        <item>No te acuestes muy tarde</item>
+        <item>Que duermas bien</item>
+        <item>Duerme un poco</item>
+        <item>Hora de relajarse</item>
+        <item>¡Disfruta de la noche!</item>
+        <item>¡Es hora de cargar las baterías!</item>
+        <item>Mañana puede ser un gran día</item>
+        <item>Prepara tus huesos para mañana</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Um... ¿Buena noche?</item>
+        <item>Ya es un poco tarde</item>
+        <item>Deberías darle una vuelta a tu horario de sueño</item>
+        <item>¿Eres más productivo a esta hora?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Nuestra ROM es tan fría como el corazón de tu Ex</item>
+        <item>¿Es hora de instalar otra actualización?</item>
+        <item>¿Emocionado por Android R?</item>
+        <item>Hola. ¿Qué tal estamos?</item>
+        <item>Concéntrate en tus tareas</item>
+        <item>¿Cuántas capturas de pantalla realizas?</item>
+        <item>Que la sincronización te acompañe...</item>
+        <item>¡Diviértete!</item>
+        <item>Es el momento para algo de buena música</item>
+        <item>¿Qué es más fresco que ser cool?</item>
+        <item>Ice Cold!</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>¡Eres todo hielo!</item>
+        <item>¿Como me las maravillaría yo?</item>
+        <item>Te queremos 3000</item>
+        <item>Dinos \'Hola\' en Discord</item>
+        <item>Haz algo bueno hoy</item>
+        <item>Esto es tan bueno como se hace, ¿verdad?</item>
+        <item>¿Como va todo?</item>
+        <item>¡Todo lo que necesitas es un helado!</item>
+        <item>Gracias por tu apoyo</item>
+        <item>La cerveza raíz nunca romperá tu corazón, ¿verdad?</item>
+        <item>Una de las mejores elecciones del buildbot</item>
+        <item>Es lo que es</item>
+        <item>Prueba postres helados</item>
+        <item>Qué experiencia tan bonita, ¿no es así?</item>
+        <item>¡Sigue flasheando!</item>
+        <item>Estás en una relación con el hielo</item>
+        <item>¿En que estas pensando?</item>
+        <item>Ganador Ganador ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <string name="date_format_title">Formato de fecha</string>
+    <string name="date_format_long_name">Largo</string>
+    <string name="date_format_normal_name">Normal</string>
+    <string name="date_format_short_name">Corto</string>
+    <string name="date_format_daydate_long_name">Día (con número)</string>
+    <string name="date_format_daydate_short_name">Día (corto con número)</string>
+    <string name="date_format_dayonly_name">Solo hoy</string>
+    <string name="date_style_font">Fuente de la fecha</string>
+    <string name="date_style_font_system_header">Título del sistema</string>
+    <string name="date_style_font_system_body">Cuerpo del sistema</string>
+    <string name="quickspace_category">Espacio rápido</string>
+    <string name="actions_category">Acciones</string>
+    <string name="date_style_transform_title">Mostrar la fecha en mayúscula</string>
+    <string name="date_style_transform_summary">Cambia toda la fecha/Información de un vistazo por texto en mayúsculas</string>
+    <string name="date_style_spacing">Espaciado de fecha</string>
+    <string name="date_style_spacing_normal">Normal</string>
+    <string name="date_style_spacing_barely">Apenas visible</string>
+    <string name="date_style_spacing_ott">Por encima</string>
+    <string name="all_apps_background_opacity_title">Opacidad del fondo</string>
+    <string name="allapps_category">Cajón de Aplicaciones</string>
+    <string name="icon_size_title">Tamaño de los iconos</string>
+    <string name="icon_size_extra_small">Muy pequeño</string>
+    <string name="icon_size_small">Pequeño</string>
+    <string name="icon_size_average">Predeterminado</string>
+    <string name="icon_size_large">Grande</string>
+    <string name="icon_size_extra_large">Muy grande</string>
+    <string name="app_show_predictions_title">Fila de predicción de aplicaciones</string>
+    <string name="app_show_predictions_summary">Activar para mostrar la fila de predicción de aplicaciones en la pantalla de aps. recientes y cajón de aplicaciones</string>
+    <string name="set_default_home_page">Establecer página predeterminada</string>
+</resources>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2018-2019 Syberia Project
+      Copyright (C) 2014-2020 AICP
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="show_searchbar_title">検索バーを表示</string>
+    <string name="show_searchbar_summary">ホーム画面で検索バーを表示する</string>
+    <string name="state_loading">適用中\u2026</string>
+    <string name="gestures_category">ジェスチャー</string>
+    <string name="pref_notifications_gesture_title">通知ジェスチャー</string>
+    <string name="pref_notifications_gesture_summary">ホーム画面で垂直に下スワイプしてクイック設定パネルを表示する</string>
+    <string name="pref_dt_gesture_title">ダブルタップジェスチャー</string>
+    <string name="pref_dt_gesture_summary">空白領域をダブルタップしてスリープする</string>
+    <string name="allow_swipe_down_clearall_title">下スワイプでアプリ履歴を全消去</string>
+    <string name="allow_swipe_down_clearall_desc">下にスワイプして一覧画面の全てのアプリ履歴を消去する</string>
+    <string name="trust_apps_manager_name">非表示のアプリ</string>
+    <string name="trust_apps_auth_manager">非表示のアプリを管理するにはロックを解除して下さい</string>
+    <string name="trust_apps_loading">読み込み中\u2026</string>
+    <string name="trust_apps_no_lock_error">アプリのアクセスを制限するためにロック画面の保護をセットアップして下さい</string>
+    <string name="trust_apps_help">ヘルプ</string>
+    <string name="trust_apps_info_hidden">非表示アプリとそのウィジェットはドロワーから非表示になります</string>
+    <string name="title_show_google_app">スワイプして Google アプリにアクセス</string>
+    <string name="msg_minus_one_on_left">既定のホーム画面から左にスワイプして Google アプリを開く</string>
+    <string name="msg_minus_one_on_right">既定のホーム画面から右にスワイプして Google アプリを開く</string>
+    <string name="desktop_show_labels">デスクトップでアイコンラベルを表示</string>
+    <string name="drawer_show_labels">ドロワーでアイコンラベルを表示</string>
+    <string name="settings_edit_allow_title">編集を許可</string>
+    <string name="settings_edit_allow_summary_on">アイコンやウィジェットの追加、削除、移動を許可する</string>
+    <string name="settings_edit_allow_summary_off">アイコンやウィジェットの追加、削除、移動を許可しない</string>
+    <string name="settings_edit_widgets_error">ウィジェットをホーム画面に追加できません</string>
+    <string name="show_quickspace_title">At A Glance</string>
+    <string name="show_quickspace_summary">ホーム画面の上部に表示する</string>
+    <string name="quick_event_rom_intro_welcome">AICP へようこそ!</string>
+    <string name="quick_event_rom_intro_learn">ここをタップして楽しみましょう!</string>
+    <string name="quick_event_ambient_now_playing">Now Playing</string>
+    <string name="quick_event_ambient_song_artist">%1$s - %2$s</string>
+    <string name="quickspace_now_playing_title">再生中の項目を表示</string>
+    <string name="quickspace_now_playing_summary">At a Glance で再生中の曲を表示します。警告: 全てのメディアプレイヤーに完全な互換性を持っている訳ではありません!</string>
+    <string name="quickspace_now_playing_showdate_title">...代わりに日付を表示</string>
+    <string name="quickspace_now_playing_showdate_summary">\"Now Playing\" の代わりに最初の行に日付を表示する</string>
+    <string name="quickspace_alternate_style_title">別のスタイルを使用</string>
+    <string name="quickspace_alternate_style_summary">At A Glance に最小限なスタイルを使用する</string>
+    <string name="quickspace_psa_title">ランダムメッセージを表示</string>
+    <string name="quickspace_psa_summary">At A Glance に素敵なメッセージを表示する</string>
+    <string-array name="quickspace_psa_morning">
+        <item>おはようございます!</item>
+        <item>おはようございます、さあ始めましょう!</item>
+        <item>なんて美しい日でしょう</item>
+        <item>良い一日を!</item>
+        <item>わずか5分間の昼寝はどうでしたか?</item>
+        <item>それは目を覚ます一つの方法です。</item>
+        <item>アラーム音を変えるべきです。</item>
+        <item>今日は美しい日だと思いませんか?</item>
+        <item>今日も一日働こう!</item>
+        <item>万一の場合に備えて天気を確認しよう</item>
+        <item>少し眠く感じます</item>
+        <item>もう窓の外を見ましたか?</item>
+        <item>早く終わらせよう</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>おやすみなさい</item>
+        <item>よい眠りを</item>
+        <item>また明日</item>
+        <item>良い夢を</item>
+        <item>夜ふかしは良くありません</item>
+        <item>よい眠りを</item>
+        <item>睡眠をとろう</item>
+        <item>リラックスする時間です</item>
+        <item>夜を楽しみましょう!</item>
+        <item>バッテリーを充電する時間です!</item>
+        <item>明日は素晴らしい日かもしれません</item>
+        <item>明日への覚悟を決めましょう</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>あの... お休みですか?</item>
+        <item>ちょっともう遅い時間ですね</item>
+        <item>睡眠スケジュールを修正する必要があります</item>
+        <item>今回はもっと生産的ですか?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>私たちの ROM はあなたの元恋人の心と同じくらい冷たいです</item>
+        <item>もうアップデートをフラッシュする時間ですか?</item>
+        <item>Android R に夢中ですか?</item>
+        <item>こんにちは、何かありましたか?</item>
+        <item>仕事に集中しましょう</item>
+        <item>スクリーンショットは何枚撮りますか?</item>
+        <item>あなたと同期してもよろしいですか?</item>
+        <item>お楽しみ下さい!</item>
+        <item>良い音楽の時間です</item>
+        <item>クールであることよりクールなことは何ですか?</item>
+        <item>Ice Cold!</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>あなたのアートは全て凍りつく!</item>
+        <item>私は最高に冷たい洒落を知っていましたがうっかり忘れました。わかりますか?</item>
+        <item>あなたを愛しています 3000</item>
+        <item>Discord で「こんにちは」と言って下さい</item>
+        <item>今日は素敵なことをしましょう</item>
+        <item>想像以上の成果ですね?</item>
+        <item>調子はどうですか?</item>
+        <item>必要なのはアイスクリームだけです!</item>
+        <item>ご協力ありがとうございます!</item>
+        <item>ルートビールはあなたの心を傷つけることはありませんよね?</item>
+        <item>ビルドボットの最高のピックの1つです</item>
+        <item>仕方ないね</item>
+        <item>Ice Cold なデザートをお試し下さい</item>
+        <item>なんて素敵な経験でしょうか?</item>
+        <item>フラッシュし続けて下さい!</item>
+        <item>あなたは氷と関係があります</item>
+        <item>何をお考えですか?</item>
+        <item>勝者の勝者…?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <string name="date_format_title">日付の形式</string>
+    <string name="date_format_long_name">長い</string>
+    <string name="date_format_normal_name">標準</string>
+    <string name="date_format_short_name">短い</string>
+    <string name="date_format_daydate_long_name">日 (数字付き)</string>
+    <string name="date_format_daydate_short_name">日 (数字付きで短い)</string>
+    <string name="date_format_dayonly_name">本日のみ</string>
+    <string name="date_style_font">日付のフォント</string>
+    <string name="date_style_font_system_header">システムのタイトル</string>
+    <string name="date_style_font_system_body">システムの本文</string>
+    <string name="quickspace_category">クイックスペース</string>
+    <string name="actions_category">アクション</string>
+    <string name="date_style_transform_title">日付に大文字を表示</string>
+    <string name="date_style_transform_summary">全ての日付と At A Glance を大文字テキストに変換する</string>
+    <string name="date_style_spacing">日付の間隔</string>
+    <string name="date_style_spacing_normal">標準</string>
+    <string name="date_style_spacing_barely">ほとんど目立たない</string>
+    <string name="date_style_spacing_ott">強調</string>
+    <string name="all_apps_background_opacity_title">背景の透明度</string>
+    <string name="allapps_category">アプリドロワー</string>
+    <string name="icon_size_title">アイコンサイズ</string>
+    <string name="icon_size_extra_small">特小</string>
+    <string name="icon_size_small">小</string>
+    <string name="icon_size_average">既定</string>
+    <string name="icon_size_large">大</string>
+    <string name="icon_size_extra_large">特大</string>
+    <string name="app_show_predictions_title">アプリの予測の行</string>
+    <string name="app_show_predictions_summary">アプリドロワーにアプリ予測の行を表示するかどうかを切り替える</string>
+    <string name="set_default_home_page">デフォルトページを設定</string>
+</resources>
