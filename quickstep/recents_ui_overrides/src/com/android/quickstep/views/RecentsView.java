@@ -55,6 +55,8 @@ import android.animation.LayoutTransition.TransitionListener;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
+import android.app.ActivityManager;
+import android.app.ActivityManager.MemoryInfo;
 import android.app.ActivityManager.RunningTaskInfo;
 import android.content.Context;
 import android.content.res.Configuration;
@@ -87,6 +89,8 @@ import android.view.accessibility.AccessibilityNodeInfo;
 import android.view.animation.Interpolator;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.ProgressBar;
 
 import androidx.annotation.Nullable;
 
@@ -422,6 +426,10 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
 
     private String mStartPkg, mEndPkg;
 
+    TextView mMemText;
+    private ActivityManager mAm;
+    private int mTotalMem;
+
     private BaseActivity.MultiWindowModeChangedListener mMultiWindowModeChangedListener =
             (inMultiWindowMode) -> {
                 if (mOrientationState != null) {
@@ -495,6 +503,8 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
         } */
         mLockedDrawable = context.getDrawable(R.drawable.recents_locked);
         mUnlockedDrawable = context.getDrawable(R.drawable.recents_unlocked);
+
+        mAm = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
     }
 
     public OverScroller getScroller() {
@@ -574,6 +584,7 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
         mLockButtonView = (Button) mActionsView.findViewById(R.id.action_lock);
         mLockButtonView.setOnClickListener(this::lockCurrentTask);
         updateLockTaskDrawable();
+        mMemText = (TextView) mActionsView.findViewById(R.id.recents_memory_text);
     }
 
     @Override
@@ -1902,6 +1913,27 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
         setImportantForAccessibility(isModal() ? IMPORTANT_FOR_ACCESSIBILITY_NO
                 : IMPORTANT_FOR_ACCESSIBILITY_AUTO);
         updateLockTaskDrawable();
+        showMemDisplay();
+    }
+
+    private boolean showMemDisplay() {
+        if (!Utilities.recentsShowMemory(getContext())) {
+            mMemText.setVisibility(View.GONE);
+            return false;
+        }
+        mMemText.setVisibility(View.VISIBLE);
+
+        updateMemoryStatus();
+        return true;
+    }
+
+    private void updateMemoryStatus() {
+        if (mMemText.getVisibility() == View.GONE) return;
+
+        MemoryInfo memInfo = new MemoryInfo();
+        mAm.getMemoryInfo(memInfo);
+        int available = (int)(memInfo.availMem / 1048576L);
+        mMemText.setText(getContext().getString(R.string.memory_info, available));
     }
 
     private void updatePageOffsets() {
