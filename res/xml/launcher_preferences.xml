@@ -44,6 +44,13 @@
         android:defaultValue="false"
         android:persistent="true" />
 
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="pref_recents_show_memory"
+        android:persistent="true"
+        android:summary="@string/pref_recents_show_memory_summary"
+        android:title="@string/pref_recents_show_memory_title"/>
+
     <com.android.launcher3.settings.preference.ReloadingListPreference
         android:key="pref_icon_pack"
         android:title="@string/app_info_icon_pack"
