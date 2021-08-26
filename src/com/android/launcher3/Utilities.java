@@ -159,6 +159,7 @@ public final class Utilities {
     public static final String KEY_DOCK_SEARCH = "pref_dock_search";
     public static final String SEARCH_PACKAGE = "com.google.android.googlequicksearchbox";
     public static final String KEY_MINUS_ONE = "pref_enable_minus_one";
+    public static final String KEY_RECENTS_SHOW_MEMORY = "pref_recents_show_memory";
 
     public static final String KEY_DEFAULT_HOME_PAGE = "pref_default_homepage";
 
@@ -951,5 +952,9 @@ public final class Utilities {
 
     public static boolean showAllAppsPredictions(Context context) {
          return getPrefs(context).getBoolean(KEY_ALLAPPS_SHOW_PREDICTIONS, true);
+    }
+
+    public static boolean recentsShowMemory(Context context) {
+         return getPrefs(context).getBoolean(KEY_RECENTS_SHOW_MEMORY, true);
     }
 }
