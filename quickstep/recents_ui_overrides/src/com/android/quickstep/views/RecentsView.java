@@ -146,6 +146,7 @@ import com.android.systemui.shared.system.PackageManagerWrapper;
 import com.android.systemui.shared.system.TaskStackChangeListener;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Consumer;
 
 /**
@@ -412,6 +413,15 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
     private int mTaskViewStartIndex = 0;
     private OverviewActionsView mActionsView;
 
+    private Drawable mLockedDrawable;
+    private Drawable mUnlockedDrawable;
+
+    List<String> mLockedTasks = new ArrayList<>();
+
+    private Button mLockButtonView;
+
+    private String mStartPkg, mEndPkg;
+
     private BaseActivity.MultiWindowModeChangedListener mMultiWindowModeChangedListener =
             (inMultiWindowMode) -> {
                 if (mOrientationState != null) {
@@ -473,6 +483,18 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
 
         // Initialize quickstep specific cache params here, as this is constructed only once
         mActivity.getViewCache().setCacheSize(R.layout.digital_wellbeing_toast, 5);
+        // mAm = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+
+        /* String lockedTasks = Settings.System.getStringForUser(
+                    context.getContentResolver(),
+                    Settings.System.RECENTS_LOCKED_TASKS,
+                    UserHandle.USER_CURRENT);
+
+        if (mLockedTasks.size() == 0 && lockedTasks != null && !lockedTasks.isEmpty()) {
+            mLockedTasks = new ArrayList<String>(Arrays.asList(lockedTasks.split(",")));
+        } */
+        mLockedDrawable = context.getDrawable(R.drawable.recents_locked);
+        mUnlockedDrawable = context.getDrawable(R.drawable.recents_unlocked);
     }
 
     public OverScroller getScroller() {
@@ -549,6 +571,9 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
         mActionsView.updateHiddenFlags(HIDDEN_NO_TASKS, getTaskViewCount() == 0);
         mClearAllButton = (Button) mActionsView.findViewById(R.id.clear_all);
         mClearAllButton.setOnClickListener(this::dismissAllTasks);
+        mLockButtonView = (Button) mActionsView.findViewById(R.id.action_lock);
+        mLockButtonView.setOnClickListener(this::lockCurrentTask);
+        updateLockTaskDrawable();
     }
 
     @Override
@@ -680,6 +705,9 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
     protected void onPageBeginTransition() {
         super.onPageBeginTransition();
         mActionsView.updateDisabledFlags(OverviewActionsView.DISABLED_SCROLLING, true);
+        if (getCurrentPageTaskView() != null)
+            mStartPkg = getCurrentPageTaskView().getTask().key.getPackageName();
+
     }
 
     @Override
@@ -688,6 +716,10 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
         if (isClearAllHidden()) {
             mActionsView.updateDisabledFlags(OverviewActionsView.DISABLED_SCROLLING, false);
         }
+        if (getCurrentPageTaskView() != null)
+            mEndPkg = getCurrentPageTaskView().getTask().key.getPackageName();
+        if (mLockedTasks.contains(mStartPkg) != mLockedTasks.contains(mEndPkg))
+            updateLockTaskDrawable();
         if (getNextPage() > 0) {
             setSwipeDownShouldLaunchApp(true);
         }
@@ -822,8 +854,26 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
 
     private void removeTasksViewsAndClearAllButton() {
         for (int i = getTaskViewCount() - 1; i >= 0; i--) {
+            TaskView tv = getTaskViewAt(i);
+            if (mLockedTasks.contains(tv.getTask().key.getPackageName())) continue;
             removeView(getTaskViewAt(i));
         }
+    }
+
+    private void updateLockTaskDrawable() {
+        if (getNextPageTaskView() != null)
+            updateLockTaskDrawable(getNextPageTaskView().getTask().key.getPackageName());
+    }
+
+    private void updateLockTaskDrawable(String pkg) {
+        boolean isLocked = mLockedTasks.contains(pkg);
+        int stringId = isLocked ? R.string.recents_task_unlock : R.string.recents_task_lock;
+        mLockButtonView.setCompoundDrawablesRelativeWithIntrinsicBounds(
+                isLocked ? mUnlockedDrawable :
+                mLockedDrawable, null, null, null);
+        mLockButtonView.setText(stringId);
+        AnimatedVectorDrawable adr = (AnimatedVectorDrawable) mLockButtonView.getCompoundDrawablesRelative()[0];
+        adr.start();
     }
 
     public int getTaskViewCount() {
@@ -1413,6 +1463,7 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
 
     private void removeTask(TaskView taskView, int index, EndState endState) {
         if (taskView.getTask() != null) {
+            if (mLockedTasks.contains(taskView.getTask().key.getPackageName())) return;
             ActivityManagerWrapper.getInstance().removeTask(taskView.getTask().key.id);
             ComponentKey compKey = TaskUtils.getLaunchComponentKeyForTask(taskView.getTask().key);
             mActivity.getUserEventDispatcher().logTaskLaunchOrDismiss(
@@ -1549,14 +1600,25 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
 
         int count = getTaskViewCount();
         for (int i = 0; i < count; i++) {
+            TaskView tv = getTaskViewAt(i);
+            if (mLockedTasks.contains(tv.getTask().key.getPackageName())) continue;
             addDismissedTaskAnimations(getTaskViewAt(i), duration, anim, false);
         }
 
         mPendingAnimation = anim;
         mPendingAnimation.addEndListener((endState) -> {
             if (endState.isSuccess) {
-                // Remove all the task views now
-                ActivityManagerWrapper.getInstance().removeAllRecentTasks();
+                if (mLockedTasks.size() != 0) {
+                    for (int i = getTaskViewCount() - 1; i >= 0; i--) {
+                        TaskView tv = getTaskViewAt(i);
+                        if (mLockedTasks.contains(tv.getTask().key.getPackageName())) continue;
+
+                        ActivityManagerWrapper.getInstance().removeTask(tv.getTask().key.id);
+                    }
+                } else {
+                    // Remove all the task views now
+                    ActivityManagerWrapper.getInstance().removeAllRecentTasks();
+                }
                 removeTasksViewsAndClearAllButton();
                 startHome();
             }
@@ -1587,6 +1649,7 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
     }
 
     public void dismissTask(TaskView taskView, boolean animateTaskView, boolean removeTask) {
+        if (mLockedTasks.contains(taskView.getTask().key.getPackageName())) return;
         runDismissAnimation(createTaskDismissAnimation(taskView, animateTaskView, removeTask,
                 DISMISS_TASK_DURATION));
     }
@@ -1602,6 +1665,23 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
         if (taskView != null) {
             dismissTask(taskView, true /*animateTaskView*/, true /*removeTask*/);
         }
+    }
+
+    private void lockCurrentTask(View view) {
+        TaskView taskView = getCurrentPageTaskView();
+        if (taskView != null) {
+            Task t = taskView.getTask();
+            String pkg = t.key.getPackageName();
+            if (mLockedTasks.contains(pkg)) {
+                mLockedTasks.remove(pkg);
+            } else {
+                mLockedTasks.add(pkg);
+            }
+            updateLockTaskDrawable(pkg);
+        }
+        //Settings.System.putStringForUser(getContext().getContentResolver(),
+        //Settings.System.RECENTS_LOCKED_TASKS, String.join(",", mLockedTasks),
+        //        UserHandle.USER_CURRENT);
     }
 
     @Override
@@ -1821,6 +1901,7 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView 
         updatePageOffsets();
         setImportantForAccessibility(isModal() ? IMPORTANT_FOR_ACCESSIBILITY_NO
                 : IMPORTANT_FOR_ACCESSIBILITY_AUTO);
+        updateLockTaskDrawable();
     }
 
     private void updatePageOffsets() {
