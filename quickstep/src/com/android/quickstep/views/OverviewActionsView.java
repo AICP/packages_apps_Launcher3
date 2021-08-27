@@ -19,6 +19,8 @@ package com.android.quickstep.views;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.Rect;
+import android.graphics.drawable.AnimatedVectorDrawable;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -40,6 +42,8 @@ import com.android.quickstep.util.LayoutUtils;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+
+import java.util.List;
 
 /**
  * View for showing action buttons in Overview
@@ -90,6 +94,12 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
     private MultiValueAlpha mMultiValueAlpha;
     private Button mSplitButton;
 
+    // Task locking
+    private Drawable mLockedDrawable;
+    private Drawable mUnlockedDrawable;
+
+    private Button mLockButton;
+
     @ActionsHiddenFlags
     private int mHiddenFlags;
 
@@ -116,6 +126,9 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
 
     public OverviewActionsView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr, 0);
+
+        mLockedDrawable = context.getDrawable(R.drawable.recents_locked);
+        mUnlockedDrawable = context.getDrawable(R.drawable.recents_unlocked);
     }
 
     @Override
@@ -126,6 +139,9 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
 
         findViewById(R.id.action_screenshot).setOnClickListener(this);
         findViewById(R.id.action_clear_all).setOnClickListener(this);
+
+        mLockButton = findViewById(R.id.action_lock);
+        mLockButton.setOnClickListener(this);
 
         mSplitButton = findViewById(R.id.action_split);
         mSplitButton.setOnClickListener(this);
@@ -152,6 +168,8 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
             mCallbacks.onSplit();
         } else if (id == R.id.action_clear_all) {
             mCallbacks.onClearAllTasksRequested();
+        } else if (id == R.id.action_lock) {
+            mCallbacks.onLockCurrentTaskRequested();
         }
     }
 
@@ -303,5 +321,15 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
                 && (mHiddenFlags & (HIDDEN_SPLIT_SCREEN | HIDDEN_SPLIT_SELECT_ACTIVE)) == 0;
         mSplitButton.setVisibility(shouldBeVisible ? VISIBLE : GONE);
         findViewById(R.id.action_split_space).setVisibility(shouldBeVisible ? VISIBLE : GONE);
+    }
+
+    public void updateLockTaskDrawable(boolean isLocked) {
+        int stringId = isLocked ? R.string.recents_task_unlock : R.string.recents_task_lock;
+        mLockButton.setCompoundDrawablesRelativeWithIntrinsicBounds(
+                isLocked ? mUnlockedDrawable :
+                mLockedDrawable, null, null, null);
+        mLockButton.setText(stringId);
+        AnimatedVectorDrawable adr = (AnimatedVectorDrawable) mLockButton.getCompoundDrawablesRelative()[0];
+        adr.start();
     }
 }
