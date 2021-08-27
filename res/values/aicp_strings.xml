@@ -247,4 +247,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Show dock search widget -->
     <string name="dock_search_title">Google search bar</string>
     <string name="dock_search_summary">Show search bar in the bottom dock</string>
+
+    <!-- Recents task locking -->
+    <string name="recents_task_lock">Lock</string>
+    <string name="recents_task_unlock">Unlock</string>
 </resources>
