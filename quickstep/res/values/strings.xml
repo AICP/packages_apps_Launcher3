@@ -166,4 +166,7 @@
     <string name="action_screenshot">Screenshot</string>
     <!-- Message shown when an action is blocked by a policy enforced by the app or the organization managing the device. [CHAR_LIMIT=NONE] -->
     <string name="blocked_by_policy">This action isn\'t allowed by the app or your organization</string>
+
+    <string name="tasked_locked">Locked</string>
+    <string name="tasked_unlocked">Unlocked</string>
 </resources>
