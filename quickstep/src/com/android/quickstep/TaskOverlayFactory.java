@@ -259,6 +259,11 @@ public class TaskOverlayFactory implements ResourceBasedOverride {
             recentsView.dismissAllTasks();
         }
 
+        private void lockCurrentTask(Task task) {
+            final RecentsView recentsView = mThumbnailView.getTaskView().getRecentsView();
+            recentsView.lockCurrentTask(task);
+        }
+
         /**
          * Called when the overlay is no longer used.
          */
@@ -379,6 +384,10 @@ public class TaskOverlayFactory implements ResourceBasedOverride {
             public void onClearAllTasksRequested() {
                 endLiveTileMode(TaskOverlay.this::clearAllTasks);
             }
+            @Override
+            public void onLockCurrentTaskRequested() {
+                endLiveTileMode(() -> lockCurrentTask(mTask));
+            }
         }
     }
 
@@ -394,5 +403,7 @@ public class TaskOverlayFactory implements ResourceBasedOverride {
         void onSplit();
 
         void onClearAllTasksRequested();
+
+        void onLockCurrentTaskRequested();
     }
 }
