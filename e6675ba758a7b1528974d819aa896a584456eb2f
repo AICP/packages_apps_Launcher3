@@ -33,6 +33,23 @@
       "message": "Works on albus; Correct account this time",
       "revId": "e6675ba758a7b1528974d819aa896a584456eb2f",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "04f59885_a6b57702",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-09-14T04:08:24Z",
+      "side": 1,
+      "message": "Test:\nCompiles,\nBe on a grid option other than 4x5, observe that the no of columns for hotseat icons and desktop items are the same,\nWithout the patch: Selecting 4x5 results in 5 hotseat icon columns and 4 desktop icons columns\nWith the patch,  : Both hotseat icon columns and desktop icon columns are same, and is equal to 4  ",
+      "revId": "e6675ba758a7b1528974d819aa896a584456eb2f",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
