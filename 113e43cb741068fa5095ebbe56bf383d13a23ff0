@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "448daef9_2dd2cb4e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-09-27T13:56:06Z",
+      "side": 1,
+      "message": "TODO:\n- Cleanup\n- Move to app shortcuts popup ?\n- Remove hardcoded strings",
+      "revId": "113e43cb741068fa5095ebbe56bf383d13a23ff0",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
