@@ -22,9 +22,11 @@
 
     <!-- QuickSpace -->
     <dimen name="quickspace_title_size">24sp</dimen>
+    <dimen name="quickspace_title_icon_size">24dp</dimen>
     <dimen name="quickspace_alternate_title_size">22sp</dimen>
 
     <dimen name="quickspace_subtitle_size">16sp</dimen>
+    <dimen name="quickspace_subtitle_icon_size">16dp</dimen>
     <dimen name="quickspace_alternate_subtitle_size">14sp</dimen>
 
     <!-- Dock search bar -->
