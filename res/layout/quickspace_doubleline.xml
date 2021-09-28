@@ -48,8 +48,8 @@
 
         <ImageView
             android:id="@+id/quick_event_icon_sub"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="@dimen/quickspace_subtitle_icon_size"
+            android:layout_height="@dimen/quickspace_subtitle_icon_size"
             android:layout_gravity="center_vertical"
             android:layout_marginRight="6dp"
             android:layout_weight="0.0" />
@@ -89,8 +89,8 @@
 
             <ImageView
                 android:id="@+id/quick_event_weather_icon"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
+                android:layout_width="@dimen/quickspace_subtitle_icon_size"
+                android:layout_height="@dimen/quickspace_subtitle_icon_size"
                 android:layout_gravity="center"
                 android:layout_marginRight="4dp"
                 android:scaleType="fitXY" />
