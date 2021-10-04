@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "09f43d8f_55274851",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1393
+      },
+      "writtenOn": "2021-10-04T13:37:24Z",
+      "side": 1,
+      "message": "works good here, respects swipe up to leave recents without clearing that task. button spacing good on enchilada display, lock/unlock changes as expected under multiple conditions.",
+      "revId": "e2faf06a8be662fe1f182f37e680635a0c2960de",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
