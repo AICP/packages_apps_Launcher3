@@ -33,6 +33,23 @@
       "message": "Test:\n- Compiles\n- Starting a install session with stores(Google Play Store, Aurora Store) enables a promise icon in all app section\n- Tapping the promise icon takes the user to the currently running install session",
       "revId": "8c3ee9ecaefa03f5570b6efe8117e328cae1d635",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4e12d50a_d46d739c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2021-10-07T15:58:09Z",
+      "side": 1,
+      "message": "But it gets stuck sometimes for me only showing a white empty rectangle, and clicking doesnt do anything.",
+      "revId": "8c3ee9ecaefa03f5570b6efe8117e328cae1d635",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
