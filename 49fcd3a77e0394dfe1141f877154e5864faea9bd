@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "48cf2828_7ccc6b21",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-10-07T11:25:55Z",
+      "side": 1,
+      "message": "Test:\n- Compiles\n- The text is limited to single line and text is terminated with ellipsis at end\n\n\nPS:- The layout is bugged when approaching very small DPIs, which shouldn\u0027t be encountered in normal usage, maybe a platform issue",
+      "revId": "49fcd3a77e0394dfe1141f877154e5864faea9bd",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
