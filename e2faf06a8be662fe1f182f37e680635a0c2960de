@@ -16,6 +16,23 @@
       "message": "works good here, respects swipe up to leave recents without clearing that task. button spacing good on enchilada display, lock/unlock changes as expected under multiple conditions.",
       "revId": "e2faf06a8be662fe1f182f37e680635a0c2960de",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "185841a7_f910f1bc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-10-07T11:16:21Z",
+      "side": 1,
+      "message": "Test:\n- Compiles\n- Lock icon is visible along with existing overview buttons\n- The toggling the button toggles the icon and the string\n- A \"locked\" app is not removed when tapping Clear All button or swiping away ",
+      "revId": "e2faf06a8be662fe1f182f37e680635a0c2960de",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
