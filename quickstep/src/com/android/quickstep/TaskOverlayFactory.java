@@ -359,9 +359,18 @@ public class TaskOverlayFactory implements ResourceBasedOverride {
             public void onSplit() {
                 endLiveTileMode(TaskOverlay.this::enterSplitSelect);
             }
+
             @Override
             public void onClearAllTasksRequested() {
                 endLiveTileMode(TaskOverlay.this::clearAllTasks);
+            }
+
+            public void onLens() {
+                if (mIsAllowedByPolicy) {
+                    endLiveTileMode(() -> mImageApi.startLensActivity());
+                } else {
+                    showBlockedByPolicyMessage();
+                }
             }
         }
     }
@@ -378,5 +387,7 @@ public class TaskOverlayFactory implements ResourceBasedOverride {
         void onSplit();
 
         void onClearAllTasksRequested();
+
+        void onLens();
     }
 }
