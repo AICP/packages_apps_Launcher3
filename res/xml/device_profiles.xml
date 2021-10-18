@@ -138,7 +138,7 @@
         launcher:numHotseatIcons="5"
         launcher:numColumnsAllApps="5"
         launcher:numAllAppsColumns="5"
-        launcher:dbFile="launcher.db"
+        launcher:dbFile="launcher_5_by_5.db"
         launcher:defaultLayoutId="@xml/default_workspace_5x5" >
 
         <display-option
