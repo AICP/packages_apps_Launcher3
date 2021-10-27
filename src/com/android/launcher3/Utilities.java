@@ -909,6 +909,11 @@ public final class Utilities {
         return prefs.getBoolean(InvariantDeviceProfile.KEY_DOCK_SEARCH, true);
     }
 
+    public static int getCornerRadius(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getInt(InvariantDeviceProfile.KEY_SEARCH_RADIUS, 100);
+    }
+
     public static boolean isThemedIconsEnabled(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getBoolean(InvariantDeviceProfile.KEY_DOCK_THEME, false);

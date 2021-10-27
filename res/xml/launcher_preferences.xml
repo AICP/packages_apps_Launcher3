@@ -31,6 +31,17 @@
         android:summary="@string/dock_search_summary"
         android:defaultValue="true" />
 
+    <com.android.launcher3.settings.preference.SeekBarPreferenceCham
+        android:key="pref_search_radius_size"
+        android:title="@string/search_radius_title"
+        android:persistent="true"
+        android:max="100"
+        android:min="0"
+        aicpextras:unitsRight="%"
+        aicpextras:interval="5"
+        android:defaultValue="100"
+        android:dependency="pref_dock_search" />
+
     <SwitchPreference
         android:key="pref_dock_theme"
         android:title="@string/dock_theme_title"
