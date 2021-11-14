@@ -16,8 +16,27 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="show_searchbar_title">Tampilkan bar pencarian</string>
+    <string name="show_searchbar_summary">Tampilkan bar pencarian di layar utama</string>
     <string name="state_loading">Menerapkan\u2026</string>
     <string name="gestures_category">Gestur</string>
+    <string name="pref_notifications_gesture_title">Gestur notifikasi</string>
+    <string name="pref_notifications_gesture_summary">Geser ke bawah pada layar beranda untuk menampilkan panel QS</string>
+    <string name="pref_dt_gesture_title">Gestur ketuk dua kali</string>
+    <string name="pref_dt_gesture_summary">Ketuk dua kali pada ruang kosong untuk mematikan layar</string>
+    <string name="allow_swipe_down_clearall_title">Geser ke bawah untuk menghapus semua baru-baru ini</string>
+    <string name="allow_swipe_down_clearall_desc">Aktifkan untuk menghapus semua yang baru-baru ini di layar dengan menggesek ke bawah</string>
+    <string name="trust_apps_manager_name">Aplikasi tersembunyi</string>
+    <string name="trust_apps_auth_manager">Buka kunci untuk mengelola aplikasi tersembunyi</string>
+    <string name="trust_apps_loading">Memuat\u2026</string>
+    <string name="trust_apps_no_lock_error">Silakan mengatur kunci layar untuk membatasi akses aplikasi</string>
+    <string name="trust_apps_help">Bantuan</string>
+    <string name="trust_apps_info_hidden">Aplikasi tersembunyi dan widget mereka akan disembunyikan</string>
+    <string name="title_show_google_app">Geser untuk mengakses aplikasi Google</string>
+    <string name="msg_minus_one_on_left">Dari layar utama default, geser ke kiri untuk membuka aplikasi Google</string>
+    <string name="msg_minus_one_on_right">Dari layar utama default, geser ke kanan untuk membuka aplikasi Google</string>
+    <string name="desktop_show_labels">Tampilkan label ikon pada desktop</string>
+    <string name="drawer_show_labels">Tampilkan label ikon di laci</string>
     <string name="settings_edit_allow_title">Izinkan sunting</string>
     <string name="settings_edit_allow_summary_on">Ikon dan widget dapat ditambahkan, dihapus dan dipindahkan pada layar utama</string>
     <string name="settings_edit_allow_summary_off">Ikon dan widget tidak dapat ditambahkan, dihapus dan dipindahkan pada layar utama</string>
@@ -25,6 +44,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="show_quickspace_title">Sekilas</string>
     <string name="show_quickspace_summary">Tampilkan dibagian atas layar beranda Anda</string>
     <string name="quick_event_rom_intro_welcome">Selamat datang di AICP!</string>
+    <string name="quick_event_rom_intro_learn">Ketuk di sini untuk bersenang-senang!</string>
     <string name="quick_event_ambient_now_playing">Sedang diputar</string>
     <string name="quick_event_ambient_song_artist">%1$s oleh %2$s</string>
     <string name="quickspace_now_playing_title">Tampilkan sedang diputar</string>
@@ -113,12 +133,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="date_style_font">Font Tanggal</string>
     <string name="date_style_font_system_header">Judul sistem</string>
     <string name="date_style_font_system_body">Tubuh sistem</string>
+    <string name="quickspace_category">QuickSpace</string>
+    <string name="actions_category">Tindakan</string>
     <string name="date_style_transform_title">Tampilkan huruf besar pada tanggal</string>
     <string name="date_style_transform_summary">Ubah semua tanggal/sekilas dengan teks berhuruf besar</string>
     <string name="date_style_spacing">Jarak tanggal</string>
     <string name="date_style_spacing_normal">Normal</string>
     <string name="date_style_spacing_barely">Hampir tak terlihat</string>
     <string name="date_style_spacing_ott">Di paling atas</string>
+    <string name="all_apps_background_opacity_title">Opasitas latar belakang</string>
+    <string name="allapps_category">Laci Aplikasi</string>
     <string name="icon_size_title">Ukuran ikon</string>
     <string name="icon_size_extra_small">Sangat kecil</string>
     <string name="icon_size_small">Kecil</string>
@@ -126,5 +150,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="icon_size_large">Besar</string>
     <string name="icon_size_extra_large">Sangat besar</string>
     <string name="app_show_predictions_title">Baris prediksi aplikasi</string>
+    <string name="app_show_predictions_summary">Tombol untuk menampilkan baris prediksi aplikasi di laci aplikasi</string>
     <string name="set_default_home_page">Atur halaman default</string>
+    <string name="dock_search_title">Bilah pencarian Google</string>
+    <string name="dock_search_summary">Tampilkan bilah pencarian di dok bawah</string>
 </resources>

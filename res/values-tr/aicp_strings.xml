@@ -152,4 +152,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_show_predictions_title">Uygulama tahminleri satırı</string>
     <string name="app_show_predictions_summary">Uygulama menüsünde uygulama tahminleri satırını göstermek için geçiş yapın</string>
     <string name="set_default_home_page">Varsayılan sayfayı ayarla</string>
+    <string name="dock_search_title">Google arama çubuğu</string>
+    <string name="dock_search_summary">Alt kısımda arama çubuğunu göster</string>
 </resources>

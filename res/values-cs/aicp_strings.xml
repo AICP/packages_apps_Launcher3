@@ -152,4 +152,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_show_predictions_title">Řádek návrhů aplikací</string>
     <string name="app_show_predictions_summary">Přepnout zobrazení řádku návrhů aplikací v seznamu aplikací</string>
     <string name="set_default_home_page">Nastavit výchozí stránku</string>
+    <string name="dock_search_title">Vyhledávací panel Google</string>
+    <string name="dock_search_summary">Zobrazit vyhledávací panel ve spodním doku</string>
 </resources>

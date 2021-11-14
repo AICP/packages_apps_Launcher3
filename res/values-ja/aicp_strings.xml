@@ -152,4 +152,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_show_predictions_title">アプリの予測の行</string>
     <string name="app_show_predictions_summary">アプリドロワーにアプリ予測の行を表示するかどうかを切り替える</string>
     <string name="set_default_home_page">デフォルトページを設定</string>
+    <string name="dock_search_title">Google 検索バー</string>
+    <string name="dock_search_summary">ドックの下部に検索バーを表示する</string>
 </resources>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2018-2019 Syberia Project
+      Copyright (C) 2014-2020 AICP
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="show_searchbar_title">Vis søgebjælke</string>
+    <string name="show_searchbar_summary">Vis søgebjælken på startskærmen</string>
+    <string name="state_loading">Anvender\u2026</string>
+    <string name="gestures_category">Berøringer</string>
+    <string name="pref_notifications_gesture_title">Notifikationsberøring</string>
+    <string name="pref_notifications_gesture_summary">Stryg lodret nedad, på startskærmen, for at vise KI-panelet</string>
+    <string name="pref_dt_gesture_title">Dobbelttrykberøringer</string>
+    <string name="pref_dt_gesture_summary">Dobbelttrykberøringer på tomt områder, for sluk</string>
+    <string name="allow_swipe_down_clearall_title">Stryg ned, for at rydde alle seneste</string>
+    <string name="allow_swipe_down_clearall_desc">Aktivér, for at rydde alle seneste, på oversigtsskærmen, ved at stryge ned</string>
+    <string name="trust_apps_manager_name">Skjulte apps</string>
+    <string name="trust_apps_auth_manager">Lås op, for administrere de skjulte apps</string>
+    <string name="trust_apps_loading">Indlæser\u2026</string>
+    <string name="trust_apps_no_lock_error">Indstil venligst en sikker låseskærm, for at restringere app-adgang</string>
+    <string name="trust_apps_help">Hjælp</string>
+    <string name="trust_apps_info_hidden">Skjulte apps, og deres widgets, er skjulte fra skuffen</string>
+    <string name="title_show_google_app">Stryg, for at tilgå Google-app</string>
+    <string name="msg_minus_one_on_left">Stryg, fra standard Startskærm, mod venstre, for at åbne Google-app</string>
+    <string name="msg_minus_one_on_right">Stryg, fra standard Startskærm, mod højre, for at åbne Google-app</string>
+    <string name="desktop_show_labels">Vis ikon-etiketter på skrivebord</string>
+    <string name="drawer_show_labels">Vis ikon-etiketter på skuffe</string>
+    <string name="settings_edit_allow_title">Tillad redigering</string>
+    <string name="settings_edit_allow_summary_on">Ikoner og widgets kan tilføjes, fjernes og flyttes på startskærmen</string>
+    <string name="settings_edit_allow_summary_off">Ikoner og widgets kan ikke tilføjes, fjernes eller flyttes på startskærmen</string>
+    <string name="settings_edit_widgets_error">Det er ikke muligt, at tilføje widgets til startskærmen</string>
+    <string name="show_quickspace_title">Ved Et Øjekast</string>
+    <string name="show_quickspace_summary">Vis øverst på din Startskærm</string>
+    <string name="quick_event_rom_intro_welcome">Velkommen til AICP!</string>
+    <string name="quick_event_rom_intro_learn">Tryk her, for at fyre den af!</string>
+    <string name="quick_event_ambient_now_playing">Afspiller Nu</string>
+    <string name="quick_event_ambient_song_artist">%1$s af %2$s</string>
+    <string name="quickspace_now_playing_title">Vis afspiller nu</string>
+    <string name="quickspace_now_playing_summary">Viser den sang du spiller, på Ved et Øjekast. ADVARSEL: Det er ikke fuldt ud kompatibelt med alle medieafspillere!</string>
+    <string name="quickspace_now_playing_showdate_title">...vis dato i stedet for</string>
+    <string name="quickspace_now_playing_showdate_summary">Viser dato i første linje, i stedet for \"Afspiller Nu\"</string>
+    <string name="quickspace_alternate_style_title">Brug en alternativ stil</string>
+    <string name="quickspace_alternate_style_summary">Brug en minimalistisk stil, til Ved et Øjekast</string>
+    <string name="quickspace_psa_title">Vis en tilfældig besked</string>
+    <string name="quickspace_psa_summary">Vis nogle pæne beskeder, nogle gange, på Ved et Øjekast.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Godmorgen!</item>
+        <item>Godmorgen, tid til rock og rul!</item>
+        <item>Hvilken smuk dag!</item>
+        <item>Hav en god dag!</item>
+        <item>Hvad med en lille 5 minutters lur?</item>
+        <item>Det er da én måde at vågne på.</item>
+        <item>Du bør ændre dine alarmlyde.</item>
+        <item>Det ser ud til, at det er en smuk dag, ikke?</item>
+        <item>Lad os få det brød.</item>
+        <item>Tjek lige vejret, for en sikkerheds skyld</item>
+        <item>Føler man sig stadig lidt søvnig</item>
+        <item>Har du kigget udenfor endnu?</item>
+        <item>Lad os så få det ordnet.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Godnat!</item>
+        <item>Sov godt!</item>
+        <item>Ses i morgen!</item>
+        <item>Drøm sødt!</item>
+        <item>Bliv ikke for længe oppe</item>
+        <item>Sov godt</item>
+        <item>Få noget søvn</item>
+        <item>Tid til at slappe af</item>
+        <item>Nyd natten!</item>
+        <item>Tid til at lade batterierne op!</item>
+        <item>I morgen bliver måske en stor dag</item>
+        <item>Gør dine ben klar til i morgen</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Øh... Godnat?</item>
+        <item>Det er en lille smule sent</item>
+        <item>Du burde rette op på din søvnplan</item>
+        <item>Er du mere produktiv på dette tidspunkt?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>Vores ROM er lige så kold, som din eks\' hjerte</item>
+        <item>Er det tid til, at brænde en opdatering igen?</item>
+        <item>Begejstret for Android R?</item>
+        <item>Åh hej, hvad så?</item>
+        <item>Fokus på dine opgaver</item>
+        <item>Hvor mange skærmbilleder tager du?</item>
+        <item>Må synk\'en være med dig...</item>
+        <item>Fyr den af!</item>
+        <item>Tid til noget god musik</item>
+        <item>Hvad er køligere end at være cool?</item>
+        <item>Iskoldt!</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HOVED</item>
+        <item>Eder er helt is!</item>
+        <item>Jeg havde den bedste is-vittighed, men min hjerne frøs. Fik du den?</item>
+        <item>Vi elsker dig 3000</item>
+        <item>Sig \'Hallo\' til os på Discord</item>
+        <item>Gør noget rart i dag</item>
+        <item>Nu bliver det ikke bedre, vel?</item>
+        <item>Hvordan går det alt sammen?</item>
+        <item>Alt du har brug for er is!</item>
+        <item>Tak for din støtte</item>
+        <item>Nisseøl knuser da aldrig dit hjerte, vel?</item>
+        <item>Et af buildbot\'ens bedste valg</item>
+        <item>Det er jo det</item>
+        <item>Prøv Iskolde desserter</item>
+        <item>Hvilken skøn oplevelse, ikke?</item>
+        <item>Brænd du bare videre!</item>
+        <item>Du er nu i et forhold med is</item>
+        <item>Hvad tænker du mon på?</item>
+        <item>Kentucky Fried ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <string name="date_format_title">Datoformat</string>
+    <string name="date_format_long_name">Langt</string>
+    <string name="date_format_normal_name">Normalt</string>
+    <string name="date_format_short_name">Kort</string>
+    <string name="date_format_daydate_long_name">Dag (med nummer)</string>
+    <string name="date_format_daydate_short_name">Dag (kort med nummer)</string>
+    <string name="date_format_dayonly_name">Netop i dag</string>
+    <string name="date_style_font">Dato-skrifttype</string>
+    <string name="date_style_font_system_header">Systemoverskrift</string>
+    <string name="date_style_font_system_body">System-brødtekst</string>
+    <string name="quickspace_category">QuickSpace</string>
+    <string name="actions_category">Handlinger</string>
+    <string name="date_style_transform_title">Vis store bogstaver på dato</string>
+    <string name="date_style_transform_summary">Forvandl hele datoen/ved et øjekast med stor tekst</string>
+    <string name="date_style_spacing">Dato-linjeafstand</string>
+    <string name="date_style_spacing_normal">Normalt</string>
+    <string name="date_style_spacing_barely">Knap mærkbart</string>
+    <string name="date_style_spacing_ott">Overdreven</string>
+    <string name="all_apps_background_opacity_title">Baggrundsgennemsigtighed</string>
+    <string name="allapps_category">App Skuffe</string>
+    <string name="icon_size_title">Ikonstørrelse</string>
+    <string name="icon_size_extra_small">Lillebitte</string>
+    <string name="icon_size_small">Lille</string>
+    <string name="icon_size_average">Standard</string>
+    <string name="icon_size_large">Stor</string>
+    <string name="icon_size_extra_large">Ekstra stor</string>
+    <string name="app_show_predictions_title">App-forudsigelsesrække</string>
+    <string name="app_show_predictions_summary">Skift funktion, for at vise række med app-forudsigelser i appskuffen</string>
+    <string name="set_default_home_page">Angiv som standardside</string>
+    <string name="dock_search_title">Google søgebjælke</string>
+    <string name="dock_search_summary">Vis søgebjælke i dokken nederst</string>
+</resources>

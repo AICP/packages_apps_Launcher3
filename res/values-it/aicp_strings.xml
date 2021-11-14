@@ -16,8 +16,27 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="show_searchbar_title">Mostra barra di ricerca</string>
+    <string name="show_searchbar_summary">Mostra la barra di ricerca sulla schermata home</string>
     <string name="state_loading">Applicando\u2026</string>
     <string name="gestures_category">Gesti</string>
+    <string name="pref_notifications_gesture_title">Gesto delle notifiche</string>
+    <string name="pref_notifications_gesture_summary">Scorri verticalmente in basso sulla schermata Home per mostrare il pannello delle IR</string>
+    <string name="pref_dt_gesture_title">Gesto di doppio tocco</string>
+    <string name="pref_dt_gesture_summary">Tocca due volte sullo spazio vuoto per spegnere il dispositivo</string>
+    <string name="allow_swipe_down_clearall_title">Scorri in giù per cancellare tutte le app recenti</string>
+    <string name="allow_swipe_down_clearall_desc">Abilita per cancellare tutte le app recenti nella schermata panoramica scorrendo in giù</string>
+    <string name="trust_apps_manager_name">App nascoste</string>
+    <string name="trust_apps_auth_manager">Sblocca per gestire le app nascoste</string>
+    <string name="trust_apps_loading">Caricamento\u2026</string>
+    <string name="trust_apps_no_lock_error">Sei pregato di configurare un blocco schermo sicuro per limitare l\'accesso alle app</string>
+    <string name="trust_apps_help">Aiuto</string>
+    <string name="trust_apps_info_hidden">Le app nascoste e i loro widget sono nascoste dal menu</string>
+    <string name="title_show_google_app">Scorri per accedere all\'app di Google</string>
+    <string name="msg_minus_one_on_left">Dalla schermata Home predefinita, scorri a sinistra per aprire l\'app di Google</string>
+    <string name="msg_minus_one_on_right">Dalla schermata Home predefinita, scorri a destra per aprire l\'app di Google</string>
+    <string name="desktop_show_labels">Mostra le etichette dell\'icona sul desktop</string>
+    <string name="drawer_show_labels">Mostra le etichette dell\'icona nel menu</string>
     <string name="settings_edit_allow_title">Consenti la modifica</string>
     <string name="settings_edit_allow_summary_on">Icone e widget sono aggiungibili, rimovibili e spostabili sulla schermata home</string>
     <string name="settings_edit_allow_summary_off">Icone e widget non sono aggiungibili, rimovibili e spostabili sulla schermata home</string>
@@ -25,6 +44,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="show_quickspace_title">A Prima Vista</string>
     <string name="show_quickspace_summary">Mostra in cima alla tua schermata home</string>
     <string name="quick_event_rom_intro_welcome">Benvenuto ad AICP!</string>
+    <string name="quick_event_rom_intro_learn">Tocca qui per divertirti!</string>
     <string name="quick_event_ambient_now_playing">In Riproduzione</string>
     <string name="quick_event_ambient_song_artist">%1$s di %2$s</string>
     <string name="quickspace_now_playing_title">Mostra ora in riproduzione</string>
@@ -113,12 +133,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="date_style_font">Font della data</string>
     <string name="date_style_font_system_header">Intestazione del sistema</string>
     <string name="date_style_font_system_body">Corpo del sistema</string>
+    <string name="quickspace_category">QuickSpace</string>
+    <string name="actions_category">Azioni</string>
     <string name="date_style_transform_title">Mostra maiuscolo sulla data</string>
     <string name="date_style_transform_summary">Trasforma tutte le date/a prima vista con il testo maiuscolo</string>
     <string name="date_style_spacing">Spaziatura della data</string>
     <string name="date_style_spacing_normal">Normale</string>
     <string name="date_style_spacing_barely">Appena percettibile</string>
     <string name="date_style_spacing_ott">In cima</string>
+    <string name="all_apps_background_opacity_title">Opacità dello sfondo</string>
+    <string name="allapps_category">Menu App</string>
     <string name="icon_size_title">Dimensione icona</string>
     <string name="icon_size_extra_small">Minuscola</string>
     <string name="icon_size_small">Piccola</string>
@@ -126,5 +150,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="icon_size_large">Grande</string>
     <string name="icon_size_extra_large">Molto Grande</string>
     <string name="app_show_predictions_title">Riga delle previsioni dell\'app</string>
+    <string name="app_show_predictions_summary">Attiva/Disattiva per mostrare la riga delle predizioni delle app nel menu delle app</string>
     <string name="set_default_home_page">Imposta la pagina predefinita</string>
+    <string name="dock_search_title">Barra di ricerca Google</string>
+    <string name="dock_search_summary">Mostra la barra di ricerca nella dock in basso</string>
 </resources>

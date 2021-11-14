@@ -152,4 +152,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_show_predictions_title">Ajánlott alkalmazások sora</string>
     <string name="app_show_predictions_summary">Kapcsoló az ajánlott alkalmazások megjelenítéséhez az alkalmazásfiókban</string>
     <string name="set_default_home_page">Az alapértelmezett oldal beállítása</string>
+    <string name="dock_search_title">Google-keresősáv</string>
+    <string name="dock_search_summary">A keresősáv megjelenítése az alsó dokkon</string>
 </resources>

@@ -152,4 +152,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_show_predictions_title">应用程序预测行</string>
     <string name="app_show_predictions_summary">切换到应用抽屉中显示应用预测行</string>
     <string name="set_default_home_page">设置默认主页</string>
+    <string name="dock_search_title">Google 搜索栏</string>
+    <string name="dock_search_summary">在底部显示搜索栏</string>
 </resources>

@@ -152,4 +152,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_show_predictions_title">Fila de predicción de aplicaciones</string>
     <string name="app_show_predictions_summary">Activar para mostrar la fila de predicción de aplicaciones en la pantalla de aps. recientes y cajón de aplicaciones</string>
     <string name="set_default_home_page">Establecer página predeterminada</string>
+    <string name="dock_search_title">Barra de búsqueda de Google</string>
+    <string name="dock_search_summary">Mostrar la barra de búsqueda en la parte inferior</string>
 </resources>

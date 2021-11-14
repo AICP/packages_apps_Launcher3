@@ -152,4 +152,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_show_predictions_title">Zeile mit App-Vorschlägen</string>
     <string name="app_show_predictions_summary">Umschalten, um Vorhersagen für Apps in der App-Übersicht anzuzeigen</string>
     <string name="set_default_home_page">Startseite festlegen</string>
+    <string name="dock_search_title">Google Suchleiste</string>
+    <string name="dock_search_summary">Suchleiste im Dock anzeigen</string>
 </resources>

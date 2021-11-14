@@ -82,8 +82,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>Czas na dobrą muzykę</item>
         <item>Co jest chłodniejsze niż bycie chłodnym?</item>
         <item>Lodowe zimno!</item>
-        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
-        <item>Thou art all ice!</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C GŁÓWNY</item>
+        <item>Jesteś cały lodem</item>
         <item>Miałem najlepszy lod, ale poślizgnąłem. Chcesz to?</item>
         <item>Kochamy Cię 3000</item>
         <item>Powiedz nam \"Cześć\" na Discordzie</item>
@@ -92,7 +92,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <item>Jak leci?</item>
         <item>Potrzebujesz tylko lodów!</item>
         <item>Dziękujemy za wsparcie</item>
-        <item>Root Beer never breaks your heart, right?</item>
+        <item>Piwo korzenne nigdy nie łamie Ci serca, prawda?</item>
         <item>Jeden z najlepszych kubków robota</item>
         <item>To właśnie jest</item>
         <item>Wypróbuj Lodowe desery</item>
@@ -112,6 +112,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="date_format_dayonly_name">Dzisiaj</string>
     <string name="date_style_font">Czcionka daty</string>
     <string name="date_style_font_system_header">Nagłówek systemu</string>
+    <string name="date_style_font_system_body">Korpus systemu</string>
     <string name="date_style_transform_title">Pokaż wielkie litery według daty</string>
     <string name="date_style_transform_summary">Przekształć całą datę/na pierwszy rzut oka z górnym tekstem</string>
     <string name="date_style_spacing">Odstęp daty</string>
