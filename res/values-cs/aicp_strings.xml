@@ -154,4 +154,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="set_default_home_page">Nastavit výchozí stránku</string>
     <string name="dock_search_title">Vyhledávací panel Google</string>
     <string name="dock_search_summary">Zobrazit vyhledávací panel ve spodním doku</string>
+    <string name="recents_task_lock">Zamknout</string>
+    <string name="recents_task_unlock">Odemknout</string>
+    <string name="pref_recents_show_memory_title">Zobrazit volnou RAM v nedávných aplikacích</string>
+    <string name="pref_recents_show_memory_summary">Zobrazit volnou RAM v zobrazení nedávných aplikací</string>
+    <string name="memory_info">Volná paměť RAM: %1$d MB</string>
 </resources>
