@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eabf9f2b_91330ecc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-11-23T05:04:38Z",
+      "side": 1,
+      "message": "Test:\n- Compiles\n- Have at-least one widget on home-screen\n- Disable \"Allow edit\" within launcher settings\n- Swipe up on the widget available and observe launcher crashing \n\nWith this patch, no crashes are observed\nCorresponding crash log https://haste.aicp-rom.com/nicupohoki",
+      "revId": "fff8e669adafeb3648f2485402b7f78c6b75dec9",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
