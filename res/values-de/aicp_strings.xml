@@ -154,4 +154,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="set_default_home_page">Startseite festlegen</string>
     <string name="dock_search_title">Google Suchleiste</string>
     <string name="dock_search_summary">Suchleiste im Dock anzeigen</string>
+    <string name="recents_task_lock">Sperren</string>
+    <string name="recents_task_unlock">Entsperren</string>
+    <string name="pref_recents_show_memory_title">Zeige Arbeitsspeicher im Anwendungsverlauf</string>
+    <string name="pref_recents_show_memory_summary">Zeige freien Arbeitsspeicher in der Anwendungsverlauf-Ansicht</string>
+    <string name="memory_info">Freier Arbeitsspeicher: %1$d MB</string>
 </resources>

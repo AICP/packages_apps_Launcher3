@@ -154,4 +154,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="set_default_home_page">Az alapértelmezett oldal beállítása</string>
     <string name="dock_search_title">Google-keresősáv</string>
     <string name="dock_search_summary">A keresősáv megjelenítése az alsó dokkon</string>
+    <string name="recents_task_lock">Zárolás</string>
+    <string name="recents_task_unlock">Feloldás</string>
+    <string name="pref_recents_show_memory_title">Szabad RAM az előzményekben</string>
+    <string name="pref_recents_show_memory_summary">Előzmények nézetben látszódjon a rendelkezésre álló RAM</string>
+    <string name="memory_info">Elérhető: %1$d MB RAM</string>
 </resources>

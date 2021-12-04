@@ -154,4 +154,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="set_default_home_page">设置默认主页</string>
     <string name="dock_search_title">Google 搜索栏</string>
     <string name="dock_search_summary">在底部显示搜索栏</string>
+    <string name="recents_task_lock">锁定</string>
+    <string name="recents_task_unlock">解锁</string>
+    <string name="pref_recents_show_memory_title">最近任务中显示空闲内存</string>
+    <string name="pref_recents_show_memory_summary">最近任务界面中显示空闲的内存</string>
+    <string name="memory_info">空闲内存：%1$d MB</string>
 </resources>
