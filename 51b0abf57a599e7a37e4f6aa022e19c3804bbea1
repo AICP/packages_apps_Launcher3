@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f84ca80_528644c4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-12-11T16:54:43Z",
+      "side": 1,
+      "message": "Required for https://gerrit.aicp-rom.com/c/AICP/vendor_aicp/+/111619\n\nTest:\n- Compiles",
+      "revId": "51b0abf57a599e7a37e4f6aa022e19c3804bbea1",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
