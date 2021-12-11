@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af1b542b_0e4e4b00",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2021-12-11T16:59:29Z",
+      "side": 1,
+      "message": "Does what this change is supposed to do, which is stop drag layer on widget ands app icons, but app folders still show the drag layer\nAlso observed the folder name can be changed when \"Allow editing\" is toggled OFF\n\nTest:\n- Compiles\n- Disable \"Allow edit\" within launcher settings\n- Swipe up on the widget/app icon available and observe the drag layer appear\n\nWith this patch, the drag layer is not observed",
+      "revId": "6a2cbfa213a48b6f5d33eaef5a7064164c7d81ce",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
