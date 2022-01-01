@@ -154,4 +154,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="set_default_home_page">Imposta la pagina predefinita</string>
     <string name="dock_search_title">Barra di ricerca Google</string>
     <string name="dock_search_summary">Mostra la barra di ricerca nella dock in basso</string>
+    <string name="recents_task_lock">Blocca</string>
+    <string name="recents_task_unlock">Sblocca</string>
+    <string name="pref_recents_show_memory_title">Mostra RAM libera nei recenti</string>
+    <string name="pref_recents_show_memory_summary">Mostra la RAM libera disponibile nella visualizzazione recenti</string>
+    <string name="memory_info">RAM libera: %1$d MB</string>
 </resources>

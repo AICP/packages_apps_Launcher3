@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2018-2019 Syberia Project
+      Copyright (C) 2014-2020 AICP
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="show_searchbar_title">نمایش نوار جستجو</string>
+    <string name="show_searchbar_summary">نمایس نوار جستجو در صفحه اصلی</string>
+    <string name="pref_notifications_gesture_title">کشیدن حرکتی اعلان‌ها</string>
+    <string name="pref_notifications_gesture_summary">برای دیدن منوی تنظیمات سریع در صفحه اصلی بصورت عمودی به پایین بکشید</string>
+    <string name="pref_dt_gesture_title">ژست حرکتی دوبار ضربه‌زدن</string>
+    <string name="pref_dt_gesture_summary">دو بار ضربه روی فضای خالی برای خاموش کردن</string>
+    <string name="allow_swipe_down_clearall_title">کشیدن رو به پایین برای بستن همه برنامه‌ها جدید</string>
+    <string name="allow_swipe_down_clearall_desc">برای بستن همه برنامه‌ها هنگام باز بودن برنامه‌های اخیر یک برنامه را رو به پایین بکشید</string>
+    <string name="trust_apps_manager_name">برنامه‌های پنهان</string>
+    <string name="trust_apps_auth_manager">برای مدیریت برنامه‌های پنهان، قفل را باز کنید</string>
+    <string name="trust_apps_loading">در حال بارگیری\u2026</string>
+    <string name="trust_apps_no_lock_error">لطفا یک قفل برای کنترل برنامه‌های پنهان و محافظت شده، تنظیم کنید</string>
+    <string name="trust_apps_help">راهنما</string>
+    <string name="trust_apps_info_hidden">برنامه‌های مخفی و ویجت‌هایشان از صفحه اصلی پنهان هستند</string>
+    <string name="title_show_google_app">کشیدن برای دسترسی به برنامه گوگل</string>
+    <string name="msg_minus_one_on_left">از صفحه اصلی پیش‌فرض، انگشت خود را به چپ بکشید تا برنامه گوگل باز شود</string>
+    <string name="msg_minus_one_on_right">از صفحه اصلی پیش‌فرض، انگشت خود را به راست بکشید تا برنامه گوگل باز شود</string>
+    <string name="desktop_show_labels">نشان دادن نام برنامه‌ها در دسکتاپ</string>
+    <string name="drawer_show_labels">نمایش برچسب‌های برنامه‌ها در کشو</string>
+    <string name="quick_event_rom_intro_learn">برای لذت بردن اینجا ضربه بزنید!</string>
+    <string name="quickspace_category">فضای سریع</string>
+    <string name="actions_category">کنش‌ها</string>
+    <string name="all_apps_background_opacity_title">شفافیت پس‌زمینه</string>
+    <string name="allapps_category">کشوی برنامه‌ها</string>
+    <string name="app_show_predictions_summary">برای نمایش ردیف پیش‌بینی‌های برنامه در کشوی برنامه، آن را تغییر دهید</string>
+    <string name="dock_search_title">نوار جست‌وجوی گوگل</string>
+    <string name="dock_search_summary">نمایش نوار جستجو در پایین</string>
+    <string name="recents_task_lock">قفل</string>
+    <string name="recents_task_unlock">بازگشایی</string>
+    <string name="pref_recents_show_memory_title">نمایش فضای خالی RAM در تازه‌ها</string>
+    <string name="pref_recents_show_memory_summary">نمایش فضای آزاد RAM در مشاهده تازه‌ها</string>
+    <string name="memory_info">فضای آزاد: %1$d مگابایت</string>
+</resources>

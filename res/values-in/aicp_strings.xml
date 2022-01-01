@@ -154,4 +154,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="set_default_home_page">Atur halaman default</string>
     <string name="dock_search_title">Bilah pencarian Google</string>
     <string name="dock_search_summary">Tampilkan bilah pencarian di dok bawah</string>
+    <string name="recents_task_lock">Kunci</string>
+    <string name="recents_task_unlock">Buka kunci</string>
+    <string name="pref_recents_show_memory_title">Tampilkan RAM Bebas di baru-baru ini</string>
+    <string name="pref_recents_show_memory_summary">Tampilkan RAM bebas yang tersedia dalam tampilan baru-baru ini</string>
+    <string name="memory_info">RAM Bebas: %1$d MB</string>
 </resources>

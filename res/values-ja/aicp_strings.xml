@@ -154,4 +154,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="set_default_home_page">デフォルトページを設定</string>
     <string name="dock_search_title">Google 検索バー</string>
     <string name="dock_search_summary">ドックの下部に検索バーを表示する</string>
+    <string name="recents_task_lock">ロック</string>
+    <string name="recents_task_unlock">未ロック</string>
+    <string name="pref_recents_show_memory_title">アプリ履歴に空きメモリを表示</string>
+    <string name="pref_recents_show_memory_summary">アプリ履歴に空きメモリを表示する</string>
+    <string name="memory_info">空きメモリ: %1$d MB</string>
 </resources>
