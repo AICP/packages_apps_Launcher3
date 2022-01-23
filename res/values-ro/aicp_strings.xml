@@ -18,6 +18,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="show_searchbar_title">Arata bara de căutare</string>
     <string name="show_searchbar_summary">Afișează bara de căutare pe panoul principal</string>
+    <string name="state_loading">Se aplică\u2026</string>
+    <string name="gestures_category">Gesturi</string>
     <string name="pref_notifications_gesture_title">Gesturi notificări</string>
     <string name="pref_notifications_gesture_summary">Glisează în jos pe panoul principal pentru a afișa panoul QS</string>
     <string name="pref_dt_gesture_title">Gest dublă atingere</string>
@@ -35,12 +37,121 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="msg_minus_one_on_right">Din ecranul de pornire implicit, glisați în dreapta pentru a deschide aplicația Google</string>
     <string name="desktop_show_labels">Arată etichetele pictogramelor pe desktop</string>
     <string name="drawer_show_labels">Arată etichetele pictogramelor în sertar</string>
+    <string name="settings_edit_allow_title">Permite editare</string>
+    <string name="settings_edit_allow_summary_on">Iconițele și widget-urile pot fi adăugate, eliminate sau mutate pe homescreen</string>
+    <string name="settings_edit_allow_summary_off">Iconițele și widget-urile nu pot fi adăugate, eliminate sau mutate pe homescreen</string>
+    <string name="settings_edit_widgets_error">Nu este posibil să adăugați widget-uri pe homescreen</string>
+    <string name="show_quickspace_title">Pe scurt</string>
+    <string name="show_quickspace_summary">Arată în partea de sus a ecranului de pornire</string>
+    <string name="quick_event_rom_intro_welcome">Bine ai venit la AICP!</string>
     <string name="quick_event_rom_intro_learn">Apasă aici pentru a te distra!</string>
+    <string name="quick_event_ambient_now_playing">Acum rulează</string>
+    <string name="quick_event_ambient_song_artist">%1$s de %2$s</string>
+    <string name="quickspace_now_playing_title">Arată ce melodie rulează</string>
+    <string name="quickspace_now_playing_summary">Arată melodia pe care o redai pe scurt. AVERTISMENT: nu este pe deplin compatibilă cu toți playerii media!</string>
+    <string name="quickspace_now_playing_showdate_title">...afișează în schimb data</string>
+    <string name="quickspace_now_playing_showdate_summary">Afişează data în prima linie în loc de \"Acum redare\"</string>
+    <string name="quickspace_alternate_style_title">Folosiți un stil alternativ</string>
+    <string name="quickspace_alternate_style_summary">Folosiți un stil minimalist pentru Prezentarea generală</string>
+    <string name="quickspace_psa_title">Arată un mesaj aleatoriu</string>
+    <string name="quickspace_psa_summary">Arată unele mesaje frumoase uneori pe scurt.</string>
+    <string-array name="quickspace_psa_morning">
+        <item>Bună dimineața!</item>
+        <item>Bună dimineața, timpul de rock!</item>
+        <item>Ce zi frumoasă!</item>
+        <item>O zi bună!</item>
+        <item>Ce zici de o pauză de 5 minute?</item>
+        <item>Acesta este un mod de a te trezi.</item>
+        <item>Ar trebui să vă schimbați sunetele de alarmă.</item>
+        <item>Se pare că este o zi frumoasă, nu-i așa?</item>
+        <item>Hai să obținem această pâine.</item>
+        <item>Verificați vremea pentru orice eventualitate</item>
+        <item>Te simti somnoros deja</item>
+        <item>Te-ai uitat afară?</item>
+        <item>Să terminăm asta.</item>
+    </string-array>
+    <string-array name="quickspace_psa_evening">
+        <item>Noapte bună!</item>
+        <item>Somn ușor!</item>
+        <item>Pe mâine!</item>
+        <item>Vise plăcute!</item>
+        <item>Nu sta prea mult</item>
+        <item>Somn usor</item>
+        <item>Odihnestete</item>
+        <item>Timpul pentru relaxare</item>
+        <item>Bucura-te de noapte!</item>
+        <item>E timpul să încărcați bateriile!</item>
+        <item>Mâine ar putea fi o zi minunată</item>
+        <item>Pregătește-ți oasele pentru mâine</item>
+    </string-array>
+    <string-array name="quickspace_psa_midnight">
+        <item>Um... noapte bună?</item>
+        <item>E cam târziu acum</item>
+        <item>Ar trebui să vă stabiliți programul de somn</item>
+        <item>Ești mai productiv în acest moment?</item>
+    </string-array>
+    <string-array name="quickspace_psa_random">
+        <item>ROM-ul nostru este la fel de rece ca inima Exului</item>
+        <item>Este timpul să instalezi din nou o actualizare?</item>
+        <item>Entuziasmat pentru Android 12?</item>
+        <item>Oh, hei, ce se întâmplă?</item>
+        <item>Focalizează sarcinile tale</item>
+        <item>Câte capturi de ecran faceți?</item>
+        <item>Poate sincronizarea să fie cu tine...</item>
+        <item>Distracție plăcută!</item>
+        <item>Timpul pentru niște muzica bună</item>
+        <item>Ce e mai grozav decât să fii cool?</item>
+        <item>Gheață rece!</item>
+        <item>\u003C\u003C\u003C\u003C\u003C\u003C\u003C HEAD</item>
+        <item>Să arta toată gheaţa!</item>
+        <item>Am avut cea mai bună bucată de gheaţă, dar mi-a alunecat mintea. Ia-o?</item>
+        <item>Te iubim 3000</item>
+        <item>Spune-ne \'Salut\' pe Discord</item>
+        <item>Fă ceva drăguț astăzi</item>
+        <item>E atât de bun pe cât îl primeşte, nu?</item>
+        <item>Cum merge totul?</item>
+        <item>Tot ce ai nevoie este înghețată!</item>
+        <item>Va multumim pentru sprijinul acordat</item>
+        <item>Root Beer nu îți sparge inima, nu?</item>
+        <item>Una dintre cele mai bune alegeri ale buildbot-ului</item>
+        <item>Este ceea ce este</item>
+        <item>Încearcă deserturile de gheață</item>
+        <item>Ce experiență minunată, nu-i așa?</item>
+        <item>Continuă spălarea!</item>
+        <item>Ești într-o relație cu gheața</item>
+        <item>La ce te gandesti?</item>
+        <item>Câștigător ....?</item>
+        <item>rm -rf \/</item>
+    </string-array>
+    <string name="date_format_title">Format data</string>
+    <string name="date_format_long_name">Lung</string>
+    <string name="date_format_normal_name">Normal</string>
+    <string name="date_format_short_name">Scurt</string>
+    <string name="date_format_daydate_long_name">Zi (cu număr)</string>
+    <string name="date_format_daydate_short_name">Zi (scurt cu număr)</string>
+    <string name="date_format_dayonly_name">Doar astăzi</string>
+    <string name="date_style_font">Format dată</string>
+    <string name="date_style_font_system_header">Titlu sistem</string>
+    <string name="date_style_font_system_body">Corpul sistemului</string>
     <string name="quickspace_category">Spaţiu rapid</string>
     <string name="actions_category">Acțiuni</string>
+    <string name="date_style_transform_title">Arată o majusculă la dată</string>
+    <string name="date_style_transform_summary">Transforma toate dataele / pe scurt cu majuscule</string>
+    <string name="date_style_spacing">Spațiere data</string>
+    <string name="date_style_spacing_normal">Normal</string>
+    <string name="date_style_spacing_barely">Nu prea vizibil</string>
+    <string name="date_style_spacing_ott">Peste partea de sus</string>
     <string name="all_apps_background_opacity_title">Opacitatea fundalului</string>
     <string name="allapps_category">Listă aplicații</string>
+    <string name="icon_size_title">Mărime pictogramă</string>
+    <string name="icon_size_extra_small">Mic</string>
+    <string name="icon_size_small">Mic</string>
+    <string name="icon_size_average">Prestabilit</string>
+    <string name="icon_size_large">Mare</string>
+    <string name="icon_size_extra_large">Foarte Mare</string>
+    <string name="app_show_predictions_title">Rând predicții aplicații</string>
     <string name="app_show_predictions_summary">Comută pentru a afișa rândul previziunilor aplicației în sertarul de aplicații</string>
+    <string name="set_default_home_page">Setare pagină implicită</string>
     <string name="dock_search_title">Bara de căutare Google</string>
     <string name="dock_search_summary">Arată bara de căutare în partea de jos a dok-ului</string>
     <string name="recents_task_lock">Blocaţi</string>

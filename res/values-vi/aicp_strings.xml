@@ -21,4 +21,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="date_format_normal_name">Bình thường</string>
     <string name="date_format_short_name">Ngắn</string>
     <string name="date_style_spacing_normal">Bình thường</string>
+    <string name="set_default_home_page">Trang mặc định</string>
 </resources>

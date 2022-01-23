@@ -152,4 +152,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_show_predictions_title">Wiersz przewidywania aplikacji</string>
     <string name="app_show_predictions_summary">Przełącz, aby pokazać wiersz podpowiedzi aplikacji w szufladzie aplikacji</string>
     <string name="set_default_home_page">Ustaw domyślną stronę</string>
+    <string name="dock_search_title">Pasek wyszukiwania Google</string>
+    <string name="dock_search_summary">Pokaż pasek wyszukiwania na dole</string>
+    <string name="recents_task_lock">Zablokuj</string>
+    <string name="recents_task_unlock">Odblokuj</string>
+    <string name="pref_recents_show_memory_title">Pokaż wolną pamięć RAM w ostatnich aplikacjach</string>
+    <string name="pref_recents_show_memory_summary">Pokaż dostępną pamięć RAM w widoku ostatnich aplikacji</string>
+    <string name="memory_info">Wolna pamięć RAM: %1$d MB</string>
 </resources>
