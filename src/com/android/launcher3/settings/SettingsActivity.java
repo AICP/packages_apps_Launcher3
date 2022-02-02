@@ -142,6 +142,7 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         switch (key) {
             case InvariantDeviceProfile.KEY_DT_GESTURE:
+            case InvariantDeviceProfile.KEY_DOCK_SEARCH:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:

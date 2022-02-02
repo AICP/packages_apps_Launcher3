@@ -88,6 +88,7 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
     public static final String KEY_FONT_SIZE = "pref_custom_font_size";
     public static final String KEY_DRAWER_SYNC_SIZE = "pref_drawer_sync_size";
     public static final String KEY_MAX_LINES = "pref_max_lines";
+    public static final String KEY_DOCK_SEARCH = "pref_dock_search";
 
     // Constants that affects the interpolation curve between statically defined device profile
     // buckets.
