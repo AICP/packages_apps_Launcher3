@@ -43,4 +43,8 @@
     <string name="msg_minus_one_on_right">From Home screen, swipe right to open Google app</string>
     <string name="pref_show_google_now_summary" translatable="false">@string/msg_minus_one_on_left</string>
 
+    <!-- Hotseat searchbar -->
+    <string name="label_search">Search</string>
+    <string name="label_lens">Google Lens</string>
+    <string name="label_voice_search">Voice search</string>
 </resources>
