@@ -145,6 +145,7 @@ public class SettingsActivity extends FragmentActivity
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         switch (key) {
             case DT2S_PREFERENCE_KEY:
+            case InvariantDeviceProfile.KEY_DOCK_SEARCH:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:
