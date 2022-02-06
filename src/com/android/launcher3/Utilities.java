@@ -129,7 +129,9 @@ public final class Utilities {
 
     private static final long WAIT_BEFORE_RESTART = 250;
 
-    private static final String GSA_PACKAGE = "com.google.android.googlequicksearchbox";
+    public static final String GSA_PACKAGE = "com.google.android.googlequicksearchbox";
+    public static final String LENS_PACKAGE = "com.google.ar.lens";
+    public static final String LENS_ACTIVITY = "com.google.vr.apps.ornament.app.lens.LensLauncherActivity";
 
     /**
      * Set on a motion event dispatched from the nav bar. See {@link MotionEvent#setEdgeFlags(int)}.
