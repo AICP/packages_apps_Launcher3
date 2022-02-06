@@ -139,7 +139,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="date_style_transform_summary">全ての日付と At A Glance を大文字テキストに変換する</string>
     <string name="date_style_spacing">日付の間隔</string>
     <string name="date_style_spacing_normal">標準</string>
-    <string name="date_style_spacing_barely">ほとんど目立たない</string>
+    <string name="date_style_spacing_barely">微小</string>
     <string name="date_style_spacing_ott">強調</string>
     <string name="all_apps_background_opacity_title">背景の透明度</string>
     <string name="allapps_category">アプリドロワー</string>

@@ -152,4 +152,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="app_show_predictions_title">Добавить строку прогноза</string>
     <string name="app_show_predictions_summary">Вкл/Выкл для отображения строки прогноза приложений в меню приложений</string>
     <string name="set_default_home_page">Задать страницу по умолчанию</string>
+    <string name="dock_search_title">Панель поиска Google</string>
+    <string name="dock_search_summary">Отображать строку поиска в нижней панели</string>
+    <string name="recents_task_lock">Заблокировать</string>
+    <string name="recents_task_unlock">Разблокировать</string>
+    <string name="pref_recents_show_memory_title">Показ свободной оперативной памяти в недавних</string>
+    <string name="pref_recents_show_memory_summary">Показ свободной оперативной памяти в режиме недавних приложений</string>
+    <string name="memory_info">Свободно ОЗУ: %1$d МБ</string>
 </resources>

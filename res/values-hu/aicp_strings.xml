@@ -133,7 +133,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="date_style_font">A dátum betűtípusa</string>
     <string name="date_style_font_system_header">Rendszer-fejléc</string>
     <string name="date_style_font_system_body">Rendszer-főlap</string>
-    <string name="quickspace_category">Hipertér</string>
+    <string name="quickspace_category">Gyors Elérés</string>
     <string name="actions_category">Műveletek</string>
     <string name="date_style_transform_title">Nagybetűs dátum-megjelenítés</string>
     <string name="date_style_transform_summary">Alakítsa át az összes dátumot / betekintést nagybetűs szöveggé</string>
