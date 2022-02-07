@@ -908,6 +908,11 @@ public final class Utilities {
         return prefs.getBoolean(InvariantDeviceProfile.KEY_DOCK_SEARCH, true);
     }
 
+    public static boolean isThemedIconsEnabled(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(InvariantDeviceProfile.KEY_DOCK_THEME, false);
+    }
+
     public static void restart(final Context context) {
         MODEL_EXECUTOR.execute(() -> {
             try {

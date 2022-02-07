@@ -143,6 +143,7 @@ public class SettingsActivity extends CollapsingToolbarBaseActivity
         switch (key) {
             case InvariantDeviceProfile.KEY_DT_GESTURE:
             case InvariantDeviceProfile.KEY_DOCK_SEARCH:
+            case InvariantDeviceProfile.KEY_DOCK_THEME:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:
