@@ -877,6 +877,11 @@ public final class Utilities {
         return prefs.getInt(InvariantDeviceProfile.KEY_ICON_SIZE, 100);
     }
 
+    public static int getTextSizeModifier(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getInt(InvariantDeviceProfile.KEY_FONT_SIZE, 100);
+    }
+
     public static void restart(final Context context) {
         MODEL_EXECUTOR.execute(() -> {
             try {

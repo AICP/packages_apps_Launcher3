@@ -85,6 +85,7 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
     public static final String KEY_WORKSPACE_EDIT = "pref_workspace_edit";
     public static final String KEY_DT_GESTURE = "pref_dt_gesture";
     public static final String KEY_ICON_SIZE = "pref_custom_icon_size";
+    public static final String KEY_FONT_SIZE = "pref_custom_font_size";
 
     // Constants that affects the interpolation curve between statically defined device profile
     // buckets.
@@ -266,6 +267,7 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
             case KEY_SHOW_DESKTOP_LABELS:
             case KEY_SHOW_DRAWER_LABELS:
             case KEY_ICON_SIZE:
+            case KEY_FONT_SIZE:
                 onConfigChanged(mContext);
                 break;
         }
@@ -316,11 +318,12 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
         mExtraAttrs = closestProfile.extraAttrs;
 
         float iconSizeModifier = (float) Utilities.getIconSizeModifier(context) / 100F;
+        float textSizeModifier = (float) Utilities.getTextSizeModifier(context) / 100F;
         iconSize = displayOption.iconSize * iconSizeModifier;
         landscapeIconSize = displayOption.landscapeIconSize * iconSizeModifier;
         iconBitmapSize = ResourceUtils.pxFromDp(iconSize, metrics);
-        iconTextSize = displayOption.iconTextSize;
-        landscapeIconTextSize = displayOption.landscapeIconTextSize;
+        iconTextSize = displayOption.iconTextSize * textSizeModifier;
+        landscapeIconTextSize = displayOption.landscapeIconTextSize * textSizeModifier;
         fillResIconDpi = getLauncherIconDensity(iconBitmapSize);
 
         minCellHeight = displayOption.minCellHeight;
@@ -337,7 +340,7 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
 
         if (Utilities.isGridOptionsEnabled(context)) {
             allAppsIconSize = displayOption.allAppsIconSize * iconSizeModifier;
-            allAppsIconTextSize = displayOption.allAppsIconTextSize;
+            allAppsIconTextSize = displayOption.allAppsIconTextSize * textSizeModifier;
         } else {
             allAppsIconSize = iconSize;
             allAppsIconTextSize = iconTextSize;
