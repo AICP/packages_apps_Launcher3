@@ -882,6 +882,11 @@ public final class Utilities {
         return prefs.getInt(InvariantDeviceProfile.KEY_FONT_SIZE, 100);
     }
 
+    public static boolean isDrawerSizeSyncAllowed(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getBoolean(InvariantDeviceProfile.KEY_DRAWER_SYNC_SIZE, false);
+    }
+
     public static void restart(final Context context) {
         MODEL_EXECUTOR.execute(() -> {
             try {

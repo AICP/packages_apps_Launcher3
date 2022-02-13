@@ -175,6 +175,7 @@ public class DeviceProfile {
     public int allAppsIconDrawablePaddingPx;
     public final int numShownAllAppsColumns;
     public float allAppsIconTextSizePx;
+    private Context mContext;
 
     // Overview
     public int overviewTaskMarginPx;
@@ -231,6 +232,7 @@ public class DeviceProfile {
         int nonFinalAvailableHeightPx = windowBounds.availableSize.y;
 
         mInfo = info;
+        mContext = context;
         // If the device's pixel density was scaled (usually via settings for A11y), use the
         // original dimensions to determine if rotation is allowed of not.
         float originalSmallestWidth = dpiFromPx(Math.min(widthPx, heightPx), DENSITY_DEVICE_STABLE);
@@ -604,14 +606,15 @@ public class DeviceProfile {
         }
 
         // All apps
+        boolean isAppDrawerSynced = Utilities.isDrawerSizeSyncAllowed(mContext);
         if (numShownAllAppsColumns != inv.numColumns) {
             allAppsIconSizePx = pxFromDp(inv.allAppsIconSize, mMetrics);
             allAppsIconTextSizePx = pxFromSp(inv.allAppsIconTextSize, mMetrics);
             allAppsIconDrawablePaddingPx = iconDrawablePaddingOriginalPx;
             autoResizeAllAppsCells();
         } else {
-            allAppsIconSizePx = iconSizePx;
-            allAppsIconTextSizePx = iconTextSizePx;
+            allAppsIconSizePx = isAppDrawerSynced ? iconSizePx : pxFromDp(inv.allAppsIconSize, mMetrics);
+            allAppsIconTextSizePx = isAppDrawerSynced ? iconTextSizePx : pxFromSp(inv.allAppsIconTextSize, mMetrics);
             allAppsIconDrawablePaddingPx = iconDrawablePaddingPx;
             allAppsCellHeightPx = getCellSize().y;
         }

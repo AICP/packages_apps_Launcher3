@@ -66,6 +66,13 @@
             aicpextras:unitsRight="%"
             aicpextras:interval="5"
             android:defaultValue="100" />
+
+        <SwitchPreference
+            android:key="pref_drawer_sync_size"
+            android:title="@string/drawer_size_change_allowed_title"
+            android:summary="@string/drawer_size_change_allowed_summary"
+            android:defaultValue="false"
+            android:persistent="true" />
     </PreferenceCategory>
 
     <!--

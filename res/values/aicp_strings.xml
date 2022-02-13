@@ -52,4 +52,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- Font size -->
     <string name="font_size_title">Text size</string>
+
+    <!-- Drawer sizes -->
+    <string name="drawer_size_change_allowed_title">Sync app drawer icons</string>
+    <string name="drawer_size_change_allowed_summary">Enable to dynamically adapt icon and text sizes to homescreen ones</string>
 </resources>
