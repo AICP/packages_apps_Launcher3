@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b0be802c_8dc3dc65",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2022-03-26T20:09:24Z",
+      "side": 1,
+      "message": "FP on Op8Pro fails with unlocking almost everytime with this commit and requires using of patern.",
+      "revId": "64fac95b052955e1b57909b5fed43d2c4c54aeaf",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
