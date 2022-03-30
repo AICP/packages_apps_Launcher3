@@ -165,6 +165,13 @@
             settings:units="%"
             android:defaultValue="100" />
 
+        <SwitchPreference
+            android:key="pref_allapps_themed_icons"
+            android:title="@string/pref_themed_icons_title"
+            android:summary="@string/pref_themed_icons_summary"
+            android:defaultValue="false"
+            android:persistent="true" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
