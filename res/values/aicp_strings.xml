@@ -21,6 +21,10 @@
     <string name="desktop_show_labels">Show icon labels on desktop</string>
     <string name="drawer_show_labels">Show icon labels in drawer</string>
 
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Use themed icons in drawer</string>
+    <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
+
     <!-- Settings title to show Google Now at -1 screen on launcher. [CHAR LIMIT=50] -->
     <string name="title_show_google_app">Show Google app</string>
     <!-- Settings message explaining when the -1 screen is available on an LTR device. [CHAR LIMIT=100] -->
