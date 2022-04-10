@@ -89,6 +89,7 @@ import com.android.launcher3.shortcuts.ShortcutKey;
 import com.android.launcher3.shortcuts.ShortcutRequest;
 import com.android.launcher3.util.IntArray;
 import com.android.launcher3.util.PackageManagerHelper;
+import com.android.launcher3.util.Themes;
 import com.android.launcher3.views.ActivityContext;
 import com.android.launcher3.views.BaseDragLayer;
 import com.android.launcher3.widget.PendingAddShortcutInfo;
@@ -701,7 +702,8 @@ public final class Utilities {
             outObj[0] = activityInfo;
             return activityInfo == null ? null : LauncherAppState.getInstance(context)
                     .getIconProvider().getIcon(
-                            activityInfo, activity.getDeviceProfile().inv.fillResIconDpi);
+                            activityInfo, activity.getDeviceProfile().inv.fillResIconDpi,
+                            Themes.getThemedIconPack(context));
         } else if (info.itemType == LauncherSettings.Favorites.ITEM_TYPE_DEEP_SHORTCUT) {
             if (info instanceof PendingAddShortcutInfo) {
                 ShortcutConfigActivityInfo activityInfo =

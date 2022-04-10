@@ -63,6 +63,7 @@ import com.android.launcher3.shortcuts.ShortcutKey;
 import com.android.launcher3.util.InstantAppResolver;
 import com.android.launcher3.util.PackageUserKey;
 import com.android.launcher3.util.Preconditions;
+import com.android.launcher3.util.Themes;
 import com.android.launcher3.widget.WidgetSections;
 import com.android.launcher3.widget.WidgetSections.WidgetSection;
 
@@ -92,6 +93,7 @@ public class IconCache extends BaseIconCache {
     private final UserCache mUserManager;
     private final InstantAppResolver mInstantAppResolver;
     private final IconProvider mIconProvider;
+    private final String mCustomThemedIconPack;
 
     private int mPendingIconRequestCount = 0;
 
@@ -110,6 +112,7 @@ public class IconCache extends BaseIconCache {
         mUserManager = UserCache.INSTANCE.get(mContext);
         mInstantAppResolver = InstantAppResolver.newInstance(mContext);
         mIconProvider = iconProvider;
+        mCustomThemedIconPack = Themes.getThemedIconPack(context);
     }
 
     @Override
@@ -428,7 +431,7 @@ public class IconCache extends BaseIconCache {
     }
 
     public Drawable getFullResIcon(LauncherActivityInfo info) {
-        return mIconProvider.getIcon(info, mIconDpi);
+        return mIconProvider.getIcon(info, mIconDpi, mCustomThemedIconPack);
     }
 
     public void updateSessionCache(PackageUserKey key, PackageInstaller.SessionInfo info) {
