@@ -29,6 +29,8 @@ import android.graphics.Path;
 import android.graphics.Point;
 import android.graphics.PointF;
 import android.graphics.Rect;
+import android.os.UserHandle;
+import android.provider.Settings;
 import android.util.DisplayMetrics;
 import android.view.Surface;
 
@@ -213,6 +215,7 @@ public class DeviceProfile {
 
     // Taskbar
     public boolean isTaskbarPresent;
+    public static final String NAVIGATION_BAR_DISABLE_TASKBAR = "navigation_bar_disable_taskbar";
     // Whether Taskbar will inset the bottom of apps by taskbarSize.
     public boolean isTaskbarPresentInApps;
     public int taskbarSize;
@@ -270,8 +273,10 @@ public class DeviceProfile {
         }
 
         hotseatQsbHeight = res.getDimensionPixelSize(R.dimen.qsb_widget_height);
+        boolean isTaskbarEnabled = Settings.System.getIntForUser(context.getContentResolver(),
+                    NAVIGATION_BAR_DISABLE_TASKBAR, 0, UserHandle.USER_CURRENT) == 0;
         isTaskbarPresent = isTablet && ApiWrapper.TASKBAR_DRAWN_IN_PROCESS
-                && FeatureFlags.ENABLE_TASKBAR.get();
+                && FeatureFlags.ENABLE_TASKBAR.get() && isTaskbarEnabled;
         if (isTaskbarPresent) {
             taskbarSize = res.getDimensionPixelSize(R.dimen.taskbar_size);
         }
