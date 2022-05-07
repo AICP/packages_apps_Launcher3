@@ -22,5 +22,8 @@
     <!-- Custom grid -->
     <string name="homescreen_columns">Set the amount of home screen columns</string>
     <string name="homescreen_rows">Set the amount of home screen rows</string>
+
+    <!-- Top shadow -->
+    <string name="show_top_shadow">Top shadow</string>
 </resources>
 
