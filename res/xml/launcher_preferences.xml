@@ -91,6 +91,13 @@
         android:fragment="com.android.launcher3.settings.DeveloperOptionsFragment"/>
 -->
     <SwitchPreference
+        android:key="pref_show_lens_button"
+        android:title="@string/show_lens_button_title"
+        android:summary="@string/show_lens_button_summary"
+        android:defaultValue="false"
+        android:persistent="true" />
+
+    <SwitchPreference
         android:key="pref_desktop_show_labels"
         android:title="@string/desktop_show_labels"
         android:defaultValue="true"
