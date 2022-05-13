@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "581816bd_344fc20f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2022-05-13T16:21:16Z",
+      "side": 1,
+      "message": "Should be dropped in favour of Ibae67603d9c38fee00bc9d463716f0a079279fe6, moreover doesn\u0027t have a toggle too",
+      "revId": "3d9614c63f81b99d38dacc1b18942c15b97c64f4",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
