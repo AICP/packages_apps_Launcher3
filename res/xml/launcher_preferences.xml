@@ -119,4 +119,11 @@
         android:defaultValue="100"
         android:dependency="pref_dock_search" />
 
+    <SwitchPreference
+        android:key="pref_dark_status_bar"
+        android:title="@string/perf_dark_status_bar_title"
+        android:summary="@string/perf_dark_status_bar_summary"
+        android:defaultValue="false"
+        android:persistent="true" />
+
 </androidx.preference.PreferenceScreen>
