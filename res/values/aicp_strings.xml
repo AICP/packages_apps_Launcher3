@@ -110,4 +110,8 @@
     <!-- Recents task locking -->
     <string name="recents_task_lock">Lock</string>
     <string name="recents_task_unlock">Unlock</string>
+
+    <!-- Taskbar -->
+    <string name="pref_allow_phone_taskbar_title">Use taskbar</string>
+    <string name="pref_allow_phone_taskbar_summary">For opening and switching apps anywhere</string>
 </resources>
