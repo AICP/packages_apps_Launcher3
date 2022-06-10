@@ -148,6 +148,7 @@ public class SettingsActivity extends FragmentActivity
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         switch (key) {
+            case DeviceProfile.KEY_PHONE_TASKBAR:
             case DT2S_PREFERENCE_KEY:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
