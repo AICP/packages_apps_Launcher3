@@ -106,6 +106,13 @@
         launcher:iconSpaceReserved="false" />
 
     <SwitchPreferenceCompat
+        android:key="pref_allow_wallpaper_scrolling"
+        android:title="@string/allow_wallpaper_scrolling"
+        android:summary="@string/allow_wallpaper_scrolling_summary"
+        android:defaultValue="true"
+        launcher:iconSpaceReserved="false" />
+
+    <SwitchPreferenceCompat
         android:key="pref_allapps_themed_icons"
         android:title="@string/pref_themed_icons_title"
         android:summary="@string/pref_themed_icons_summary"
