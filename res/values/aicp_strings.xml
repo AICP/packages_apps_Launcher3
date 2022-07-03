@@ -25,5 +25,9 @@
 
     <!-- Top shadow -->
     <string name="show_top_shadow">Top shadow</string>
+
+    <!-- Wallpaper zooming -->
+    <string name="allow_wallpaper_zooming">Wallpaper zooming</string>
+    <string name="allow_wallpaper_zooming_summary">Zoom in or out the wallpaper when using drawer or recent apps</string>
 </resources>
 
