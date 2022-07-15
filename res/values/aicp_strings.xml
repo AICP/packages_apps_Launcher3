@@ -94,4 +94,8 @@
     <!-- Dark Status Bar -->
     <string name="perf_dark_status_bar_title">Dark status bar</string>
     <string name="perf_dark_status_bar_summary">Use dark status bar on Home screen</string>
+
+    <!-- Background opacity -->
+    <string name="app_drawer_background_opacity_title">App drawer background opacity</string>
+    <string name="recents_background_opacity_title">Recents background opacity</string>
 </resources>

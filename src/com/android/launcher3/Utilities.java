@@ -164,6 +164,8 @@ public final class Utilities {
     public static final String KEY_DOCK_THEME = "pref_dock_theme";
     public static final String KEY_SEARCH_RADIUS = "pref_search_radius_size";
     public static final String KEY_SHOW_HOTSEAT_BG = "pref_show_hotseat_bg";
+    public static final String KEY_RECENTS_OPACITY = "pref_recents_opacity";
+    public static final String KEY_APP_DRAWER_OPACITY = "pref_app_drawer_opacity";
 
     /**
      * Returns true if theme is dark.
@@ -992,5 +994,15 @@ public final class Utilities {
     public static boolean isHotseatBgEnabled(Context context) {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_SHOW_HOTSEAT_BG, false);
+    }
+
+    public static int getRecentsOpacity(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getInt(KEY_RECENTS_OPACITY, 40);
+    }
+
+    public static int getAllAppsOpacity(Context context) {
+        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        return prefs.getInt(KEY_APP_DRAWER_OPACITY, 80);
     }
 }
