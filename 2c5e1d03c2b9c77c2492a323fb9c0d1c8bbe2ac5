@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f39dc07c_c6d0726f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2022-07-27T21:25:49Z",
+      "side": 1,
+      "message": "Agreed. Why not set it to false ?",
+      "revId": "2c5e1d03c2b9c77c2492a323fb9c0d1c8bbe2ac5",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
