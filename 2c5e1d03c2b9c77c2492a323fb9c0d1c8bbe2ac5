@@ -16,6 +16,24 @@
       "message": "Agreed. Why not set it to false ?",
       "revId": "2c5e1d03c2b9c77c2492a323fb9c0d1c8bbe2ac5",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5fdab2e3_5e2d51fc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2022-07-28T16:51:31Z",
+      "side": 1,
+      "message": "Didn\u0027t want to override the AOSP behavior, we can always overlay at vendor or here itself",
+      "parentUuid": "f39dc07c_c6d0726f",
+      "revId": "2c5e1d03c2b9c77c2492a323fb9c0d1c8bbe2ac5",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
