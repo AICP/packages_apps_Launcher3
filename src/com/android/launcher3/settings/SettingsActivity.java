@@ -59,6 +59,7 @@ import com.android.launcher3.BuildConfig;
 import com.android.launcher3.Flags;
 import com.android.launcher3.InvariantDeviceProfile;
 import com.android.launcher3.LauncherFiles;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
 import com.android.launcher3.lineage.LineageUtils;
 import com.android.launcher3.lineage.trust.TrustAppsActivity;
@@ -68,6 +69,7 @@ import com.android.launcher3.util.SettingsCache;
 import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 import com.android.settingslib.widget.SettingsThemeHelper;
 
+import com.android.systemui.shared.system.BlurUtils;
 /**
  * Settings activity for Launcher. Currently implements the following setting: Allow rotation
  */
@@ -318,6 +320,15 @@ public class SettingsActivity extends FragmentActivity
         protected boolean initPreference(Preference preference) {
             DisplayController.Info info = DisplayController.INSTANCE.get(getContext()).getInfo();
             LauncherApps launcherApps = getContext().getSystemService(LauncherApps.class);
+
+            String key = preference.getKey();
+            if (key == null) {
+                return true;
+            }
+            if (key.equals(LauncherPrefs.BLUR_DEPTH.getSharedPrefKey())) {
+                return BlurUtils.supportsBlursOnWindows();
+            }
+
             switch (preference.getKey()) {
                 case NOTIFICATION_DOTS_PREFERENCE_KEY:
                     return BuildConfig.NOTIFICATION_DOTS_ENABLED;
@@ -376,6 +387,7 @@ public class SettingsActivity extends FragmentActivity
                 case KEY_SUGGESTIONS:
                     return launcherApps != null &&
                             launcherApps.isPackageEnabled(SUGGESTIONS_PACKAGE, myUserHandle());
+
             }
             return true;
         }
