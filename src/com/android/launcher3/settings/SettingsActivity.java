@@ -158,6 +158,10 @@ public class SettingsActivity extends FragmentActivity
             case Utilities.KEY_DOCK_THEME:
             case Utilities.KEY_SEARCH_RADIUS:
             case Utilities.KEY_SHOW_HOTSEAT_BG:
+			case Utilities.DESKTOP_SHOW_QUICKSPACE:
+            case Utilities.KEY_SHOW_ALT_QUICKSPACE:
+            case Utilities.KEY_SHOW_QUICKSPACE_NOWPLAYING:
+            case Utilities.KEY_SHOW_QUICKSPACE_PSONALITY:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:
