@@ -18,6 +18,8 @@
 -->
 
 <resources>
+    <!-- Google string -->
+    <string name="google_folder_title">Google</string>
 
     <!-- Double tap gesture -->
     <string name="pref_sleep_gesture_title">Double tap to sleep</string>
