@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4e47138f_8df3f17c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1393
+      },
+      "writtenOn": "2022-11-10T12:38:20Z",
+      "side": 1,
+      "message": "Working fine here on instantnoodlep\n\nTest:\nOpen app, so it is added to recents menu\nPause app from app drawer\nTry to open app from app drawer\nTry to longpress app icon (no menu presented)\nCheck recents, app is gone\nOpen app settings page in Settings and attempt to open app\nUnpause app and recheck functionality",
+      "revId": "98e10997f01b3707bbfe4dd002c655261c523445",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
