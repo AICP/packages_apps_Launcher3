@@ -16,6 +16,24 @@
       "message": "PS2 please,",
       "revId": "a6a4c805798d699a42ea77a9c20e5fc42e7148da",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1b37fa4_8696e2f3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2023-01-04T17:24:11Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "5bf148da_17bb54c0",
+      "revId": "a6a4c805798d699a42ea77a9c20e5fc42e7148da",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
