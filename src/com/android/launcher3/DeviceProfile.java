@@ -445,7 +445,7 @@ public class DeviceProfile {
                 && hotseatQsbHeight > 0 && Utilities.showQSB(context);
 //         isQsbInline = inv.inlineQsb[mTypeIndex] && canQsbInline;
 //
-        isQsbInline = isScalableGrid && inv.inlineQsb[mTypeIndex] && canQsbInline  && hotseatQsbHeight > 0;;
+        isQsbInline = inv.inlineQsb[mTypeIndex] && canQsbInline  && hotseatQsbHeight > 0;;
 
         areNavButtonsInline = isTaskbarPresent && !isGestureMode;
         numShownHotseatIcons =
@@ -644,7 +644,8 @@ public class DeviceProfile {
      * necessary.
      */
     public void recalculateHotseatWidthAndBorderSpace() {
-        if (!isScalableGrid) return;
+        //Breaks hotseat QSB
+        //if (!isScalableGrid) return;
 
         int columns = inv.hotseatColumnSpan[mTypeIndex];
         float hotseatWidthPx = getIconToIconWidthForColumns(columns);
