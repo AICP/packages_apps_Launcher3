@@ -48,6 +48,7 @@ import com.android.launcher3.R;
 import com.android.launcher3.config.FeatureFlags;
 import com.android.launcher3.graphics.FragmentWithPreview;
 import com.android.launcher3.widget.util.WidgetSizes;
+import com.android.launcher3.Utilities;
 
 /**
  * A frame layout which contains a QSB. This internally uses fragment to bind the view, which

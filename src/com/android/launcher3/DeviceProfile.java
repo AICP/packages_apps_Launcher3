@@ -443,9 +443,9 @@ public class DeviceProfile {
                 || inv.inlineQsb[INDEX_TWO_PANEL_LANDSCAPE]
                 : inv.inlineQsb[INDEX_DEFAULT] || inv.inlineQsb[INDEX_LANDSCAPE])
                 && hotseatQsbHeight > 0 && Utilities.showQSB(context);
-        isQsbInline = inv.inlineQsb[mTypeIndex] && canQsbInline;
-                && hotseatQsbHeight > 0;
-        isQsbInline = isScalableGrid && inv.inlineQsb[mTypeIndex] && canQsbInline;
+//         isQsbInline = inv.inlineQsb[mTypeIndex] && canQsbInline;
+//
+        isQsbInline = isScalableGrid && inv.inlineQsb[mTypeIndex] && canQsbInline  && hotseatQsbHeight > 0;;
 
         areNavButtonsInline = isTaskbarPresent && !isGestureMode;
         numShownHotseatIcons =

@@ -546,7 +546,7 @@ public class Launcher extends StatefulActivity<LauncherState>
                 Themes.getAttrBoolean(this, R.attr.isWorkspaceDarkText)
                 || mSharedPrefs.getBoolean(KEY_DARK_STATUS_BAR, false));
 
-        mSharedPrefs.registerOnSharedPreferenceChangeListener(this);
+        //mSharedPrefs.registerOnSharedPreferenceChangeListener(this);
 
         if (mLauncherCallbacks != null) {
             mLauncherCallbacks.onCreate(savedInstanceState);
@@ -580,7 +580,7 @@ public class Launcher extends StatefulActivity<LauncherState>
         return mOnboardingPrefs;
     }
 
-    @Override
+    //@Override
     public void onSharedPreferenceChanged(SharedPreferences SharedPrefs, String key) {
         if (key.equals(KEY_DARK_STATUS_BAR)) {
             recreate();

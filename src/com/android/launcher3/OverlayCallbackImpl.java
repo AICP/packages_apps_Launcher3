@@ -149,9 +149,9 @@ public class OverlayCallbackImpl
 
     @Override
     public void onOverlayScrollChanged(float progress) {
-        if (mLauncherOverlayCallbacks != null) {
-            mLauncherOverlayCallbacks.onScrollChanged(progress);
-        }
+//         if (mLauncherOverlayCallbacks != null) {
+//             mLauncherOverlayCallbacks.onScrollChanged(progress);
+//         }
     }
 
     @Override

@@ -163,6 +163,17 @@ public class SystemUiProxy implements ISystemUiProxy {
     }
 
     @Override
+    public void notifySwipeUpGestureStarted() {
+        if (mSystemUiProxy != null) {
+            try {
+                mSystemUiProxy.notifySwipeUpGestureStarted();
+            } catch (RemoteException e) {
+                Log.w(TAG, "Failed call notifySwipeUpGestureStarted", e);
+            }
+        }
+    }
+
+    @Override
     public IBinder asBinder() {
         // Do nothing
         return null;

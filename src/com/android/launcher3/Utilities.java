@@ -29,9 +29,11 @@ import android.app.WallpaperManager;
 import android.content.Context;
 import android.content.pm.LauncherActivityInfo;
 import android.content.pm.LauncherApps;
+import android.content.pm.PackageManager;
 import android.content.pm.ShortcutInfo;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.LightingColorFilter;
@@ -520,6 +522,20 @@ public final class Utilities {
                 0, 1, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
         return spanned;
     }
+
+        public static SharedPreferences getPrefs(Context context) {
+        // Use application context for shared preferences, so that we use a single cached instance
+        return context.getApplicationContext().getSharedPreferences(
+                LauncherFiles.SHARED_PREFERENCES_KEY, Context.MODE_PRIVATE);
+    }
+
+    public static SharedPreferences getDevicePrefs(Context context) {
+        // Use application context for shared preferences, so that we use a single cached instance
+        return context.getApplicationContext().getSharedPreferences(
+                LauncherFiles.DEVICE_PREFERENCES_KEY, Context.MODE_PRIVATE);
+    }
+
+
 
     public static boolean isWallpaperSupported(Context context) {
         return context.getSystemService(WallpaperManager.class).isWallpaperSupported();

@@ -76,6 +76,7 @@ import com.android.launcher3.util.SafeCloseable;
 import com.android.launcher3.util.ShortcutUtil;
 import com.android.launcher3.views.ActivityContext;
 import com.android.launcher3.views.IconLabelDotView;
+import com.android.launcher3.Utilities;
 
 import java.text.NumberFormat;
 import java.util.HashMap;
