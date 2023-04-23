@@ -286,7 +286,7 @@ public class DeviceProfile {
         this.rotationHint = windowBounds.rotationHint;
         mInsets.set(windowBounds.insets);
 
-        SharedPreferences prefs = Utilities.getPrefs(context);
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context);
 
         isScalableGrid = inv.isScalable && !isVerticalBarLayout() && !isMultiWindowMode;
         // Determine device posture.

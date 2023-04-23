@@ -214,7 +214,7 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
     private InvariantDeviceProfile(Context context) {
         mContext = context;
 
-        SharedPreferences prefs = Utilities.getPrefs(context);
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context);
         prefs.registerOnSharedPreferenceChangeListener(this);
         String gridName = getCurrentGridName(context);
         String newGridName = initGrid(context, gridName);
@@ -950,9 +950,9 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
             TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.ProfileDisplayOption);
 
             float iconSizeModifier =
-                    (float) Utilities.getPrefs(context).getInt(KEY_ICON_SIZE, 100) / 100F;
+                    (float) LauncherPrefs.getPrefs(context).getInt(KEY_ICON_SIZE, 100) / 100F;
             float fontSizeModifier =
-                    (float) Utilities.getPrefs(context).getInt(KEY_FONT_SIZE, 100) / 100F;
+                    (float) LauncherPrefs.getPrefs(context).getInt(KEY_FONT_SIZE, 100) / 100F;
 
             minWidthDps = a.getFloat(R.styleable.ProfileDisplayOption_minWidthDps, 0);
             minHeightDps = a.getFloat(R.styleable.ProfileDisplayOption_minHeightDps, 0);

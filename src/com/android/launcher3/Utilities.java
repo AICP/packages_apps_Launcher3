@@ -524,20 +524,6 @@ public final class Utilities {
         return spanned;
     }
 
-        public static SharedPreferences getPrefs(Context context) {
-        // Use application context for shared preferences, so that we use a single cached instance
-        return context.getApplicationContext().getSharedPreferences(
-                LauncherFiles.SHARED_PREFERENCES_KEY, Context.MODE_PRIVATE);
-    }
-
-    public static SharedPreferences getDevicePrefs(Context context) {
-        // Use application context for shared preferences, so that we use a single cached instance
-        return context.getApplicationContext().getSharedPreferences(
-                LauncherFiles.DEVICE_PREFERENCES_KEY, Context.MODE_PRIVATE);
-    }
-
-
-
     public static boolean isWallpaperSupported(Context context) {
         return context.getSystemService(WallpaperManager.class).isWallpaperSupported();
     }
@@ -793,32 +779,32 @@ public final class Utilities {
     }
 
     private static boolean isQSBEnabled(Context context) {
-        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_DOCK_SEARCH, true);
     }
 
     public static boolean isThemedIconsEnabled(Context context) {
-        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_DOCK_THEME, false);
     }
 
     public static int getCornerRadius(Context context) {
-        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
         return prefs.getInt(KEY_SEARCH_RADIUS, 100);
     }
 
     public static boolean isHotseatBgEnabled(Context context) {
-        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_SHOW_HOTSEAT_BG, false);
     }
 
     public static int getRecentsOpacity(Context context) {
-        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
         return prefs.getInt(KEY_RECENTS_OPACITY, 40);
     }
 
     public static int getAllAppsOpacity(Context context) {
-        SharedPreferences prefs = getPrefs(context.getApplicationContext());
+        SharedPreferences prefs = LauncherPrefs.getPrefs(context.getApplicationContext());
         return prefs.getInt(KEY_APP_DRAWER_OPACITY, 100);
     }
 }

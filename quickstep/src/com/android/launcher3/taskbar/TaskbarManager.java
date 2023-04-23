@@ -43,6 +43,7 @@ import androidx.annotation.VisibleForTesting;
 
 import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.LauncherAppState;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.Utilities;
 import com.android.launcher3.anim.AnimatorPlaybackController;
 import com.android.launcher3.statemanager.StatefulActivity;
@@ -199,7 +200,7 @@ public class TaskbarManager implements OnSharedPreferenceChangeListener {
     public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
         switch (key) {
             case DeviceProfile.KEY_PHONE_TASKBAR:
-                boolean enabled = Utilities.getPrefs(mContext).getBoolean(DeviceProfile.KEY_PHONE_TASKBAR, false);
+                boolean enabled = LauncherPrefs.getPrefs(mContext).getBoolean(DeviceProfile.KEY_PHONE_TASKBAR, false);
                 SystemUiProxy.INSTANCE.get(mContext).setTaskbarEnabled(enabled);
 
                 Settings.System.putInt(mContext.getContentResolver(),
@@ -233,7 +234,7 @@ public class TaskbarManager implements OnSharedPreferenceChangeListener {
      */
     public void onUserUnlocked() {
         mUserUnlocked = true;
-        SharedPreferences prefs = Utilities.getPrefs(mContext);
+        SharedPreferences prefs = LauncherPrefs.getPrefs(mContext);
         prefs.registerOnSharedPreferenceChangeListener(this);
         recreateTaskbar();
     }
