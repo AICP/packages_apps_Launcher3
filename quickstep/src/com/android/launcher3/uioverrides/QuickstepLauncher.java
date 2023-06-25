@@ -60,6 +60,7 @@ import static com.android.launcher3.popup.SystemShortcut.DONT_SUGGEST_APP;
 import static com.android.launcher3.popup.SystemShortcut.INSTALL;
 import static com.android.launcher3.popup.SystemShortcut.PRIVATE_PROFILE_INSTALL;
 import static com.android.launcher3.popup.SystemShortcut.REMOVE;
+import static com.android.launcher3.popup.SystemShortcut.UNINSTALL;
 import static com.android.launcher3.popup.SystemShortcut.UNINSTALL_APP;
 import static com.android.launcher3.popup.SystemShortcut.WIDGETS;
 import static com.android.launcher3.taskbar.LauncherTaskbarUIController.ALL_APPS_PAGE_PROGRESS_INDEX;
@@ -553,6 +554,7 @@ public class QuickstepLauncher extends Launcher implements RecentsViewContainer,
         }
 
         shortcuts.addAll(getSplitShortcuts());
+        shortcuts.add(UNINSTALL);
         shortcuts.add(WIDGETS);
         shortcuts.add(INSTALL);
         // TODO(b/444744861): Update private space apps to have its own container.
