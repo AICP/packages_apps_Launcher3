@@ -149,11 +149,11 @@ public class ThemedLocalColorExtractor extends LocalColorExtractor implements
         boolean darkMode = (mContext.getResources().getConfiguration().uiMode
                 & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
         ColorScheme colorScheme = new ColorScheme(colors, darkMode, Style.TONAL_SPOT);
-        addColorsToArray(colorScheme.getAccent1(), ACCENT1_RES, colorRes);
-        addColorsToArray(colorScheme.getAccent2(), ACCENT2_RES, colorRes);
-        addColorsToArray(colorScheme.getAccent3(), ACCENT3_RES, colorRes);
-        addColorsToArray(colorScheme.getNeutral1(), NEUTRAL1_RES, colorRes);
-        addColorsToArray(colorScheme.getNeutral2(), NEUTRAL2_RES, colorRes);
+        addColorsToArray(colorScheme.getAccent1().getAllShades(), ACCENT1_RES, colorRes);
+        addColorsToArray(colorScheme.getAccent2().getAllShades(), ACCENT2_RES, colorRes);
+        addColorsToArray(colorScheme.getAccent3().getAllShades(), ACCENT3_RES, colorRes);
+        addColorsToArray(colorScheme.getNeutral1().getAllShades(), NEUTRAL1_RES, colorRes);
+        addColorsToArray(colorScheme.getNeutral2().getAllShades(), NEUTRAL2_RES, colorRes);
         return colorRes;
     }
 
