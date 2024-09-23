@@ -16,6 +16,23 @@
       "message": "This was hiding the first page as a whole along with included any widgets/shortcuts I had on first page. We will have to figure out a way just to hide the search bar",
       "revId": "b213d61eb3b3755e461d9a3d7737d09ace0ae636",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "237720c3_75b1b423",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 209
+      },
+      "writtenOn": "2024-09-23T18:33:56Z",
+      "side": 1,
+      "message": "Yeah we probably had a better patch for this at some point, this one was the first one I found (on omni gerrit for current Android version at least).\n\nBetter than no patch for me, I just moved everything to one page further manually for now, unlikely I\u0027ll decide I want the bar back anyway. 🙈",
+      "revId": "b213d61eb3b3755e461d9a3d7737d09ace0ae636",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
