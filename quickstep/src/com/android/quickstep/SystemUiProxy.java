@@ -246,6 +246,14 @@ public class SystemUiProxy implements ISystemUiProxy, NavHandle {
     }
 
     @Override
+    public void injectLongPress(int keyCode) {
+    }
+
+    @Override
+    public void injectPress(int keyCode) {
+    }
+
+    @Override
     public void updateContextualEduStats(boolean isTrackpadGesture, String gestureType) {
         if (mSystemUiProxy != null) {
             try {
