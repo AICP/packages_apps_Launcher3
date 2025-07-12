@@ -91,6 +91,8 @@ filegroup {
     srcs: [
         "quickstep/src/**/*.kt",
         "quickstep/src/**/*.java",
+        "slimrecent/src/**/*.kt",
+        "slimrecent/src/**/*.java",
     ],
     device_common_srcs: [
         ":launcher-quickstep-processed-protolog-src",
@@ -542,6 +544,7 @@ android_library {
     srcs: [],
     resource_dirs: [
         "quickstep/res",
+        "slimrecent/res",
     ],
     libs: [
         "framework-statsd.stubs.module_lib",
@@ -590,6 +593,7 @@ android_library {
     static_libs: [
         "QuickstepResLib",
         "androidx.room_room-runtime",
+        "androidx.cardview_cardview",
     ],
     plugins: [
         "androidx.room_room-compiler-plugin",
@@ -632,6 +636,9 @@ android_library {
     static_libs: [
         "SystemUI-statsd",
         "QuickstepResLib",
+        "AicpGear-preference",
+        "AicpGear-util",
+        "androidx.cardview_cardview",
     ],
     manifest: "quickstep/AndroidManifest.xml",
     platform_apis: true,
@@ -672,7 +679,7 @@ android_app {
         "launcher.quickstep.protolog.pb",
     ],
 
-    resource_dirs: ["quickstep/res"],
+    resource_dirs: ["quickstep/res", "slimrecent/res"],
 
     additional_manifests: [
         "quickstep/AndroidManifest-launcher.xml",

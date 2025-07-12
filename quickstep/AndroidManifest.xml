@@ -43,6 +43,10 @@
     <uses-permission android:name="android.permission.READ_REMOTE_TASKS"/>
     <uses-permission android:name="android.permission.REQUEST_TASK_HANDOFF"/>
 
+    <!-- Slim recents -->
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" />
+
     <uses-permission android:name="android.permission.SYSTEM_APPLICATION_OVERLAY" />
 
     <!--
