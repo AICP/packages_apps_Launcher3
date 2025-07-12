@@ -208,6 +208,7 @@ public class TouchInteractionService extends Service {
 
         @BinderThread
         public void onOverviewToggle() {
+            Log.i("SCSCSC", "onOverviewToggle");
             TestLogging.recordEvent(TestProtocol.SEQUENCE_MAIN, "onOverviewToggle");
             executeForTouchInteractionService(tis -> {
                 // If currently screen pinning, do not enter overview
@@ -222,6 +223,7 @@ public class TouchInteractionService extends Service {
         @BinderThread
         @Override
         public void onOverviewShown(boolean triggeredFromAltTab) {
+            Log.i("SCSCSC", "onOverviewShown");
             executeForTouchInteractionService(tis -> {
                 if (triggeredFromAltTab) {
                     TaskUtils.closeSystemWindowsAsync(CLOSE_SYSTEM_WINDOWS_REASON_RECENTS);
