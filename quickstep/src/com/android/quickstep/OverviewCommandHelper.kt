@@ -73,6 +73,7 @@ constructor(
     private val coroutineScope = CoroutineScope(SupervisorJob() + dispatcherProvider.background)
 
     private val commandQueue = ConcurrentLinkedDeque<CommandInfo>()
+    private var aicpCommandHelper: AicpOverviewCommandHelper? = null
 
     /**
      * Index of the TaskView that should be focused when launching Overview. Persisted so that we do
@@ -105,6 +106,7 @@ constructor(
 
         if (commandQueue.size == 1) {
             Log.d(TAG, "execute: $command - queue size: ${commandQueue.size}")
+
             if (enableOverviewCommandHelperTimeout()) {
                 coroutineScope.launch(dispatcherProvider.main) { processNextCommand() }
             } else {
@@ -169,6 +171,16 @@ constructor(
     fun executeCommand(command: CommandInfo, onCallbackResult: () -> Unit): Boolean {
         val recentsView = visibleRecentsView
         Log.d(TAG, "executeCommand: $command - visibleRecentsView: $recentsView")
+        val aicpHelper = aicpCommandHelper ?: run {
+            containerInterface.getCreatedContainer()?.asContext()?.let {
+                AicpOverviewCommandHelper(it.applicationContext)
+            }?.also {
+                aicpCommandHelper = it
+            }
+        }
+        if (aicpHelper?.overrideExecuteCommand(command.type) == true) {
+            return true
+        }
         return if (recentsView != null) {
             executeWhenRecentsIsVisible(command, recentsView, onCallbackResult)
         } else {
