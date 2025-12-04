@@ -235,12 +235,12 @@ public class SystemUiProxy implements ISystemUiProxy, NavHandle {
     }
 
     @Override
-    public void injectPress(int keyCode) {
+    public void onKeyEvent(int keycode) {
         if (mSystemUiProxy != null) {
             try {
-                mSystemUiProxy.injectPress(keyCode);
+                mSystemUiProxy.onKeyEvent(keycode);
             } catch (RemoteException e) {
-                Log.w(TAG, "Failed call injectPress", e);
+                Log.w(TAG, "Failed call onKeyEvent", e);
             }
         }
     }
@@ -265,14 +265,6 @@ public class SystemUiProxy implements ISystemUiProxy, NavHandle {
                 Log.w(TAG, "Failed call onImeSwitcherLongPress");
             }
         }
-    }
-
-    @Override
-    public void injectLongPress(int keyCode) {
-    }
-
-    @Override
-    public void injectPress(int keyCode) {
     }
 
     @Override
