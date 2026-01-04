@@ -57,6 +57,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
+import android.os.RemoteException;
 import android.os.Trace;
 import android.provider.Settings;
 import android.util.ArraySet;
@@ -64,8 +65,10 @@ import android.util.Log;
 import android.util.SparseArray;
 import android.util.SparseBooleanArray;
 import android.view.Display;
+import android.view.IWindowManager;
 import android.view.MotionEvent;
 import android.view.WindowManager;
+import android.view.WindowManagerGlobal;
 import android.widget.FrameLayout;
 import android.window.DesktopExperienceFlags;
 
@@ -169,6 +172,9 @@ public class TaskbarManagerImpl implements DisplayDecorationListener {
 
     public static final Uri NAVIGATION_BAR_HINT = LineageSettings.System.getUriFor(
             LineageSettings.System.NAVIGATION_BAR_HINT);
+
+    public static final Uri FORCE_SHOW_NAVBAR = LineageSettings.System.getUriFor(
+            LineageSettings.System.FORCE_SHOW_NAVBAR);
 
     private static final LooperExecutor TASKBAR_UI_THREAD =
             new LooperExecutor("TASKBAR_UI_THREAD", THREAD_PRIORITY_FOREGROUND);
@@ -503,6 +509,8 @@ public class TaskbarManagerImpl implements DisplayDecorationListener {
                 .register(ENABLE_TASKBAR, mOnTaskBarChangeListener);
         SettingsCache.INSTANCE.get(mPrimaryWindowContext)
                 .register(NAVIGATION_BAR_HINT, mOnTaskBarChangeListener);
+        SettingsCache.INSTANCE.get(mPrimaryWindowContext)
+                .register(FORCE_SHOW_NAVBAR, mOnTaskBarChangeListener);
         if (DesktopExperienceFlags.ENABLE_SYS_DECORS_CALLBACKS_VIA_WM.isTrue()
                 && DesktopExperienceFlags.ENABLE_DISPLAY_CONTENT_MODE_MANAGEMENT.isTrue()) {
             displaysWithDecorationsRepositoryCompat
@@ -1202,6 +1210,8 @@ public class TaskbarManagerImpl implements DisplayDecorationListener {
                 .unregister(ENABLE_TASKBAR, mOnTaskBarChangeListener);
         SettingsCache.INSTANCE.get(mPrimaryWindowContext)
                 .unregister(NAVIGATION_BAR_HINT, mOnTaskBarChangeListener);
+        SettingsCache.INSTANCE.get(mPrimaryWindowContext)
+                .unregister(FORCE_SHOW_NAVBAR, mOnTaskBarChangeListener);
         if (DesktopExperienceFlags.ENABLE_SYS_DECORS_CALLBACKS_VIA_WM.isTrue()
                 && DesktopExperienceFlags.ENABLE_DISPLAY_CONTENT_MODE_MANAGEMENT.isTrue()) {
             mDisplaysWithDecorationsRepositoryCompat.unregisterDisplayDecorationListener(this);
@@ -1252,7 +1262,19 @@ public class TaskbarManagerImpl implements DisplayDecorationListener {
         }
     }
 
+    boolean hasNavigationBar() {
+        try {
+            IWindowManager windowManager = WindowManagerGlobal.getWindowManagerService();
+            return windowManager.hasNavigationBar(Display.DEFAULT_DISPLAY);
+        } catch (RemoteException e) {
+            return true;
+        }
+    }
+
     private void addTaskbarRootViewToWindow(@NonNull TaskbarActivityContext taskbar) {
+        if (!hasNavigationBar()) {
+            return;
+        }
         int displayId = taskbar.getDisplayId();
         debugTaskbarManager("addTaskbarRootViewToWindow:", displayId);
         if (!enableTaskbarNoRecreate()) {
