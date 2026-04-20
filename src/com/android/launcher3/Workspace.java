@@ -26,6 +26,7 @@ import static com.android.launcher3.LauncherSettings.Favorites.CONTAINER_HOTSEAT
 import static com.android.launcher3.LauncherSettings.Favorites.CONTAINER_HOTSEAT_PREDICTION;
 import static com.android.launcher3.LauncherSettings.Favorites.ITEM_TYPE_APPWIDGET;
 import static com.android.launcher3.LauncherSettings.Favorites.ITEM_TYPE_FILE_SYSTEM_FILE;
+import com.android.launcher3.LauncherState;
 import static com.android.launcher3.LauncherState.ALL_APPS;
 import static com.android.launcher3.LauncherState.EDIT_MODE;
 import static com.android.launcher3.LauncherState.FLAG_MULTI_PAGE;
@@ -113,6 +114,7 @@ import com.android.launcher3.graphics.DragPreviewProvider;
 import com.android.launcher3.homescreenfiles.HomeScreenFilesProvider;
 import com.android.launcher3.icons.BitmapRenderer;
 import com.android.launcher3.icons.FastBitmapDrawable;
+import com.android.launcher3.LauncherState;
 import com.android.launcher3.logger.LauncherAtom;
 import com.android.launcher3.logging.InstanceId;
 import com.android.launcher3.logging.StatsLogManager;
@@ -1509,17 +1511,24 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
 
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
-        mHasOnLayoutBeenCalled = true; // b/349929393 - is the required call to onLayout not done?
-        if (mUnlockWallpaperFromDefaultPageOnLayout) {
-            mWallpaperOffset.setLockToDefaultPage(false);
-            mUnlockWallpaperFromDefaultPageOnLayout = false;
-        }
-        if (mFirstLayout && mCurrentPage >= 0 && mCurrentPage < getChildCount()) {
-            mWallpaperOffset.syncWithScroll();
+        if (mFirstLayout) {
             mWallpaperOffset.jumpToFinal();
         }
         super.onLayout(changed, left, top, right, bottom);
         updatePageAlphaValues();
+        DeviceProfile dp = mLauncher.getDeviceProfile();
+        if (dp != null && dp.inv != null && dp.inv.deviceType == InvariantDeviceProfile.TYPE_DESKTOP
+                && mLauncher.getStateManager().getState() == LauncherState.NORMAL) {
+            this.setAlpha(1f);
+            this.setVisibility(VISIBLE);
+            for (int i = 0; i < getChildCount(); i++) {
+                android.view.View child = getChildAt(i);
+                if (child != null) {
+                    child.setAlpha(1f);
+                    child.setVisibility(VISIBLE);
+                }
+            }
+        }
     }
 
     @Override
