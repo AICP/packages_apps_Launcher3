@@ -918,6 +918,11 @@ public class InvariantDeviceProfile {
                 minWidthPx = Math.min(minWidthPx, bounds.availableSize.x);
                 minHeightPx = Math.min(minHeightPx, bounds.availableSize.y);
             }
+           if (displayInfo.getDeviceType() == TYPE_DESKTOP) {
+              this.numRows = customRows;
+              this.numColumns = customCols;
+              this.iconSize[INDEX_DEFAULT] = 48;
+            }
         }
 
         float width = dpiFromPx(minWidthPx, displayInfo.getDensityDpi());
