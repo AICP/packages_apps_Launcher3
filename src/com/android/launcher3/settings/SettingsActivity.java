@@ -211,7 +211,7 @@ public class SettingsActivity extends FragmentActivity
      * This fragment shows the launcher preferences.
      */
     public static class LauncherSettingsFragment extends SettingsBasePreferenceFragment implements
-            SettingsCache.OnChangeListener {
+            SettingsCache.OnChangeListener, androidx.preference.Preference.OnPreferenceChangeListener {
 
         protected boolean mDeveloperOptionsEnabled = false;
 
@@ -271,6 +271,12 @@ public class SettingsActivity extends FragmentActivity
             if (getActivity() != null && !TextUtils.isEmpty(getPreferenceScreen().getTitle())) {
                 getActivity().setTitle(getPreferenceScreen().getTitle());
             }
+            // Link the UI elements to the listener
+            Preference rowPref = findPreference("custom_grid_rows");
+            Preference colPref = findPreference("custom_grid_cols");
+
+            if (rowPref != null) rowPref.setOnPreferenceChangeListener(this);
+            if (colPref != null) colPref.setOnPreferenceChangeListener(this);
         }
 
         private boolean isKeyInPreferenceGroup(String targetKey, PreferenceGroup parent) {
@@ -476,6 +482,19 @@ public class SettingsActivity extends FragmentActivity
             return position >= 0 ? new PreferenceHighlighter(
                     list, position, screen.findPreference(mHighLightKey))
                     : null;
+        }
+
+        @Override
+        public boolean onPreferenceChange(Preference preference, Object newValue) {
+            String key = preference.getKey();
+            if ("custom_grid_rows".equals(key) || "custom_grid_cols".equals(key)) {
+                preference.getSharedPreferences().edit().putString(key, (String) newValue).commit();
+                InvariantDeviceProfile.INSTANCE.get(getContext()).onConfigChanged();
+                if (getActivity() != null) {
+                    getActivity().recreate();
+                }
+            }
+            return true;
         }
     }
 }
