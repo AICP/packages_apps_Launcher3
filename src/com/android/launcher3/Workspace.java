@@ -113,6 +113,7 @@ import com.android.launcher3.graphics.DragPreviewProvider;
 import com.android.launcher3.homescreenfiles.HomeScreenFilesProvider;
 import com.android.launcher3.icons.BitmapRenderer;
 import com.android.launcher3.icons.FastBitmapDrawable;
+import com.android.launcher3.LauncherState;
 import com.android.launcher3.logger.LauncherAtom;
 import com.android.launcher3.logging.InstanceId;
 import com.android.launcher3.logging.StatsLogManager;
@@ -1520,8 +1521,18 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
         }
         super.onLayout(changed, left, top, right, bottom);
         updatePageAlphaValues();
+        // Keep icons visible in Desktop Mode
+        DeviceProfile dp = mLauncher.getDeviceProfile();
+        if (dp != null && dp.inv != null && dp.inv.deviceType == InvariantDeviceProfile.TYPE_DESKTOP
+           && mLauncher.getStateManager().getState() == LauncherState.NORMAL) {
+           this.setAlpha(1f);
+           this.setVisibility(VISIBLE);
+        // Force every page to be visible too
+        for (int i = 0; i < getChildCount(); i++) {
+            getChildAt(i).setAlpha(1f);
+        }
     }
-
+}
     @Override
     public int getDescendantFocusability() {
         if (workspaceInModalState()) {
