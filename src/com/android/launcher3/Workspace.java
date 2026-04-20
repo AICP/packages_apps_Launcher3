@@ -1519,6 +1519,11 @@ public class Workspace<T extends View & PageIndicator> extends PagedView<T>
             mWallpaperOffset.jumpToFinal();
         }
         super.onLayout(changed, left, top, right, bottom);
+        // Keep icons visible in Desktop Mode
+        if (mLauncher.getDeviceProfile().inv.deviceType == InvariantDeviceProfile.TYPE_DESKTOP) {
+           this.setAlpha(1f);
+           this.setVisibility(VISIBLE);
+    }
         updatePageAlphaValues();
     }
 

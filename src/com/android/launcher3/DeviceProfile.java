@@ -558,6 +558,24 @@ public class DeviceProfile {
                 getWorkspaceIconProfile().getIconSizePx(), dotRendererCache);
         mDotRendererAllApps = createDotRenderer(
                 getAllAppsProfile().getIconSizePx(), dotRendererCache);
+        // Ensure workspace icons show in Desktop Mode
+        if (inv.deviceType == InvariantDeviceProfile.TYPE_DESKTOP) {
+        // We need to get the custom values here too so the compiler sees them
+        android.content.SharedPreferences desktopPrefs = context.getSharedPreferences(
+                LauncherFiles.SHARED_PREFERENCES_KEY, Context.MODE_PRIVATE);
+        String rVal = desktopPrefs.getString("custom_grid_rows", "5");
+        String cVal = desktopPrefs.getString("custom_grid_cols", "5");
+        try {
+            this.numRows = Integer.parseInt(rVal);
+            this.numColumns = Integer.parseInt(cVal);
+            this.isTaskbarPresent = true;
+            this.iconSize[InvariantDeviceProfile.INDEX_DEFAULT] = 
+                Utilities.pxFromDp(48, mMetrics);
+        } catch (NumberFormatException e) {
+            this.numRows = 5;
+            this.numColumns = 5;
+        }
+      }
     }
 
     private boolean isLandscapeOrientation()  {
@@ -817,9 +835,11 @@ public class DeviceProfile {
      * It is important to call this method after the All Apps variables have been set.
      */
     private void hideWorkspaceLabelsIfNotEnoughSpace() {
-        // We want enough space so that the text is closer to its corresponding icon.
+        if (inv.deviceType == InvariantDeviceProfile.TYPE_DESKTOP) {
+            return;
+        }
+
         if (getWorkspaceIconProfile().isLabelHidden()) {
-            // TODO(420933882) Group all modifications of AllAppsProfile in one place
             mAllAppsProfile = AllAppsProfile.Factory.autoResizeAllAppsCells(getAllAppsProfile());
         }
     }
