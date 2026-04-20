@@ -1990,4 +1990,16 @@ public class CellLayout extends ViewGroup {
         }
         return null;
     }
+    @Override
+    public void setVisibility(int visibility) {
+        // Force the icons to be visible if we are in Desktop Mode
+        if (getContext() instanceof com.android.launcher3.Launcher) {
+            com.android.launcher3.Launcher launcher = (com.android.launcher3.Launcher) getContext();
+            if (launcher.getDeviceProfile().inv.deviceType == com.android.launcher3.InvariantDeviceProfile.TYPE_DESKTOP) {
+                super.setVisibility(VISIBLE);
+                return;
+            }
+        }
+        super.setVisibility(visibility);
+    }
 }
