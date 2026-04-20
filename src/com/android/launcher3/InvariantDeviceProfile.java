@@ -862,27 +862,37 @@ public class InvariantDeviceProfile {
      * Currently we support: all apps row / column count.
      */
     private void applyPartnerDeviceProfileOverrides(Context context, DisplayMetrics dm) {
-        Partner p = Partner.get(context.getPackageManager());
-        if (p == null) {
-            return;
-        }
-        try {
-            int numRows = p.getIntValue(RES_GRID_NUM_ROWS, -1);
-            int numColumns = p.getIntValue(RES_GRID_NUM_COLUMNS, -1);
-            float iconSizePx = p.getDimenValue(RES_GRID_ICON_SIZE_DP, -1);
+    SharedPreferences prefs = LauncherPrefs.get(context).getReadOnly();
 
-            if (numRows > 0 && numColumns > 0) {
-                this.numRows = numRows;
-                this.numColumns = numColumns;
-            }
-            if (iconSizePx > 0) {
-                this.iconSize[InvariantDeviceProfile.INDEX_DEFAULT] =
-                        Utilities.dpiFromPx(iconSizePx, dm.densityDpi);
-            }
-        } catch (Resources.NotFoundException ex) {
-            Log.e(TAG, "Invalid Partner grid resource!", ex);
-        }
+    int customRows = prefs.getInt("custom_grid_rows", -1);
+    int customCols = prefs.getInt("custom_grid_cols", -1);
+
+    if (customRows > 0 && customCols > 0) {
+        this.numRows = customRows;
+        this.numColumns = customCols;
+
+        // Change the DB file name so the icons don't get
+        // scrambled when switching between different custom sizes.
+        this.dbFile = "launcher_custom_" + customRows + "_" + customCols + ".db";
+        return; // Exit early since we've applied our custom grid
     }
+
+    // 3. Fallback to original Partner logic if no custom grid is set
+    Partner p = Partner.get(context.getPackageManager());
+    if (p == null) {
+        return;
+    }
+    try {
+        int numRows = p.getIntValue(RES_GRID_NUM_ROWS, -1);
+        int numColumns = p.getIntValue(RES_GRID_NUM_COLUMNS, -1);
+        if (numRows > 0 && numColumns > 0) {
+            this.numRows = numRows;
+            this.numColumns = numColumns;
+        }
+    } catch (Resources.NotFoundException ex) {
+        Log.e(TAG, "Invalid Partner grid resource!", ex);
+    }
+}
 
     private static float dist(float x0, float y0, float x1, float y1) {
         return (float) Math.hypot(x1 - x0, y1 - y0);
