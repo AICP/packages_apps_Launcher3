@@ -44,6 +44,7 @@ import com.android.launcher3.concurrent.annotations.Ui;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.content.res.XmlResourceParser;
+import android.content.SharedPreferences;
 import android.graphics.Point;
 import android.graphics.PointF;
 import android.graphics.Rect;
@@ -557,7 +558,7 @@ public class InvariantDeviceProfile {
     }
 
     /** Updates IDP using the provided context. Notifies listeners of change. */
-    private void onConfigChanged() {
+    public void onConfigChanged() {
         Object[] oldState = toModelState();
 
         // Re-init grid
@@ -862,27 +863,36 @@ public class InvariantDeviceProfile {
      * Currently we support: all apps row / column count.
      */
     private void applyPartnerDeviceProfileOverrides(Context context, DisplayMetrics dm) {
-        Partner p = Partner.get(context.getPackageManager());
-        if (p == null) {
+        SharedPreferences prefs = context.getSharedPreferences(LauncherFiles.SHARED_PREFERENCES_KEY, Context.MODE_PRIVATE);
+    String rowVal = prefs.getString("custom_grid_rows", "5");
+    String colVal = prefs.getString("custom_grid_cols", "5");
+    try {
+        int customRows = Integer.parseInt(rowVal);
+        int customCols = Integer.parseInt(colVal);
+        if (customRows > 0 && customCols > 0) {
+            this.numRows = customRows;
+            this.numColumns = customCols;
+            this.dbFile = "launcher_custom_" + customRows + "_" + customCols + ".db";
             return;
         }
-        try {
-            int numRows = p.getIntValue(RES_GRID_NUM_ROWS, -1);
-            int numColumns = p.getIntValue(RES_GRID_NUM_COLUMNS, -1);
-            float iconSizePx = p.getDimenValue(RES_GRID_ICON_SIZE_DP, -1);
-
-            if (numRows > 0 && numColumns > 0) {
-                this.numRows = numRows;
-                this.numColumns = numColumns;
-            }
-            if (iconSizePx > 0) {
-                this.iconSize[InvariantDeviceProfile.INDEX_DEFAULT] =
-                        Utilities.dpiFromPx(iconSizePx, dm.densityDpi);
-            }
-        } catch (Resources.NotFoundException ex) {
-            Log.e(TAG, "Invalid Partner grid resource!", ex);
-        }
+    } catch (NumberFormatException e) {
+        Log.e(TAG, "Failed to parse custom grid: " + rowVal + "x" + colVal);
     }
+
+    // Original Fallback Logic
+    Partner p = Partner.get(context.getPackageManager());
+    if (p == null) return;
+    try {
+        int numRows = p.getIntValue(RES_GRID_NUM_ROWS, -1);
+        int numColumns = p.getIntValue(RES_GRID_NUM_COLUMNS, -1);
+        if (numRows > 0 && numColumns > 0) {
+            this.numRows = numRows;
+            this.numColumns = numColumns;
+        }
+    } catch (Resources.NotFoundException ex) {
+        Log.e(TAG, "Invalid Partner grid resource!", ex);
+    }
+}
 
     private static float dist(float x0, float y0, float x1, float y1) {
         return (float) Math.hypot(x1 - x0, y1 - y0);
