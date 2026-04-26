@@ -487,8 +487,8 @@ public class SettingsActivity extends FragmentActivity
         @Override
         public boolean onPreferenceChange(androidx.preference.Preference preference, Object newValue) {
         String key = preference.getKey();
-            if ("custom_grid_rows".equals(key) || "custom_grid_cols".equals(key)) {        
-        android.content.Context deContext = getContext().createDeviceProtectedStorageContext();        
+            if ("custom_grid_rows".equals(key) || "custom_grid_cols".equals(key)) {
+        android.content.Context deContext = getContext().createDeviceProtectedStorageContext();
         android.content.SharedPreferences prefs = deContext.getSharedPreferences(
                 LauncherFiles.SHARED_PREFERENCES_KEY, android.content.Context.MODE_PRIVATE);
         prefs.edit().putString(key, (String) newValue).commit();
