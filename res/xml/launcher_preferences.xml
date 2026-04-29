@@ -120,7 +120,7 @@
 
     <ListPreference
         android:key="custom_grid_rows"
-        android:title="Home screen rows"
+        android:title="@string/homescreen_rows"
         android:summary="%s rows"
         android:entries="@array/grid_size_entries"
         android:entryValues="@array/grid_size_values"
@@ -128,7 +128,7 @@
 
     <ListPreference
         android:key="custom_grid_cols"
-        android:title="Home screen columns"
+        android:title="@string/homescreen_columns"
         android:summary="%s columns"
         android:entries="@array/grid_size_entries"
         android:entryValues="@array/grid_size_values"
