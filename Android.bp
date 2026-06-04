@@ -442,6 +442,7 @@ android_library {
         "//frameworks/libs/systemui:contextualeducationlib",
         "//frameworks/libs/systemui:mechanics",
         "//frameworks/libs/systemui:msdl",
+        "SettingsLib",
         "SystemUI-statsd",
         "WindowManager-Shell-shared-AOSP",
         "launcher-testing-shared",
@@ -462,8 +463,7 @@ android_library {
         "org.lineageos.platform",
     ],
     manifest: "AndroidManifest-common.xml",
-    sdk_version: "current",
-    min_sdk_version: min_launcher3_sdk_version,
+    platform_apis: true,
     lint: {
         baseline_filename: "lint-baseline.xml",
     },
