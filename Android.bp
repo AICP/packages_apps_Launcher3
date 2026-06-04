@@ -489,6 +489,7 @@ android_app {
     defaults: [
         "launcher-non-platform-apis-defaults",
         "launcher_compose_defaults",
+        "SettingsLibDefaults",
     ],
 
     static_libs: [
@@ -553,6 +554,7 @@ android_library {
         "Launcher3ResLib",
         "lottie",
         "SystemUISharedLib",
+        "SettingsLibPreference",
         "SettingsLibSettingsTheme",
         "dagger2",
         "protolog-group",
