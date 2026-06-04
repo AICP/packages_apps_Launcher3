@@ -442,6 +442,7 @@ android_library {
         "//frameworks/libs/systemui:contextualeducationlib",
         "//frameworks/libs/systemui:mechanics",
         "//frameworks/libs/systemui:msdl",
+        "SettingsLib",
         "SystemUI-statsd",
         "WindowManager-Shell-shared-AOSP",
         "launcher-testing-shared",
