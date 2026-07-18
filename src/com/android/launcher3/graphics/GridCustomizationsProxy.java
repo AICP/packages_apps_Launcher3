@@ -352,6 +352,16 @@ public class GridCustomizationsProxy implements ProxyProvider {
         return switch (method) {
             case METHOD_GET_PREVIEW -> getPreview(extras);
             case METHOD_GET_PREVIEW_BITMAP -> getPreviewBitmap(extras);
+            case "set_grid" -> {
+                com.android.launcher3.Utilities.getPrefs(getContext()).edit()
+                        .putString(com.android.launcher3.InvariantDeviceProfile.KEY_WORKSPACE_SIZE, arg)
+                        .apply();
+                com.android.launcher3.InvariantDeviceProfile.INSTANCE.get(getContext()).reinitAndClear(getContext());
+                getContext().getContentResolver().notifyChange(getUriForPath("grid"), null);
+                Bundle result = new Bundle();
+                result.putBoolean("serialize_sync", true);
+                yield result;
+            }
             default -> null;
         };
     }
